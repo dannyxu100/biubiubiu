@@ -1,5 +1,5 @@
 {
   "comment": "",
   "port":"80",
-  "type":"development"
+  "env":"development"
 }

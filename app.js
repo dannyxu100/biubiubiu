@@ -1,12 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require('express'),
+	path = require('path'),
+	favicon = require('serve-favicon'),
+	logger = require('morgan'),
+	cookie_parser = require('cookie-parser'),
+	body_parser = require('body-parser'),
+	compression = require('compression'),
+	session = require('express-session');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var CONFIG = require('./config/config.json'),
+	SESSION = require('./config/session.json');
+
+var routes = require('./routes/index'),
+	users = require('./routes/users');
 
 var app = express();
 
@@ -15,12 +20,21 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public/images/favicon.png')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(compression());
+app.use(body_parser.json());
+app.use(body_parser.urlencoded({ extended: false }));
+app.use(cookie_parser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.use(session({
+	secret: SESSION.secret,
+	cookie: {maxAge: SESSION.maxAge, secure: false},
+	resave: false,
+	saveUninitialized: true
+}));
 
 app.use('/', routes);
 app.use('/users', users);
