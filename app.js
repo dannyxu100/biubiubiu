@@ -6,12 +6,15 @@ var express = require('express'),
 	body_parser = require('body-parser'),
 	compression = require('compression'),
 	session = require('express-session');
+	
+global.tools = require('./libs/tools');
 
-var CONFIG = require('./config/config.json'),
-	SESSION = require('./config/session.json');
+var CONFIG = tools.require('/config/config.json'),
+	SESSION = tools.require('/config/session.json');
 
-var routes = require('./routes/index'),
-	users = require('./routes/users');
+	
+var routes = tools.require('/routes/index.js'),
+	users = tools.require('/routes/users.js');
 
 var app = express();
 

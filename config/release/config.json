@@ -1,5 +1,12 @@
 {
-  "comment": "",
-  "port":"80",
-  "env":"production"
+	"comment": 	"",
+	"port": 	"80",
+	"env": 		"production",
+	"mongodb": {
+		"server":		"localhost",
+		"port": 		"27017",
+		"database": 	"mytest",
+		"username": 	"",
+		"password": 	""
+	}
 }
