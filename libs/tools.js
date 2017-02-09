@@ -19,6 +19,19 @@ var tools = {
 			console.log(msg);
 		}
 	},
+	
+	send: function( res, data, type ){
+		if( 'JSON' === type ) {
+			res.writeHead( 200, {'Content-Type': 'application/json'} );
+			res.end( JSON.stringify(data) );
+		} else {
+			res.send( data );
+		}
+	},
+	end: function( res, data, type ){
+		tools.send( res, data, type )
+		res.end();
+	}
 };
 
 module.exports = tools;
