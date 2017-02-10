@@ -14,10 +14,13 @@ db.once('open', function() {
 
 
 var strconn = 'mongodb://';
-if(  '' !== CONFIG_DB.username && '' !== CONFIG_DB.password ){
-	strconn += CONFIG_DB.username +':'+ CONFIG_DB.password +'@';
-}
+// if(  '' !== CONFIG_DB.username && '' !== CONFIG_DB.password ){
+	// strconn += CONFIG_DB.username +':'+ CONFIG_DB.password +'@';
+// }
 strconn += CONFIG_DB.server +':'+ CONFIG_DB.port +'/'+ CONFIG_DB.database;
-mongoose.connect(strconn);					//mongodb连接地址,demo为数据库名称,默认mongodb连接不需要密码
+mongoose.connect(strconn, {
+  user: CONFIG_DB.username,
+  pass: CONFIG_DB.password
+});
 
 exports.mongoose = mongoose;				//导出mongoose对象

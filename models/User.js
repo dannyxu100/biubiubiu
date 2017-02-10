@@ -2,13 +2,15 @@ var Base = tools.require('/models/Base');
 
 var UserSchema = new Base.Schema({
 	code:			Base.ObjectId,
-	password:		String,				//密码  
-	mobile:			String,				//手机  
+	password:		String,				//密码	
+	mobile:			String,				//手机
+	age:			Number,
 	lastLoginTime:	Date,				//最后登陆时间  
 	createTime: {						//创建时间  
 		type:		Date,
 		default:	Date.now
-	}
+	},
+	job: 			Base.Mixed
 	
 }, {
 	// _id: false,
