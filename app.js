@@ -14,7 +14,7 @@ var CONFIG = tools.require('/config/config.json'),
 
 	
 var routes = tools.require('/routes/index.js'),
-	users = tools.require('/routes/users.js');
+	users = tools.require('/routes/web/users.js');
 
 var app = express();
 

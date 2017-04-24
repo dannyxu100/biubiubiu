@@ -6,7 +6,7 @@ var tools = {
 		if( 0 === userpath.indexOf('/') ){					//绝对路径引入
 			userpath = path.join(tools.rootpath, userpath);
 		}
-		console.log(userpath);
+		// tools.log(userpath);
 		return require( userpath );
 		
 	},
@@ -22,7 +22,7 @@ var tools = {
 	
 	send: function( res, data, type ){
 		if( 'JSON' === type ) {
-			res.writeHead( 200, {'Content-Type': 'application/json'} );
+			res.writeHead( 200, {'Content-Type': 'application/json;charset=utf-8'} );
 			res.end( JSON.stringify(data) );
 		} else {
 			res.send( data );
