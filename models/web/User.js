@@ -1,12 +1,13 @@
-var Base = tools.require('/models/Base');
+var Base = tools.require('/models/comm/Base');
 
 var UserSchema = new Base.Schema({
-	code:			Base.ObjectId,
-	password:		String,				//密码	
+	// _id:			Base.ObjectId,
+	code:			String,
+	pwd:			String,				//密码	
 	mobile:			String,				//手机
 	age:			Number,
-	lastLoginTime:	Date,				//最后登陆时间  
-	createTime: {						//创建时间  
+	logintime:		Date,				//最后登陆时间  
+	createtime: {						//创建时间  
 		type:		Date,
 		default:	Date.now
 	},

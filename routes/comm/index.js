@@ -1,12 +1,12 @@
 var express = tools.require('express');
 var router = express.Router();
 
-var User = tools.require('/models/User');
-var Rtn = tools.require('/models/Rtn');
+var Rtn = tools.require('/models/comm/Rtn');
+var User = tools.require('/models/web/User');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Express' });
+	res.render('web/index', { title: 'Express' });
 });
 
 module.exports = router;
