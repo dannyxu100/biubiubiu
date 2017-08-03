@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 
-window.vueapp = new vue({
+window.vueapp = new Vue({
 	el: '#vueapp',
 	data: {}
 });

@@ -1,5 +1,8 @@
+var tools = global.tools;
+
 var CONFIG_DB = tools.require('/config/config.json').mongodb,
-	mongoose = tools.require('mongoose');
+	mongoose = tools.require('mongoose'),
+	strconn = 'mongodb://';
 
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -13,14 +16,11 @@ db.once('open', function() {
 
 
 
-var strconn = 'mongodb://';
-// if(  '' !== CONFIG_DB.username && '' !== CONFIG_DB.password ){
-	// strconn += CONFIG_DB.username +':'+ CONFIG_DB.password +'@';
-// }
 strconn += CONFIG_DB.server +':'+ CONFIG_DB.port +'/'+ CONFIG_DB.database;
 mongoose.connect(strconn, {
   user: CONFIG_DB.username,
   pass: CONFIG_DB.password
 });
+
 
 exports.mongoose = mongoose;				//导出mongoose对象

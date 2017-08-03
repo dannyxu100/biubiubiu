@@ -1,21 +1,23 @@
 var express = require('express'),
-	path = require('path'),
-	favicon = require('serve-favicon'),
-	logger = require('morgan'),
-	body_parser = require('body-parser'),
-	// multer = require('multer'),
-	cookie_parser = require('cookie-parser'),
-	compression = require('compression'),
-	session = require('express-session');
-	
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    body_parser = require('body-parser'),
+    // multer = require('multer'),
+    cookie_parser = require('cookie-parser'),
+    compression = require('compression'),
+    session = require('express-session');
+
 global.tools = require('./libs/tools');
+var tools = global.tools;
+
 
 var CONFIG = tools.require('/config/config.json'),
-	SESSION = tools.require('/config/session.json');
+    SESSION = tools.require('/config/session.json');
 
-	
+
 var index = tools.require('/routes/comm/index.js'),
-	users = tools.require('/routes/web/users.js');
+    users = tools.require('/routes/web/users.js');
 
 var app = express();
 
@@ -27,18 +29,18 @@ app.set('view engine', 'ejs');
 app.use(favicon(path.join(__dirname, 'public/images/favicon.png')));
 app.use(logger('dev'));
 app.use(compression());
-app.use(body_parser.json());											// for parsing application/json
-app.use(body_parser.urlencoded({ extended: false }));					// for parsing application/x-www-form-urlencoded
-// app.use(multer());														// for parsing multipart/form-data
+app.use(body_parser.json());                                            // for parsing application/json
+app.use(body_parser.urlencoded({ extended: false }));                   // for parsing application/x-www-form-urlencoded
+// app.use(multer());                                                       // for parsing multipart/form-data
 app.use(cookie_parser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(session({
-	secret: SESSION.secret,
-	cookie: {maxAge: SESSION.maxAge, secure: false},
-	resave: false,
-	saveUninitialized: true
+    secret: SESSION.secret,
+    cookie: {maxAge: SESSION.maxAge, secure: false},
+    resave: false,
+    saveUninitialized: true
 }));
 
 app.use('/', index);

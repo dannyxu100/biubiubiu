@@ -1,21 +1,22 @@
-var Base = tools.require('/models/comm/Base');
+var tools = global.tools;
 
+var Base = tools.require('/models/comm/Base');
 var UserSchema = new Base.Schema({
 	// _id:			Base.ObjectId,
 	code:			String,
-	pwd:			String,				//密码	
+	pwd:			String,				//密码
 	mobile:			String,				//手机
 	age:			Number,
-	logintime:		Date,				//最后登陆时间  
-	createtime: {						//创建时间  
+	logintime:		Date,				//最后登陆时间
+	createtime: {						//创建时间
 		type:		Date,
 		default:	Date.now
 	},
 	job: 			Base.Mixed
-	
+
 }, {
 	// _id: false,
-	// autoIndex: false 
+	// autoIndex: false
 });
 
 

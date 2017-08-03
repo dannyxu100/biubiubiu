@@ -1,5 +1,6 @@
-var mongodb = tools.require('/libs/mongodb');	//引入config中的mongodb对象
+var tools = global.tools;
 
+var mongodb = tools.require('/libs/mongodb');	//引入config中的mongodb对象
 var mongoose = mongodb.mongoose;				//获取mongoose
 
 var Base = {

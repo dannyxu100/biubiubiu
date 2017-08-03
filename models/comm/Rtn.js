@@ -1,3 +1,5 @@
+var tools = global.tools;
+
 var ErrorMap = tools.require('/models/comm/ErrorMap');
 
 var Rtn = function(){

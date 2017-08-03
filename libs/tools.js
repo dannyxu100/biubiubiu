@@ -8,7 +8,7 @@ var tools = {
 		}
 		// tools.log(userpath);
 		return require( userpath );
-		
+
 	},
 	log: function( msg, type ){
 		if( 'ERROR' === type ){
@@ -19,7 +19,7 @@ var tools = {
 			console.log(msg);
 		}
 	},
-	
+
 	send: function( res, data, type ){
 		if( 'JSON' === type ) {
 			res.writeHead( 200, {'Content-Type': 'application/json;charset=utf-8'} );
@@ -29,7 +29,7 @@ var tools = {
 		}
 	},
 	end: function( res, data, type ){
-		tools.send( res, data, type )
+		tools.send( res, data, type );
 		res.end();
 	}
 };

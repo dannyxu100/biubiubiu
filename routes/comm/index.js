@@ -1,3 +1,4 @@
+var tools = global.tools;
 var express = tools.require('express');
 var router = express.Router();
 
