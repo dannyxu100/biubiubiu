@@ -3,7 +3,7 @@
 	"port": 	"80",
 	"env": 		"production",
 	"mongodb": {
-		"server":		"localhost",
+		"server":		"127.0.0.1",
 		"port": 		"27017",
 		"database": 	"mytest",
 		"username": 	"",

@@ -7,7 +7,7 @@ var User = tools.require('/models/web/User');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('web/index', { title: 'Express' });
+	res.render('web/index', { title: 'biubiubiu~' });
 });
 
 module.exports = router;

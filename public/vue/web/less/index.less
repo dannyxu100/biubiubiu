@@ -1,0 +1,181 @@
+// 混合
+@import "mixins/prefix.less";
+@import "mixins/common.less";
+
+/************************** 通用动画相关 **************************/
+.fade-transition {}
+.fade-enter {
+    .prefix-animation( fade-show .3s linear );
+}
+.fade-leave {
+    .prefix-animation( fade-hide .3s linear );
+}
+.prefix-keyframes(fade-show, {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+});
+.prefix-keyframes(fade-hide, {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+});
+
+
+.slide-transition {}
+.slide-enter {
+    .prefix-transformorigin( left top );
+    .prefix-animation( slide-down .15s ease-out );
+}
+.slide-leave {
+    .prefix-transformorigin( left top );
+    .prefix-animation( slide-up .15s ease-in );
+}
+.prefix-keyframes(slide-down, {
+    0% {
+        .prefix-transform( scale(1, 0) );
+    }
+    100% {
+        .prefix-transform( scale(1, 1) );
+    }
+});
+.prefix-keyframes(slide-up, {
+    0% {
+        .prefix-transform( scale(1, 1) );
+    }
+    100% {
+        .prefix-transform( scale(1, 0) );
+    }
+});
+
+
+.imodal-transition {}
+.imodal-enter {
+    .prefix-animation( margin-in .3s ease-out );
+}
+.imodal-leave {
+    .prefix-animation( margin-out .3s ease-out );
+}
+.prefix-keyframes(margin-in, {
+    0% { margin-top: -1000px; }
+    100% { margin-top: 0; }
+});
+.prefix-keyframes(margin-out, {
+    0% { margin-top: 0; }
+    100% { margin-top: -1000px; }
+});
+
+
+.floatpad-transition {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.floatpad-enter {
+    .prefix-animation( right-in .3s ease-out );
+}
+.floatpad-leave {
+    .prefix-animation( right-out .3s ease-in );
+}
+.prefix-keyframes(right-in, {
+    0% { margin-right: -1000px; }
+    100% { margin-right: 0; }
+});
+.prefix-keyframes(right-out, {
+    0% { margin-right: 0; }
+    100% { margin-right: -1000px; }
+});
+
+
+/************************* placeholder ************************/
+.prefix-placeholder(#aaa);
+input,
+textarea {
+    .prefix-placeholder(#aaa);
+}
+
+
+
+
+/************************** 常用公共 **************************/
+.v-app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 240px;
+    overflow: hidden;
+    // background: linear-gradient(left to right, #1bb3eb, #40f1d1);
+    .prefix-gradient(45deg, #1bb3eb, #40f1d1);
+    &.small {
+        margin-left: 60px;
+    }
+}
+.topbar {
+    height: 50px;
+    // background: rgb(52, 138, 199);
+    // background: linear-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
+    // background: linear-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
+}
+.leftbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    // background: linear-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
+    .prefix-gradient(240deg, rgb(116, 116, 191), rgb(52, 138, 199));
+    &.small {
+        width: 60px;
+    }
+}
+.lb-transition,
+.lbsmall-transition {}
+.lb-enter {
+    .prefix-animation(lb-in .3s ease-out);
+}
+.lb-leave {
+    .prefix-animation(lb-out .3s ease-in);
+}
+.prefix-keyframes(lb-in, {
+    0% { left: -240px; }
+    100% { left: 0; }
+});
+.prefix-keyframes(lb-out, {
+    0% { left: 0; }
+    100% { left: -240px; }
+});
+.lbsmall-enter {
+    .prefix-animation(lbsmall-in .3s ease-out);
+}
+.lbsmall-leave {
+    .prefix-animation(lbsmall-out .3s ease-in);
+}
+.prefix-keyframes(lbsmall-in, {
+    0% { left: -60px; }
+    100% { left: 0; }
+});
+.prefix-keyframes(lbsmall-out, {
+    0% { left: 0; }
+    100% { left: -60px; }
+});
+
+
+
+.wrapper {
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    right: 80px;
+    bottom: 80px;
+    overflow: hidden;
+}
+.wrapper-scroll {
+    overflow-y: auto;
+}
+.wrapper-box {
+    background: rgba(255,255,255,.9);
+    padding: 10px;
+    .prefix-border-radius(10px);
+    .prefix-box-shadow(0 5px 50px rgba(0,0,0,.2));
+}

@@ -5,7 +5,7 @@ var tools = global.tools;
 var Rtn = tools.require('/models/comm/Rtn');
 var User = tools.require('/models/web/User');
 
-/* GET users listing. */
+
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });

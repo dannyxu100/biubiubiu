@@ -1,0 +1,61 @@
+//====================================================
+//
+//		common
+//
+//====================================================
+// Clearfix
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+.comm-clearfix() {
+	&:before,
+	&:after {
+		content: " "; 		// for 1
+		display: table; 	// for 2
+	}
+	&:after {
+		clear: both;
+	}
+	& {
+		*zoom: 1;
+	}
+}
+
+
+//文字溢出处理
+.comm-textoverflow() {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+//消除inline-block 空白间隔（父元素使用）
+.comm-inlineblock-clearspace() {
+	font-size: 0;
+    white-space: nowrap;
+}
+
+
+//字体图标
+.makeiconfont ( @fontsize; @fontfamily ) {
+	font-family: @fontfamily !important;
+	font-size: @fontsize;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	// -webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+.comm-iconfont( @content; @fontsize:inherit; @fontfamily:@fontfamily-icon ) {
+	.makeiconfont( @fontsize, @fontfamily );
+	content: @content;
+}
+
+
+
+
+

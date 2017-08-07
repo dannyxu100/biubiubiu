@@ -2,15 +2,17 @@
 <html>
 	<head>
 		<title><%=title%></title>
-		<link rel="stylesheet" href="/css/style.css"/>
+		<!-- <link rel="stylesheet" href="/css/style.css"/> -->
 	</head>
 
 	<body>
-		<!-- Vuejs 路由匹配到的组件将渲染在这里 -->
-		<div class="vueapp">
+		<div id="v-app" class="v-app" :class="{small: showleftbar_small}">
+			<topbar></topbar>
 			<router-view></router-view>
+			<leftbar :show="showleftbar"></leftbar>
+			<leftbar class="small" :show="showleftbar_small"></leftbar>
 		</div>
 	</body>
 
-	<script type="text/javascript" src="/vue/web/main.js"></script>
+	<script type="text/javascript" src="/vue/web/main.build.js"></script>
 </html>
