@@ -1,6 +1,0 @@
-export default {
-	MERGE_DATA: 		'MERGE_DATA',
-	SET_KPIRANKING:		'SET_KPIRANKING',
-	SET_DETAIL: 		'SET_DETAIL',
-	SET_LIST: 			'SET_LIST'
-};

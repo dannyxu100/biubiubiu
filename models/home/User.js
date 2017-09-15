@@ -1,6 +1,5 @@
-var tools = global.tools;
-
-var Base = tools.require('/models/comm/Base');
+var tools 	= global.tools;
+var Base 	= tools.require('/models/comm/Base');
 var UserSchema = new Base.Schema({
 	// _id:			Base.ObjectId,
 	code:			String,

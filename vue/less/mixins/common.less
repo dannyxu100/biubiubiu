@@ -30,8 +30,10 @@
 
 //文字溢出处理
 .comm-textoverflow() {
-	white-space: nowrap;
-	text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
 //消除inline-block 空白间隔（父元素使用）

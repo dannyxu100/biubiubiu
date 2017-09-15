@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%=title%></title>
+		<!-- <link rel="stylesheet" href="/css/style.css"/> -->
+	</head>
+
+	<body>
+		<div id="v-app" class="v-app" :class="{small: leftbarsmall.show}">{{test}}
+			<router-view></router-view>
+			<topbar :show="topbar.show"></topbar>
+			<leftbar :show="leftbar.show"></leftbar>
+			<leftbar :show="leftbarsmall.show" class="small"></leftbar>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="/main.build.js"></script>
+</html>

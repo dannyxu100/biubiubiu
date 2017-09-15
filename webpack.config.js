@@ -5,23 +5,37 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = [{
-    entry: path.resolve(__dirname, 'public/vue/web/main.js'),
+    entry: path.resolve(__dirname, './vue/main.js'),
     output: {
-        path: path.resolve(__dirname, 'public/vue/web'),
+        path: path.resolve(__dirname, './vue'),
         filename: '[name].build.js'
     },
     resolve: {
         alias: {
-            'root': path.resolve(__dirname),
-            'vue$': path.resolve(__dirname,'./node_modules/vue/dist/vue.js'),
+            'vue$'          : path.resolve(__dirname,'./node_modules/vue/dist/vue.js'),
+            '_WEBROOT_'     : __dirname,
+            '_ROOT_'        : path.resolve(__dirname, './vue'),
+            '_PLUGIN_'      : path.resolve(__dirname, './vue/plugins'),
+            '_JS_'          : path.resolve(__dirname, './vue/js'),
+            '_LESS_'        : path.resolve(__dirname, './vue/less'),
+            '_APPS_'        : path.resolve(__dirname, './vue/apps'),
+            '_STORE_'       : path.resolve(__dirname, './vue/store'),
+            // '_IVIEW_'       : path.resolve(__dirname, '../dreamix-components/components/web/components'),
+            // '_IVIEW_LESS_'  : path.resolve(__dirname, '../dreamix-components/components/web/styles')
         }
     },
     module: {
         rules: [{
             test: /\.vue?$/,
-            use: ['vue-loader']
-        },
-        {
+            use: [{
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        less: ['style-loader', 'css-loader', 'less-loader'], // <style lang='less'>
+                    }
+                }
+            }]
+        }, {
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader']
         },{
@@ -49,5 +63,6 @@ module.exports = [{
                 drop_console: false,
             }
         }),*/
-    ]
+    ],
+    watch: true
 }];

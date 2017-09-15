@@ -7,7 +7,6 @@ export default {
 	    dispatch( mt.MERGE_DATA, $data );
 	},
 
-
     //展开收起左侧栏
     toggle_leftbar(){
 

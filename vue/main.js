@@ -8,24 +8,23 @@ Vue.use(Vuex);
 Vue.use(VueRouter);
 
 //组件
-import Topbar                   from './common/topbar.vue';
-import Leftbar                  from './common/leftbar.vue';
-import Home                     from './home/index.vue';
-import User                     from './user/index.vue';
-
+import Topbar                   from '_PLUGIN_/topbar.vue';
+import Leftbar                  from '_PLUGIN_/leftbar.vue';
 
 //路由
+import Home                     from '_APPS_/home/index.vue';
+import Admin                    from '_APPS_/admin/index.vue';
 const ROUTELIST = [
     { path: '/',                component: Home },
-    { path: '/user',            component: User }
+    { path: '/admin',           component: Admin }
 ];
 const router = new VueRouter({
     routes: ROUTELIST
 });
 
 
-//vuex
-import store                                from './common/vuex/store.js';
+//
+import store                                from '_STORE_/store.js';
 import { mapGetters, mapActions }           from 'vuex';
 
 
@@ -38,14 +37,16 @@ window.vapp = new Vue({
     },
     router,
     store,
-    // vuex: {
-    //     getters,
-    //     actions
-    // },
-    computed: mapGetters({
-        showleftbar: 'showleftbar',
-        showleftbar_small: 'showleftbar_small'
-    }),
+    computed: {
+        test() {
+            return 1111;
+        },
+        ...mapGetters({
+            topbar: 'topbar',
+            leftbar: 'leftbar',
+            leftbarsmall: 'leftbarsmall'
+        })
+    },
     data() {
         return {};
     },

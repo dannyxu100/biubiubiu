@@ -97,77 +97,12 @@ textarea {
 
 
 /************************** 常用公共 **************************/
-.v-app {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-left: 240px;
-    overflow: hidden;
-    // background: linear-gradient(left to right, #1bb3eb, #40f1d1);
-    .prefix-gradient(45deg, #1bb3eb, #40f1d1);
-    &.small {
-        margin-left: 60px;
-    }
-}
-.topbar {
-    height: 50px;
-    // background: rgb(52, 138, 199);
-    // background: linear-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
-    // background: linear-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
-}
-.leftbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 240px;
-    // background: linear-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
-    .prefix-gradient(240deg, rgb(116, 116, 191), rgb(52, 138, 199));
-    &.small {
-        width: 60px;
-    }
-}
-.lb-transition,
-.lbsmall-transition {}
-.lb-enter {
-    .prefix-animation(lb-in .3s ease-out);
-}
-.lb-leave {
-    .prefix-animation(lb-out .3s ease-in);
-}
-.prefix-keyframes(lb-in, {
-    0% { left: -240px; }
-    100% { left: 0; }
-});
-.prefix-keyframes(lb-out, {
-    0% { left: 0; }
-    100% { left: -240px; }
-});
-.lbsmall-enter {
-    .prefix-animation(lbsmall-in .3s ease-out);
-}
-.lbsmall-leave {
-    .prefix-animation(lbsmall-out .3s ease-in);
-}
-.prefix-keyframes(lbsmall-in, {
-    0% { left: -60px; }
-    100% { left: 0; }
-});
-.prefix-keyframes(lbsmall-out, {
-    0% { left: 0; }
-    100% { left: -60px; }
-});
-
-
-
 .wrapper {
     position: absolute;
-    left: 80px;
-    top: 80px;
-    right: 80px;
-    bottom: 80px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
 }
 .wrapper-scroll {
@@ -179,3 +114,76 @@ textarea {
     .prefix-border-radius(10px);
     .prefix-box-shadow(0 5px 50px rgba(0,0,0,.2));
 }
+
+
+.v-app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 240px;
+    overflow: hidden;
+    // background: linear-gradient(left to right, #1bb3eb, #40f1d1);
+    .prefix-gradient(45deg, #1bb3eb, #40f1d1);
+    .wrapper {
+        left: 320px;
+        top: 80px;
+        right: 80px;
+        bottom: 80px;
+    }
+    &.small {
+        padding-left: 60px;
+        .wrapper {
+            left: 140px;
+        }
+    }
+}
+.topbar {
+    height: 50px;
+    // background: rgb(52, 138, 199);
+    // .prefix-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
+    // .prefix-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
+}
+.leftbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    // .prefix-gradient(240deg, rgba(255, 255, 255, .2), rgba(52, 138, 199, .2));
+    .prefix-gradient(240deg, rgba(116, 116, 191, .5), rgba(52, 138, 199, .8));
+    &.small {
+        width: 60px;
+    }
+}
+.leftbar-transition,
+.leftbarsmall-transition {}
+.leftbar-enter {
+    .prefix-animation(leftbar-in .3s ease-out);
+}
+.leftbar-leave {
+    .prefix-animation(leftbar-out .3s ease-in);
+}
+.prefix-keyframes(leftbar-in, {
+    0% { left: -240px; }
+    100% { left: 0; }
+});
+.prefix-keyframes(leftbar-out, {
+    0% { left: 0; }
+    100% { left: -240px; }
+});
+.lbsmall-enter {
+    .prefix-animation(leftbarsmall-in .3s ease-out);
+}
+.lbsmall-leave {
+    .prefix-animation(leftbarsmall-out .3s ease-in);
+}
+.prefix-keyframes(leftbarsmall-in, {
+    0% { left: -60px; }
+    100% { left: 0; }
+});
+.prefix-keyframes(leftbarsmall-out, {
+    0% { left: 0; }
+    100% { left: -60px; }
+});

@@ -1,24 +1,24 @@
-var express = require('express'),
-    path = require('path'),
-    favicon = require('serve-favicon'),
-    logger = require('morgan'),
-    body_parser = require('body-parser'),
-    // multer = require('multer'),
+var express       = require('express'),
+    path          = require('path'),
+    favicon       = require('serve-favicon'),
+    logger        = require('morgan'),
+    body_parser   = require('body-parser'),
+    // multer        = require('multer'),
     cookie_parser = require('cookie-parser'),
-    compression = require('compression'),
-    session = require('express-session');
+    compression   = require('compression'),
+    session       = require('express-session');
 
-global.tools = require('./libs/tools');
-const tools = global.tools;
+global.tools  = require('./libs/tools');
+const tools   = global.tools;
 
 
-const CONFIG = tools.require('/config/config.json'),
+const CONFIG  = tools.require('/config/config.json'),
       SESSION = tools.require('/config/session.json');
 
 
-const route_index = tools.require('/routes/common/index.js'),
-      route_access = tools.require('/routes/web/access.js'),
-      route_users = tools.require('/routes/web/users.js');
+const route_index   = tools.require('/routes/common/index.js'),
+      route_access  = tools.require('/routes/home/access.js'),
+      route_users   = tools.require('/routes/home/users.js');
 
 const app = express();
 
@@ -35,6 +35,7 @@ app.use(body_parser.urlencoded({ extended: false }));                   // for p
 // app.use(multer());                                                       // for parsing multipart/form-data
 app.use(cookie_parser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'vue')));
 
 
 app.use(session({

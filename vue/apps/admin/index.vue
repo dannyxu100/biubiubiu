@@ -1,5 +1,9 @@
-<style>
-
+<style lang="less">
+    body {
+        & *{
+            font-size: 16px;
+        }
+    }
 </style>
 
 <template>
@@ -12,7 +16,7 @@
 
 <script>
     // import "./../less/run.less";
-    import {mapGetters, mapActions}                             from 'vuex';
+    import {mapGetters, mapActions}         from 'vuex';
 	export default {
         components: {},
         data() {

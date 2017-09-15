@@ -1,38 +1,56 @@
 {
-  "name": "biubiubiu",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.15.1",
-    "compression": "^1.6.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "ejs": "~2.4.1",
-    "express": "~4.13.4",
-    "express-session": "^1.15.0",
-    "mongoose": "^4.8.1",
-    "morgan": "~1.7.0",
-    "multer": "^1.3.0",
-    "serve-favicon": "~2.3.0",
-    "vue": "^2.2.6",
-    "vue-router": "^2.7.0",
-    "vuex": "^2.3.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
-    "style-loader": "^0.18.2",
-    "uglifyjs-webpack-plugin": "^0.4.6",
-    "vue-loader": "^13.0.2",
-    "vue-template-compiler": "^2.4.2",
-    "webpack": "^3.4.1"
-  }
+    "name": "biubiubiu",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www"
+    },
+    "babel": {
+        "presets": [
+            ["env", {
+                "es2015": {
+                    "modules": false
+                }
+            }],
+            "stage-2"
+        ],
+        "plugins": [],
+        "env": {
+            "test": {
+                "presets": ["env", "stage-2"],
+                "plugins": ["istanbul"]
+            }
+        }
+    },
+    "dependencies": {
+        "body-parser": "~1.15.1",
+        "compression": "^1.6.2",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.2.0",
+        "ejs": "~2.4.1",
+        "express": "~4.13.4",
+        "express-session": "^1.15.0",
+        "mongoose": "^4.8.1",
+        "morgan": "~1.7.0",
+        "multer": "^1.3.0",
+        "serve-favicon": "~2.3.0",
+        "vue": "^2.2.6",
+        "vue-router": "^2.7.0",
+        "vuex": "^2.3.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.25.0",
+        "babel-loader": "^7.1.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-stage-2": "^6.24.1",
+        "css-loader": "^0.28.4",
+        "extract-text-webpack-plugin": "^3.0.0",
+        "less": "^2.7.2",
+        "less-loader": "^4.0.5",
+        "style-loader": "^0.18.2",
+        "uglifyjs-webpack-plugin": "^0.4.6",
+        "vue-loader": "^13.0.2",
+        "vue-template-compiler": "^2.4.2",
+        "webpack": "^3.4.1"
+    }
 }

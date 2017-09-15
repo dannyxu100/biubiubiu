@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+var express 	= require('express');
+var router 		= express.Router();
 
-var tools = global.tools;
-var Rtn = tools.require('/models/comm/Rtn');
-var User = tools.require('/models/web/User');
+var tools		= global.tools;
+var Rtn 		= tools.require('/models/comm/Rtn');
+var User 		= tools.require('/models/home/User');
 
 
 router.get('/', function(req, res, next) {
