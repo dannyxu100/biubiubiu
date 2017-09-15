@@ -1,8 +1,14 @@
 <style lang="less">
+    @import "../../less/mixins/prefix.less";
     body {
+        .prefix-transition();
         & *{
-            font-size: 16px;
+            font-size: 22px;
         }
+    }
+    .wrapper {
+        background-image: url(/vue/images/bg.jpg);
+        background-repeat: no-repeat;
     }
 </style>
 

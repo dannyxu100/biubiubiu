@@ -5,9 +5,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = [{
-    entry: path.resolve(__dirname, './vue/main.js'),
+    entry: [
+        path.resolve(__dirname, './vue/less/app.less'),
+        path.resolve(__dirname, './vue/main.js'),
+    ],
     output: {
         path: path.resolve(__dirname, './vue'),
+        // publicPath: '',
         filename: '[name].build.js'
     },
     resolve: {
@@ -26,22 +30,32 @@ module.exports = [{
     },
     module: {
         rules: [{
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({
+                use: ['css-loader'],
+            })
+        }, {
+            test: /\.less$/,
+            use: ExtractTextPlugin.extract({
+                use: ['css-loader', 'less-loader'],
+            })
+        }, {
             test: /\.vue?$/,
             use: [{
                 loader: 'vue-loader',
                 options: {
+                    // publicPath: '',
                     loaders: {
-                        less: ['style-loader', 'css-loader', 'less-loader'], // <style lang='less'>
+                        css: ExtractTextPlugin.extract({
+                            use: ['css-loader'],
+                        }),
+                        less: ExtractTextPlugin.extract({
+                            use: ['css-loader', 'less-loader'],
+                        })
                     }
                 }
             }]
         }, {
-            test: /\.less$/,
-            use: ['style-loader', 'css-loader', 'less-loader']
-        },{
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader']
-        },{
             test: /\.js$/,
             use: ['babel-loader'],
             exclude: /node_modules/
@@ -49,7 +63,7 @@ module.exports = [{
     },
     plugins: [
         //''
-        new ExtractTextPlugin('[name].css'),
+        new ExtractTextPlugin('[name].build.css'),
         //
         /*new webpack.DefinePlugin({
             'process.env': {

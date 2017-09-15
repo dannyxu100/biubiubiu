@@ -26,16 +26,16 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public/images/favicon.png')));
+
+app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/vue', express.static(path.join(__dirname, 'vue')));
+
 app.use(logger('dev'));
 app.use(compression());
 app.use(body_parser.json());                                            // for parsing application/json
 app.use(body_parser.urlencoded({ extended: false }));                   // for parsing application/x-www-form-urlencoded
 // app.use(multer());                                                       // for parsing multipart/form-data
 app.use(cookie_parser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'vue')));
 
 
 app.use(session({

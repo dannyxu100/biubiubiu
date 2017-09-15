@@ -1,10 +1,3 @@
-<style lang="less">
-    body {
-        & *{
-            font-size: 16px;
-        }
-    }
-</style>
 
 <template>
 	<div class="wrapper wrapper-box">

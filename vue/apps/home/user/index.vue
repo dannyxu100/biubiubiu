@@ -1,6 +1,3 @@
-<style>
-
-</style>
 
 <template>
 	<div >12333333333

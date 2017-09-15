@@ -1,6 +1,3 @@
-import './less/index.less';
-
-
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
 import VueRouter                from 'vue-router';
@@ -23,14 +20,17 @@ const router = new VueRouter({
 });
 
 
-//
+//Vuex
 import store                                from '_STORE_/store.js';
 import { mapGetters, mapActions }           from 'vuex';
 
 
+//基础样式
+// import './less/app.less';
+
 //实例
-window.vapp = new Vue({
-	el: '#v-app',
+window.vueapp = new Vue({
+	el: '#vueapp',
     components: {
         topbar: Topbar,
         leftbar: Leftbar

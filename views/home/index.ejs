@@ -3,10 +3,11 @@
 	<head>
 		<title><%=title%></title>
 		<!-- <link rel="stylesheet" href="/css/style.css"/> -->
+		<link rel="stylesheet" href="/vue/main.build.css"/>
 	</head>
 
 	<body>
-		<div id="v-app" class="v-app" :class="{small: leftbarsmall.show}">{{test}}
+		<div id="vueapp" class="vueapp" :class="{small: leftbarsmall.show}">{{test}}
 			<router-view></router-view>
 			<topbar :show="topbar.show"></topbar>
 			<leftbar :show="leftbar.show"></leftbar>
@@ -14,5 +15,5 @@
 		</div>
 	</body>
 
-	<script type="text/javascript" src="/main.build.js"></script>
+	<script type="text/javascript" src="/vue/main.build.js"></script>
 </html>
