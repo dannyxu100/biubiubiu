@@ -125,16 +125,17 @@ textarea {
     padding-left: 240px;
     overflow: hidden;
     // background: linear-gradient(left to right, #1bb3eb, #40f1d1);
-    .prefix-gradient(45deg, #1bb3eb, #40f1d1);
-    .wrapper {
+    .prefix-gradient(225deg, #1bb3eb, #40f1d1);
+    &>.wrapper {
         left: 320px;
         top: 80px;
         right: 80px;
         bottom: 80px;
+        .prefix-transition(left ease-out .3s);
     }
     &.small {
         padding-left: 60px;
-        .wrapper {
+        &>.wrapper {
             left: 140px;
         }
     }
@@ -151,39 +152,38 @@ textarea {
     left: 0;
     bottom: 0;
     width: 240px;
+    background: rgba(240, 245, 255, .8);
     // .prefix-gradient(240deg, rgba(255, 255, 255, .2), rgba(52, 138, 199, .2));
-    .prefix-gradient(240deg, rgba(116, 116, 191, .5), rgba(52, 138, 199, .8));
+    // .prefix-gradient(240deg, rgba(116, 116, 191, .5), rgba(52, 138, 199, .8));
+    .prefix-box-shadow(0 5px 50px rgba(0,0,0,.2));
     &.small {
         width: 60px;
+        background: rgba(240, 245, 255, .2);
+        .prefix-box-shadow(0 3px 8px rgba(0,0,0,.1));
     }
 }
-.leftbar-transition,
-.leftbarsmall-transition {}
-.leftbar-enter {
-    .prefix-animation(leftbar-in .3s ease-out);
+
+.leftbar-enter-active {
+    left: -240px;
+    .prefix-animation(leftbar .3s ease-out .3s);
 }
-.leftbar-leave {
-    .prefix-animation(leftbar-out .3s ease-in);
+.leftbar-leave-active {
+    .prefix-animation(leftbar .3s ease-out reverse);
 }
-.prefix-keyframes(leftbar-in, {
+.prefix-keyframes(leftbar, {
     0% { left: -240px; }
     100% { left: 0; }
 });
-.prefix-keyframes(leftbar-out, {
-    0% { left: 0; }
-    100% { left: -240px; }
-});
-.lbsmall-enter {
-    .prefix-animation(leftbarsmall-in .3s ease-out);
+
+
+.leftbarsmall-enter-active {
+    left: -60px;
+    .prefix-animation(leftbarsmall .3s ease-out .3s);
 }
-.lbsmall-leave {
-    .prefix-animation(leftbarsmall-out .3s ease-in);
+.leftbarsmall-leave-active {
+    .prefix-animation(leftbarsmall .3s ease-out reverse);
 }
-.prefix-keyframes(leftbarsmall-in, {
+.prefix-keyframes(leftbarsmall, {
     0% { left: -60px; }
     100% { left: 0; }
-});
-.prefix-keyframes(leftbarsmall-out, {
-    0% { left: 0; }
-    100% { left: -60px; }
 });

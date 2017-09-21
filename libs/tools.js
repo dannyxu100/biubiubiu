@@ -7,8 +7,11 @@ var tools = {
 			userpath = path.join(tools.rootpath, userpath);
 		}
 		// tools.log(userpath);
-		return require( userpath );
-
+		try {
+			return require( userpath );
+		} catch( err ){
+			throw new Error('tools.require 文档引用中异常: '+ userpath +'\n\n'+ err);
+		}
 	},
 	log: function( msg, type ){
 		if( 'ERROR' === type ){

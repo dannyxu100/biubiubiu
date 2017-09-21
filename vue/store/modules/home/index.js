@@ -1,12 +1,11 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
+import MT                       from './mutaions-types.js';
+import Getters                  from './getter.js';
+import Actions                  from './action.js';
 Vue.use(Vuex);
 
-import mt                       from './mutaions-types.js';
-import getters                  from './getter.js';
-import actions                  from './action.js';
-
-const state = {
+const State = {
     data_copy: {},
     data: {
         topbar: {
@@ -21,18 +20,18 @@ const state = {
     }
 };
 
-const mutations = {
-    [mt.MERGE_DATA] ( state, newdata ) {
-        state.data_copy = Vue.api.copy( state.data );           //备份，做重置覆盖使用
+const Mutations = {
+    [MT.MERGE_DATA] ( state, newdata ) {
+        state.data_copy = Vue.api.copy( state.data );       //备份，做重置覆盖使用
         state.data = Object.assign( state.data, newdata );
     }
 };
 
 export default new Vuex.Store({
-    state,
-    mutations,
-    getters,
-    actions
+    State,
+    Mutations,
+    Getters,
+    Actions
 });
 
 

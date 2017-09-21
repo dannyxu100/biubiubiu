@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
+<% var hwppejs = htmlWebpackPlugin.options.ejs %>
 <html>
     <head>
-        <title><%=title%></title>
+        <title><%=hwppejs.title%></title>
         <!-- <link rel="stylesheet" href="/css/style.css"/> -->
     </head>
     <body>
@@ -29,5 +29,5 @@
                 <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
             </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?8ec4a1aebbd1a2962bc9"></script></body>
+    </body>
 </html>

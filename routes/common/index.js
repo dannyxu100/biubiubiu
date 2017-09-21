@@ -1,13 +1,13 @@
-var tools       = global.tools;
-var express     = tools.require('express');
-var router      = express.Router();
+const tools       = global.tools;
+const express     = tools.require('express'),
+      router      = express.Router();
 
-var Rtn         = tools.require('/models/comm/Rtn');
-var User        = tools.require('/models/home/User');
+const Rtn         = tools.require('/models/comm/Rtn'),
+      User        = tools.require('/models/home/User');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('home/index', { title: 'biubiubiu~' });
+	res.render('home/index.ejs', { title: 'biubiubiu~' });
 });
 
 module.exports = router;

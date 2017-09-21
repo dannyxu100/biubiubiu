@@ -119,13 +119,20 @@
 
 //tab键切换焦点
 .prefix-tabfocus() {
-	// Default
-	outline: thin dotted;
-	// WebKit
-	outline: 2px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+    // Default
+    outline: thin dotted;
+    // WebKit
+    outline: 2px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 
-	outline: none;
+    outline: none;
+}
+//浏览器默认样式
+.prefix-appearance(@mode:none) {
+	// firefox
+    -moz-appearance: @mode;
+    // webkit
+	-webkit-appearance: @mode;
 }
 
 

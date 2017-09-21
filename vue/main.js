@@ -5,23 +5,16 @@ Vue.use(Vuex);
 Vue.use(VueRouter);
 
 //组件
-import Topbar                   from '_PLUGIN_/topbar.vue';
-import Leftbar                  from '_PLUGIN_/leftbar.vue';
+// import CMyComponent            from '_PLUGIN_/mycomponent.vue';
+import CLeftpad                 from '_APPS_/home/leftpad.vue';
+import CLeftpadSmall            from '_APPS_/home/leftpadsmall.vue';
 
 //路由
-import Home                     from '_APPS_/home/index.vue';
-import Admin                    from '_APPS_/admin/index.vue';
-const ROUTELIST = [
-    { path: '/',                component: Home },
-    { path: '/admin',           component: Admin }
-];
-const router = new VueRouter({
-    routes: ROUTELIST
-});
+import Router                   from '_ROUTER_/index.js';
 
 
 //Vuex
-import store                                from '_STORE_/store.js';
+import Store                                from '_STORE_/store.js';
 import { mapGetters, mapActions }           from 'vuex';
 
 
@@ -32,23 +25,25 @@ import { mapGetters, mapActions }           from 'vuex';
 window.vueapp = new Vue({
 	el: '#vueapp',
     components: {
-        topbar: Topbar,
-        leftbar: Leftbar
+        'c-leftpad':            CLeftpad,
+        'c-leftpadsmall':       CLeftpadSmall
     },
-    router,
-    store,
-    computed: {
-        test() {
-            return 1111;
-        },
-        ...mapGetters({
-            topbar: 'topbar',
-            leftbar: 'leftbar',
-            leftbarsmall: 'leftbarsmall'
-        })
-    },
+    router: Router,
+    store: Store,
     data() {
         return {};
+    },
+    computed: {
+        ...mapGetters([
+            'topbar',
+            'leftbar',
+            'leftbarsmall'
+        ])
+    },
+    methods: {
+        ...mapActions([
+            'toggle_leftbar'
+        ])
     },
     created(){
         // debugger;

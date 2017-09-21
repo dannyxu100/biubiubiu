@@ -1,48 +1,46 @@
 <style lang="less">
     @import "../../less/mixins/prefix.less";
-    body {
-        .prefix-transition();
-        & *{
-            font-size: 22px;
-        }
-    }
+
+    // body {
+    //     .prefix-transition();
+    //     & *{
+    //         font-size: 22px;
+    //     }
+    // }
     .wrapper {
-        background-image: url(/vue/images/bg.jpg);
+        // background-image: url(/public/images/avatar.png);
         background-repeat: no-repeat;
+    }
+    .homepage {
+        background: #fff;
     }
 </style>
 
 <template>
-	<div class="wrapper wrapper-box">
-        welcome to you! {{mode}}
-        <button @click="open">开</button>
-        <button @click="close">关</button>
+	<div class="homepage wrapper wrapper-box">
+        welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}}
 	</div>
 </template>
 
 <script>
-    // import "./../less/run.less";
     import {mapGetters, mapActions}         from 'vuex';
+
 	export default {
         components: {},
         data() {
             return {
 				mode: 'HOME',
-				userid4modal: '',
+				userid4modal: '333',
 				showdetail: false
 			}
         },
         computed: {},
-		created() {},
-        methods:{
-            //展开左栏
-            open(){
-
-            },
-            //收起左栏
-            close(){
-
-            }
-        }
+        methods: {
+            //收起展开左栏
+            // ...mapActions([
+            //     'toggle_leftbar'
+            // ])
+        },
+        created() {}
     }
 </script>
