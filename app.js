@@ -30,9 +30,10 @@ app.set('view engine', 'ejs');
 //Webpack打包
 const WEBPACKCONFIG = tools.require('/config/webpack.config.js');
 var compiler;
+
 if ('production' === process.env.NODE_ENV) {
     compiler = webpack(WEBPACKCONFIG, (err, stats)=>{
-        console.log(err);
+        console.log('webpack err:'+ err);
     });
 }
 if ('development' === process.env.NODE_ENV) {
@@ -47,16 +48,23 @@ if ('development' === process.env.NODE_ENV) {
     });
     const hot_middleware = tools.require('webpack-hot-middleware')(compiler, {
         log: console.log,
-        heartbeat: 2000
+        path: '/__webpack_hmr',
+        heartbeat: 2*1000
     });
-    //监听打包事件
+
+    /*// force page reload when html-webpack-plugin template changes
+    // currently disabled until this is resolved:
+    // https://github.com/jantimon/html-webpack-plugin/issues/680
     compiler.plugin('compilation', (compilation)=>{
+        console.log(1111111111);
         compilation.plugin('html-webpack-plugin-after-emit', (data, callback)=>{
             //发布事件 reload,这个事件会在config/webpack-dev-client.js中接受到，然后刷新
+            console.log(1111111111);
             hot_middleware.publish({action:'reload'});
             callback();
         });
-    });
+    });*/
+    console.log(1111111111);
     app.use(dev_middleware);
     app.use(hot_middleware);
 }

@@ -1,4 +1,4 @@
-const tools             = global.tools;
+const tools             = require('../libs/tools');
 const path              = tools.require('path'),
       webpack           = tools.require('webpack');
 

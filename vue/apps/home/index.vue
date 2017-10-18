@@ -12,7 +12,8 @@
         background-repeat: no-repeat;
     }
     .homepage {
-        background: #fff;
+        // background: #fff;
+        color: #fff;
     }
 </style>
 
