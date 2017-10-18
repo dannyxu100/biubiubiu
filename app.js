@@ -64,7 +64,7 @@ if ('development' === process.env.NODE_ENV) {
             callback();
         });
     });*/
-    console.log(1111111111);
+    // console.log(1111111111);
     app.use(dev_middleware);
     app.use(hot_middleware);
 }

@@ -7,6 +7,12 @@ const Rtn         = tools.require('/models/comm/Rtn'),
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    res.render('admin/index.ejs', { title: 'biubiubiu管理' });
+});
+router.get('/admin', function(req, res, next) {
+    res.render('admin/index.ejs', { title: 'biubiubiu管理' });
+});
+router.get('/home', function(req, res, next) {
 	res.render('home/index.ejs', { title: 'biubiubiu~' });
 });
 

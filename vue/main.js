@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 
 //组件
 // import CMyComponent            from '_PLUGIN_/mycomponent.vue';
-import CLeftpad                 from '_APPS_/home/leftpad.vue';
-import CLeftpadSmall            from '_APPS_/home/leftpadsmall.vue';
+import CLeftpad                 from '_APPS_/common/leftpad.vue';
+import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
 
 //路由
 import Router                   from '_ROUTER_/index.js';
@@ -31,7 +31,10 @@ window.vueapp = new Vue({
     router: Router,
     store: Store,
     data() {
-        return {};
+        return {
+            navlist: [],
+            currentnav: '',
+        };
     },
     computed: {
         ...mapGetters([
@@ -43,10 +46,28 @@ window.vueapp = new Vue({
     methods: {
         ...mapActions([
             'toggle_leftbar'
-        ])
+        ]),
+        //切换nav
+        switchnav(item) {
+            this.currentnav = item.name;
+            this.$router.push(item.path);
+        }
     },
     created(){
         // debugger;
         // this.actions.marge_data();
+        this.navlist = [{
+            name: '模块',
+            path: '/admin-module',
+        }, {
+            name: '角色',
+            path: '/admin-roles',
+        }, {
+            name: '权限',
+            path: '/admin-power',
+        }, {
+            name: '系统配置',
+            path: '/admin-setting'
+        }];
     }
 });

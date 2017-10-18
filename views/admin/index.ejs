@@ -8,7 +8,21 @@
     </head>
     <body>
         <div id="vueapp" class="vueapp" :class="{small: leftbarsmall.show}">
-            <router-view></router-view>
+            <div class="adminpage wrapper">
+                <div class="topnavs">
+                    <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
+                    <a class="nav home" @click="switchnav('HOME')">
+                        <i class="iconfont icon-home"></i>
+                    </a>
+                    <template v-for="(item,idx) in navlist">
+                        <a class="nav" :class="{active: currentnav===item.name}" @click="switchnav(item)">{{item.name}}</a>
+                    </template>
+                </div>
+                <div></div>
+                <div class="content">
+                    <router-view></router-view>
+                </div>
+            </div>
 
             <transition name="leftbar">
                 <div class="leftbar" v-show="leftbar.show">

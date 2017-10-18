@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-
+<% var hwppejs = htmlWebpackPlugin.options.ejs %>
 <html>
     <head>
-        <title><%=title%></title>
+        <title><%=hwppejs.title%></title>
         <link rel="stylesheet" href="/public/css/iconfont.css"/>
         <!-- <link rel="stylesheet" href="/public/css/style.css"/> -->
     </head>
     <body>
         <div id="vueapp" class="vueapp" :class="{small: leftbarsmall.show}">
-            <router-view></router-view>
+            <div class="adminpage wrapper">
+                <div class="topnavs">
+                    <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
+                    <a class="nav home" @click="switchnav('HOME')">
+                        <i class="iconfont icon-home"></i>
+                    </a>
+                    <template v-for="(item,idx) in navlist">
+                        <a class="nav" :class="{active: currentnav===item.name}" @click="switchnav(item)">{{item.name}}</a>
+                    </template>
+                </div>
+                <div></div>
+                <div class="content">
+                    <router-view></router-view>
+                </div>
+            </div>
 
             <transition name="leftbar">
                 <div class="leftbar" v-show="leftbar.show">
@@ -30,5 +44,5 @@
                 <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
             </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?71b10a8982fc13dc1d84"></script></body>
+    </body>
 </html>

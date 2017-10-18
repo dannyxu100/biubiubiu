@@ -30,9 +30,11 @@
             }
             .avatar-image {
                 margin: 60px auto 0;
-                width: 80px;
-                height: 80px;
+                width: 92px;
+                height: 92px;
                 background-color: rgba(255,255,255,.9);
+                background-repeat: no-repeat;
+                background-size: cover;
                 .prefix-border-radius(50px);
             }
         }
@@ -43,7 +45,7 @@
 	<div class="leftpad wrapper">
         <div class="avatarbox">
             <button class="btn-toggle" @click="toggle_leftbar()">=</button>
-            <div class="avatar-image"></div>
+            <div class="avatar-image" style="background-image:url(/public/images/avatar.png)"></div>
         </div>
 	</div>
 </template>

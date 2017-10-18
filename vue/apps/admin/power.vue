@@ -5,9 +5,7 @@
 
 <template>
     <div class="wrapper wrapper-box">
-        <div>
-            <div><i class="iconfont icon-home"></i></div>
-        </div>
+    权限管理
     </div>
 </template>
 

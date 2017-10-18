@@ -99,6 +99,25 @@ module.exports = {
             // chunks              : [],
             // excludeChunks       : [],
             // chunksSortMode      : 'auto'
+        }),
+        //
+        new HtmlWebpackPlugin({
+            filename            : R('../views/admin/index.ejs'),
+            template            : R('../views/template/admin-index.tmpl'),
+            // templateContent     : '',
+            ejs                 : {
+                title           : '<%=title%>'
+            },
+            // title               : 'biubiubiu~~~',
+            // favicon             : 'static/images/favicon.png',
+            // inject              : true,
+            minify              : false,
+            hash                : true,
+            // cache               : true,
+            // showErrors          : true,
+            // chunks              : [],
+            // excludeChunks       : [],
+            // chunksSortMode      : 'auto'
         })
     ]
 };
