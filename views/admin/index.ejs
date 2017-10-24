@@ -3,6 +3,7 @@
 <html>
     <head>
         <title><%=title%></title>
+        <link rel="stylesheet" href="/public/css/prime/prime.min.css"/>
         <link rel="stylesheet" href="/public/css/iconfont.css"/>
         <!-- <link rel="stylesheet" href="/public/css/style.css"/> -->
     </head>
@@ -11,7 +12,7 @@
             <div class="adminpage wrapper">
                 <div class="topnavs">
                     <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
-                    <a class="nav home" @click="switchnav('HOME')">
+                    <a class="nav home" @click="switchnav({name:'HOME', path:'/admin'})">
                         <i class="iconfont icon-home"></i>
                     </a>
                     <template v-for="(item,idx) in navlist">
@@ -44,5 +45,5 @@
                 <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
             </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?71b10a8982fc13dc1d84"></script></body>
+    <script type="text/javascript" src="/public/dist/vue-main.js?ff613a29ab4e99456059"></script></body>
 </html>

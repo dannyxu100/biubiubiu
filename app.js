@@ -48,7 +48,6 @@ if ('development' === process.env.NODE_ENV) {
     });
     const hot_middleware = tools.require('webpack-hot-middleware')(compiler, {
         log: console.log,
-        path: '/__webpack_hmr',
         heartbeat: 2*1000
     });
 

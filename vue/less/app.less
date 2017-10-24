@@ -1,6 +1,7 @@
 // 混合
 @import "mixins/prefix.less";
 @import "mixins/common.less";
+@import "mixins/normalize.less";
 
 /************************** 通用动画相关 **************************/
 .fade-transition {}
@@ -20,14 +21,13 @@
 });
 
 
-.slide-transition {}
-.slide-enter {
+.slide-enter-active {
     .prefix-transformorigin( left top );
-    .prefix-animation( slide-down .15s ease-out );
+    .prefix-animation( slide-down .15s linear );
 }
-.slide-leave {
+.slide-leave-active {
     .prefix-transformorigin( left top );
-    .prefix-animation( slide-up .15s ease-in );
+    .prefix-animation( slide-up .15s linear );
 }
 .prefix-keyframes(slide-down, {
     0% {
@@ -109,7 +109,7 @@ textarea {
     overflow-y: auto;
 }
 .wrapper-box {
-    padding: 10px;
+    padding: 20px;
     // background: rgba(255,255,255,.9);
     // .prefix-border-radius(10px);
     // .prefix-box-shadow(0 5px 50px rgba(0,0,0,.2));
@@ -152,7 +152,7 @@ textarea {
     left: 0;
     bottom: 0;
     width: 240px;
-    background: rgba(240, 245, 255, .8);
+    background: rgba(240, 245, 255, .9);
     // .prefix-gradient(240deg, rgba(255, 255, 255, .2), rgba(52, 138, 199, .2));
     // .prefix-gradient(240deg, rgba(116, 116, 191, .5), rgba(52, 138, 199, .8));
     .prefix-box-shadow(0 5px 50px rgba(0,0,0,.2));
@@ -197,33 +197,36 @@ textarea {
         top: 0;
         left: 0;
         right: 0;
+        // padding-left: 20px;
         height: 50px;
         background: rgba(255,255,255,.2);
-        // padding-left: 20px;
         font-size: 0;
+        // .prefix-box-shadow(0 2px 5px 1px rgba(0, 166, 124,.1));
         .nav {
             display: inline-block;
             padding: 0 20px;
             height: 50px;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 700;
             line-height: 50px;
-            color: #fff;
+            color: rgb(188, 255, 248);
             cursor: pointer;
-            .prefix-transition();
+            text-decoration: none;
+            .prefix-transition(all linear .2s);
             &:hover {
+                color: rgb(255, 255, 255);
                 background: rgba(255,255,255,.2);
             }
             &.active {
-                color: #37e3d6;
+                color: rgb(0, 169, 180);
                 background: rgba(255,255,255,1);
                 cursor: default;
             }
             &.home {
                 padding: 0 16px;
-                color: #b6fffb;
-                cursor: pointer;
-                &:hover {
-                    color: #fff;
+                .iconfont {
+                    font-size: 24px;
+                    vertical-align: middle;
                 }
             }
         }

@@ -141,7 +141,7 @@
 //
 // Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
 // supported browsers that have box shadow capabilities now support it.
-.prefix-box-shadow(@shadow) {
+.prefix-box-shadow(@shadow:0 3px 10px 2px rgba(0,0,0,.05)) {
 	-webkit-box-shadow: @shadow;	// iOS <4.3 & Android <4.1
 	-ms-box-shadow: @shadow;		//IE11
 	-moz-box-shadow: @shadow;		//firefox
@@ -186,9 +186,9 @@
   background: linear-gradient(@angle,@start,@stop);
 }
 //镜像渐变背景
-.prefix-gradient-radial(@positionorangle:bottom left,@shapeorsize:circle,@color_stop1:#000000,@color_stop2:#d2f726 ,@color_stop13:#dd2222 ){
-  background: -moz-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop13);
-  background: -webkit-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop13);
+.prefix-gradient-radial(@positionorangle:bottom left,@shapeorsize:circle,@color_stop1:#000000,@color_stop2:#d2f726 ,@color_stop3:#dd2222 ){
+  background: -moz-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop3);
+  background: -webkit-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop3);
 }
 
 

@@ -57,8 +57,8 @@ window.vueapp = new Vue({
         // debugger;
         // this.actions.marge_data();
         this.navlist = [{
-            name: '模块',
-            path: '/admin-module',
+            name: '用户',
+            path: '/admin-users',
         }, {
             name: '角色',
             path: '/admin-roles',

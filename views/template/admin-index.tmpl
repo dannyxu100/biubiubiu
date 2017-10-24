@@ -3,6 +3,7 @@
 <html>
     <head>
         <title><%=hwppejs.title%></title>
+        <link rel="stylesheet" href="/public/css/prime/prime.min.css"/>
         <link rel="stylesheet" href="/public/css/iconfont.css"/>
         <!-- <link rel="stylesheet" href="/public/css/style.css"/> -->
     </head>
@@ -11,7 +12,7 @@
             <div class="adminpage wrapper">
                 <div class="topnavs">
                     <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
-                    <a class="nav home" @click="switchnav('HOME')">
+                    <a class="nav home" @click="switchnav({name:'HOME', path:'/admin'})">
                         <i class="iconfont icon-home"></i>
                     </a>
                     <template v-for="(item,idx) in navlist">
