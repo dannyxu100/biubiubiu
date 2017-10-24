@@ -27,6 +27,7 @@
                     background-position: center;
                     background-size: 58px 58px;
                     .prefix-border-radius(9px);
+                    .prefix-box-shadow(0 3px 5px 0 rgba(19, 74, 94,.1));
                     .prefix-transition();
                 }
                 .tit {

@@ -97,22 +97,28 @@
         .menus-box {
             .menus-group {
                 .groupname {
-                    margin: 20px 20px 5px;
+                    margin: 25px 20px 0;
                     font-size: 12px;
                     // color: rgb(0, 188, 182);
-                    color: rgb(0, 106, 102);
+                    color: rgb(0, 68, 90);
                 }
                 .menu {
                     .name {
                         position: relative;
                         display: block;
-                        padding: 15px 20px;
-                        color: #666;
+                        padding: 13px 20px;
                         font-size: 15px;
+                        color: rgb(60, 122, 145);
                         cursor: pointer;
                         text-decoration: none;
+                        .prefix-transition();
+                        &:hover,
+                        &.active {
+                            color: rgb(19, 74, 94);
+                        }
                         i {
                             margin-right: 10px;
+                            font-size: 16px;
                         }
                     }
                     .child {
@@ -121,10 +127,10 @@
                     }
                     &.haschild {
                         .name {
-                            padding: 6px 20px;
+                            padding: 4px 20px;
                         }
                         & > .name {
-                            padding: 15px 20px;
+                            padding: 13px 20px;
                             &:after {
                                 position: absolute;
                                 top: 0;
@@ -134,18 +140,18 @@
                                 height: 50px;
                                 line-height: 50px;
                                 text-align: center;
-                                color: #999;
+                                color: rgb(106, 148, 164);
                                 font-family: "iconfont" !important;
-                                font-size: 16px;
+                                font-size: 20px;
                                 font-style: normal;
                                 -webkit-font-smoothing: antialiased;
                                 -moz-osx-font-smoothing: grayscale;
-                                content: "\e6dd";                       //.icon-right
-                                // .prefix-transform(rotate(90deg));       //旋转向下
+                                content: "\e64d";                           //
+                                // .prefix-transform(rotate(90deg));        //旋转向下
                             }
                             &.active {
                                 &:after {
-                                    color: rgb(0, 106, 102);
+                                    color: rgb(19, 74, 94);
                                 }
                             }
                         }
@@ -174,20 +180,35 @@
 
         <div class="menus-box">
             <div class="menus-group">
-                <div class="groupname">常用功能</div>
-
+                <div class="groupname"><!-- 常用功能 --></div>
                 <div class="menu">
-                    <a class="name" href="javascript:void(0)"><i class="iconfont icon-user"></i>修改密码</a>
-                </div>
-                <div class="menu">
-                    <a class="name" href="javascript:void(0)"><i class="iconfont icon-article"></i>发布文章</a>
+                    <a class="name" href="javascript:void(0)"><i class="iconfont icon-file-inverse"></i>发布文章</a>
                 </div>
             </div>
             <div class="menus-group">
-                <div class="groupname">全部模块</div>
+                <div class="groupname"><!-- 全部模块 --></div>
                 <div class="menu haschild">
-                    <span class="name" :class="{active:menu.modules}"
-                    @click="togglemenu('modules')"><i class="iconfont icon-module-fill"></i>功能模块</span>
+                    <span class="name" :class="{active:menu.theme}" @click="togglemenu('theme')">
+                        <i class="iconfont icon-theme-inverse"></i>主题样式
+                    </span>
+                    <transition name="slide">
+                    <div class="child" v-if="menu.theme" transition="slide">
+                        <div class="menu">
+                            <a class="name" href="javascript:void(0)">配色</a>
+                        </div>
+                        <div class="menu">
+                            <a class="name" href="javascript:void(0)">字体图标</a>
+                        </div>
+                        <div class="menu">
+                            <a class="name" href="javascript:void(0)">栅格</a>
+                        </div>
+                    </div>
+                    </transition>
+                </div>
+                <div class="menu haschild">
+                    <span class="name" :class="{active:menu.modules}" @click="togglemenu('modules')">
+                        <i class="iconfont icon-window-inverse"></i>功能模块
+                    </span>
                     <transition name="slide">
                     <div class="child" v-if="menu.modules" transition="slide">
                         <div class="menu">
@@ -200,8 +221,9 @@
                     </transition>
                 </div>
                 <div class="menu haschild">
-                    <span class="name" :class="{active:menu.all}"
-                    @click="togglemenu('all')"><i class="iconfont icon-article"></i>文章模块</span>
+                    <span class="name" :class="{active:menu.all}" @click="togglemenu('all')">
+                        <i class="iconfont icon-list"></i>文章模块
+                    </span>
                     <transition name="slide">
                     <div class="child" v-if="menu.all">
                         <div class="menu">
@@ -212,6 +234,15 @@
                         </div>
                     </div>
                     </transition>
+                </div>
+                <div class="menus-group">
+                    <div class="groupname"><!-- 其他 --></div>
+                    <div class="menu">
+                        <a class="name" href="javascript:void(0)"><i class="iconfont icon-lock-inverse"></i>修改密码</a>
+                    </div>
+                    <div class="menu">
+                        <a class="name" href="javascript:void(0)"><i class="iconfont icon-file-inverse"></i>退出登录</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -227,6 +258,7 @@
         data() {
             return {
                 menu: {
+                    theme: true,
                     modules: false,
                     all: false
                 }

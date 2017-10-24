@@ -4,7 +4,7 @@
     <head>
         <title><%=hwppejs.title%></title>
         <link rel="stylesheet" href="/public/css/prime/prime.min.css"/>
-        <link rel="stylesheet" href="/public/css/iconfont.css"/>
+        <!-- <link rel="stylesheet" href="/public/css/iconfont.css"/> -->
         <!-- <link rel="stylesheet" href="/public/css/style.css"/> -->
     </head>
     <body>
@@ -13,7 +13,7 @@
                 <div class="topnavs">
                     <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
                     <a class="nav home" @click="switchnav({name:'HOME', path:'/admin'})">
-                        <i class="iconfont icon-home"></i>
+                        <i class="iconfont icon-apps"></i>
                     </a>
                     <template v-for="(item,idx) in navlist">
                         <a class="nav" :class="{active: currentnav===item.name}" @click="switchnav(item)">{{item.name}}</a>
