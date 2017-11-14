@@ -1,11 +1,14 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
 import VueRouter                from 'vue-router';
+import Api                      from './js/api.js';
 Vue.use(Vuex);
 Vue.use(VueRouter);
+Vue.use(Api);
 
 //组件
 // import CMyComponent            from '_PLUGIN_/mycomponent.vue';
+import CNavsbar                 from '_APPS_/common/navsbar.vue';
 import CLeftpad                 from '_APPS_/common/leftpad.vue';
 import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
 
@@ -25,6 +28,7 @@ import { mapGetters, mapActions }           from 'vuex';
 window.vueapp = new Vue({
 	el: '#vueapp',
     components: {
+        'c-navsbar':            CNavsbar,
         'c-leftpad':            CLeftpad,
         'c-leftpadsmall':       CLeftpadSmall
     },
@@ -32,8 +36,10 @@ window.vueapp = new Vue({
     store: Store,
     data() {
         return {
-            navlist: [],
-            currentnav: '',
+            navs: {
+                list: [],
+                current: ''
+            }
         };
     },
     computed: {
@@ -46,27 +52,36 @@ window.vueapp = new Vue({
     methods: {
         ...mapActions([
             'toggle_leftbar'
-        ]),
-        //切换nav
-        switchnav(item) {
-            this.currentnav = item.name;
-            this.$router.push(item.path);
-        }
+        ])
     },
     created(){
         // debugger;
         // this.actions.marge_data();
-        this.navlist = [{
-            name: '用户',
+        this.navs.current = '';
+        this.navs.list = [{
+            value: '',
+            icon: 'icon-apps',
+            class: 'home',
+            path: '/admin',
+        }, {
+            value: '用户',
+            icon: '',
+            class: '',
             path: '/admin-users',
         }, {
-            name: '角色',
+            value: '角色',
+            icon: '',
+            class: '',
             path: '/admin-roles',
         }, {
-            name: '权限',
+            value: '权限',
+            icon: '',
+            class: '',
             path: '/admin-power',
         }, {
-            name: '系统配置',
+            value: '系统配置',
+            icon: '',
+            class: '',
             path: '/admin-setting'
         }];
     }

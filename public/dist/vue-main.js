@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2e509547efc2ee550251"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ed869c210644e955c8ca"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -713,7 +713,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(17)(__webpack_require__.s = 17);
+/******/ 	return hotCreateRequire(31)(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10949,7 +10949,7 @@ return Vue$3;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49)))
 
 /***/ }),
 /* 2 */
@@ -11894,7 +11894,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(33);
+var	fixUrls = __webpack_require__(47);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -12312,7 +12312,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/*normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */\n/**\n * 1. Change the default font family in all browsers (opinionated).\n * 2. Correct the line height in all browsers.\n * 3. Prevent adjustments of font size after orientation changes in IE and iOS.\n */\n/* Document\n   ========================================================================== */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  line-height: 1.15;\n  /* 2 */\n  -ms-text-size-adjust: 100%;\n  /* 3 */\n  -webkit-text-size-adjust: 100%;\n  /* 3 */\n}\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0;\n}\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block;\n}\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px;\n}\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */\n}\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */\n}\n/**\n * Remove the outline on focused links when they are also active or hovered\n * in all browsers (opinionated).\n */\na:active,\na:hover {\n  outline-width: 0;\n}\n/**\n * 1. Remove the bottom border in Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */\n}\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit;\n}\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n}\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic;\n}\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%;\n}\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsub {\n  bottom: -0.25em;\n}\nsup {\n  top: -0.5em;\n}\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block;\n}\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none;\n}\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden;\n}\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change font properties to `inherit` in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font: inherit;\n  /* 1 */\n  margin: 0;\n  /* 2 */\n}\n/**\n * Restore the font weight unset by the previous rule.\n */\noptgroup {\n  font-weight: bold;\n}\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible;\n}\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none;\n}\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n}\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n/**\n * Change the border, margin, and padding in all browsers (opinionated).\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */\n}\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */\n}\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto;\n}\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n}\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */\n}\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n}\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block;\n}\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item;\n}\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block;\n}\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none;\n}\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none;\n}\n/************************** 通用动画相关 **************************/\n.fade-enter {\n  -webkit-animation: fade-show 0.3s linear;\n  -moz-animation: fade-show 0.3s linear;\n  -ms-animation: fade-show 0.3s linear;\n  -o-animation: fade-show 0.3s linear;\n  animation: fade-show 0.3s linear;\n}\n.fade-leave {\n  -webkit-animation: fade-hide 0.3s linear;\n  -moz-animation: fade-hide 0.3s linear;\n  -ms-animation: fade-hide 0.3s linear;\n  -o-animation: fade-hide 0.3s linear;\n  animation: fade-hide 0.3s linear;\n}\n@-webkit-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-moz-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-ms-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-o-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-moz-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-ms-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-o-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.slide-enter-active {\n  -webkit-transform-origin: left top;\n  -moz-transform-origin: left top;\n  -o-transform-origin: left top;\n  -ms-transform-origin: left top;\n  transform-origin: left top;\n  -webkit-animation: slide-down 0.15s linear;\n  -moz-animation: slide-down 0.15s linear;\n  -ms-animation: slide-down 0.15s linear;\n  -o-animation: slide-down 0.15s linear;\n  animation: slide-down 0.15s linear;\n}\n.slide-leave-active {\n  -webkit-transform-origin: left top;\n  -moz-transform-origin: left top;\n  -o-transform-origin: left top;\n  -ms-transform-origin: left top;\n  transform-origin: left top;\n  -webkit-animation: slide-up 0.15s linear;\n  -moz-animation: slide-up 0.15s linear;\n  -ms-animation: slide-up 0.15s linear;\n  -o-animation: slide-up 0.15s linear;\n  animation: slide-up 0.15s linear;\n}\n@-webkit-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-moz-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-ms-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-o-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-webkit-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@-moz-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@-ms-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@-o-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n.imodal-enter {\n  -webkit-animation: margin-in 0.3s ease-out;\n  -moz-animation: margin-in 0.3s ease-out;\n  -ms-animation: margin-in 0.3s ease-out;\n  -o-animation: margin-in 0.3s ease-out;\n  animation: margin-in 0.3s ease-out;\n}\n.imodal-leave {\n  -webkit-animation: margin-out 0.3s ease-out;\n  -moz-animation: margin-out 0.3s ease-out;\n  -ms-animation: margin-out 0.3s ease-out;\n  -o-animation: margin-out 0.3s ease-out;\n  animation: margin-out 0.3s ease-out;\n}\n@-webkit-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-moz-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-ms-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-o-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-webkit-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@-moz-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@-ms-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@-o-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n.floatpad-transition {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n}\n.floatpad-enter {\n  -webkit-animation: right-in 0.3s ease-out;\n  -moz-animation: right-in 0.3s ease-out;\n  -ms-animation: right-in 0.3s ease-out;\n  -o-animation: right-in 0.3s ease-out;\n  animation: right-in 0.3s ease-out;\n}\n.floatpad-leave {\n  -webkit-animation: right-out 0.3s ease-in;\n  -moz-animation: right-out 0.3s ease-in;\n  -ms-animation: right-out 0.3s ease-in;\n  -o-animation: right-out 0.3s ease-in;\n  animation: right-out 0.3s ease-in;\n}\n@-webkit-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-moz-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-ms-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-o-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-webkit-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@-moz-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@-ms-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@-o-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n/************************* placeholder ************************/\n::-webkit-input-placeholder {\n  /* WebKit browsers */\n  color: #aaa;\n  font-size: 14px;\n}\n:-moz-placeholder {\n  /* Mozilla Firefox 4 to 18 */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\n::-moz-placeholder {\n  /* Mozilla Firefox 19+ */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\n:-ms-input-placeholder {\n  /* Internet Explorer 10+ */\n  color: #aaa;\n  font-size: 14px;\n}\ninput::-webkit-input-placeholder,\ntextarea::-webkit-input-placeholder {\n  /* WebKit browsers */\n  color: #aaa;\n  font-size: 14px;\n}\ninput:-moz-placeholder,\ntextarea:-moz-placeholder {\n  /* Mozilla Firefox 4 to 18 */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\ninput::-moz-placeholder,\ntextarea::-moz-placeholder {\n  /* Mozilla Firefox 19+ */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\ninput:-ms-input-placeholder,\ntextarea:-ms-input-placeholder {\n  /* Internet Explorer 10+ */\n  color: #aaa;\n  font-size: 14px;\n}\n/************************** 常用公共 **************************/\n.wrapper {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n}\n.wrapper-scroll {\n  overflow-y: auto;\n}\n.wrapper-box {\n  padding: 20px;\n}\n.vueapp {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding-left: 240px;\n  overflow: hidden;\n  background: -webkit-linear-gradient(225deg, #1bb3eb, #40f1d1);\n  background: -moz-linear-gradient(225deg, #1bb3eb, #40f1d1);\n  background: -o-linear-gradient(225deg, #1bb3eb, #40f1d1);\n  background: linear-gradient(225deg, #1bb3eb, #40f1d1);\n}\n.vueapp > .wrapper {\n  left: 260px;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  -webkit-transition: left ease-out 0.3s;\n  -ms-transition: left ease-out 0.3s;\n  -moz-transition: left ease-out 0.3s;\n  transition: left ease-out 0.3s;\n}\n.vueapp.small {\n  padding-left: 60px;\n}\n.vueapp.small > .wrapper {\n  left: 80px;\n}\n.topbar {\n  height: 50px;\n}\n.leftbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 240px;\n  background: rgba(240, 245, 255, 0.9);\n  -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);\n  -ms-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);\n  -moz-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);\n}\n.leftbar.small {\n  width: 60px;\n  background: rgba(240, 245, 255, 0.2);\n  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);\n  -ms-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);\n  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);\n  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);\n}\n.leftbar-enter-active {\n  left: -240px;\n  -webkit-animation: leftbar 0.3s ease-out 0.3s;\n  -moz-animation: leftbar 0.3s ease-out 0.3s;\n  -ms-animation: leftbar 0.3s ease-out 0.3s;\n  -o-animation: leftbar 0.3s ease-out 0.3s;\n  animation: leftbar 0.3s ease-out 0.3s;\n}\n.leftbar-leave-active {\n  -webkit-animation: leftbar 0.3s ease-out reverse;\n  -moz-animation: leftbar 0.3s ease-out reverse;\n  -ms-animation: leftbar 0.3s ease-out reverse;\n  -o-animation: leftbar 0.3s ease-out reverse;\n  animation: leftbar 0.3s ease-out reverse;\n}\n@-webkit-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-moz-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-ms-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-o-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n.leftbarsmall-enter-active {\n  left: -60px;\n  -webkit-animation: leftbarsmall 0.3s ease-out 0.3s;\n  -moz-animation: leftbarsmall 0.3s ease-out 0.3s;\n  -ms-animation: leftbarsmall 0.3s ease-out 0.3s;\n  -o-animation: leftbarsmall 0.3s ease-out 0.3s;\n  animation: leftbarsmall 0.3s ease-out 0.3s;\n}\n.leftbarsmall-leave-active {\n  -webkit-animation: leftbarsmall 0.3s ease-out reverse;\n  -moz-animation: leftbarsmall 0.3s ease-out reverse;\n  -ms-animation: leftbarsmall 0.3s ease-out reverse;\n  -o-animation: leftbarsmall 0.3s ease-out reverse;\n  animation: leftbarsmall 0.3s ease-out reverse;\n}\n@-webkit-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-moz-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-ms-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-o-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n.adminpage {\n  color: #fff;\n}\n.adminpage .topnavs {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 50px;\n  background: rgba(255, 255, 255, 0.2);\n  font-size: 0;\n}\n.adminpage .topnavs .nav {\n  display: inline-block;\n  padding: 0 20px;\n  height: 50px;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 50px;\n  color: #bcfff8;\n  cursor: pointer;\n  text-decoration: none;\n  -webkit-transition: all linear 0.2s;\n  -ms-transition: all linear 0.2s;\n  -moz-transition: all linear 0.2s;\n  transition: all linear 0.2s;\n}\n.adminpage .topnavs .nav:hover {\n  color: #ffffff;\n  background: rgba(255, 255, 255, 0.2);\n}\n.adminpage .topnavs .nav.active {\n  color: #00a9b4;\n  background: #ffffff;\n  cursor: default;\n}\n.adminpage .topnavs .nav.home {\n  padding: 0 16px;\n}\n.adminpage .topnavs .nav.home .iconfont {\n  font-size: 24px;\n  vertical-align: middle;\n}\n.adminpage .content {\n  position: absolute;\n  top: 50px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.1);\n}\n", ""]);
+exports.push([module.i, "/*normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */\n/**\n * 1. Change the default font family in all browsers (opinionated).\n * 2. Correct the line height in all browsers.\n * 3. Prevent adjustments of font size after orientation changes in IE and iOS.\n */\n/* Document\n   ========================================================================== */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  line-height: 1.15;\n  /* 2 */\n  -ms-text-size-adjust: 100%;\n  /* 3 */\n  -webkit-text-size-adjust: 100%;\n  /* 3 */\n}\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0;\n}\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block;\n}\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px;\n}\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */\n}\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */\n}\n/**\n * Remove the outline on focused links when they are also active or hovered\n * in all browsers (opinionated).\n */\na:active,\na:hover {\n  outline-width: 0;\n}\n/**\n * 1. Remove the bottom border in Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */\n}\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit;\n}\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n}\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic;\n}\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%;\n}\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsub {\n  bottom: -0.25em;\n}\nsup {\n  top: -0.5em;\n}\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block;\n}\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none;\n}\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden;\n}\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change font properties to `inherit` in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font: inherit;\n  /* 1 */\n  margin: 0;\n  /* 2 */\n}\n/**\n * Restore the font weight unset by the previous rule.\n */\noptgroup {\n  font-weight: bold;\n}\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible;\n}\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none;\n}\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n}\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n/**\n * Change the border, margin, and padding in all browsers (opinionated).\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */\n}\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */\n}\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto;\n}\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n}\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */\n}\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n}\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block;\n}\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item;\n}\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block;\n}\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none;\n}\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none;\n}\n/************************** 通用动画相关 **************************/\n.fade-enter-active {\n  -webkit-animation: fade-show 0.3s linear;\n  -moz-animation: fade-show 0.3s linear;\n  -ms-animation: fade-show 0.3s linear;\n  -o-animation: fade-show 0.3s linear;\n  animation: fade-show 0.3s linear;\n}\n.fade-leave-active {\n  -webkit-animation: fade-hide 0.3s linear;\n  -moz-animation: fade-hide 0.3s linear;\n  -ms-animation: fade-hide 0.3s linear;\n  -o-animation: fade-hide 0.3s linear;\n  animation: fade-hide 0.3s linear;\n}\n@-webkit-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-moz-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-ms-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-o-keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes fade-show {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-moz-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-ms-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-o-keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes fade-hide {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.slide-enter-active {\n  -webkit-transform-origin: left top;\n  -moz-transform-origin: left top;\n  -o-transform-origin: left top;\n  -ms-transform-origin: left top;\n  transform-origin: left top;\n  -webkit-animation: slide-down 0.15s linear;\n  -moz-animation: slide-down 0.15s linear;\n  -ms-animation: slide-down 0.15s linear;\n  -o-animation: slide-down 0.15s linear;\n  animation: slide-down 0.15s linear;\n}\n.slide-leave-active {\n  -webkit-transform-origin: left top;\n  -moz-transform-origin: left top;\n  -o-transform-origin: left top;\n  -ms-transform-origin: left top;\n  transform-origin: left top;\n  -webkit-animation: slide-up 0.15s linear;\n  -moz-animation: slide-up 0.15s linear;\n  -ms-animation: slide-up 0.15s linear;\n  -o-animation: slide-up 0.15s linear;\n  animation: slide-up 0.15s linear;\n}\n@-webkit-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-moz-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-ms-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-o-keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@keyframes slide-down {\n  0% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n}\n@-webkit-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@-moz-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@-ms-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@-o-keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n@keyframes slide-up {\n  0% {\n    -webkit-transform: scale(1, 1);\n    -moz-transform: scale(1, 1);\n    -o-transform: scale(1, 1);\n    -ms-transform: scale(1, 1);\n    transform: scale(1, 1);\n  }\n  100% {\n    -webkit-transform: scale(1, 0);\n    -moz-transform: scale(1, 0);\n    -o-transform: scale(1, 0);\n    -ms-transform: scale(1, 0);\n    transform: scale(1, 0);\n  }\n}\n.imodal-enter {\n  -webkit-animation: margin-in 0.3s ease-out;\n  -moz-animation: margin-in 0.3s ease-out;\n  -ms-animation: margin-in 0.3s ease-out;\n  -o-animation: margin-in 0.3s ease-out;\n  animation: margin-in 0.3s ease-out;\n}\n.imodal-leave {\n  -webkit-animation: margin-out 0.3s ease-out;\n  -moz-animation: margin-out 0.3s ease-out;\n  -ms-animation: margin-out 0.3s ease-out;\n  -o-animation: margin-out 0.3s ease-out;\n  animation: margin-out 0.3s ease-out;\n}\n@-webkit-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-moz-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-ms-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-o-keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@keyframes margin-in {\n  0% {\n    margin-top: -1000px;\n  }\n  100% {\n    margin-top: 0;\n  }\n}\n@-webkit-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@-moz-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@-ms-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@-o-keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n@keyframes margin-out {\n  0% {\n    margin-top: 0;\n  }\n  100% {\n    margin-top: -1000px;\n  }\n}\n.floatpad-transition {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n}\n.floatpad-enter {\n  -webkit-animation: right-in 0.3s ease-out;\n  -moz-animation: right-in 0.3s ease-out;\n  -ms-animation: right-in 0.3s ease-out;\n  -o-animation: right-in 0.3s ease-out;\n  animation: right-in 0.3s ease-out;\n}\n.floatpad-leave {\n  -webkit-animation: right-out 0.3s ease-in;\n  -moz-animation: right-out 0.3s ease-in;\n  -ms-animation: right-out 0.3s ease-in;\n  -o-animation: right-out 0.3s ease-in;\n  animation: right-out 0.3s ease-in;\n}\n@-webkit-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-moz-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-ms-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-o-keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@keyframes right-in {\n  0% {\n    margin-right: -1000px;\n  }\n  100% {\n    margin-right: 0;\n  }\n}\n@-webkit-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@-moz-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@-ms-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@-o-keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n@keyframes right-out {\n  0% {\n    margin-right: 0;\n  }\n  100% {\n    margin-right: -1000px;\n  }\n}\n/************************* placeholder ************************/\n::-webkit-input-placeholder {\n  /* WebKit browsers */\n  color: #aaa;\n  font-size: 14px;\n}\n:-moz-placeholder {\n  /* Mozilla Firefox 4 to 18 */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\n::-moz-placeholder {\n  /* Mozilla Firefox 19+ */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\n:-ms-input-placeholder {\n  /* Internet Explorer 10+ */\n  color: #aaa;\n  font-size: 14px;\n}\ninput::-webkit-input-placeholder,\ntextarea::-webkit-input-placeholder {\n  /* WebKit browsers */\n  color: #aaa;\n  font-size: 14px;\n}\ninput:-moz-placeholder,\ntextarea:-moz-placeholder {\n  /* Mozilla Firefox 4 to 18 */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\ninput::-moz-placeholder,\ntextarea::-moz-placeholder {\n  /* Mozilla Firefox 19+ */\n  color: #aaa;\n  font-size: 14px;\n  opacity: 1;\n}\ninput:-ms-input-placeholder,\ntextarea:-ms-input-placeholder {\n  /* Internet Explorer 10+ */\n  color: #aaa;\n  font-size: 14px;\n}\n/************************** 常用公共 **************************/\n.wrapper {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n}\n.wrapper-scroll {\n  overflow-y: auto;\n}\n.wrapper-box {\n  padding: 20px;\n}\n.wrapper-white {\n  background-color: #fff;\n  color: #333;\n}\n.vueapp {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding-left: 240px;\n  overflow: hidden;\n  background: -webkit-linear-gradient(225deg, #1bb3eb, #40f1d1);\n  background: -moz-linear-gradient(225deg, #1bb3eb, #40f1d1);\n  background: -o-linear-gradient(225deg, #1bb3eb, #40f1d1);\n  background: linear-gradient(225deg, #1bb3eb, #40f1d1);\n}\n.vueapp > .wrapper {\n  left: 260px;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  -webkit-transition: left ease-out 0.3s;\n  -ms-transition: left ease-out 0.3s;\n  -moz-transition: left ease-out 0.3s;\n  transition: left ease-out 0.3s;\n}\n.vueapp.small {\n  padding-left: 60px;\n}\n.vueapp.small > .wrapper {\n  left: 80px;\n}\n.topbar {\n  height: 50px;\n}\n.leftbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 240px;\n  background: rgba(240, 245, 255, 0.9);\n  -webkit-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);\n  -ms-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);\n  -moz-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);\n  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);\n}\n.leftbar.small {\n  width: 60px;\n  background: rgba(240, 245, 255, 0.2);\n  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);\n  -ms-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);\n  -moz-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);\n  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);\n}\n.leftbar-enter-active {\n  left: -240px;\n  -webkit-animation: leftbar 0.3s ease-out 0.3s;\n  -moz-animation: leftbar 0.3s ease-out 0.3s;\n  -ms-animation: leftbar 0.3s ease-out 0.3s;\n  -o-animation: leftbar 0.3s ease-out 0.3s;\n  animation: leftbar 0.3s ease-out 0.3s;\n}\n.leftbar-leave-active {\n  -webkit-animation: leftbar 0.3s ease-out reverse;\n  -moz-animation: leftbar 0.3s ease-out reverse;\n  -ms-animation: leftbar 0.3s ease-out reverse;\n  -o-animation: leftbar 0.3s ease-out reverse;\n  animation: leftbar 0.3s ease-out reverse;\n}\n@-webkit-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-moz-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-ms-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-o-keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@keyframes leftbar {\n  0% {\n    left: -240px;\n  }\n  100% {\n    left: 0;\n  }\n}\n.leftbarsmall-enter-active {\n  left: -60px;\n  -webkit-animation: leftbarsmall 0.3s ease-out 0.3s;\n  -moz-animation: leftbarsmall 0.3s ease-out 0.3s;\n  -ms-animation: leftbarsmall 0.3s ease-out 0.3s;\n  -o-animation: leftbarsmall 0.3s ease-out 0.3s;\n  animation: leftbarsmall 0.3s ease-out 0.3s;\n}\n.leftbarsmall-leave-active {\n  -webkit-animation: leftbarsmall 0.3s ease-out reverse;\n  -moz-animation: leftbarsmall 0.3s ease-out reverse;\n  -ms-animation: leftbarsmall 0.3s ease-out reverse;\n  -o-animation: leftbarsmall 0.3s ease-out reverse;\n  animation: leftbarsmall 0.3s ease-out reverse;\n}\n@-webkit-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-moz-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-ms-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@-o-keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n@keyframes leftbarsmall {\n  0% {\n    left: -60px;\n  }\n  100% {\n    left: 0;\n  }\n}\n.adminpage {\n  color: #fff;\n}\n.adminpage .topbar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 50px;\n  background: rgba(255, 255, 255, 0.2);\n}\n.adminpage .content {\n  position: absolute;\n  top: 50px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.1);\n}\n/************************** Prime demo **************************/\n/*!\n * prime v1.0.1 (https://github.com/dannyxu100/prime)\n * 版权所有 danny.xu\n */\n.wrapper-theme {\n  color: #333;\n  background: #ffffff;\n}\n.wrapper-theme .container {\n  width: 100%;\n  max-width: 1200px;\n}\nh1 {\n  font-size: 60px;\n}\n.section {\n  background: #fff;\n  padding: 20px;\n  margin-bottom: 30px;\n}\n.colorblock,\n.colorblock-min {\n  position: relative;\n  z-index: 1;\n  width: 100%;\n  height: 100px;\n  line-height: 20px;\n  font-size: 14px;\n  padding: 20px 0px;\n  text-align: center;\n  border: 0px;\n  -webkit-transition: all linear 0.125s;\n  -ms-transition: all linear 0.125s;\n  -moz-transition: all linear 0.125s;\n  transition: all linear 0.125s;\n}\n.colorblock.active {\n  border-bottom: 2px solid #A22613;\n}\n.colorblock-min {\n  height: 0px;\n  padding: 0px;\n  border: 15px solid #fff;\n  border-width: 15px 0 0;\n}\n.colorblock:not(.empty):hover,\n.colorblock-min:not(.empty):hover {\n  z-index: 2;\n  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.125);\n  -ms-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.125);\n  -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.125);\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.125);\n}\n.fillblock {\n  width: 100%;\n  font-size: 12px;\n  color: #666;\n  background: #eee;\n  border: 1px solid transparent;\n  padding: 5px 0px;\n  -webkit-transition: all linear 0.125s;\n  -ms-transition: all linear 0.125s;\n  -moz-transition: all linear 0.125s;\n  transition: all linear 0.125s;\n}\n.fillblock:hover {\n  border-color: #ddd;\n  background: #f5f5f5;\n  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);\n  -ms-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);\n  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);\n  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);\n}\n.fillblock:focus {\n  outline: none;\n}\n.rdsbox,\n.rdsboxp {\n  width: 80px;\n  height: 80px;\n  line-height: 80px;\n  background: #ddd;\n  border: 1px solid #ccc;\n  margin: 5px;\n  font-size: 12px;\n  text-align: center;\n}\n.rdsboxp {\n  background: #F5F5F5;\n  border: 1px solid #999;\n}\n.textbox5 {\n  padding-top: 0px;\n  padding-bottom: 0px;\n}\n.textbox10 {\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n.bgimg-light {\n  background: center url(/vue/images/prime/bg-1.png);\n}\n.bgimg-dark {\n  background: center url(/vue/images/prime/bg-2.png);\n}\n.bgimg-gray {\n  background: center url(/vue/images/prime/bg-3.png);\n}\n.demo-popmenuopen {\n  position: relative;\n  height: 260px;\n}\n.demo-popmenuopen > .popmenu {\n  display: block;\n}\n.demo-dlg {\n  position: relative;\n  height: 400px;\n}\n.demo-dlg .dlg {\n  position: absolute;\n}\n.demo-iconfont .iconfont,\n.demo-iconfont-sys .iconfont {\n  font-size: 26px;\n  margin: 20px;\n  color: #319DBB;\n  cursor: pointer;\n}\n.demo-iconfont .iconfont:hover {\n  color: #05C3F9;\n}\n.demo-iconfont-sys .iconfont {\n  color: #A22613;\n}\n.demo-iconfont-sys .iconfont:hover {\n  color: #F95339;\n}\n", ""]);
 
 // exports
 
@@ -12326,7 +12326,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n.leftpad .avatarbox {\n  display: inline-block;\n  position: relative;\n  width: 100%;\n  height: 220px;\n  background-image: url(/public/images/bg-star.png);\n}\n.leftpad .avatarbox:after {\n  content: \"\";\n  opacity: .9;\n  position: absolute;\n  z-index: 1;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: -webkit-linear-gradient(25deg, #00d0ff, #00ffc4);\n  background: -moz-linear-gradient(25deg, #00d0ff, #00ffc4);\n  background: -o-linear-gradient(25deg, #00d0ff, #00ffc4);\n  background: linear-gradient(25deg, #00d0ff, #00ffc4);\n}\n.leftpad .avatarbox .avatarbox-content {\n  position: absolute;\n  z-index: 2;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle {\n  position: absolute;\n  top: 0;\n  right: 0;\n  display: block;\n  padding: 0;\n  width: 50px;\n  height: 50px;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  background: rgba(255, 255, 255, 0);\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle:hover {\n  background: rgba(255, 255, 255, 0.3);\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle i {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  font-size: 26px;\n  color: #fff;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  -ms-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle i.active {\n  -webkit-transform: rotate(-90deg);\n  -moz-transform: rotate(-90deg);\n  -o-transform: rotate(-90deg);\n  -ms-transform: rotate(-90deg);\n  transform: rotate(-90deg);\n}\n.leftpad .avatarbox .avatarbox-content .avatar-image {\n  position: relative;\n  top: 0;\n  margin: 60px auto 0;\n  width: 64px;\n  height: 64px;\n  background-color: rgba(255, 255, 255, 0.9);\n  background-repeat: no-repeat;\n  background-size: cover;\n  -moz-border-radius: 50px;\n  -webkit-border-radius: 50px;\n  border-radius: 50px;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .avatarbox .avatarbox-content .avatar-image:hover {\n  top: -2px;\n  -webkit-box-shadow: 3px 10px 30px 3px #66ffe9;\n  -ms-box-shadow: 3px 10px 30px 3px #66ffe9;\n  -moz-box-shadow: 3px 10px 30px 3px #66ffe9;\n  box-shadow: 3px 10px 30px 3px #66ffe9;\n}\n.leftpad .avatarbox .avatarbox-content .avatar-name {\n  margin: 10px auto 0;\n  width: 160px;\n  text-align: center;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 700;\n  -moz-border-radius: 12px;\n  -webkit-border-radius: 12px;\n  border-radius: 12px;\n}\n.leftpad .avatarbox .avatarbox-content .avatar-remark {\n  margin: 3px auto 0;\n  width: 160px;\n  text-align: center;\n  color: #90ffe3;\n  font-size: 13px;\n}\n.leftpad .menus-box .menus-group .groupname {\n  margin: 25px 20px 0;\n  font-size: 12px;\n  color: #00445a;\n}\n.leftpad .menus-box .menus-group .menu .name {\n  position: relative;\n  display: block;\n  padding: 13px 20px;\n  font-size: 15px;\n  cursor: pointer;\n  text-decoration: none;\n}\n.leftpad .menus-box .menus-group .menu .name i {\n  margin-right: 10px;\n  font-size: 16px;\n}\n.leftpad .menus-box .menus-group .menu .child {\n  padding-left: 40px;\n  padding-bottom: 20px;\n}\n.leftpad .menus-box .menus-group .menu.haschild .name {\n  padding: 6px 20px;\n}\n.leftpad .menus-box .menus-group .menu.haschild > .name {\n  padding: 13px 20px;\n}\n.leftpad .menus-box .menus-group .menu.haschild > .name:after {\n  position: absolute;\n  top: 0;\n  right: 20px;\n  bottom: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  color: #999;\n  font-family: \"iconfont\" !important;\n  font-size: 20px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  content: \"\\E64D\";\n}\n.leftpad .menus-box .menus-group .menu.haschild > .name.active:after {\n  color: #006a66;\n}\n.leftpad .menus-box .menus-group > .menu {\n  border-bottom: 1px solid #bee2e7;\n}\n", ""]);
+exports.push([module.i, "\n.navbar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 50px;\n  background: rgba(255, 255, 255, 0.2);\n  font-size: 0;\n}\n.navbar .nav {\n  display: inline-block;\n  padding: 0 20px;\n  height: 50px;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 50px;\n  color: #bcfff8;\n  cursor: pointer;\n  text-decoration: none;\n  -webkit-transition: all linear 0.2s;\n  -ms-transition: all linear 0.2s;\n  -moz-transition: all linear 0.2s;\n  transition: all linear 0.2s;\n}\n.navbar .nav:hover {\n  color: #ffffff;\n  background: rgba(255, 255, 255, 0.2);\n}\n.navbar .nav.active {\n  color: #00a9b4;\n  background: #ffffff;\n  cursor: default;\n}\n.navbar .nav.home {\n  padding: 0 16px;\n}\n.navbar .nav.home .iconfont {\n  font-size: 16px;\n  font-weight: 400;\n  vertical-align: middle;\n}\n", ""]);
 
 // exports
 
@@ -12340,7 +12340,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n.leftpadsmall {\n  overflow: visible;\n}\n.leftpadsmall .btn-toggle {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0;\n  border: none;\n  background: rgba(255, 255, 255, 0.2);\n  cursor: pointer;\n  outline: none;\n  color: #fff;\n  font-size: 24px;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .btn-toggle:hover {\n  background: rgba(255, 255, 255, 0.4);\n}\n.leftpadsmall .btn-toggle i {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n  line-height: 52px;\n  font-size: 26px;\n  color: #fff;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  -ms-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .btn-toggle i.active {\n  -webkit-transform: rotate(90deg);\n  -moz-transform: rotate(90deg);\n  -o-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.leftpadsmall .appsbar {\n  margin: 0;\n  padding: 0;\n}\n.leftpadsmall .appsbar .appsbar-item {\n  position: relative;\n  left: 0;\n  margin: 10px auto;\n  width: 40px;\n  height: 40px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n  background-color: #ffffff;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 40px 40px;\n  cursor: pointer;\n  -moz-border-radius: 9px;\n  -webkit-border-radius: 9px;\n  border-radius: 9px;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .appsbar .appsbar-item .tip {\n  display: block;\n  opacity: 0;\n  position: absolute;\n  top: 7px;\n  left: 45px;\n  width: 0;\n  overflow: hidden;\n  height: 26px;\n  line-height: 26px;\n  white-space: nowrap;\n  font-size: 13px;\n  color: #ffffff;\n  background: rgba(0, 132, 176, 0.9);\n  -moz-border-radius: 13px;\n  -webkit-border-radius: 13px;\n  border-radius: 13px;\n  background: -webkit-linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  background: -moz-linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  background: -o-linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  background: linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -ms-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -moz-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .appsbar .appsbar-item:hover {\n  left: 2px;\n  background-color: #ffffff;\n  -webkit-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -ms-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -moz-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n}\n.leftpadsmall .appsbar .appsbar-item:hover .tip {\n  opacity: 1;\n  width: auto;\n  padding: 0 20px;\n}\n.leftpadsmall .appsbar-split {\n  margin: 10px auto;\n  width: 40px;\n  border-top: 1px solid rgba(255, 255, 255, 0.3);\n}\n", ""]);
+exports.push([module.i, "\n.leftpad .avatarbox {\n  display: inline-block;\n  position: relative;\n  width: 100%;\n  height: 220px;\n  background-image: url(/public/images/bg-star.png);\n}\n.leftpad .avatarbox:after {\n  content: \"\";\n  opacity: .9;\n  position: absolute;\n  z-index: 1;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: -webkit-linear-gradient(25deg, #00d0ff, #00ffc4);\n  background: -moz-linear-gradient(25deg, #00d0ff, #00ffc4);\n  background: -o-linear-gradient(25deg, #00d0ff, #00ffc4);\n  background: linear-gradient(25deg, #00d0ff, #00ffc4);\n}\n.leftpad .avatarbox .avatarbox-content {\n  position: absolute;\n  z-index: 2;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle {\n  position: absolute;\n  top: 0;\n  right: 0;\n  display: block;\n  padding: 0;\n  width: 50px;\n  height: 50px;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  background: rgba(255, 255, 255, 0);\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle:hover {\n  background: rgba(255, 255, 255, 0.3);\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle i {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  font-size: 22px;\n  color: #fff;\n  -webkit-transform: rotate(90deg);\n  -moz-transform: rotate(90deg);\n  -o-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .avatarbox .avatarbox-content .btn-toggle i.active {\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  -ms-transform: rotate(0deg);\n  transform: rotate(0deg);\n}\n.leftpad .avatarbox .avatarbox-content .avatar-image {\n  position: relative;\n  top: 0;\n  margin: 60px auto 0;\n  width: 64px;\n  height: 64px;\n  background-color: rgba(255, 255, 255, 0.9);\n  background-repeat: no-repeat;\n  background-size: cover;\n  -moz-border-radius: 50px;\n  -webkit-border-radius: 50px;\n  border-radius: 50px;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .avatarbox .avatarbox-content .avatar-image:hover {\n  top: -2px;\n  -webkit-box-shadow: 3px 10px 30px 3px #66ffe9;\n  -ms-box-shadow: 3px 10px 30px 3px #66ffe9;\n  -moz-box-shadow: 3px 10px 30px 3px #66ffe9;\n  box-shadow: 3px 10px 30px 3px #66ffe9;\n}\n.leftpad .avatarbox .avatarbox-content .avatar-name {\n  margin: 10px auto 0;\n  width: 160px;\n  text-align: center;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 700;\n  -moz-border-radius: 12px;\n  -webkit-border-radius: 12px;\n  border-radius: 12px;\n}\n.leftpad .avatarbox .avatarbox-content .avatar-remark {\n  margin: 3px auto 0;\n  width: 160px;\n  text-align: center;\n  color: #90ffe3;\n  font-size: 13px;\n}\n.leftpad .menusbox {\n  position: absolute;\n  top: 220px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.leftpad .menusbox .menus-group .groupname {\n  margin: 25px 20px 0;\n  font-size: 12px;\n  color: #00445a;\n}\n.leftpad .menusbox .menus-group .menu .name {\n  position: relative;\n  display: block;\n  padding: 13px 20px;\n  font-size: 15px;\n  color: #3c7a91;\n  cursor: pointer;\n  text-decoration: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpad .menusbox .menus-group .menu .name:hover,\n.leftpad .menusbox .menus-group .menu .name.active {\n  color: #134a5e;\n}\n.leftpad .menusbox .menus-group .menu .name i {\n  margin-right: 10px;\n  font-size: 16px;\n}\n.leftpad .menusbox .menus-group .menu .child {\n  padding-left: 40px;\n  padding-bottom: 20px;\n}\n.leftpad .menusbox .menus-group .menu.haschild .name {\n  padding: 4px 20px;\n}\n.leftpad .menusbox .menus-group .menu.haschild > .name {\n  padding: 13px 20px;\n}\n.leftpad .menusbox .menus-group .menu.haschild > .name:after {\n  position: absolute;\n  top: 0;\n  right: 20px;\n  bottom: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  color: #6a94a4;\n  font-family: \"iconfont\" !important;\n  font-size: 20px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  content: \"\\E64D\";\n}\n.leftpad .menusbox .menus-group .menu.haschild > .name.active:after {\n  color: #134a5e;\n}\n.leftpad .menusbox .menus-group > .menu {\n  border-bottom: 1px solid #bee2e7;\n}\n", ""]);
 
 // exports
 
@@ -12354,7 +12354,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n.apps-container {\n  margin: 20px;\n}\n.apps-container .apps-group {\n  padding: 20px 0 0;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.15);\n  font-size: 0;\n}\n.apps-container .apps-group .apps-item {\n  position: relative;\n  top: 0;\n  display: inline-block;\n  font-size: 14px;\n  margin-right: 20px;\n  margin-bottom: 20px;\n  text-decoration: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item .ico {\n  display: block;\n  margin: 0 auto 10px;\n  width: 58px;\n  height: 58px;\n  background-color: #ffffff;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 58px 58px;\n  -moz-border-radius: 9px;\n  -webkit-border-radius: 9px;\n  border-radius: 9px;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item .tit {\n  display: block;\n  position: relative;\n  z-index: 2;\n  width: 96px;\n  height: 26px;\n  line-height: 26px;\n  color: #1ab6ab;\n  font-size: 13px;\n  text-align: center;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item:after {\n  opacity: 0;\n  content: \"\";\n  display: block;\n  position: absolute;\n  z-index: 1;\n  top: 70px;\n  left: 48px;\n  bottom: 0;\n  right: 0;\n  width: 0;\n  -moz-border-radius: 13px;\n  -webkit-border-radius: 13px;\n  border-radius: 13px;\n  background: -webkit-linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  background: -moz-linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  background: -o-linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  background: linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item:hover {\n  top: -2px;\n}\n.apps-container .apps-group .apps-item:hover .ico {\n  background-color: #ffffff;\n  -webkit-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -ms-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -moz-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n}\n.apps-container .apps-group .apps-item:hover .tit {\n  color: #ffffff;\n}\n.apps-container .apps-group .apps-item:hover:after {\n  opacity: 1;\n  width: 96px;\n  left: 0;\n  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -ms-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -moz-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n}\n", ""]);
+exports.push([module.i, "\n.leftpadsmall {\n  overflow: visible;\n}\n.leftpadsmall .btn-toggle {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0;\n  border: none;\n  background: rgba(255, 255, 255, 0.2);\n  cursor: pointer;\n  outline: none;\n  color: #fff;\n  font-size: 24px;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .btn-toggle:hover {\n  background: rgba(255, 255, 255, 0.4);\n}\n.leftpadsmall .btn-toggle i {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  font-size: 22px;\n  color: #fff;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  -ms-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .btn-toggle i.active {\n  -webkit-transform: rotate(90deg);\n  -moz-transform: rotate(90deg);\n  -o-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.leftpadsmall .appsbar {\n  margin: 0;\n  padding: 0;\n}\n.leftpadsmall .appsbar .appsbar-item {\n  position: relative;\n  left: 0;\n  margin: 10px auto;\n  width: 40px;\n  height: 40px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n  background-color: #ffffff;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 40px 40px;\n  cursor: pointer;\n  list-style: none;\n  -moz-border-radius: 9px;\n  -webkit-border-radius: 9px;\n  border-radius: 9px;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .appsbar .appsbar-item .tip {\n  display: block;\n  opacity: 0;\n  position: absolute;\n  top: 7px;\n  left: 45px;\n  width: 0;\n  overflow: hidden;\n  height: 26px;\n  line-height: 26px;\n  white-space: nowrap;\n  font-size: 13px;\n  color: #ffffff;\n  background: rgba(0, 132, 176, 0.9);\n  -moz-border-radius: 13px;\n  -webkit-border-radius: 13px;\n  border-radius: 13px;\n  background: -webkit-linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  background: -moz-linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  background: -o-linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  background: linear-gradient(25deg, rgba(0, 79, 147, 0.8), rgba(0, 166, 124, 0.9));\n  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -ms-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -moz-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.leftpadsmall .appsbar .appsbar-item:hover {\n  left: 2px;\n  background-color: #ffffff;\n  -webkit-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -ms-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -moz-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n}\n.leftpadsmall .appsbar .appsbar-item:hover .tip {\n  opacity: 1;\n  width: auto;\n  padding: 0 20px;\n}\n.leftpadsmall .appsbar-split {\n  margin: 10px auto;\n  width: 40px;\n  border-top: 1px solid rgba(255, 255, 255, 0.3);\n}\n", ""]);
 
 // exports
 
@@ -12368,7 +12368,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n.toolsbar {\n  position: relative;\n  display: inline-table;\n  width: 100%;\n  margin-bottom: 20px;\n  font-size: 0;\n}\n.toolsbar .toolsbar-left,\n.toolsbar .toolsbar-middle,\n.toolsbar .toolsbar-right {\n  display: table-cell;\n  vertical-align: top;\n}\n.toolsbar .toolsbar-left {\n  text-align: left;\n  width: 33%;\n}\n.toolsbar .toolsbar-middle {\n  text-align: center;\n}\n.toolsbar .toolsbar-right {\n  text-align: right;\n  width: 33%;\n}\n.toolsbar .tool-item {\n  display: inline-block;\n  margin: 2px;\n  padding: 6px 20px;\n  border: none;\n  background: rgba(255, 255, 255, 0.4);\n  border-radius: 5px;\n  font-size: 14px;\n  color: #2d9293;\n  cursor: pointer;\n  outline: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.toolsbar .tool-item:hover {\n  background: rgba(255, 255, 255, 0.8);\n  color: #009899;\n  -webkit-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n  -ms-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n  -moz-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n}\n.toolsbar .tool-group {\n  display: inline-block;\n  border-radius: 5px;\n  overflow: hidden;\n  margin: 2px;\n}\n.toolsbar .tool-group:first-child {\n  margin-left: 0;\n}\n.toolsbar .tool-group .tool-item {\n  margin: 0;\n  border-left: 1px solid rgba(255, 255, 255, 0.3);\n  border-radius: 0;\n  white-space: nowrap;\n}\n.toolsbar .tool-group .tool-item:first-child {\n  border: none;\n}\n.grid table {\n  width: 100%;\n  border-top: 1px solid rgba(255, 255, 255, 0.1);\n  border-left: 1px solid rgba(255, 255, 255, 0.1);\n  border-collapse: collapse;\n}\n.grid table tr {\n  color: #d3fbff;\n  background: rgba(0, 0, 0, 0.5);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.grid table tbody tr:hover {\n  color: #ffffff;\n  background: rgba(0, 0, 0, 0.7);\n}\n.grid table th,\n.grid table td {\n  padding: 10px 15px;\n  font-size: 14px;\n  border-right: 1px solid rgba(255, 255, 255, 0.1);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n}\n.grid table th {\n  text-align: left;\n  font-size: 13px;\n  font-weight: 400;\n  color: #54c4c1;\n}\n.grid.grid-line {\n  border-left: none;\n}\n.grid.grid-line th,\n.grid.grid-line td {\n  border-right: none;\n}\n", ""]);
+exports.push([module.i, "\n.apps-container {\n  margin: 20px;\n}\n.apps-container .apps-group {\n  padding: 20px 0 0;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.15);\n  font-size: 0;\n}\n.apps-container .apps-group .apps-item {\n  position: relative;\n  top: 0;\n  display: inline-block;\n  font-size: 14px;\n  margin-right: 20px;\n  margin-bottom: 20px;\n  text-decoration: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item .ico {\n  display: block;\n  margin: 0 auto 10px;\n  width: 58px;\n  height: 58px;\n  background-color: #ffffff;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 58px 58px;\n  -moz-border-radius: 9px;\n  -webkit-border-radius: 9px;\n  border-radius: 9px;\n  -webkit-box-shadow: 0 3px 5px 0 rgba(19, 74, 94, 0.1);\n  -ms-box-shadow: 0 3px 5px 0 rgba(19, 74, 94, 0.1);\n  -moz-box-shadow: 0 3px 5px 0 rgba(19, 74, 94, 0.1);\n  box-shadow: 0 3px 5px 0 rgba(19, 74, 94, 0.1);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item .tit {\n  display: block;\n  position: relative;\n  z-index: 2;\n  width: 96px;\n  height: 26px;\n  line-height: 28px;\n  color: #1ab6ab;\n  font-size: 13px;\n  text-align: center;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item:after {\n  opacity: 0;\n  content: \"\";\n  display: block;\n  position: absolute;\n  z-index: 1;\n  top: 70px;\n  left: 48px;\n  bottom: 0;\n  right: 0;\n  width: 0;\n  -moz-border-radius: 13px;\n  -webkit-border-radius: 13px;\n  border-radius: 13px;\n  background: -webkit-linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  background: -moz-linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  background: -o-linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  background: linear-gradient(25deg, rgba(0, 79, 147, 0.7), rgba(0, 166, 124, 0.8));\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.apps-container .apps-group .apps-item:hover {\n  top: -2px;\n}\n.apps-container .apps-group .apps-item:hover .ico {\n  background-color: #ffffff;\n  -webkit-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -ms-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  -moz-box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n  box-shadow: 0 3px 30px 5px rgba(255, 255, 255, 0.5);\n}\n.apps-container .apps-group .apps-item:hover .tit {\n  color: #ffffff;\n}\n.apps-container .apps-group .apps-item:hover:after {\n  opacity: 1;\n  width: 96px;\n  left: 0;\n  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -ms-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  -moz-box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n  box-shadow: 0 5px 10px 3px rgba(0, 166, 124, 0.3);\n}\n", ""]);
 
 // exports
 
@@ -12382,7 +12382,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.toolsbar {\n  position: relative;\n  display: inline-table;\n  width: 100%;\n  margin-bottom: 20px;\n  font-size: 0;\n}\n.toolsbar .toolsbar-left,\n.toolsbar .toolsbar-middle,\n.toolsbar .toolsbar-right {\n  display: table-cell;\n  vertical-align: top;\n}\n.toolsbar .toolsbar-left {\n  text-align: left;\n  width: 33%;\n}\n.toolsbar .toolsbar-middle {\n  text-align: center;\n}\n.toolsbar .toolsbar-right {\n  text-align: right;\n  width: 33%;\n}\n.toolsbar .tool-item {\n  display: inline-block;\n  margin: 2px;\n  padding: 6px 20px;\n  border: none;\n  background: rgba(255, 255, 255, 0.4);\n  border-radius: 5px;\n  font-size: 14px;\n  color: #2d9293;\n  cursor: pointer;\n  outline: none;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.toolsbar .tool-item:hover {\n  background: rgba(255, 255, 255, 0.8);\n  color: #009899;\n  -webkit-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n  -ms-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n  -moz-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.05);\n}\n.toolsbar .tool-group {\n  display: inline-block;\n  border-radius: 5px;\n  overflow: hidden;\n  margin: 2px;\n}\n.toolsbar .tool-group:first-child {\n  margin-left: 0;\n}\n.toolsbar .tool-group .tool-item {\n  margin: 0;\n  border-left: 1px solid rgba(255, 255, 255, 0.3);\n  border-radius: 0;\n  white-space: nowrap;\n}\n.toolsbar .tool-group .tool-item:first-child {\n  border: none;\n}\n.grid table {\n  width: 100%;\n  border-top: 1px solid rgba(255, 255, 255, 0.1);\n  border-left: 1px solid rgba(255, 255, 255, 0.1);\n  border-collapse: collapse;\n}\n.grid table tr {\n  color: #d3fbff;\n  background: rgba(0, 0, 0, 0.5);\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.grid table tbody tr:hover {\n  color: #ffffff;\n  background: rgba(0, 0, 0, 0.7);\n}\n.grid table th,\n.grid table td {\n  padding: 10px 15px;\n  font-size: 14px;\n  border-right: 1px solid rgba(255, 255, 255, 0.1);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n}\n.grid table th {\n  text-align: left;\n  font-size: 13px;\n  font-weight: 400;\n  color: #54c4c1;\n}\n.grid.grid-line {\n  border-left: none;\n}\n.grid.grid-line th,\n.grid.grid-line td {\n  border-right: none;\n}\n", ""]);
 
 // exports
 
@@ -12410,13 +12410,209 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n.wrapper {\n  background-repeat: no-repeat;\n}\n.homepage {\n  color: #fff;\n}\n.homepage .topnavs {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 50px;\n  background: rgba(255, 255, 255, 0.2);\n  font-size: 0;\n}\n.homepage .topnavs .nav {\n  display: inline-block;\n  padding: 0 20px;\n  height: 50px;\n  font-size: 15px;\n  line-height: 50px;\n  color: #fff;\n  cursor: pointer;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.homepage .topnavs .nav:hover {\n  background: rgba(255, 255, 255, 0.2);\n}\n.homepage .topnavs .nav.active {\n  color: #37e3d6;\n  background: #ffffff;\n  cursor: default;\n}\n.homepage .topnavs .nav.home {\n  padding: 0 16px;\n  color: #b6fffb;\n  cursor: pointer;\n}\n.homepage .topnavs .nav.home:hover {\n  color: #fff;\n}\n.homepage .content {\n  position: absolute;\n  top: 50px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.1);\n}\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.wrapper {\n  background-repeat: no-repeat;\n}\n.homepage {\n  color: #fff;\n}\n.homepage .topnavs {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 50px;\n  background: rgba(255, 255, 255, 0.2);\n  font-size: 0;\n}\n.homepage .topnavs .nav {\n  display: inline-block;\n  padding: 0 20px;\n  height: 50px;\n  font-size: 15px;\n  line-height: 50px;\n  color: #fff;\n  cursor: pointer;\n  -webkit-transition: all linear 0.15s;\n  -ms-transition: all linear 0.15s;\n  -moz-transition: all linear 0.15s;\n  transition: all linear 0.15s;\n}\n.homepage .topnavs .nav:hover {\n  background: rgba(255, 255, 255, 0.2);\n}\n.homepage .topnavs .nav.active {\n  color: #37e3d6;\n  background: #ffffff;\n  cursor: default;\n}\n.homepage .topnavs .nav.home {\n  padding: 0 16px;\n  color: #b6fffb;\n  cursor: pointer;\n}\n.homepage .topnavs .nav.home:hover {\n  color: #fff;\n}\n.homepage .content {\n  position: absolute;\n  top: 50px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.1);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports) {
 
 var ENTITIES = [['Aacute', [193]], ['aacute', [225]], ['Abreve', [258]], ['abreve', [259]], ['ac', [8766]], ['acd', [8767]], ['acE', [8766, 819]], ['Acirc', [194]], ['acirc', [226]], ['acute', [180]], ['Acy', [1040]], ['acy', [1072]], ['AElig', [198]], ['aelig', [230]], ['af', [8289]], ['Afr', [120068]], ['afr', [120094]], ['Agrave', [192]], ['agrave', [224]], ['alefsym', [8501]], ['aleph', [8501]], ['Alpha', [913]], ['alpha', [945]], ['Amacr', [256]], ['amacr', [257]], ['amalg', [10815]], ['amp', [38]], ['AMP', [38]], ['andand', [10837]], ['And', [10835]], ['and', [8743]], ['andd', [10844]], ['andslope', [10840]], ['andv', [10842]], ['ang', [8736]], ['ange', [10660]], ['angle', [8736]], ['angmsdaa', [10664]], ['angmsdab', [10665]], ['angmsdac', [10666]], ['angmsdad', [10667]], ['angmsdae', [10668]], ['angmsdaf', [10669]], ['angmsdag', [10670]], ['angmsdah', [10671]], ['angmsd', [8737]], ['angrt', [8735]], ['angrtvb', [8894]], ['angrtvbd', [10653]], ['angsph', [8738]], ['angst', [197]], ['angzarr', [9084]], ['Aogon', [260]], ['aogon', [261]], ['Aopf', [120120]], ['aopf', [120146]], ['apacir', [10863]], ['ap', [8776]], ['apE', [10864]], ['ape', [8778]], ['apid', [8779]], ['apos', [39]], ['ApplyFunction', [8289]], ['approx', [8776]], ['approxeq', [8778]], ['Aring', [197]], ['aring', [229]], ['Ascr', [119964]], ['ascr', [119990]], ['Assign', [8788]], ['ast', [42]], ['asymp', [8776]], ['asympeq', [8781]], ['Atilde', [195]], ['atilde', [227]], ['Auml', [196]], ['auml', [228]], ['awconint', [8755]], ['awint', [10769]], ['backcong', [8780]], ['backepsilon', [1014]], ['backprime', [8245]], ['backsim', [8765]], ['backsimeq', [8909]], ['Backslash', [8726]], ['Barv', [10983]], ['barvee', [8893]], ['barwed', [8965]], ['Barwed', [8966]], ['barwedge', [8965]], ['bbrk', [9141]], ['bbrktbrk', [9142]], ['bcong', [8780]], ['Bcy', [1041]], ['bcy', [1073]], ['bdquo', [8222]], ['becaus', [8757]], ['because', [8757]], ['Because', [8757]], ['bemptyv', [10672]], ['bepsi', [1014]], ['bernou', [8492]], ['Bernoullis', [8492]], ['Beta', [914]], ['beta', [946]], ['beth', [8502]], ['between', [8812]], ['Bfr', [120069]], ['bfr', [120095]], ['bigcap', [8898]], ['bigcirc', [9711]], ['bigcup', [8899]], ['bigodot', [10752]], ['bigoplus', [10753]], ['bigotimes', [10754]], ['bigsqcup', [10758]], ['bigstar', [9733]], ['bigtriangledown', [9661]], ['bigtriangleup', [9651]], ['biguplus', [10756]], ['bigvee', [8897]], ['bigwedge', [8896]], ['bkarow', [10509]], ['blacklozenge', [10731]], ['blacksquare', [9642]], ['blacktriangle', [9652]], ['blacktriangledown', [9662]], ['blacktriangleleft', [9666]], ['blacktriangleright', [9656]], ['blank', [9251]], ['blk12', [9618]], ['blk14', [9617]], ['blk34', [9619]], ['block', [9608]], ['bne', [61, 8421]], ['bnequiv', [8801, 8421]], ['bNot', [10989]], ['bnot', [8976]], ['Bopf', [120121]], ['bopf', [120147]], ['bot', [8869]], ['bottom', [8869]], ['bowtie', [8904]], ['boxbox', [10697]], ['boxdl', [9488]], ['boxdL', [9557]], ['boxDl', [9558]], ['boxDL', [9559]], ['boxdr', [9484]], ['boxdR', [9554]], ['boxDr', [9555]], ['boxDR', [9556]], ['boxh', [9472]], ['boxH', [9552]], ['boxhd', [9516]], ['boxHd', [9572]], ['boxhD', [9573]], ['boxHD', [9574]], ['boxhu', [9524]], ['boxHu', [9575]], ['boxhU', [9576]], ['boxHU', [9577]], ['boxminus', [8863]], ['boxplus', [8862]], ['boxtimes', [8864]], ['boxul', [9496]], ['boxuL', [9563]], ['boxUl', [9564]], ['boxUL', [9565]], ['boxur', [9492]], ['boxuR', [9560]], ['boxUr', [9561]], ['boxUR', [9562]], ['boxv', [9474]], ['boxV', [9553]], ['boxvh', [9532]], ['boxvH', [9578]], ['boxVh', [9579]], ['boxVH', [9580]], ['boxvl', [9508]], ['boxvL', [9569]], ['boxVl', [9570]], ['boxVL', [9571]], ['boxvr', [9500]], ['boxvR', [9566]], ['boxVr', [9567]], ['boxVR', [9568]], ['bprime', [8245]], ['breve', [728]], ['Breve', [728]], ['brvbar', [166]], ['bscr', [119991]], ['Bscr', [8492]], ['bsemi', [8271]], ['bsim', [8765]], ['bsime', [8909]], ['bsolb', [10693]], ['bsol', [92]], ['bsolhsub', [10184]], ['bull', [8226]], ['bullet', [8226]], ['bump', [8782]], ['bumpE', [10926]], ['bumpe', [8783]], ['Bumpeq', [8782]], ['bumpeq', [8783]], ['Cacute', [262]], ['cacute', [263]], ['capand', [10820]], ['capbrcup', [10825]], ['capcap', [10827]], ['cap', [8745]], ['Cap', [8914]], ['capcup', [10823]], ['capdot', [10816]], ['CapitalDifferentialD', [8517]], ['caps', [8745, 65024]], ['caret', [8257]], ['caron', [711]], ['Cayleys', [8493]], ['ccaps', [10829]], ['Ccaron', [268]], ['ccaron', [269]], ['Ccedil', [199]], ['ccedil', [231]], ['Ccirc', [264]], ['ccirc', [265]], ['Cconint', [8752]], ['ccups', [10828]], ['ccupssm', [10832]], ['Cdot', [266]], ['cdot', [267]], ['cedil', [184]], ['Cedilla', [184]], ['cemptyv', [10674]], ['cent', [162]], ['centerdot', [183]], ['CenterDot', [183]], ['cfr', [120096]], ['Cfr', [8493]], ['CHcy', [1063]], ['chcy', [1095]], ['check', [10003]], ['checkmark', [10003]], ['Chi', [935]], ['chi', [967]], ['circ', [710]], ['circeq', [8791]], ['circlearrowleft', [8634]], ['circlearrowright', [8635]], ['circledast', [8859]], ['circledcirc', [8858]], ['circleddash', [8861]], ['CircleDot', [8857]], ['circledR', [174]], ['circledS', [9416]], ['CircleMinus', [8854]], ['CirclePlus', [8853]], ['CircleTimes', [8855]], ['cir', [9675]], ['cirE', [10691]], ['cire', [8791]], ['cirfnint', [10768]], ['cirmid', [10991]], ['cirscir', [10690]], ['ClockwiseContourIntegral', [8754]], ['clubs', [9827]], ['clubsuit', [9827]], ['colon', [58]], ['Colon', [8759]], ['Colone', [10868]], ['colone', [8788]], ['coloneq', [8788]], ['comma', [44]], ['commat', [64]], ['comp', [8705]], ['compfn', [8728]], ['complement', [8705]], ['complexes', [8450]], ['cong', [8773]], ['congdot', [10861]], ['Congruent', [8801]], ['conint', [8750]], ['Conint', [8751]], ['ContourIntegral', [8750]], ['copf', [120148]], ['Copf', [8450]], ['coprod', [8720]], ['Coproduct', [8720]], ['copy', [169]], ['COPY', [169]], ['copysr', [8471]], ['CounterClockwiseContourIntegral', [8755]], ['crarr', [8629]], ['cross', [10007]], ['Cross', [10799]], ['Cscr', [119966]], ['cscr', [119992]], ['csub', [10959]], ['csube', [10961]], ['csup', [10960]], ['csupe', [10962]], ['ctdot', [8943]], ['cudarrl', [10552]], ['cudarrr', [10549]], ['cuepr', [8926]], ['cuesc', [8927]], ['cularr', [8630]], ['cularrp', [10557]], ['cupbrcap', [10824]], ['cupcap', [10822]], ['CupCap', [8781]], ['cup', [8746]], ['Cup', [8915]], ['cupcup', [10826]], ['cupdot', [8845]], ['cupor', [10821]], ['cups', [8746, 65024]], ['curarr', [8631]], ['curarrm', [10556]], ['curlyeqprec', [8926]], ['curlyeqsucc', [8927]], ['curlyvee', [8910]], ['curlywedge', [8911]], ['curren', [164]], ['curvearrowleft', [8630]], ['curvearrowright', [8631]], ['cuvee', [8910]], ['cuwed', [8911]], ['cwconint', [8754]], ['cwint', [8753]], ['cylcty', [9005]], ['dagger', [8224]], ['Dagger', [8225]], ['daleth', [8504]], ['darr', [8595]], ['Darr', [8609]], ['dArr', [8659]], ['dash', [8208]], ['Dashv', [10980]], ['dashv', [8867]], ['dbkarow', [10511]], ['dblac', [733]], ['Dcaron', [270]], ['dcaron', [271]], ['Dcy', [1044]], ['dcy', [1076]], ['ddagger', [8225]], ['ddarr', [8650]], ['DD', [8517]], ['dd', [8518]], ['DDotrahd', [10513]], ['ddotseq', [10871]], ['deg', [176]], ['Del', [8711]], ['Delta', [916]], ['delta', [948]], ['demptyv', [10673]], ['dfisht', [10623]], ['Dfr', [120071]], ['dfr', [120097]], ['dHar', [10597]], ['dharl', [8643]], ['dharr', [8642]], ['DiacriticalAcute', [180]], ['DiacriticalDot', [729]], ['DiacriticalDoubleAcute', [733]], ['DiacriticalGrave', [96]], ['DiacriticalTilde', [732]], ['diam', [8900]], ['diamond', [8900]], ['Diamond', [8900]], ['diamondsuit', [9830]], ['diams', [9830]], ['die', [168]], ['DifferentialD', [8518]], ['digamma', [989]], ['disin', [8946]], ['div', [247]], ['divide', [247]], ['divideontimes', [8903]], ['divonx', [8903]], ['DJcy', [1026]], ['djcy', [1106]], ['dlcorn', [8990]], ['dlcrop', [8973]], ['dollar', [36]], ['Dopf', [120123]], ['dopf', [120149]], ['Dot', [168]], ['dot', [729]], ['DotDot', [8412]], ['doteq', [8784]], ['doteqdot', [8785]], ['DotEqual', [8784]], ['dotminus', [8760]], ['dotplus', [8724]], ['dotsquare', [8865]], ['doublebarwedge', [8966]], ['DoubleContourIntegral', [8751]], ['DoubleDot', [168]], ['DoubleDownArrow', [8659]], ['DoubleLeftArrow', [8656]], ['DoubleLeftRightArrow', [8660]], ['DoubleLeftTee', [10980]], ['DoubleLongLeftArrow', [10232]], ['DoubleLongLeftRightArrow', [10234]], ['DoubleLongRightArrow', [10233]], ['DoubleRightArrow', [8658]], ['DoubleRightTee', [8872]], ['DoubleUpArrow', [8657]], ['DoubleUpDownArrow', [8661]], ['DoubleVerticalBar', [8741]], ['DownArrowBar', [10515]], ['downarrow', [8595]], ['DownArrow', [8595]], ['Downarrow', [8659]], ['DownArrowUpArrow', [8693]], ['DownBreve', [785]], ['downdownarrows', [8650]], ['downharpoonleft', [8643]], ['downharpoonright', [8642]], ['DownLeftRightVector', [10576]], ['DownLeftTeeVector', [10590]], ['DownLeftVectorBar', [10582]], ['DownLeftVector', [8637]], ['DownRightTeeVector', [10591]], ['DownRightVectorBar', [10583]], ['DownRightVector', [8641]], ['DownTeeArrow', [8615]], ['DownTee', [8868]], ['drbkarow', [10512]], ['drcorn', [8991]], ['drcrop', [8972]], ['Dscr', [119967]], ['dscr', [119993]], ['DScy', [1029]], ['dscy', [1109]], ['dsol', [10742]], ['Dstrok', [272]], ['dstrok', [273]], ['dtdot', [8945]], ['dtri', [9663]], ['dtrif', [9662]], ['duarr', [8693]], ['duhar', [10607]], ['dwangle', [10662]], ['DZcy', [1039]], ['dzcy', [1119]], ['dzigrarr', [10239]], ['Eacute', [201]], ['eacute', [233]], ['easter', [10862]], ['Ecaron', [282]], ['ecaron', [283]], ['Ecirc', [202]], ['ecirc', [234]], ['ecir', [8790]], ['ecolon', [8789]], ['Ecy', [1069]], ['ecy', [1101]], ['eDDot', [10871]], ['Edot', [278]], ['edot', [279]], ['eDot', [8785]], ['ee', [8519]], ['efDot', [8786]], ['Efr', [120072]], ['efr', [120098]], ['eg', [10906]], ['Egrave', [200]], ['egrave', [232]], ['egs', [10902]], ['egsdot', [10904]], ['el', [10905]], ['Element', [8712]], ['elinters', [9191]], ['ell', [8467]], ['els', [10901]], ['elsdot', [10903]], ['Emacr', [274]], ['emacr', [275]], ['empty', [8709]], ['emptyset', [8709]], ['EmptySmallSquare', [9723]], ['emptyv', [8709]], ['EmptyVerySmallSquare', [9643]], ['emsp13', [8196]], ['emsp14', [8197]], ['emsp', [8195]], ['ENG', [330]], ['eng', [331]], ['ensp', [8194]], ['Eogon', [280]], ['eogon', [281]], ['Eopf', [120124]], ['eopf', [120150]], ['epar', [8917]], ['eparsl', [10723]], ['eplus', [10865]], ['epsi', [949]], ['Epsilon', [917]], ['epsilon', [949]], ['epsiv', [1013]], ['eqcirc', [8790]], ['eqcolon', [8789]], ['eqsim', [8770]], ['eqslantgtr', [10902]], ['eqslantless', [10901]], ['Equal', [10869]], ['equals', [61]], ['EqualTilde', [8770]], ['equest', [8799]], ['Equilibrium', [8652]], ['equiv', [8801]], ['equivDD', [10872]], ['eqvparsl', [10725]], ['erarr', [10609]], ['erDot', [8787]], ['escr', [8495]], ['Escr', [8496]], ['esdot', [8784]], ['Esim', [10867]], ['esim', [8770]], ['Eta', [919]], ['eta', [951]], ['ETH', [208]], ['eth', [240]], ['Euml', [203]], ['euml', [235]], ['euro', [8364]], ['excl', [33]], ['exist', [8707]], ['Exists', [8707]], ['expectation', [8496]], ['exponentiale', [8519]], ['ExponentialE', [8519]], ['fallingdotseq', [8786]], ['Fcy', [1060]], ['fcy', [1092]], ['female', [9792]], ['ffilig', [64259]], ['fflig', [64256]], ['ffllig', [64260]], ['Ffr', [120073]], ['ffr', [120099]], ['filig', [64257]], ['FilledSmallSquare', [9724]], ['FilledVerySmallSquare', [9642]], ['fjlig', [102, 106]], ['flat', [9837]], ['fllig', [64258]], ['fltns', [9649]], ['fnof', [402]], ['Fopf', [120125]], ['fopf', [120151]], ['forall', [8704]], ['ForAll', [8704]], ['fork', [8916]], ['forkv', [10969]], ['Fouriertrf', [8497]], ['fpartint', [10765]], ['frac12', [189]], ['frac13', [8531]], ['frac14', [188]], ['frac15', [8533]], ['frac16', [8537]], ['frac18', [8539]], ['frac23', [8532]], ['frac25', [8534]], ['frac34', [190]], ['frac35', [8535]], ['frac38', [8540]], ['frac45', [8536]], ['frac56', [8538]], ['frac58', [8541]], ['frac78', [8542]], ['frasl', [8260]], ['frown', [8994]], ['fscr', [119995]], ['Fscr', [8497]], ['gacute', [501]], ['Gamma', [915]], ['gamma', [947]], ['Gammad', [988]], ['gammad', [989]], ['gap', [10886]], ['Gbreve', [286]], ['gbreve', [287]], ['Gcedil', [290]], ['Gcirc', [284]], ['gcirc', [285]], ['Gcy', [1043]], ['gcy', [1075]], ['Gdot', [288]], ['gdot', [289]], ['ge', [8805]], ['gE', [8807]], ['gEl', [10892]], ['gel', [8923]], ['geq', [8805]], ['geqq', [8807]], ['geqslant', [10878]], ['gescc', [10921]], ['ges', [10878]], ['gesdot', [10880]], ['gesdoto', [10882]], ['gesdotol', [10884]], ['gesl', [8923, 65024]], ['gesles', [10900]], ['Gfr', [120074]], ['gfr', [120100]], ['gg', [8811]], ['Gg', [8921]], ['ggg', [8921]], ['gimel', [8503]], ['GJcy', [1027]], ['gjcy', [1107]], ['gla', [10917]], ['gl', [8823]], ['glE', [10898]], ['glj', [10916]], ['gnap', [10890]], ['gnapprox', [10890]], ['gne', [10888]], ['gnE', [8809]], ['gneq', [10888]], ['gneqq', [8809]], ['gnsim', [8935]], ['Gopf', [120126]], ['gopf', [120152]], ['grave', [96]], ['GreaterEqual', [8805]], ['GreaterEqualLess', [8923]], ['GreaterFullEqual', [8807]], ['GreaterGreater', [10914]], ['GreaterLess', [8823]], ['GreaterSlantEqual', [10878]], ['GreaterTilde', [8819]], ['Gscr', [119970]], ['gscr', [8458]], ['gsim', [8819]], ['gsime', [10894]], ['gsiml', [10896]], ['gtcc', [10919]], ['gtcir', [10874]], ['gt', [62]], ['GT', [62]], ['Gt', [8811]], ['gtdot', [8919]], ['gtlPar', [10645]], ['gtquest', [10876]], ['gtrapprox', [10886]], ['gtrarr', [10616]], ['gtrdot', [8919]], ['gtreqless', [8923]], ['gtreqqless', [10892]], ['gtrless', [8823]], ['gtrsim', [8819]], ['gvertneqq', [8809, 65024]], ['gvnE', [8809, 65024]], ['Hacek', [711]], ['hairsp', [8202]], ['half', [189]], ['hamilt', [8459]], ['HARDcy', [1066]], ['hardcy', [1098]], ['harrcir', [10568]], ['harr', [8596]], ['hArr', [8660]], ['harrw', [8621]], ['Hat', [94]], ['hbar', [8463]], ['Hcirc', [292]], ['hcirc', [293]], ['hearts', [9829]], ['heartsuit', [9829]], ['hellip', [8230]], ['hercon', [8889]], ['hfr', [120101]], ['Hfr', [8460]], ['HilbertSpace', [8459]], ['hksearow', [10533]], ['hkswarow', [10534]], ['hoarr', [8703]], ['homtht', [8763]], ['hookleftarrow', [8617]], ['hookrightarrow', [8618]], ['hopf', [120153]], ['Hopf', [8461]], ['horbar', [8213]], ['HorizontalLine', [9472]], ['hscr', [119997]], ['Hscr', [8459]], ['hslash', [8463]], ['Hstrok', [294]], ['hstrok', [295]], ['HumpDownHump', [8782]], ['HumpEqual', [8783]], ['hybull', [8259]], ['hyphen', [8208]], ['Iacute', [205]], ['iacute', [237]], ['ic', [8291]], ['Icirc', [206]], ['icirc', [238]], ['Icy', [1048]], ['icy', [1080]], ['Idot', [304]], ['IEcy', [1045]], ['iecy', [1077]], ['iexcl', [161]], ['iff', [8660]], ['ifr', [120102]], ['Ifr', [8465]], ['Igrave', [204]], ['igrave', [236]], ['ii', [8520]], ['iiiint', [10764]], ['iiint', [8749]], ['iinfin', [10716]], ['iiota', [8489]], ['IJlig', [306]], ['ijlig', [307]], ['Imacr', [298]], ['imacr', [299]], ['image', [8465]], ['ImaginaryI', [8520]], ['imagline', [8464]], ['imagpart', [8465]], ['imath', [305]], ['Im', [8465]], ['imof', [8887]], ['imped', [437]], ['Implies', [8658]], ['incare', [8453]], ['in', [8712]], ['infin', [8734]], ['infintie', [10717]], ['inodot', [305]], ['intcal', [8890]], ['int', [8747]], ['Int', [8748]], ['integers', [8484]], ['Integral', [8747]], ['intercal', [8890]], ['Intersection', [8898]], ['intlarhk', [10775]], ['intprod', [10812]], ['InvisibleComma', [8291]], ['InvisibleTimes', [8290]], ['IOcy', [1025]], ['iocy', [1105]], ['Iogon', [302]], ['iogon', [303]], ['Iopf', [120128]], ['iopf', [120154]], ['Iota', [921]], ['iota', [953]], ['iprod', [10812]], ['iquest', [191]], ['iscr', [119998]], ['Iscr', [8464]], ['isin', [8712]], ['isindot', [8949]], ['isinE', [8953]], ['isins', [8948]], ['isinsv', [8947]], ['isinv', [8712]], ['it', [8290]], ['Itilde', [296]], ['itilde', [297]], ['Iukcy', [1030]], ['iukcy', [1110]], ['Iuml', [207]], ['iuml', [239]], ['Jcirc', [308]], ['jcirc', [309]], ['Jcy', [1049]], ['jcy', [1081]], ['Jfr', [120077]], ['jfr', [120103]], ['jmath', [567]], ['Jopf', [120129]], ['jopf', [120155]], ['Jscr', [119973]], ['jscr', [119999]], ['Jsercy', [1032]], ['jsercy', [1112]], ['Jukcy', [1028]], ['jukcy', [1108]], ['Kappa', [922]], ['kappa', [954]], ['kappav', [1008]], ['Kcedil', [310]], ['kcedil', [311]], ['Kcy', [1050]], ['kcy', [1082]], ['Kfr', [120078]], ['kfr', [120104]], ['kgreen', [312]], ['KHcy', [1061]], ['khcy', [1093]], ['KJcy', [1036]], ['kjcy', [1116]], ['Kopf', [120130]], ['kopf', [120156]], ['Kscr', [119974]], ['kscr', [120000]], ['lAarr', [8666]], ['Lacute', [313]], ['lacute', [314]], ['laemptyv', [10676]], ['lagran', [8466]], ['Lambda', [923]], ['lambda', [955]], ['lang', [10216]], ['Lang', [10218]], ['langd', [10641]], ['langle', [10216]], ['lap', [10885]], ['Laplacetrf', [8466]], ['laquo', [171]], ['larrb', [8676]], ['larrbfs', [10527]], ['larr', [8592]], ['Larr', [8606]], ['lArr', [8656]], ['larrfs', [10525]], ['larrhk', [8617]], ['larrlp', [8619]], ['larrpl', [10553]], ['larrsim', [10611]], ['larrtl', [8610]], ['latail', [10521]], ['lAtail', [10523]], ['lat', [10923]], ['late', [10925]], ['lates', [10925, 65024]], ['lbarr', [10508]], ['lBarr', [10510]], ['lbbrk', [10098]], ['lbrace', [123]], ['lbrack', [91]], ['lbrke', [10635]], ['lbrksld', [10639]], ['lbrkslu', [10637]], ['Lcaron', [317]], ['lcaron', [318]], ['Lcedil', [315]], ['lcedil', [316]], ['lceil', [8968]], ['lcub', [123]], ['Lcy', [1051]], ['lcy', [1083]], ['ldca', [10550]], ['ldquo', [8220]], ['ldquor', [8222]], ['ldrdhar', [10599]], ['ldrushar', [10571]], ['ldsh', [8626]], ['le', [8804]], ['lE', [8806]], ['LeftAngleBracket', [10216]], ['LeftArrowBar', [8676]], ['leftarrow', [8592]], ['LeftArrow', [8592]], ['Leftarrow', [8656]], ['LeftArrowRightArrow', [8646]], ['leftarrowtail', [8610]], ['LeftCeiling', [8968]], ['LeftDoubleBracket', [10214]], ['LeftDownTeeVector', [10593]], ['LeftDownVectorBar', [10585]], ['LeftDownVector', [8643]], ['LeftFloor', [8970]], ['leftharpoondown', [8637]], ['leftharpoonup', [8636]], ['leftleftarrows', [8647]], ['leftrightarrow', [8596]], ['LeftRightArrow', [8596]], ['Leftrightarrow', [8660]], ['leftrightarrows', [8646]], ['leftrightharpoons', [8651]], ['leftrightsquigarrow', [8621]], ['LeftRightVector', [10574]], ['LeftTeeArrow', [8612]], ['LeftTee', [8867]], ['LeftTeeVector', [10586]], ['leftthreetimes', [8907]], ['LeftTriangleBar', [10703]], ['LeftTriangle', [8882]], ['LeftTriangleEqual', [8884]], ['LeftUpDownVector', [10577]], ['LeftUpTeeVector', [10592]], ['LeftUpVectorBar', [10584]], ['LeftUpVector', [8639]], ['LeftVectorBar', [10578]], ['LeftVector', [8636]], ['lEg', [10891]], ['leg', [8922]], ['leq', [8804]], ['leqq', [8806]], ['leqslant', [10877]], ['lescc', [10920]], ['les', [10877]], ['lesdot', [10879]], ['lesdoto', [10881]], ['lesdotor', [10883]], ['lesg', [8922, 65024]], ['lesges', [10899]], ['lessapprox', [10885]], ['lessdot', [8918]], ['lesseqgtr', [8922]], ['lesseqqgtr', [10891]], ['LessEqualGreater', [8922]], ['LessFullEqual', [8806]], ['LessGreater', [8822]], ['lessgtr', [8822]], ['LessLess', [10913]], ['lesssim', [8818]], ['LessSlantEqual', [10877]], ['LessTilde', [8818]], ['lfisht', [10620]], ['lfloor', [8970]], ['Lfr', [120079]], ['lfr', [120105]], ['lg', [8822]], ['lgE', [10897]], ['lHar', [10594]], ['lhard', [8637]], ['lharu', [8636]], ['lharul', [10602]], ['lhblk', [9604]], ['LJcy', [1033]], ['ljcy', [1113]], ['llarr', [8647]], ['ll', [8810]], ['Ll', [8920]], ['llcorner', [8990]], ['Lleftarrow', [8666]], ['llhard', [10603]], ['lltri', [9722]], ['Lmidot', [319]], ['lmidot', [320]], ['lmoustache', [9136]], ['lmoust', [9136]], ['lnap', [10889]], ['lnapprox', [10889]], ['lne', [10887]], ['lnE', [8808]], ['lneq', [10887]], ['lneqq', [8808]], ['lnsim', [8934]], ['loang', [10220]], ['loarr', [8701]], ['lobrk', [10214]], ['longleftarrow', [10229]], ['LongLeftArrow', [10229]], ['Longleftarrow', [10232]], ['longleftrightarrow', [10231]], ['LongLeftRightArrow', [10231]], ['Longleftrightarrow', [10234]], ['longmapsto', [10236]], ['longrightarrow', [10230]], ['LongRightArrow', [10230]], ['Longrightarrow', [10233]], ['looparrowleft', [8619]], ['looparrowright', [8620]], ['lopar', [10629]], ['Lopf', [120131]], ['lopf', [120157]], ['loplus', [10797]], ['lotimes', [10804]], ['lowast', [8727]], ['lowbar', [95]], ['LowerLeftArrow', [8601]], ['LowerRightArrow', [8600]], ['loz', [9674]], ['lozenge', [9674]], ['lozf', [10731]], ['lpar', [40]], ['lparlt', [10643]], ['lrarr', [8646]], ['lrcorner', [8991]], ['lrhar', [8651]], ['lrhard', [10605]], ['lrm', [8206]], ['lrtri', [8895]], ['lsaquo', [8249]], ['lscr', [120001]], ['Lscr', [8466]], ['lsh', [8624]], ['Lsh', [8624]], ['lsim', [8818]], ['lsime', [10893]], ['lsimg', [10895]], ['lsqb', [91]], ['lsquo', [8216]], ['lsquor', [8218]], ['Lstrok', [321]], ['lstrok', [322]], ['ltcc', [10918]], ['ltcir', [10873]], ['lt', [60]], ['LT', [60]], ['Lt', [8810]], ['ltdot', [8918]], ['lthree', [8907]], ['ltimes', [8905]], ['ltlarr', [10614]], ['ltquest', [10875]], ['ltri', [9667]], ['ltrie', [8884]], ['ltrif', [9666]], ['ltrPar', [10646]], ['lurdshar', [10570]], ['luruhar', [10598]], ['lvertneqq', [8808, 65024]], ['lvnE', [8808, 65024]], ['macr', [175]], ['male', [9794]], ['malt', [10016]], ['maltese', [10016]], ['Map', [10501]], ['map', [8614]], ['mapsto', [8614]], ['mapstodown', [8615]], ['mapstoleft', [8612]], ['mapstoup', [8613]], ['marker', [9646]], ['mcomma', [10793]], ['Mcy', [1052]], ['mcy', [1084]], ['mdash', [8212]], ['mDDot', [8762]], ['measuredangle', [8737]], ['MediumSpace', [8287]], ['Mellintrf', [8499]], ['Mfr', [120080]], ['mfr', [120106]], ['mho', [8487]], ['micro', [181]], ['midast', [42]], ['midcir', [10992]], ['mid', [8739]], ['middot', [183]], ['minusb', [8863]], ['minus', [8722]], ['minusd', [8760]], ['minusdu', [10794]], ['MinusPlus', [8723]], ['mlcp', [10971]], ['mldr', [8230]], ['mnplus', [8723]], ['models', [8871]], ['Mopf', [120132]], ['mopf', [120158]], ['mp', [8723]], ['mscr', [120002]], ['Mscr', [8499]], ['mstpos', [8766]], ['Mu', [924]], ['mu', [956]], ['multimap', [8888]], ['mumap', [8888]], ['nabla', [8711]], ['Nacute', [323]], ['nacute', [324]], ['nang', [8736, 8402]], ['nap', [8777]], ['napE', [10864, 824]], ['napid', [8779, 824]], ['napos', [329]], ['napprox', [8777]], ['natural', [9838]], ['naturals', [8469]], ['natur', [9838]], ['nbsp', [160]], ['nbump', [8782, 824]], ['nbumpe', [8783, 824]], ['ncap', [10819]], ['Ncaron', [327]], ['ncaron', [328]], ['Ncedil', [325]], ['ncedil', [326]], ['ncong', [8775]], ['ncongdot', [10861, 824]], ['ncup', [10818]], ['Ncy', [1053]], ['ncy', [1085]], ['ndash', [8211]], ['nearhk', [10532]], ['nearr', [8599]], ['neArr', [8663]], ['nearrow', [8599]], ['ne', [8800]], ['nedot', [8784, 824]], ['NegativeMediumSpace', [8203]], ['NegativeThickSpace', [8203]], ['NegativeThinSpace', [8203]], ['NegativeVeryThinSpace', [8203]], ['nequiv', [8802]], ['nesear', [10536]], ['nesim', [8770, 824]], ['NestedGreaterGreater', [8811]], ['NestedLessLess', [8810]], ['nexist', [8708]], ['nexists', [8708]], ['Nfr', [120081]], ['nfr', [120107]], ['ngE', [8807, 824]], ['nge', [8817]], ['ngeq', [8817]], ['ngeqq', [8807, 824]], ['ngeqslant', [10878, 824]], ['nges', [10878, 824]], ['nGg', [8921, 824]], ['ngsim', [8821]], ['nGt', [8811, 8402]], ['ngt', [8815]], ['ngtr', [8815]], ['nGtv', [8811, 824]], ['nharr', [8622]], ['nhArr', [8654]], ['nhpar', [10994]], ['ni', [8715]], ['nis', [8956]], ['nisd', [8954]], ['niv', [8715]], ['NJcy', [1034]], ['njcy', [1114]], ['nlarr', [8602]], ['nlArr', [8653]], ['nldr', [8229]], ['nlE', [8806, 824]], ['nle', [8816]], ['nleftarrow', [8602]], ['nLeftarrow', [8653]], ['nleftrightarrow', [8622]], ['nLeftrightarrow', [8654]], ['nleq', [8816]], ['nleqq', [8806, 824]], ['nleqslant', [10877, 824]], ['nles', [10877, 824]], ['nless', [8814]], ['nLl', [8920, 824]], ['nlsim', [8820]], ['nLt', [8810, 8402]], ['nlt', [8814]], ['nltri', [8938]], ['nltrie', [8940]], ['nLtv', [8810, 824]], ['nmid', [8740]], ['NoBreak', [8288]], ['NonBreakingSpace', [160]], ['nopf', [120159]], ['Nopf', [8469]], ['Not', [10988]], ['not', [172]], ['NotCongruent', [8802]], ['NotCupCap', [8813]], ['NotDoubleVerticalBar', [8742]], ['NotElement', [8713]], ['NotEqual', [8800]], ['NotEqualTilde', [8770, 824]], ['NotExists', [8708]], ['NotGreater', [8815]], ['NotGreaterEqual', [8817]], ['NotGreaterFullEqual', [8807, 824]], ['NotGreaterGreater', [8811, 824]], ['NotGreaterLess', [8825]], ['NotGreaterSlantEqual', [10878, 824]], ['NotGreaterTilde', [8821]], ['NotHumpDownHump', [8782, 824]], ['NotHumpEqual', [8783, 824]], ['notin', [8713]], ['notindot', [8949, 824]], ['notinE', [8953, 824]], ['notinva', [8713]], ['notinvb', [8951]], ['notinvc', [8950]], ['NotLeftTriangleBar', [10703, 824]], ['NotLeftTriangle', [8938]], ['NotLeftTriangleEqual', [8940]], ['NotLess', [8814]], ['NotLessEqual', [8816]], ['NotLessGreater', [8824]], ['NotLessLess', [8810, 824]], ['NotLessSlantEqual', [10877, 824]], ['NotLessTilde', [8820]], ['NotNestedGreaterGreater', [10914, 824]], ['NotNestedLessLess', [10913, 824]], ['notni', [8716]], ['notniva', [8716]], ['notnivb', [8958]], ['notnivc', [8957]], ['NotPrecedes', [8832]], ['NotPrecedesEqual', [10927, 824]], ['NotPrecedesSlantEqual', [8928]], ['NotReverseElement', [8716]], ['NotRightTriangleBar', [10704, 824]], ['NotRightTriangle', [8939]], ['NotRightTriangleEqual', [8941]], ['NotSquareSubset', [8847, 824]], ['NotSquareSubsetEqual', [8930]], ['NotSquareSuperset', [8848, 824]], ['NotSquareSupersetEqual', [8931]], ['NotSubset', [8834, 8402]], ['NotSubsetEqual', [8840]], ['NotSucceeds', [8833]], ['NotSucceedsEqual', [10928, 824]], ['NotSucceedsSlantEqual', [8929]], ['NotSucceedsTilde', [8831, 824]], ['NotSuperset', [8835, 8402]], ['NotSupersetEqual', [8841]], ['NotTilde', [8769]], ['NotTildeEqual', [8772]], ['NotTildeFullEqual', [8775]], ['NotTildeTilde', [8777]], ['NotVerticalBar', [8740]], ['nparallel', [8742]], ['npar', [8742]], ['nparsl', [11005, 8421]], ['npart', [8706, 824]], ['npolint', [10772]], ['npr', [8832]], ['nprcue', [8928]], ['nprec', [8832]], ['npreceq', [10927, 824]], ['npre', [10927, 824]], ['nrarrc', [10547, 824]], ['nrarr', [8603]], ['nrArr', [8655]], ['nrarrw', [8605, 824]], ['nrightarrow', [8603]], ['nRightarrow', [8655]], ['nrtri', [8939]], ['nrtrie', [8941]], ['nsc', [8833]], ['nsccue', [8929]], ['nsce', [10928, 824]], ['Nscr', [119977]], ['nscr', [120003]], ['nshortmid', [8740]], ['nshortparallel', [8742]], ['nsim', [8769]], ['nsime', [8772]], ['nsimeq', [8772]], ['nsmid', [8740]], ['nspar', [8742]], ['nsqsube', [8930]], ['nsqsupe', [8931]], ['nsub', [8836]], ['nsubE', [10949, 824]], ['nsube', [8840]], ['nsubset', [8834, 8402]], ['nsubseteq', [8840]], ['nsubseteqq', [10949, 824]], ['nsucc', [8833]], ['nsucceq', [10928, 824]], ['nsup', [8837]], ['nsupE', [10950, 824]], ['nsupe', [8841]], ['nsupset', [8835, 8402]], ['nsupseteq', [8841]], ['nsupseteqq', [10950, 824]], ['ntgl', [8825]], ['Ntilde', [209]], ['ntilde', [241]], ['ntlg', [8824]], ['ntriangleleft', [8938]], ['ntrianglelefteq', [8940]], ['ntriangleright', [8939]], ['ntrianglerighteq', [8941]], ['Nu', [925]], ['nu', [957]], ['num', [35]], ['numero', [8470]], ['numsp', [8199]], ['nvap', [8781, 8402]], ['nvdash', [8876]], ['nvDash', [8877]], ['nVdash', [8878]], ['nVDash', [8879]], ['nvge', [8805, 8402]], ['nvgt', [62, 8402]], ['nvHarr', [10500]], ['nvinfin', [10718]], ['nvlArr', [10498]], ['nvle', [8804, 8402]], ['nvlt', [60, 8402]], ['nvltrie', [8884, 8402]], ['nvrArr', [10499]], ['nvrtrie', [8885, 8402]], ['nvsim', [8764, 8402]], ['nwarhk', [10531]], ['nwarr', [8598]], ['nwArr', [8662]], ['nwarrow', [8598]], ['nwnear', [10535]], ['Oacute', [211]], ['oacute', [243]], ['oast', [8859]], ['Ocirc', [212]], ['ocirc', [244]], ['ocir', [8858]], ['Ocy', [1054]], ['ocy', [1086]], ['odash', [8861]], ['Odblac', [336]], ['odblac', [337]], ['odiv', [10808]], ['odot', [8857]], ['odsold', [10684]], ['OElig', [338]], ['oelig', [339]], ['ofcir', [10687]], ['Ofr', [120082]], ['ofr', [120108]], ['ogon', [731]], ['Ograve', [210]], ['ograve', [242]], ['ogt', [10689]], ['ohbar', [10677]], ['ohm', [937]], ['oint', [8750]], ['olarr', [8634]], ['olcir', [10686]], ['olcross', [10683]], ['oline', [8254]], ['olt', [10688]], ['Omacr', [332]], ['omacr', [333]], ['Omega', [937]], ['omega', [969]], ['Omicron', [927]], ['omicron', [959]], ['omid', [10678]], ['ominus', [8854]], ['Oopf', [120134]], ['oopf', [120160]], ['opar', [10679]], ['OpenCurlyDoubleQuote', [8220]], ['OpenCurlyQuote', [8216]], ['operp', [10681]], ['oplus', [8853]], ['orarr', [8635]], ['Or', [10836]], ['or', [8744]], ['ord', [10845]], ['order', [8500]], ['orderof', [8500]], ['ordf', [170]], ['ordm', [186]], ['origof', [8886]], ['oror', [10838]], ['orslope', [10839]], ['orv', [10843]], ['oS', [9416]], ['Oscr', [119978]], ['oscr', [8500]], ['Oslash', [216]], ['oslash', [248]], ['osol', [8856]], ['Otilde', [213]], ['otilde', [245]], ['otimesas', [10806]], ['Otimes', [10807]], ['otimes', [8855]], ['Ouml', [214]], ['ouml', [246]], ['ovbar', [9021]], ['OverBar', [8254]], ['OverBrace', [9182]], ['OverBracket', [9140]], ['OverParenthesis', [9180]], ['para', [182]], ['parallel', [8741]], ['par', [8741]], ['parsim', [10995]], ['parsl', [11005]], ['part', [8706]], ['PartialD', [8706]], ['Pcy', [1055]], ['pcy', [1087]], ['percnt', [37]], ['period', [46]], ['permil', [8240]], ['perp', [8869]], ['pertenk', [8241]], ['Pfr', [120083]], ['pfr', [120109]], ['Phi', [934]], ['phi', [966]], ['phiv', [981]], ['phmmat', [8499]], ['phone', [9742]], ['Pi', [928]], ['pi', [960]], ['pitchfork', [8916]], ['piv', [982]], ['planck', [8463]], ['planckh', [8462]], ['plankv', [8463]], ['plusacir', [10787]], ['plusb', [8862]], ['pluscir', [10786]], ['plus', [43]], ['plusdo', [8724]], ['plusdu', [10789]], ['pluse', [10866]], ['PlusMinus', [177]], ['plusmn', [177]], ['plussim', [10790]], ['plustwo', [10791]], ['pm', [177]], ['Poincareplane', [8460]], ['pointint', [10773]], ['popf', [120161]], ['Popf', [8473]], ['pound', [163]], ['prap', [10935]], ['Pr', [10939]], ['pr', [8826]], ['prcue', [8828]], ['precapprox', [10935]], ['prec', [8826]], ['preccurlyeq', [8828]], ['Precedes', [8826]], ['PrecedesEqual', [10927]], ['PrecedesSlantEqual', [8828]], ['PrecedesTilde', [8830]], ['preceq', [10927]], ['precnapprox', [10937]], ['precneqq', [10933]], ['precnsim', [8936]], ['pre', [10927]], ['prE', [10931]], ['precsim', [8830]], ['prime', [8242]], ['Prime', [8243]], ['primes', [8473]], ['prnap', [10937]], ['prnE', [10933]], ['prnsim', [8936]], ['prod', [8719]], ['Product', [8719]], ['profalar', [9006]], ['profline', [8978]], ['profsurf', [8979]], ['prop', [8733]], ['Proportional', [8733]], ['Proportion', [8759]], ['propto', [8733]], ['prsim', [8830]], ['prurel', [8880]], ['Pscr', [119979]], ['pscr', [120005]], ['Psi', [936]], ['psi', [968]], ['puncsp', [8200]], ['Qfr', [120084]], ['qfr', [120110]], ['qint', [10764]], ['qopf', [120162]], ['Qopf', [8474]], ['qprime', [8279]], ['Qscr', [119980]], ['qscr', [120006]], ['quaternions', [8461]], ['quatint', [10774]], ['quest', [63]], ['questeq', [8799]], ['quot', [34]], ['QUOT', [34]], ['rAarr', [8667]], ['race', [8765, 817]], ['Racute', [340]], ['racute', [341]], ['radic', [8730]], ['raemptyv', [10675]], ['rang', [10217]], ['Rang', [10219]], ['rangd', [10642]], ['range', [10661]], ['rangle', [10217]], ['raquo', [187]], ['rarrap', [10613]], ['rarrb', [8677]], ['rarrbfs', [10528]], ['rarrc', [10547]], ['rarr', [8594]], ['Rarr', [8608]], ['rArr', [8658]], ['rarrfs', [10526]], ['rarrhk', [8618]], ['rarrlp', [8620]], ['rarrpl', [10565]], ['rarrsim', [10612]], ['Rarrtl', [10518]], ['rarrtl', [8611]], ['rarrw', [8605]], ['ratail', [10522]], ['rAtail', [10524]], ['ratio', [8758]], ['rationals', [8474]], ['rbarr', [10509]], ['rBarr', [10511]], ['RBarr', [10512]], ['rbbrk', [10099]], ['rbrace', [125]], ['rbrack', [93]], ['rbrke', [10636]], ['rbrksld', [10638]], ['rbrkslu', [10640]], ['Rcaron', [344]], ['rcaron', [345]], ['Rcedil', [342]], ['rcedil', [343]], ['rceil', [8969]], ['rcub', [125]], ['Rcy', [1056]], ['rcy', [1088]], ['rdca', [10551]], ['rdldhar', [10601]], ['rdquo', [8221]], ['rdquor', [8221]], ['CloseCurlyDoubleQuote', [8221]], ['rdsh', [8627]], ['real', [8476]], ['realine', [8475]], ['realpart', [8476]], ['reals', [8477]], ['Re', [8476]], ['rect', [9645]], ['reg', [174]], ['REG', [174]], ['ReverseElement', [8715]], ['ReverseEquilibrium', [8651]], ['ReverseUpEquilibrium', [10607]], ['rfisht', [10621]], ['rfloor', [8971]], ['rfr', [120111]], ['Rfr', [8476]], ['rHar', [10596]], ['rhard', [8641]], ['rharu', [8640]], ['rharul', [10604]], ['Rho', [929]], ['rho', [961]], ['rhov', [1009]], ['RightAngleBracket', [10217]], ['RightArrowBar', [8677]], ['rightarrow', [8594]], ['RightArrow', [8594]], ['Rightarrow', [8658]], ['RightArrowLeftArrow', [8644]], ['rightarrowtail', [8611]], ['RightCeiling', [8969]], ['RightDoubleBracket', [10215]], ['RightDownTeeVector', [10589]], ['RightDownVectorBar', [10581]], ['RightDownVector', [8642]], ['RightFloor', [8971]], ['rightharpoondown', [8641]], ['rightharpoonup', [8640]], ['rightleftarrows', [8644]], ['rightleftharpoons', [8652]], ['rightrightarrows', [8649]], ['rightsquigarrow', [8605]], ['RightTeeArrow', [8614]], ['RightTee', [8866]], ['RightTeeVector', [10587]], ['rightthreetimes', [8908]], ['RightTriangleBar', [10704]], ['RightTriangle', [8883]], ['RightTriangleEqual', [8885]], ['RightUpDownVector', [10575]], ['RightUpTeeVector', [10588]], ['RightUpVectorBar', [10580]], ['RightUpVector', [8638]], ['RightVectorBar', [10579]], ['RightVector', [8640]], ['ring', [730]], ['risingdotseq', [8787]], ['rlarr', [8644]], ['rlhar', [8652]], ['rlm', [8207]], ['rmoustache', [9137]], ['rmoust', [9137]], ['rnmid', [10990]], ['roang', [10221]], ['roarr', [8702]], ['robrk', [10215]], ['ropar', [10630]], ['ropf', [120163]], ['Ropf', [8477]], ['roplus', [10798]], ['rotimes', [10805]], ['RoundImplies', [10608]], ['rpar', [41]], ['rpargt', [10644]], ['rppolint', [10770]], ['rrarr', [8649]], ['Rrightarrow', [8667]], ['rsaquo', [8250]], ['rscr', [120007]], ['Rscr', [8475]], ['rsh', [8625]], ['Rsh', [8625]], ['rsqb', [93]], ['rsquo', [8217]], ['rsquor', [8217]], ['CloseCurlyQuote', [8217]], ['rthree', [8908]], ['rtimes', [8906]], ['rtri', [9657]], ['rtrie', [8885]], ['rtrif', [9656]], ['rtriltri', [10702]], ['RuleDelayed', [10740]], ['ruluhar', [10600]], ['rx', [8478]], ['Sacute', [346]], ['sacute', [347]], ['sbquo', [8218]], ['scap', [10936]], ['Scaron', [352]], ['scaron', [353]], ['Sc', [10940]], ['sc', [8827]], ['sccue', [8829]], ['sce', [10928]], ['scE', [10932]], ['Scedil', [350]], ['scedil', [351]], ['Scirc', [348]], ['scirc', [349]], ['scnap', [10938]], ['scnE', [10934]], ['scnsim', [8937]], ['scpolint', [10771]], ['scsim', [8831]], ['Scy', [1057]], ['scy', [1089]], ['sdotb', [8865]], ['sdot', [8901]], ['sdote', [10854]], ['searhk', [10533]], ['searr', [8600]], ['seArr', [8664]], ['searrow', [8600]], ['sect', [167]], ['semi', [59]], ['seswar', [10537]], ['setminus', [8726]], ['setmn', [8726]], ['sext', [10038]], ['Sfr', [120086]], ['sfr', [120112]], ['sfrown', [8994]], ['sharp', [9839]], ['SHCHcy', [1065]], ['shchcy', [1097]], ['SHcy', [1064]], ['shcy', [1096]], ['ShortDownArrow', [8595]], ['ShortLeftArrow', [8592]], ['shortmid', [8739]], ['shortparallel', [8741]], ['ShortRightArrow', [8594]], ['ShortUpArrow', [8593]], ['shy', [173]], ['Sigma', [931]], ['sigma', [963]], ['sigmaf', [962]], ['sigmav', [962]], ['sim', [8764]], ['simdot', [10858]], ['sime', [8771]], ['simeq', [8771]], ['simg', [10910]], ['simgE', [10912]], ['siml', [10909]], ['simlE', [10911]], ['simne', [8774]], ['simplus', [10788]], ['simrarr', [10610]], ['slarr', [8592]], ['SmallCircle', [8728]], ['smallsetminus', [8726]], ['smashp', [10803]], ['smeparsl', [10724]], ['smid', [8739]], ['smile', [8995]], ['smt', [10922]], ['smte', [10924]], ['smtes', [10924, 65024]], ['SOFTcy', [1068]], ['softcy', [1100]], ['solbar', [9023]], ['solb', [10692]], ['sol', [47]], ['Sopf', [120138]], ['sopf', [120164]], ['spades', [9824]], ['spadesuit', [9824]], ['spar', [8741]], ['sqcap', [8851]], ['sqcaps', [8851, 65024]], ['sqcup', [8852]], ['sqcups', [8852, 65024]], ['Sqrt', [8730]], ['sqsub', [8847]], ['sqsube', [8849]], ['sqsubset', [8847]], ['sqsubseteq', [8849]], ['sqsup', [8848]], ['sqsupe', [8850]], ['sqsupset', [8848]], ['sqsupseteq', [8850]], ['square', [9633]], ['Square', [9633]], ['SquareIntersection', [8851]], ['SquareSubset', [8847]], ['SquareSubsetEqual', [8849]], ['SquareSuperset', [8848]], ['SquareSupersetEqual', [8850]], ['SquareUnion', [8852]], ['squarf', [9642]], ['squ', [9633]], ['squf', [9642]], ['srarr', [8594]], ['Sscr', [119982]], ['sscr', [120008]], ['ssetmn', [8726]], ['ssmile', [8995]], ['sstarf', [8902]], ['Star', [8902]], ['star', [9734]], ['starf', [9733]], ['straightepsilon', [1013]], ['straightphi', [981]], ['strns', [175]], ['sub', [8834]], ['Sub', [8912]], ['subdot', [10941]], ['subE', [10949]], ['sube', [8838]], ['subedot', [10947]], ['submult', [10945]], ['subnE', [10955]], ['subne', [8842]], ['subplus', [10943]], ['subrarr', [10617]], ['subset', [8834]], ['Subset', [8912]], ['subseteq', [8838]], ['subseteqq', [10949]], ['SubsetEqual', [8838]], ['subsetneq', [8842]], ['subsetneqq', [10955]], ['subsim', [10951]], ['subsub', [10965]], ['subsup', [10963]], ['succapprox', [10936]], ['succ', [8827]], ['succcurlyeq', [8829]], ['Succeeds', [8827]], ['SucceedsEqual', [10928]], ['SucceedsSlantEqual', [8829]], ['SucceedsTilde', [8831]], ['succeq', [10928]], ['succnapprox', [10938]], ['succneqq', [10934]], ['succnsim', [8937]], ['succsim', [8831]], ['SuchThat', [8715]], ['sum', [8721]], ['Sum', [8721]], ['sung', [9834]], ['sup1', [185]], ['sup2', [178]], ['sup3', [179]], ['sup', [8835]], ['Sup', [8913]], ['supdot', [10942]], ['supdsub', [10968]], ['supE', [10950]], ['supe', [8839]], ['supedot', [10948]], ['Superset', [8835]], ['SupersetEqual', [8839]], ['suphsol', [10185]], ['suphsub', [10967]], ['suplarr', [10619]], ['supmult', [10946]], ['supnE', [10956]], ['supne', [8843]], ['supplus', [10944]], ['supset', [8835]], ['Supset', [8913]], ['supseteq', [8839]], ['supseteqq', [10950]], ['supsetneq', [8843]], ['supsetneqq', [10956]], ['supsim', [10952]], ['supsub', [10964]], ['supsup', [10966]], ['swarhk', [10534]], ['swarr', [8601]], ['swArr', [8665]], ['swarrow', [8601]], ['swnwar', [10538]], ['szlig', [223]], ['Tab', [9]], ['target', [8982]], ['Tau', [932]], ['tau', [964]], ['tbrk', [9140]], ['Tcaron', [356]], ['tcaron', [357]], ['Tcedil', [354]], ['tcedil', [355]], ['Tcy', [1058]], ['tcy', [1090]], ['tdot', [8411]], ['telrec', [8981]], ['Tfr', [120087]], ['tfr', [120113]], ['there4', [8756]], ['therefore', [8756]], ['Therefore', [8756]], ['Theta', [920]], ['theta', [952]], ['thetasym', [977]], ['thetav', [977]], ['thickapprox', [8776]], ['thicksim', [8764]], ['ThickSpace', [8287, 8202]], ['ThinSpace', [8201]], ['thinsp', [8201]], ['thkap', [8776]], ['thksim', [8764]], ['THORN', [222]], ['thorn', [254]], ['tilde', [732]], ['Tilde', [8764]], ['TildeEqual', [8771]], ['TildeFullEqual', [8773]], ['TildeTilde', [8776]], ['timesbar', [10801]], ['timesb', [8864]], ['times', [215]], ['timesd', [10800]], ['tint', [8749]], ['toea', [10536]], ['topbot', [9014]], ['topcir', [10993]], ['top', [8868]], ['Topf', [120139]], ['topf', [120165]], ['topfork', [10970]], ['tosa', [10537]], ['tprime', [8244]], ['trade', [8482]], ['TRADE', [8482]], ['triangle', [9653]], ['triangledown', [9663]], ['triangleleft', [9667]], ['trianglelefteq', [8884]], ['triangleq', [8796]], ['triangleright', [9657]], ['trianglerighteq', [8885]], ['tridot', [9708]], ['trie', [8796]], ['triminus', [10810]], ['TripleDot', [8411]], ['triplus', [10809]], ['trisb', [10701]], ['tritime', [10811]], ['trpezium', [9186]], ['Tscr', [119983]], ['tscr', [120009]], ['TScy', [1062]], ['tscy', [1094]], ['TSHcy', [1035]], ['tshcy', [1115]], ['Tstrok', [358]], ['tstrok', [359]], ['twixt', [8812]], ['twoheadleftarrow', [8606]], ['twoheadrightarrow', [8608]], ['Uacute', [218]], ['uacute', [250]], ['uarr', [8593]], ['Uarr', [8607]], ['uArr', [8657]], ['Uarrocir', [10569]], ['Ubrcy', [1038]], ['ubrcy', [1118]], ['Ubreve', [364]], ['ubreve', [365]], ['Ucirc', [219]], ['ucirc', [251]], ['Ucy', [1059]], ['ucy', [1091]], ['udarr', [8645]], ['Udblac', [368]], ['udblac', [369]], ['udhar', [10606]], ['ufisht', [10622]], ['Ufr', [120088]], ['ufr', [120114]], ['Ugrave', [217]], ['ugrave', [249]], ['uHar', [10595]], ['uharl', [8639]], ['uharr', [8638]], ['uhblk', [9600]], ['ulcorn', [8988]], ['ulcorner', [8988]], ['ulcrop', [8975]], ['ultri', [9720]], ['Umacr', [362]], ['umacr', [363]], ['uml', [168]], ['UnderBar', [95]], ['UnderBrace', [9183]], ['UnderBracket', [9141]], ['UnderParenthesis', [9181]], ['Union', [8899]], ['UnionPlus', [8846]], ['Uogon', [370]], ['uogon', [371]], ['Uopf', [120140]], ['uopf', [120166]], ['UpArrowBar', [10514]], ['uparrow', [8593]], ['UpArrow', [8593]], ['Uparrow', [8657]], ['UpArrowDownArrow', [8645]], ['updownarrow', [8597]], ['UpDownArrow', [8597]], ['Updownarrow', [8661]], ['UpEquilibrium', [10606]], ['upharpoonleft', [8639]], ['upharpoonright', [8638]], ['uplus', [8846]], ['UpperLeftArrow', [8598]], ['UpperRightArrow', [8599]], ['upsi', [965]], ['Upsi', [978]], ['upsih', [978]], ['Upsilon', [933]], ['upsilon', [965]], ['UpTeeArrow', [8613]], ['UpTee', [8869]], ['upuparrows', [8648]], ['urcorn', [8989]], ['urcorner', [8989]], ['urcrop', [8974]], ['Uring', [366]], ['uring', [367]], ['urtri', [9721]], ['Uscr', [119984]], ['uscr', [120010]], ['utdot', [8944]], ['Utilde', [360]], ['utilde', [361]], ['utri', [9653]], ['utrif', [9652]], ['uuarr', [8648]], ['Uuml', [220]], ['uuml', [252]], ['uwangle', [10663]], ['vangrt', [10652]], ['varepsilon', [1013]], ['varkappa', [1008]], ['varnothing', [8709]], ['varphi', [981]], ['varpi', [982]], ['varpropto', [8733]], ['varr', [8597]], ['vArr', [8661]], ['varrho', [1009]], ['varsigma', [962]], ['varsubsetneq', [8842, 65024]], ['varsubsetneqq', [10955, 65024]], ['varsupsetneq', [8843, 65024]], ['varsupsetneqq', [10956, 65024]], ['vartheta', [977]], ['vartriangleleft', [8882]], ['vartriangleright', [8883]], ['vBar', [10984]], ['Vbar', [10987]], ['vBarv', [10985]], ['Vcy', [1042]], ['vcy', [1074]], ['vdash', [8866]], ['vDash', [8872]], ['Vdash', [8873]], ['VDash', [8875]], ['Vdashl', [10982]], ['veebar', [8891]], ['vee', [8744]], ['Vee', [8897]], ['veeeq', [8794]], ['vellip', [8942]], ['verbar', [124]], ['Verbar', [8214]], ['vert', [124]], ['Vert', [8214]], ['VerticalBar', [8739]], ['VerticalLine', [124]], ['VerticalSeparator', [10072]], ['VerticalTilde', [8768]], ['VeryThinSpace', [8202]], ['Vfr', [120089]], ['vfr', [120115]], ['vltri', [8882]], ['vnsub', [8834, 8402]], ['vnsup', [8835, 8402]], ['Vopf', [120141]], ['vopf', [120167]], ['vprop', [8733]], ['vrtri', [8883]], ['Vscr', [119985]], ['vscr', [120011]], ['vsubnE', [10955, 65024]], ['vsubne', [8842, 65024]], ['vsupnE', [10956, 65024]], ['vsupne', [8843, 65024]], ['Vvdash', [8874]], ['vzigzag', [10650]], ['Wcirc', [372]], ['wcirc', [373]], ['wedbar', [10847]], ['wedge', [8743]], ['Wedge', [8896]], ['wedgeq', [8793]], ['weierp', [8472]], ['Wfr', [120090]], ['wfr', [120116]], ['Wopf', [120142]], ['wopf', [120168]], ['wp', [8472]], ['wr', [8768]], ['wreath', [8768]], ['Wscr', [119986]], ['wscr', [120012]], ['xcap', [8898]], ['xcirc', [9711]], ['xcup', [8899]], ['xdtri', [9661]], ['Xfr', [120091]], ['xfr', [120117]], ['xharr', [10231]], ['xhArr', [10234]], ['Xi', [926]], ['xi', [958]], ['xlarr', [10229]], ['xlArr', [10232]], ['xmap', [10236]], ['xnis', [8955]], ['xodot', [10752]], ['Xopf', [120143]], ['xopf', [120169]], ['xoplus', [10753]], ['xotime', [10754]], ['xrarr', [10230]], ['xrArr', [10233]], ['Xscr', [119987]], ['xscr', [120013]], ['xsqcup', [10758]], ['xuplus', [10756]], ['xutri', [9651]], ['xvee', [8897]], ['xwedge', [8896]], ['Yacute', [221]], ['yacute', [253]], ['YAcy', [1071]], ['yacy', [1103]], ['Ycirc', [374]], ['ycirc', [375]], ['Ycy', [1067]], ['ycy', [1099]], ['yen', [165]], ['Yfr', [120092]], ['yfr', [120118]], ['YIcy', [1031]], ['yicy', [1111]], ['Yopf', [120144]], ['yopf', [120170]], ['Yscr', [119988]], ['yscr', [120014]], ['YUcy', [1070]], ['yucy', [1102]], ['yuml', [255]], ['Yuml', [376]], ['Zacute', [377]], ['zacute', [378]], ['Zcaron', [381]], ['zcaron', [382]], ['Zcy', [1047]], ['zcy', [1079]], ['Zdot', [379]], ['zdot', [380]], ['zeetrf', [8488]], ['ZeroWidthSpace', [8203]], ['Zeta', [918]], ['zeta', [950]], ['zfr', [120119]], ['Zfr', [8488]], ['ZHcy', [1046]], ['zhcy', [1078]], ['zigrarr', [8669]], ['zopf', [120171]], ['Zopf', [8484]], ['Zscr', [119989]], ['zscr', [120015]], ['zwj', [8205]], ['zwnj', [8204]]];
@@ -12612,7 +12808,7 @@ module.exports = Html5Entities;
 
 
 /***/ }),
-/* 15 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15125,7 +15321,7 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 16 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15139,19 +15335,19 @@ exports.default = {
 };
 
 /***/ }),
-/* 17 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(18);
 __webpack_require__(32);
-module.exports = __webpack_require__(34);
+__webpack_require__(46);
+module.exports = __webpack_require__(48);
 
 
 /***/ }),
-/* 18 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const hotClient         = __webpack_require__(19);
+const hotClient         = __webpack_require__(33);
 // 订阅事件，当 event.action === 'reload' 时执行页面刷新
 // app.js中 派发的reload事件吧
 hotClient.subscribe(function (event) {
@@ -15161,7 +15357,7 @@ hotClient.subscribe(function (event) {
 });
 
 /***/ }),
-/* 19 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -15178,7 +15374,7 @@ var options = {
   autoConnect: true
 };
 if (true) {
-  var querystring = __webpack_require__(21);
+  var querystring = __webpack_require__(35);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   setOverrides(overrides);
 }
@@ -15312,11 +15508,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(24);
+  var strip = __webpack_require__(38);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(26);
+    overlay = __webpack_require__(40);
   }
 
   var styles = {
@@ -15369,7 +15565,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(31);
+var processUpdate = __webpack_require__(45);
 
 var customHandler;
 var subscribeAllHandler;
@@ -15435,10 +15631,10 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?noInfo=true&reload=true", __webpack_require__(20)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?noInfo=true&reload=true", __webpack_require__(34)(module)))
 
 /***/ }),
-/* 20 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -15466,18 +15662,18 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 21 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(22);
-exports.encode = exports.stringify = __webpack_require__(23);
+exports.decode = exports.parse = __webpack_require__(36);
+exports.encode = exports.stringify = __webpack_require__(37);
 
 
 /***/ }),
-/* 22 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15568,7 +15764,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 23 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15660,12 +15856,12 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 24 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(25)();
+var ansiRegex = __webpack_require__(39)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -15673,7 +15869,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 25 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15684,7 +15880,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 26 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -15713,7 +15909,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(27);
+var ansiHTML = __webpack_require__(41);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -15728,7 +15924,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(28).AllHtmlEntities;
+var Entities = __webpack_require__(42).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -15769,7 +15965,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 27 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15952,19 +16148,19 @@ ansiHTML.reset()
 
 
 /***/ }),
-/* 28 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(29),
-  Html4Entities: __webpack_require__(30),
-  Html5Entities: __webpack_require__(14),
-  AllHtmlEntities: __webpack_require__(14)
+  XmlEntities: __webpack_require__(43),
+  Html4Entities: __webpack_require__(44),
+  Html5Entities: __webpack_require__(28),
+  AllHtmlEntities: __webpack_require__(28)
 };
 
 
 /***/ }),
-/* 29 */
+/* 43 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -16125,7 +16321,7 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 30 */
+/* 44 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -16278,7 +16474,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 31 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -16416,7 +16612,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 32 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -16447,7 +16643,7 @@ if(true) {
 }
 
 /***/ }),
-/* 33 */
+/* 47 */
 /***/ (function(module, exports) {
 
 
@@ -16542,7 +16738,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 34 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16558,23 +16754,31 @@ var _vuex = __webpack_require__(2);
 
 var _vuex2 = _interopRequireDefault(_vuex);
 
-var _vueRouter = __webpack_require__(15);
+var _vueRouter = __webpack_require__(29);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _leftpad = __webpack_require__(36);
+var _api = __webpack_require__(50);
+
+var _api2 = _interopRequireDefault(_api);
+
+var _navsbar = __webpack_require__(51);
+
+var _navsbar2 = _interopRequireDefault(_navsbar);
+
+var _leftpad = __webpack_require__(55);
 
 var _leftpad2 = _interopRequireDefault(_leftpad);
 
-var _leftpadsmall = __webpack_require__(40);
+var _leftpadsmall = __webpack_require__(59);
 
 var _leftpadsmall2 = _interopRequireDefault(_leftpadsmall);
 
-var _index = __webpack_require__(44);
+var _index = __webpack_require__(63);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _store = __webpack_require__(65);
+var _store = __webpack_require__(136);
 
 var _store2 = _interopRequireDefault(_store);
 
@@ -16582,6 +16786,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _vue2.default.use(_vuex2.default);
 _vue2.default.use(_vueRouter2.default);
+_vue2.default.use(_api2.default);
 
 //组件
 // import CMyComponent            from '_PLUGIN_/mycomponent.vue';
@@ -16600,6 +16805,7 @@ _vue2.default.use(_vueRouter2.default);
 window.vueapp = new _vue2.default({
     el: '#vueapp',
     components: {
+        'c-navsbar': _navsbar2.default,
         'c-leftpad': _leftpad2.default,
         'c-leftpadsmall': _leftpadsmall2.default
     },
@@ -16607,40 +16813,50 @@ window.vueapp = new _vue2.default({
     store: _store2.default,
     data: function data() {
         return {
-            navlist: [],
-            currentnav: ''
+            navs: {
+                list: [],
+                current: ''
+            }
         };
     },
 
     computed: _extends({}, (0, _vuex.mapGetters)(['topbar', 'leftbar', 'leftbarsmall'])),
-    methods: _extends({}, (0, _vuex.mapActions)(['toggle_leftbar']), {
-        //切换nav
-        switchnav: function switchnav(item) {
-            this.currentnav = item.name;
-            this.$router.push(item.path);
-        }
-    }),
+    methods: _extends({}, (0, _vuex.mapActions)(['toggle_leftbar'])),
     created: function created() {
         // debugger;
         // this.actions.marge_data();
-        this.navlist = [{
+        this.navs.current = 'HOME';
+        this.navs.list = [{
+            name: '',
+            icon: 'icon-apps',
+            class: 'home',
+            path: '/admin'
+        }, {
             name: '用户',
+            icon: '',
+            class: '',
             path: '/admin-users'
         }, {
             name: '角色',
+            icon: '',
+            class: '',
             path: '/admin-roles'
         }, {
             name: '权限',
+            icon: '',
+            class: '',
             path: '/admin-power'
         }, {
             name: '系统配置',
+            icon: '',
+            class: '',
             path: '/admin-setting'
         }];
     }
 });
 
 /***/ }),
-/* 35 */
+/* 49 */
 /***/ (function(module, exports) {
 
 var g;
@@ -16667,18 +16883,1299 @@ module.exports = g;
 
 
 /***/ }),
-/* 36 */
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+// import Message          from '_IVIEW_/message';
+// import Modal            from '_IVIEW_/modal';
+// import Pinyin           from './pinyin';
+// import MD5              from './md5';
+/*
+//                    _ooOoo_
+//                   o8888888o
+//                   88" . "88
+//                   (| -_- |)
+//                    O\ = /O
+//                ____/`---'\____
+//              .   ' \\| |// `.
+//               / \\||| : |||// \
+//             / _||||| -:- |||||- \
+//               | | \\\ - /// | |
+//             | \_| ''\---/'' | |
+//              \ .-\__ `-` ___/-. /
+//           ___`. .' /--.--\ `. . __
+//        ."" '< `.___\_<|>_/___.' >'"".
+//       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+//         \ \ `-. \_ __\ /__ _/ .-` / /
+// ======`-.____`-.___\_____/___.-`____.-'======
+//                    `=---='
+//
+// .............................................
+//          佛祖保佑             永无BUG
+*/
+
+var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1,
+    //js数组最大索引号
+toString = window.toString,
+    viewUtil = window.viewUtil,
+    dr = window.dr,
+    QUERY_SERVICE = window.QUERY_SERVICE,
+    SERVICE_PREFIX = window.SERVICE_PREFIX,
+    uploadApi4base64 = window.uploadApi4base64,
+    uploadPath = window.uploadPath,
+    createfolderApi = window.createfolderApi,
+    rtype = window.rtype,
+    rid = window.rid,
+    nowCompanyId = window.nowCompanyId;
+
+//vue通用api插件
+var api = {
+    //类型判断
+    //数组
+    isarray: Array.isArray || function (target) {
+        return toString.call(target) === '[object Array]';
+    },
+    //类数组
+    isarraylike: function isarraylike(target) {
+        var len = target && target.length;
+        return len && 'number' === typeof len && 0 <= len && len <= MAX_ARRAY_INDEX;
+    },
+    isboolean: function isboolean(target) {
+        return target === true || target === false || toString.call(target) === '[object Boolean]';
+    },
+    isdate: function isdate(target) {
+        return toString.call(target) === '[object Date]';
+    },
+    isnumber: function isnumber(target) {
+        return typeof target === 'number';
+    },
+    isstring: function isstring(target) {
+        return typeof target === 'string';
+    },
+    isfunction: function isfunction(target) {
+        return typeof target === 'function';
+    },
+
+    //普通对象
+    isobject: function isobject(target) {
+        return (typeof target === 'undefined' ? 'undefined' : _typeof(target)) === 'object';
+    },
+
+    //键值对象
+    isplainobject: function isplainobject(target) {
+        return target && api.isobject(target) && Object.getPrototypeOf(target) === Object.prototype;
+    },
+
+
+    //判断某值是否存在于对象类型数组的某属性
+    hasvalue: function hasvalue(obj, key, value) {
+        var res = false;
+        api.each(obj, function (item, i) {
+            if (item[key] && item[key] === value) {
+                res = true;
+                return false;
+            }
+        });
+        return res;
+    },
+
+    //判断对象是否包含某直接属性（非原型）
+    haskey: function haskey(obj, key) {
+        return obj !== null && hasOwnProperty.call(obj, key);
+    },
+
+    //获取对象所有属性名
+    allkeys: function allkeys(obj) {
+        if (!api.isobject(obj)) {
+            return [];
+        }
+        var keys = [],
+            key = void 0;
+        for (key in obj) {
+            keys.push(key);
+        }
+        return keys;
+    },
+
+    //获取对象自有属性名（不包含原型属性）
+    keys: function keys(obj) {
+        if (!api.isobject(obj)) {
+            return [];
+        }
+        if (Object.keys) {
+            return Object.keys(obj);
+        }
+        var keys = [],
+            key = void 0;
+        for (key in obj) {
+            if (api.haskey(obj, key)) {
+                keys.push(key);
+            }
+        }
+        return keys;
+    },
+
+    //获取对象自有属性值（数组）
+    values: function values(obj) {
+        var keys = api.keys(obj),
+            len = keys.length,
+            i = 0,
+            arr = Array(len);
+
+        for (; i < len; i++) {
+            arr[i] = obj[keys[i]];
+        }
+        return arr;
+    },
+
+    //对象属性扩展覆盖（同jQuery/Angularjs）
+    //放弃使用Object.assign, 因为Object.assign只能覆盖一层，不能深度扩展
+    //return Object.assign.apply( (arguments.length > 0 ? arguments[0] : this), arguments);
+    extend: function extend( /*isdeep,*/obj) {
+        var len = arguments.length,
+            idx = 1,
+            isdeep = false;
+        if (len < 2 || obj === null) {
+            return obj;
+        }
+        if (api.isboolean(arguments[0])) {
+            isdeep = arguments[0];
+            obj = arguments[1];
+            idx++;
+        }
+        var source = void 0,
+            keys = void 0,
+            proplen = void 0,
+            i = void 0,
+            key = void 0,
+            iscopyarr = void 0,
+            clone = void 0;
+        for (; idx < len; idx++) {
+            //多对象
+            source = arguments[idx]; //扩展目标对象
+            keys = api.allkeys(source);
+            proplen = keys.length;
+            for (i = 0; i < proplen; i++) {
+                key = keys[i];
+                if (source[key] === obj) {
+                    //防止引用对象包含关系，导致死循环
+                    continue;
+                }
+                if (isdeep && (api.isplainobject(source[key]) || (iscopyarr = api.isarray(source[key])))) {
+                    if (iscopyarr) {
+                        iscopyarr = false;
+                        clone = obj[key] && api.isarray(obj[key]) ? obj[key] : [];
+                    } else {
+                        clone = obj[key] && api.isPlainObject(obj[key]) ? obj[key] : {};
+                    }
+                    obj[key] = api.extend(isdeep, clone, source[key]);
+                } else if (void 0 !== source[key]) {
+                    obj[key] = source[key];
+                }
+            }
+        }
+        return obj;
+    },
+    //拷贝
+    copy: function copy(target) {
+        var isdeep = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+        var clone = void 0;
+        if (api.isarray(target)) {
+            clone = [];
+        } else {
+            clone = {};
+        }
+        return api.extend(isdeep, clone, target);
+    },
+
+    //遍历工具，dataset可以是数组和对象
+    //回调函数 fn( item, index|key, dataset);
+    // break----用return false;
+    // continue --用return ture;
+    each: function each(dataset, fn, context) {
+        var callback = 'undefined' === typeof context ? fn : function (value, index, collection) {
+            return fn.call(context, value, index, collection);
+        };
+        var i = void 0,
+            len = void 0,
+            res = void 0;
+        if (api.isarraylike(dataset)) {
+            //类数组
+            i = 0;
+            len = dataset.length;
+            for (; i < len; i++) {
+                res = callback(dataset[i], i, dataset);
+                if (false === res) {
+                    break;
+                } else if (true === res) {
+                    continue;
+                }
+            }
+        } else {
+            //键值对象
+            var keys = api.keys(dataset);
+            i = 0;
+            len = keys.length;
+            for (; i < len; i++) {
+                res = callback(dataset[keys[i]], keys[i], dataset);
+                if (false === res) {
+                    break;
+                } else if (true === res) {
+                    continue;
+                }
+            }
+        }
+        return dataset;
+    },
+
+    //队列缓存对象生产器（返回一个缓存区对象）
+    createcache: function createcache(maxlen) {
+        var keys = [];
+        function cache(key, value) {
+            if (false !== maxlen && keys.push[key + ' '] > maxlen) {
+                //key加一个空格符，与原型属性做一下区分，避免原型属性被修改
+                delete cache[keys.shift()];
+            }
+            if ('undefined' !== typeof value) {
+                return cache[key + ' '] = value;
+            } else {
+                return cache[key + ' '];
+            }
+        }
+        return cache;
+    },
+
+    //降频处理器
+    later: function later(fn, delay, immediate) {
+        var timer = void 0;
+        return function () {
+            var context = this,
+                args = arguments,
+                callnow = immediate && !timer;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                if (!immediate) {
+                    fn.apply(context, args);
+                }
+                timer = null;
+            }, delay);
+            if (callnow) {
+                fn.apply(context, args);
+            }
+        };
+    },
+
+
+    //去掉字符串前后空格
+    trim: function trim(str) {
+        return 'undefined' !== typeof str.trim ? str.trim() : str.replace(/(^\s*)|(\s*$)/g, '');
+    },
+
+    //裁剪字符串
+    substr: function substr(str, start, len) {
+        str = String(str).toString();
+        start = start || 0;
+        len = len || str.length;
+        return str.substr(start, len);
+    },
+
+    //前置补零
+    prefillzero: function prefillzero(num, len) {
+        num = num.toString();
+        while (num.length < len) {
+            num = '0' + num;
+        }
+        return num;
+    },
+
+    //获取文件后缀
+    sufix: function sufix(url) {
+        var islower = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+        url = url.substr(url.lastIndexOf('.') + 1);
+        return true === islower ? url.toLowerCase() : url.toUpperCase();
+    },
+
+    //汉子转拼音
+    pinyin: function pinyin(str) {
+        var isupper = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+        var isfirst = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+        if (!str) {
+            return str;
+        }
+        str = isfirst ? Pinyin.convert_first(str) : Pinyin.convert(str);
+        return isupper ? str.toUpperCase() : str.toLowerCase();
+    },
+
+
+    //字符串转日期
+    str2date: function str2date(strdate) {
+        var arr = strdate.split(/[- \/:]/g) || [];
+        arr[0] = arr[0] || 1986;
+        arr[1] = arr[1] || 6;
+        arr[2] = arr[2] || 1;
+        arr[3] = arr[3] || 0;
+        arr[4] = arr[4] || 0;
+        arr[5] = arr[5] || 0;
+        return new Date(arr[0], --arr[1], arr[2], arr[3], arr[4], arr[5]);
+    },
+
+    //日期格式化
+    fmtdate: function fmtdate(date) {
+        var fmt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-MM-dd hh:mm:ss';
+
+        var o = {
+            'M+': date.getMonth() + 1, //月份
+            'd+': date.getDate(), //日
+            'h+': date.getHours(), //小时
+            'm+': date.getMinutes(), //分
+            's+': date.getSeconds(), //秒
+            'q+': Math.floor((date.getMonth() + 3) / 3), //季度
+            'S': date.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) {
+            fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
+        }
+        for (var k in o) {
+            if (new RegExp('(' + k + ')').test(fmt)) {
+                fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length));
+            }
+        }
+        return fmt;
+    },
+
+    //获得日期对应的星期数
+    getweekday: function getweekday(date) {
+        var map = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+        if (api.isdate(date)) {
+            return map[date.getDay()];
+        } else if (api.isstring(date)) {
+            date = date.split(/[- :]/g);
+            date = new Date(date[0], --date[1], date[2]);
+            return map[date.getDay()];
+        } else {
+            return '';
+        }
+    },
+
+    //获得日期对应的星期数
+    dateplus: function dateplus(date) {
+        if (api.isstring(date)) {
+            date = api.str2date(date);
+        }
+        return {
+            self: date,
+            text: api.fmtdate(date), //字符串全日期
+            time: date.getTime(), //整数时间戳
+            y: date.getFullYear(), //年
+            M: date.getMonth() + 1, //月
+            d: date.getDate(), //日
+            D: api.getweekday(date), //星期
+            h: date.getHours(),
+            m: date.getMinutes(),
+            s: date.getSeconds(),
+            q: Math.floor((date.getMonth() + 3) / 3), //季度
+            S: date.getMilliseconds() //毫秒
+        };
+    },
+
+    //日期加减
+    // fmt = '-d5'; //五天前
+    // fmt = '+d5'; //五天后
+    // fmt = '-M5'; //五个月前
+    // fmt = '+M5'; //五个月后
+    adddate: function adddate(date, fmt) {
+        var dateplus = void 0,
+            matchs = void 0,
+            mothed = void 0,
+            type = void 0,
+            value = void 0;
+        dateplus = api.dateplus(date);
+
+        matchs = fmt.match(/^([-+])([A-Za-z])(\d)*$/);
+        if (matchs && matchs[1] && matchs[2] && matchs[3]) {
+            mothed = matchs[1];
+            type = matchs[2];
+            value = matchs[3];
+
+            switch (type) {
+                case 'y':
+                    dateplus.y += parseInt(mothed + value);
+                    date.setFullYear(dateplus.y);
+                    break;
+                case 'M':
+                    dateplus.M += parseInt(mothed + value);
+                    date.setMonth(dateplus.M);
+                    break;
+                case 'd':
+                    dateplus.d += parseInt(mothed + value);
+                    date.setDate(dateplus.d);
+                    break;
+                case 'h':
+                    dateplus.h += parseInt(mothed + value);
+                    date.setHours(dateplus.h);
+                    break;
+                case 'm':
+                    dateplus.m += parseInt(mothed + value);
+                    date.setMinutes(dateplus.m);
+                    break;
+            }
+            return date;
+        } else {
+            return false;
+        }
+    },
+
+
+    //统一信息提示
+    /*info() {
+        Message.info.apply(this, arguments);
+    },
+    success() {
+        Message.success.apply(this, arguments);
+    },
+    error() {
+        Message.error.apply(this, arguments);
+    },
+    confirm( content, fnok, fncancel, textok, textcancel ) {
+        Modal.confirm({
+            content: '<span style="font-size: 18px;">'+ content +'</span>',
+            okText: textok || '确定',
+            onOk: fnok || function(){},
+            cancelText: textcancel || '取消',
+            onCancel: fncancel || function(){}
+        });
+    },*/
+
+    //获得一个流水号
+    nowid: function nowid() {
+        var now = new Date().getTime();
+        now += window.g35user._id;
+        return now;
+    },
+
+    //http工具
+    http: function http() {
+        return $.ajax.apply(this, arguments); //可更换第三方支持promise的ajax工具
+    },
+
+    //数据统一接口
+    ajax: function ajax(url, data) {
+        if (url === false) {
+            url = QUERY_SERVICE;
+        }
+        var params = {
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json'
+        };
+        return api.http(params).then(function (res) {
+            if (!res) {
+                return false;
+            }
+            if (res && !!res.encode_str) {
+                try {
+                    res = JSON.parse(dr(res.encode_str));
+                    // res = JSON.parse( MD5.hex(res.encode_str) );
+                } catch (ex) {
+                    api.error('数据错误！');
+                    return false;
+                }
+            }
+            if (res.refresh) {
+                window.location.reload();
+                return false;
+            }
+            if (res.result === 'ServerError') {
+                api.error('操作超时，请重试或刷新页面！');
+                return false;
+            }
+            if (res.result.toUpperCase() !== 'TRUE') {
+                if (res.result === 'FALSE' && res.errorcode === 'COMPANY_CRM_PAYED_TIME_EXPIRED') {
+                    viewUtil.isCRMNoPayed();
+                    return false;
+                }
+                if (res.result === 'FALSE' && res.errorcode === 'ERROR_NO_AUTHORITY') {
+                    if ($('#taskDetail').length) {
+                        viewUtil.showSummary();
+                    } else {
+                        api.error('无权限查看相关内容');
+                    }
+                    return false;
+                }
+                if (res.result === 'FALSE' && (res.errorcode === 'ERROR_BE_DELETED' || res.errorcode === 'be_deleted')) {
+                    api.error('内容已被删除');
+                    return false;
+                }
+                if (res.result === 'FALSE' && res.errorcode === 'ERROR_REPEATED') {
+                    api.error('已有相关内容');
+                    return false;
+                }
+                //续费已过期
+                if (res.result === 'FALSE' && res.errorcode === 'COMPANY_PAYED_TIME_EXPIRED') {
+                    viewUtil.companyNoPayedBox();
+                    return false;
+                }
+                if (res.result === 'FALSE' && res.msg === 'ERROR_DB_GAOXIN_DATA_EXIST') {
+                    api.error('已存在相同数据，请勿重复提交！');
+                    return false;
+                }
+                api.error('操作失败');
+            }
+            return res;
+        }, function (res) {
+            api.error('操作超时，请重试或刷新页面！');
+        });
+    },
+
+
+    //upyun上传接口
+    //data = {policy, signature, file}
+    ajaxupyun: function ajaxupyun(url, data) {
+        var formData = new FormData(),
+            nowid = api.nowid(),
+            filedata = {
+            nowid: nowid,
+            filetype: data.file.type,
+            size: data.file.size,
+            file_nowid: nowid,
+            file_name: data.file.name,
+            file_url: ''
+        };
+
+        api.each(data, function (item, key) {
+            formData.append(key, item);
+        });
+
+        var params = {
+            type: 'POST',
+            url: url,
+            data: formData,
+            dataType: 'json',
+            processData: false,
+            contentType: false
+        };
+
+        return api.http(params).then(function (res) {
+            // debugger;
+            if ('string' === typeof res) {
+                res = JSON.parse(res);
+            } else {
+                res = res;
+            }
+            if (200 === res.code && 'ok' === res.message) {
+                var isimage = /image\/\w+/.test(res.mimetype);
+                if (isimage) {
+                    if (res['image-width']) {
+                        filedata.file_width = res['image-width'];
+                        filedata.width = res['image-width'];
+                    }
+                    if (res['image-height']) {
+                        filedata.file_height = res['image-height'];
+                        filedata.height = res['image-height'];
+                    }
+                    filedata.file_url = 'https://groups35-images.b0.upaiyun.com' + res.url.substr(0, 9) + encodeURIComponent(res.url.substr(9)) + '!normal';
+                    filedata.file_type = 'pic';
+                    filedata.type = '1';
+                } else {
+                    filedata.file_url = 'https://groups35-notimage.b0.upaiyun.com' + res.url.substr(0, 9) + encodeURIComponent(res.url.substr(9));
+                    filedata.file_type = 'files';
+                    filedata.type = '3';
+                }
+                return filedata;
+            } else {
+                api.error('云存储数据异常！');
+            }
+        }, function (res) {
+            if (res && res.responseJSON) {
+                api.error('云存储错误：' + res.responseJSON.code + ' - ' + res.responseJSON.message);
+            }
+        });
+    },
+
+    //保存附件文件信息
+    savefile: function savefile(filedata) {
+        var params = {
+            httpType: 'post',
+            serviceName: 'file',
+            functionName: 'addToGroupOrP2P',
+            user_id: '',
+            token: '',
+            company_id: nowCompanyId
+        };
+        params = api.extend(params, filedata);
+
+        return api.ajax(false, params).then(function (res) {
+            if (res && 'TRUE' === res.result) {
+                res.data.created = '刚刚'; //返回新数据，未日期格式化
+                return res.data;
+            } else {
+                api.error('保存附件失败！');
+            }
+        }, function (res) {
+            // debugger;
+            api.error('保存附件失败！');
+        });
+    },
+
+    //上传附件
+    //attachtype = msg|group|temp       //附件分类
+    //attachdata = {type, id}           //分类信息
+    uploadattach: function uploadattach(file, attachtype, attachdata) {
+        var configtype = 'files';
+        if (/image\/\w+/.test(file.type)) {
+            configtype = 'images';
+        }
+        if (/audio\/\w+/.test(file.type)) {
+            configtype = 'audio';
+        }
+
+        var params = {
+            serviceName: 'file',
+            functionName: 'getUploadInfoNoReturn',
+            type: configtype,
+            file_name: encodeURIComponent(file.name),
+            service_params_order: ['type', 'file_name']
+        };
+        return api.ajax(false, params).then(function (res) {
+            //获得upyun验证配置
+            if (res && 'TRUE' === res.result && res.data) {
+                res = res.data;
+
+                var data = {
+                    policy: res.policy,
+                    signature: res.signature,
+                    file: file
+                };
+                return api.ajaxupyun(res.action, data);
+            } else {
+                api.error('upyun配置数据异常！');
+            }
+        }).then(function (res) {
+            //保存附件文件信息
+            var filedata = {
+                file_url: res.file_url,
+                type: res.file_type,
+                title: res.file_name,
+                size: res.size,
+                file_rtype: '',
+                file_rid: '0'
+            };
+
+            if ('pic' === res.type) {
+                filedata.width = res.file_width;
+                filedata.height = res.file_height;
+            }
+
+            if ('task' === attachtype) {
+                filedata.from = attachtype;
+            }
+            if ('msg' === attachtype) {
+                filedata.file_rtype = attachdata.type || rtype; //rtype、rid兼容老代码的全局变量
+                filedata.file_rid = attachdata.id || rid;
+            }
+            if ('group' === attachtype) {
+                filedata.file_rtype = attachdata.type;
+                filedata.file_rid = attachdata.id;
+
+                if ('task' !== attachtype) {
+                    filedata.from_group_id = attachdata.id;
+                }
+            }
+
+            if ('p2p' === filedata.file_rtype) {
+                filedata.another_user_id = filedata.file_rid;
+            }
+            if ('all' === filedata.file_rtype) {
+                filedata.file_rid = 0;
+                filedata.another_user_id = 0;
+            }
+
+            return api.savefile(filedata);
+        });
+    },
+
+    //上传图片（不保存附件管理记录）
+    uploadimage: function uploadimage(src, rid, rtype) {
+        var params = {
+            nowid: api.nowid(),
+            img_src: src
+        };
+        if (rid) {
+            params.rid = rid;
+        }
+        if (rtype) {
+            params.rtype = rtype;
+        }
+
+        return api.ajax(SERVICE_PREFIX + 'upload/uploadCaptureOrDragImg', params);
+    },
+
+    //根据路径创建目录（本地服务器）
+    createfolder: function createfolder(opt) {
+        if (api.isarray(opt.paths)) {
+            opt.paths = opt.paths.join('<+>');
+        }
+
+        var params = {
+            httpType: 'post',
+            serviceName: '',
+            functionName: '',
+            serviceURL: createfolderApi, //上传API地址
+            paths: opt.paths || ''
+        };
+        return api.ajax(false, params);
+    },
+
+    //上传文件（base64）
+    uploadlocal4base64: function uploadlocal4base64(opt) {
+        var params = {
+            httpType: 'post',
+            serviceName: '',
+            functionName: '',
+            serviceURL: uploadApi4base64, //上传API地址
+            host: uploadPath, //服务器地址
+            imgdata: opt.imgdata,
+            path: opt.path || '',
+            filename: opt.filename || ''
+        };
+        return api.ajax(false, params);
+    },
+
+    //已上传文件列表
+    getfiles: function getfiles() {
+        var filetype = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'file';
+        var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+        var limit = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 15;
+
+        var image_only = void 0;
+        switch (filetype) {
+            case 'file':
+                image_only = 0;
+                break;
+            case 'pic':
+                image_only = 1;
+                break;
+        }
+
+        var params = {
+            serviceName: 'file',
+            functionName: 'getItemsByUserId',
+            user_id: '',
+            token: '',
+            company_id: nowCompanyId,
+            limit: limit,
+            page: page,
+            image_only: image_only,
+            service_params_order: ['user_id', 'token', 'company_id', 'limit', 'page', 'image_only']
+        };
+        return api.ajax(false, params);
+    },
+
+    //切换图片upyun尺寸
+    imagemode: function imagemode(url, mode) {
+        if (!url || !mode) {
+            return url;
+        }
+        if ('NORMAL' === mode) {
+            return url.replace(/\!\w*/, '!normal');
+        } else if ('THUMBNAIL' === mode) {
+            return url.replace(/\!\w*/, '!thumbnail');
+        } else if ('ORIGIN' === mode) {
+            return url.replace(/\!\w*/, '');
+        }
+    },
+
+
+    //获取项目详情
+    getprojectdetail: function getprojectdetail(projectid) {
+        var params = {
+            user_id: '',
+            token: '',
+            serviceName: 'project',
+            functionName: 'getProjectInfo',
+            httpType: 'post',
+            project_id: projectid,
+            tiny: 0
+        };
+        return api.ajax(false, params);
+    },
+
+    //获取项目阶段列表
+    getprojectstages: function getprojectstages(projectid) {
+        var params = {
+            httpType: 'get',
+            serviceName: 'stage',
+            functionName: 'getStageByProjectId',
+            user_id: '',
+            token: '',
+            project_id: projectid,
+            service_params_order: ['user_id', 'token', 'project_id']
+        };
+        return api.ajax(false, params);
+    },
+
+    //获取所有参与项目
+    getprojects: function getprojects() {
+        var params = {
+            httpType: 'get',
+            serviceName: 'project',
+            functionName: 'getCanVisibleProjectList',
+            user_id: '',
+            token: '',
+            company_id: nowCompanyId,
+            service_params_order: ['user_id', 'token', 'company_id']
+        };
+        return api.ajax(false, params);
+    },
+
+    //获取所有客户
+    getcustomers: function getcustomers() {
+        var params = {
+            httpType: 'post',
+            serviceName: 'customer',
+            functionName: 'listOwnCustomers',
+            user_id: '',
+            token: '',
+            limit: 99999,
+            page: 1,
+            company_id: nowCompanyId
+        };
+        return api.ajax(false, params);
+    },
+
+
+    //通过用户id获得用户
+    getuser: function getuser(id) {
+        return id && window.orgUsers[id] ? window.orgUsers[id] : null;
+    },
+
+    //筛选用户
+    queryusers: function queryusers(keywords, source) {
+        var res = [];
+        keywords = keywords.toUpperCase();
+        if (keywords !== '') {
+            api.each(source, function (user, index) {
+                if (user.nickname_en && -1 < user.nickname_en.replace('/,/g', '').toUpperCase().indexOf(keywords)) {
+                    res.push(user);
+                    return true;
+                } else if (user.nickname && -1 < user.nickname.replace('/,/g', '').toUpperCase().indexOf(keywords)) {
+                    res.push(user);
+                    return true;
+                }
+            });
+        }
+        return res;
+    },
+
+
+    //向pomelo服务器发送消息
+    send_comment: function send_comment(opt) {
+        var params = {
+            httpType: 'post',
+            serviceName: 'task',
+            functionName: 'addComment',
+            user_id: '',
+            token: ''
+        };
+        if (opt.type) {
+            params.sub_type = opt.type;
+        }
+        if (opt.data) {
+            params.data = opt.data;
+        }
+
+        return api.ajax(false, params).then(function (res) {
+            if (res && res.result && 'TRUE' === res.result) {} else {
+                //
+            }
+        }, function (res) {
+            //
+        });
+    }
+};
+//扩展部分
+api.extend(api, {
+    //创建一个全局缓存队列
+    cache: api.createcache(false)
+});
+
+//懒加载组件
+function findvmfromfrag(frag) {
+    var node = frag.node;
+    if (frag.end) {
+        while (!node.__vue__ && node !== frag.end && node.nextSibling) {
+            node = node.nextSibling;
+        }
+    }
+    return node.__vue__;
+}
+//扩展部分
+api.extend(api, {
+    install: function install(Vue, options) {
+        Vue.$fn = api;
+        Vue.prototype.$fn = api;
+
+        Vue.directive('floaded', {
+            bind: function bind() {
+                // debugger;
+                // console.log(1111111111);
+                // console.log($('#projectprogress-ganttbox').length);
+            },
+            update: function update() {
+                // debugger;
+                // console.log(3333333333);
+                // console.log($('#projectprogress-ganttbox').length);
+            },
+            unbind: function unbind() {
+                // debugger;
+                // console.log(5555555555);
+                // console.log($('#projectprogress-ganttbox').length);
+            }
+        });
+
+        //可编辑元素 contenteditable="true"
+        Vue.directive('edit', {
+            twoWay: true,
+            bind: function bind() {
+                this.handler = function () {
+                    this.set(this.el.innerHTML);
+                }.bind(this);
+                this.el.addEventListener('keyup', this.handler); //每次输入内容后，重新双向绑定
+            },
+            update: function update(newValue, oldValue) {
+                this.el.innerHTML = newValue || '';
+            },
+            unbind: function unbind() {
+                this.el.removeEventListener('keyup', this.handler);
+            }
+        });
+
+        //懒加载组件
+        var FragmentFactory = Vue.FragmentFactory;
+        var _Vue$util = Vue.util,
+            createAnchor = _Vue$util.createAnchor,
+            replace = _Vue$util.replace;
+
+        Vue.directive('lazy', {
+            terminal: true,
+            bind: function bind() {
+                // this.INITED = false;
+                this.anchor = createAnchor('v-if');
+                replace(this.el, this.anchor);
+            },
+            update: function update(value) {
+                var _this = this;
+
+                if (this.INITED) {
+                    return;
+                }
+                window.setTimeout(function () {
+                    _this.insert();
+                    _this.updateref();
+                    _this.INITED = true;
+                }, value || 0);
+            },
+            unbind: function unbind() {
+                if (this.frag) {
+                    this.frag.destroy();
+                }
+            },
+
+            // insert dom
+            insert: function insert() {
+                if (!this.factory) {
+                    this.factory = new FragmentFactory(this.vm, this.el);
+                }
+                this.frag = this.factory.create(this._host, this._scope, this._frag);
+                this.frag.before(this.anchor, !this.modifiers['no-animation']); //multiBefore(target, withTransition)
+            },
+
+            // update v-ref
+            updateref: function updateref() {
+                var ref = this.descriptor.ref;
+                if (!ref) {
+                    return;
+                }
+
+                var hash = (this.vm || this._scope).$refs,
+                    refs = hash[ref],
+                    key = this._frag.scope.$key;
+
+                if (!refs) {
+                    return;
+                }
+
+                if (Array.isArray(refs)) {
+                    refs.push(findvmfromfrag(this._frag));
+                } else {
+                    refs[key] = findvmfromfrag(this._frag);
+                }
+            }
+        });
+    }
+});
+exports.default = api;
+
+/***/ }),
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpad_vue__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpad_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpad_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_2bcbf1dd_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_leftpad_vue__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_navsbar_vue__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_navsbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_navsbar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_7d036194_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_navsbar_vue__ = __webpack_require__(54);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(37)
+  __webpack_require__(52)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_navsbar_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_7d036194_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_navsbar_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\common\\navsbar.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] navsbar.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7d036194", Component.options)
+  } else {
+    hotAPI.reload("data-v-7d036194", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(7);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(7, function() {
+			var newContent = __webpack_require__(7);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    props: {
+        list: {
+            type: Array,
+            required: true
+        },
+        value: {
+            type: Object
+        }
+    },
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //
+        classesitem: function classesitem(item) {
+            debugger;
+            var classes = {};
+            if (this.value === item.name) {
+                classes['active'] = true;
+            }
+            if (item.class) {
+                this.$fn.each(item.class.split(' '), function (classname, idx) {
+                    classes[classname] = true;
+                });
+            }
+            console.log(classes);
+            return classes;
+        },
+
+        //切换nav
+        switchnav: function switchnav(item) {
+            // this.value = item.name;
+            this.$emit('input', item.name);
+            this.$router.push(item.path);
+        }
+    },
+    mounted: function mounted() {
+        // debugger;
+    }
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "navbar"
+  }, [_vm._l((_vm.list), function(item, idx) {
+    return [_c('a', {
+      staticClass: "nav",
+      class: _vm.classesitem(item),
+      on: {
+        "click": function($event) {
+          _vm.switchnav(item)
+        }
+      }
+    }, [(item.icon) ? _c('i', {
+      staticClass: "iconfont icon-apps"
+    }) : _vm._e(), _vm._v(" "), (item.name) ? _c('span', [_vm._v(_vm._s(item.name))]) : _vm._e()])]
+  })], 2)
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-7d036194", esExports)
+  }
+}
+
+/***/ }),
+/* 55 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpad_vue__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpad_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpad_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_2bcbf1dd_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_leftpad_vue__ = __webpack_require__(58);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(56)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -16722,13 +18219,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 37 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(7);
+var content = __webpack_require__(8);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -16742,8 +18239,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(7, function() {
-			var newContent = __webpack_require__(7);
+		module.hot.accept(8, function() {
+			var newContent = __webpack_require__(8);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -16753,7 +18250,7 @@ if(true) {
 }
 
 /***/ }),
-/* 38 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16764,6 +18261,49 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -17037,7 +18577,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 39 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17056,10 +18596,11 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }
     }
   }, [_c('i', {
+    staticClass: "iconfont icon-down",
     class: {
       active: _vm.leftbar.show
     }
-  }, [_vm._v("=")])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _c('div', {
     staticClass: "avatar-image",
     staticStyle: {
       "background-image": "url(/public/images/avatar.png)"
@@ -17069,7 +18610,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._v("王小二")]), _vm._v(" "), _c('div', {
     staticClass: "avatar-remark"
   }, [_vm._v("市场部-专员")])])]), _vm._v(" "), _c('div', {
-    staticClass: "menus-box"
+    staticClass: "menusbox"
   }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "menus-group"
   }, [_c('div', {
@@ -17099,26 +18640,96 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, [_c('div', {
     staticClass: "menu"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "name",
     attrs: {
-      "href": "javascript:void(0)"
+      "to": "/admin-theme-color"
     }
-  }, [_vm._v("配色")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("配色")])], 1), _vm._v(" "), _c('div', {
     staticClass: "menu"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "name",
     attrs: {
-      "href": "javascript:void(0)"
+      "to": "/admin-theme-grid"
     }
-  }, [_vm._v("字体图标")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("栅格")])], 1), _vm._v(" "), _c('div', {
     staticClass: "menu"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "name",
     attrs: {
-      "href": "javascript:void(0)"
+      "to": "/admin-theme-table"
     }
-  }, [_vm._v("栅格")])])]) : _vm._e()])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("表格")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-button"
+    }
+  }, [_vm._v("按钮")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-popmenu"
+    }
+  }, [_vm._v("气泡菜单")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-check"
+    }
+  }, [_vm._v("选择项")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-select"
+    }
+  }, [_vm._v("下拉")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-tabs"
+    }
+  }, [_vm._v("标签页")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-tag"
+    }
+  }, [_vm._v("标签")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-input"
+    }
+  }, [_vm._v("输入框")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-form"
+    }
+  }, [_vm._v("表单")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-dialog"
+    }
+  }, [_vm._v("对话框")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('router-link', {
+    staticClass: "name",
+    attrs: {
+      "to": "/admin-theme-icons"
+    }
+  }, [_vm._v("字体图标")])], 1)]) : _vm._e()])], 1), _vm._v(" "), _c('div', {
     staticClass: "menu haschild"
   }, [_c('span', {
     staticClass: "name",
@@ -17242,18 +18853,18 @@ if (true) {
 }
 
 /***/ }),
-/* 40 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpadsmall_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpadsmall_vue__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpadsmall_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_leftpadsmall_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_73a6effa_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_leftpadsmall_vue__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_73a6effa_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_leftpadsmall_vue__ = __webpack_require__(62);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(41)
+  __webpack_require__(60)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -17297,13 +18908,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 41 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(8);
+var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -17317,8 +18928,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(8, function() {
-			var newContent = __webpack_require__(8);
+		module.hot.accept(9, function() {
+			var newContent = __webpack_require__(9);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -17328,7 +18939,7 @@ if(true) {
 }
 
 /***/ }),
-/* 42 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17339,6 +18950,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
 //
 //
 //
@@ -17473,7 +19085,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 43 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17488,10 +19100,11 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }
     }
   }, [_c('i', {
+    staticClass: "iconfont icon-down",
     class: {
       active: _vm.leftbarsmall.show
     }
-  }, [_vm._v("=")])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "appsbar-split"
   }), _vm._v(" "), _vm._m(1)])
 }
@@ -17543,7 +19156,7 @@ if (true) {
 }
 
 /***/ }),
-/* 44 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17553,51 +19166,103 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _vueRouter = __webpack_require__(15);
+var _vueRouter = __webpack_require__(29);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _index = __webpack_require__(45);
+var _index = __webpack_require__(64);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _users = __webpack_require__(49);
+var _users = __webpack_require__(68);
 
 var _users2 = _interopRequireDefault(_users);
 
-var _power = __webpack_require__(53);
+var _power = __webpack_require__(72);
 
 var _power2 = _interopRequireDefault(_power);
 
-var _roles = __webpack_require__(57);
+var _roles = __webpack_require__(76);
 
 var _roles2 = _interopRequireDefault(_roles);
 
-var _index3 = __webpack_require__(61);
+var _themeColor = __webpack_require__(80);
+
+var _themeColor2 = _interopRequireDefault(_themeColor);
+
+var _themeGrid = __webpack_require__(84);
+
+var _themeGrid2 = _interopRequireDefault(_themeGrid);
+
+var _themeTable = __webpack_require__(88);
+
+var _themeTable2 = _interopRequireDefault(_themeTable);
+
+var _themeButton = __webpack_require__(92);
+
+var _themeButton2 = _interopRequireDefault(_themeButton);
+
+var _themePopmenu = __webpack_require__(96);
+
+var _themePopmenu2 = _interopRequireDefault(_themePopmenu);
+
+var _themeCheck = __webpack_require__(100);
+
+var _themeCheck2 = _interopRequireDefault(_themeCheck);
+
+var _themeSelect = __webpack_require__(104);
+
+var _themeSelect2 = _interopRequireDefault(_themeSelect);
+
+var _themeTabs = __webpack_require__(108);
+
+var _themeTabs2 = _interopRequireDefault(_themeTabs);
+
+var _themeTag = __webpack_require__(112);
+
+var _themeTag2 = _interopRequireDefault(_themeTag);
+
+var _themeInput = __webpack_require__(116);
+
+var _themeInput2 = _interopRequireDefault(_themeInput);
+
+var _themeForm = __webpack_require__(120);
+
+var _themeForm2 = _interopRequireDefault(_themeForm);
+
+var _themeDialog = __webpack_require__(124);
+
+var _themeDialog2 = _interopRequireDefault(_themeDialog);
+
+var _themeIcons = __webpack_require__(128);
+
+var _themeIcons2 = _interopRequireDefault(_themeIcons);
+
+var _index3 = __webpack_require__(132);
 
 var _index4 = _interopRequireDefault(_index3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ROUTELIST = [{ path: '/', component: _index2.default }, { path: '/admin', component: _index2.default }, { path: '/admin-users', component: _users2.default }, { path: '/admin-power', component: _power2.default }, { path: '/admin-roles', component: _roles2.default }, { path: '/home', component: _index4.default }];
+var ROUTELIST = [{ path: '/', component: _index2.default }, { path: '/admin', component: _index2.default }, { path: '/admin-users', component: _users2.default }, { path: '/admin-power', component: _power2.default }, { path: '/admin-roles', component: _roles2.default }, { path: '/admin-theme-color', component: _themeColor2.default }, { path: '/admin-theme-grid', component: _themeGrid2.default }, { path: '/admin-theme-table', component: _themeTable2.default }, { path: '/admin-theme-button', component: _themeButton2.default }, { path: '/admin-theme-popmenu', component: _themePopmenu2.default }, { path: '/admin-theme-check', component: _themeCheck2.default }, { path: '/admin-theme-select', component: _themeSelect2.default }, { path: '/admin-theme-tabs', component: _themeTabs2.default }, { path: '/admin-theme-tag', component: _themeTag2.default }, { path: '/admin-theme-input', component: _themeInput2.default }, { path: '/admin-theme-form', component: _themeForm2.default }, { path: '/admin-theme-dialog', component: _themeDialog2.default }, { path: '/admin-theme-icons', component: _themeIcons2.default }, { path: '/home', component: _index4.default }];
 
 exports.default = new _vueRouter2.default({
     routes: ROUTELIST
 });
 
 /***/ }),
-/* 45 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_ebbbe6e6_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_ebbbe6e6_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(67);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(46)
+  __webpack_require__(65)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -17641,13 +19306,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 46 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(9);
+var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -17661,8 +19326,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(9, function() {
-			var newContent = __webpack_require__(9);
+		module.hot.accept(10, function() {
+			var newContent = __webpack_require__(10);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -17672,7 +19337,7 @@ if(true) {
 }
 
 /***/ }),
-/* 47 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17849,26 +19514,78 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
-/* 48 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrapper wrapper-scroll wrapper-box"
   }, [_c('div', {
     staticClass: "apps-container"
   }, [_c('div', {
     staticClass: "apps-group"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17877,10 +19594,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("用户")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("用户")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17889,10 +19606,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("用户")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("用户")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17901,12 +19618,12 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("菜单")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("菜单")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "apps-group"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17915,10 +19632,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("分类")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("分类")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17927,10 +19644,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("文章")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("文章")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17939,10 +19656,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("审核")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("审核")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17951,12 +19668,12 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("报表")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("报表")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "apps-group"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17965,10 +19682,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("密码")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("密码")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17977,10 +19694,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("编辑")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("编辑")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -17989,12 +19706,12 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("权限")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("权限")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "apps-group"
-  }, [_c('a', {
+  }, [_c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -18003,10 +19720,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("提交")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("提交")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -18015,10 +19732,10 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("支付")])]), _vm._v(" "), _c('a', {
+  }, [_vm._v("支付")])]), _vm._v(" "), _c('router-link', {
     staticClass: "apps-item",
     attrs: {
-      "href": "javascript:void(0);"
+      "to": ""
     }
   }, [_c('i', {
     staticClass: "ico",
@@ -18027,8 +19744,167 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   }), _vm._v(" "), _c('span', {
     staticClass: "tit"
-  }, [_vm._v("任务")])])])])])
-}]
+  }, [_vm._v("任务")])])], 1), _vm._v(" "), _c('div', {
+    staticClass: "apps-group"
+  }, [_c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-color"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-color.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("配色")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-grid"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-grid.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("栅格")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-table"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-table.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("表格")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-button"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-button-play.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("按钮")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-popmenu"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-list.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("气泡菜单")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-check"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-checked.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("选择项")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-select"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-menu.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("下拉")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-tabs"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-tabs.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("标签页")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-tag"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-tag.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("标签")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-input"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-input.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("输入框")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-form"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-form.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("表单")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-dialog"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-window.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("对话框")])]), _vm._v(" "), _c('router-link', {
+    staticClass: "apps-item",
+    attrs: {
+      "to": "/admin-theme-icons"
+    }
+  }, [_c('i', {
+    staticClass: "ico",
+    staticStyle: {
+      "background-image": "url(/public/images/apps/theme-heart.svg)"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tit"
+  }, [_vm._v("字体图标")])])], 1)])])
+}
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -18040,18 +19916,18 @@ if (true) {
 }
 
 /***/ }),
-/* 49 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_users_vue__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_users_vue__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_users_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_users_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_60e8327a_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_users_vue__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_60e8327a_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_users_vue__ = __webpack_require__(71);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(50)
+  __webpack_require__(69)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -18095,13 +19971,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 50 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(10);
+var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18115,8 +19991,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(10, function() {
-			var newContent = __webpack_require__(10);
+		module.hot.accept(11, function() {
+			var newContent = __webpack_require__(11);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -18126,7 +20002,7 @@ if(true) {
 }
 
 /***/ }),
-/* 51 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18421,7 +20297,7 @@ exports.default = {
 //
 
 /***/ }),
-/* 52 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18475,18 +20351,18 @@ if (true) {
 }
 
 /***/ }),
-/* 53 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_power_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_power_vue__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_power_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_power_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_26b7c980_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_power_vue__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_26b7c980_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_power_vue__ = __webpack_require__(75);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(54)
+  __webpack_require__(73)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -18530,13 +20406,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 54 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
+var content = __webpack_require__(12);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18550,8 +20426,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(11, function() {
-			var newContent = __webpack_require__(11);
+		module.hot.accept(12, function() {
+			var newContent = __webpack_require__(12);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -18561,7 +20437,7 @@ if(true) {
 }
 
 /***/ }),
-/* 55 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18604,7 +20480,7 @@ exports.default = {
 //
 
 /***/ }),
-/* 56 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18625,18 +20501,18 @@ if (true) {
 }
 
 /***/ }),
-/* 57 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_roles_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_roles_vue__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_roles_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_roles_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_6152f610_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_roles_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_6152f610_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_roles_vue__ = __webpack_require__(79);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(58)
+  __webpack_require__(77)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -18680,13 +20556,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 58 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(13);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18700,8 +20576,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(12, function() {
-			var newContent = __webpack_require__(12);
+		module.hot.accept(13, function() {
+			var newContent = __webpack_require__(13);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -18711,7 +20587,7 @@ if(true) {
 }
 
 /***/ }),
-/* 59 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18754,7 +20630,7 @@ exports.default = {
 //
 
 /***/ }),
-/* 60 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18775,18 +20651,9257 @@ if (true) {
 }
 
 /***/ }),
-/* 61 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_1c6caff7_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_color_vue__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_color_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_color_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_57f76d5a_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_color_vue__ = __webpack_require__(83);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(62)
+  __webpack_require__(81)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_color_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_57f76d5a_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_color_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-color.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-color.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-57f76d5a", Component.options)
+  } else {
+    hotAPI.reload("data-v-57f76d5a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(14);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(14, function() {
+			var newContent = __webpack_require__(14);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('h2', [_vm._v("基调配色")]), _vm._v(" "), _c('h3', [_vm._v("色块")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme | .bgkey | .bglight | .bgnice | .bgblack | .bgwhite | .bggray")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock bgtheme-lightest"
+  }, [_c('div', [_vm._v("主题-最亮")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme-lightest")]), _vm._v(" "), _c('div', [_vm._v("#D8F6FE")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgtheme-lighter fwhite"
+  }, [_c('div', [_vm._v("主题-较亮")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme-lighter")]), _vm._v(" "), _c('div', [_vm._v("#74DEFC")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgtheme-light fwhite"
+  }, [_c('div', [_vm._v("主题-亮")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme-light")]), _vm._v(" "), _c('div', [_vm._v("#43D3FC")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bgtheme fwhite"
+  }, [_c('div', [_vm._v("主题")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme")]), _vm._v(" "), _c('div', [_vm._v("#05C3F9")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgtheme-dark fwhite"
+  }, [_c('div', [_vm._v("主题-暗")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme-dark")]), _vm._v(" "), _c('div', [_vm._v("#319DBB")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgtheme-darker fwhite"
+  }, [_c('div', [_vm._v("主题-较暗")]), _vm._v(" "), _c('div', [_vm._v(".bgtheme-darker")]), _vm._v(" "), _c('div', [_vm._v("#027FA2")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgkey-light fwhite"
+  }, [_c('div', [_vm._v("关键的-亮")]), _vm._v(" "), _c('div', [_vm._v(".bgkey-light")]), _vm._v(" "), _c('div', [_vm._v("#FC7E6A")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bgkey fwhite"
+  }, [_c('div', [_vm._v("关键的")]), _vm._v(" "), _c('div', [_vm._v(".bgkey")]), _vm._v(" "), _c('div', [_vm._v("#F95339")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgkey-dark fwhite"
+  }, [_c('div', [_vm._v("关键的-暗")]), _vm._v(" "), _c('div', [_vm._v(".bgkey-dark")]), _vm._v(" "), _c('div', [_vm._v("#BB5D4F")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgkey-darker fwhite"
+  }, [_c('div', [_vm._v("关键的-较暗")]), _vm._v(" "), _c('div', [_vm._v(".bgkey-darker")]), _vm._v(" "), _c('div', [_vm._v("#A22613")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock bglight-lightest"
+  }, [_c('div', [_vm._v("闪亮的-最亮")]), _vm._v(" "), _c('div', [_vm._v(".bglight-lightest")]), _vm._v(" "), _c('div', [_vm._v("#FFFFC5")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bglight-lighter"
+  }, [_c('div', [_vm._v("闪亮的-较亮")]), _vm._v(" "), _c('div', [_vm._v(".bglight-lighter")]), _vm._v(" "), _c('div', [_vm._v("#FFFF73")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bglight-light"
+  }, [_c('div', [_vm._v("闪亮的-亮")]), _vm._v(" "), _c('div', [_vm._v(".bglight-light")]), _vm._v(" "), _c('div', [_vm._v("#FFFF41")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bglight"
+  }, [_c('div', [_vm._v("闪亮的")]), _vm._v(" "), _c('div', [_vm._v(".bglight")]), _vm._v(" "), _c('div', [_vm._v("#FFFF01")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bglight-dark "
+  }, [_c('div', [_vm._v("闪亮的-暗")]), _vm._v(" "), _c('div', [_vm._v(".bglight-dark")]), _vm._v(" "), _c('div', [_vm._v("#FFF201")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bglight-darker "
+  }, [_c('div', [_vm._v("闪亮的-较暗")]), _vm._v(" "), _c('div', [_vm._v(".bglight-darker")]), _vm._v(" "), _c('div', [_vm._v("#FFD301")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgnice-lighter fwhite"
+  }, [_c('div', [_vm._v("友好的-较亮")]), _vm._v(" "), _c('div', [_vm._v(".bgnice-lighter")]), _vm._v(" "), _c('div', [_vm._v("#67E3B1")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgnice-light fwhite"
+  }, [_c('div', [_vm._v("友好的-亮")]), _vm._v(" "), _c('div', [_vm._v(".bgnice-light")]), _vm._v(" "), _c('div', [_vm._v("#39E39E")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bgnice fwhite"
+  }, [_c('div', [_vm._v("友好的")]), _vm._v(" "), _c('div', [_vm._v(".bgnice")]), _vm._v(" "), _c('div', [_vm._v("#01C677")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgnice-dark fwhite"
+  }, [_c('div', [_vm._v("友好的-暗")]), _vm._v(" "), _c('div', [_vm._v(".bgnice-dark")]), _vm._v(" "), _c('div', [_vm._v("#269568")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgnice-darker fwhite"
+  }, [_c('div', [_vm._v("友好的-较暗")]), _vm._v(" "), _c('div', [_vm._v(".bgnice-darker")]), _vm._v(" "), _c('div', [_vm._v("#00814D")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgblack-light fwhite"
+  }, [_c('div', [_vm._v("黑-亮")]), _vm._v(" "), _c('div', [_vm._v(".bgblack-light")]), _vm._v(" "), _c('div', [_vm._v("#666")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bgblack fwhite"
+  }, [_c('div', [_vm._v("黑")]), _vm._v(" "), _c('div', [_vm._v(".bgblack")]), _vm._v(" "), _c('div', [_vm._v("#444")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgblack-dark fwhite"
+  }, [_c('div', [_vm._v("黑-基础")]), _vm._v(" "), _c('div', [_vm._v(".bgblack-dark")]), _vm._v(" "), _c('div', [_vm._v("#333")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgblack-darker fwhite"
+  }, [_c('div', [_vm._v("黑-暗")]), _vm._v(" "), _c('div', [_vm._v(".bgblack-darker")]), _vm._v(" "), _c('div', [_vm._v("#222")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgblack-darkest fwhite"
+  }, [_c('div', [_vm._v("黑-最暗")]), _vm._v(" "), _c('div', [_vm._v(".bgblack-darkest")]), _vm._v(" "), _c('div', [_vm._v("#000")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bggray-lighter"
+  }, [_c('div', [_vm._v("灰-较亮")]), _vm._v(" "), _c('div', [_vm._v(".bggray-lighter")]), _vm._v(" "), _c('div', [_vm._v("#EEE")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bggray-light"
+  }, [_c('div', [_vm._v("灰-亮")]), _vm._v(" "), _c('div', [_vm._v(".bggray-light")]), _vm._v(" "), _c('div', [_vm._v("#DDD")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bggray"
+  }, [_c('div', [_vm._v("灰")]), _vm._v(" "), _c('div', [_vm._v(".bggray")]), _vm._v(" "), _c('div', [_vm._v("#CCC")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bggray-dark fwhite"
+  }, [_c('div', [_vm._v("灰-暗")]), _vm._v(" "), _c('div', [_vm._v(".bggray-dark")]), _vm._v(" "), _c('div', [_vm._v("#BBB")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bggray-darker fwhite"
+  }, [_c('div', [_vm._v("灰-较暗")]), _vm._v(" "), _c('div', [_vm._v(".bggray-darker")]), _vm._v(" "), _c('div', [_vm._v("#AAA")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bggray-darkest fwhite"
+  }, [_c('div', [_vm._v("灰-最暗")]), _vm._v(" "), _c('div', [_vm._v(".bggray-darkest")]), _vm._v(" "), _c('div', [_vm._v("#999")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock empty"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgwhite-light"
+  }, [_c('div', [_vm._v("白-亮")]), _vm._v(" "), _c('div', [_vm._v(".bgwhite-light")]), _vm._v(" "), _c('div', [_vm._v("#FFF")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock active bgwhite"
+  }, [_c('div', [_vm._v("白")]), _vm._v(" "), _c('div', [_vm._v(".bgwhite")]), _vm._v(" "), _c('div', [_vm._v("#FAFAFA")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgwhite-dark"
+  }, [_c('div', [_vm._v("白-暗")]), _vm._v(" "), _c('div', [_vm._v(".bgwhite-dark")]), _vm._v(" "), _c('div', [_vm._v("#F7F7F7")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgwhite-darker"
+  }, [_c('div', [_vm._v("白-较暗")]), _vm._v(" "), _c('div', [_vm._v(".bgwhite-darker")]), _vm._v(" "), _c('div', [_vm._v("#F5F5F5")])]), _vm._v(" "), _c('div', {
+    staticClass: "colorblock bgwhite-darkest"
+  }, [_c('div', [_vm._v("白-最暗")]), _vm._v(" "), _c('div', [_vm._v(".bgwhite-darkest")]), _vm._v(" "), _c('div', [_vm._v("#F3F3F3")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', [_vm._v("我这个配色方案中还给出一些辅助色，参考一下得了")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#5ADBD3"
+    }
+  }, [_c('div', [_vm._v("#5ADBD3")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#ED0145"
+    }
+  }, [_c('div', [_vm._v("#ED0145")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#D13079"
+    }
+  }, [_c('div', [_vm._v("#D13079")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#710AAA"
+    }
+  }, [_c('div', [_vm._v("#710AAA")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#FF6000"
+    }
+  }, [_c('div', [_vm._v("#FF6000")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#FFBA73"
+    }
+  }, [_c('div', [_vm._v("#FFBA73")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('div', {
+    staticClass: "colorblock-min",
+    staticStyle: {
+      "border-color": "#F8F1CE"
+    }
+  }, [_c('div', [_vm._v("#F8F1CE")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("文本")]), _vm._v(" "), _c('div', [_vm._v("深暗色调")]), _vm._v(" "), _c('div', [_vm._v(".ftheme | .fkey | .fnice | .fblack")]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox5"
+  }, [_c('li', {
+    staticClass: "ftheme"
+  }, [_vm._v("Look inside")]), _vm._v(" "), _c('li', {
+    staticClass: "ftheme"
+  }, [_vm._v("看看")]), _vm._v(" "), _c('li', {
+    staticClass: "ftheme"
+  }, [_vm._v("Look inside your tiny mind")]), _vm._v(" "), _c('li', {
+    staticClass: "ftheme"
+  }, [_vm._v("看看你那浅薄的思想")])]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox5"
+  }, [_c('li', {
+    staticClass: "fkey"
+  }, [_vm._v("then look a bit harder")]), _vm._v(" "), _c('li', {
+    staticClass: "fkey"
+  }, [_vm._v("放远大点吧")]), _vm._v(" "), _c('li', {
+    staticClass: "fkey"
+  }, [_vm._v("Cause we're so uninspired")]), _vm._v(" "), _c('li', {
+    staticClass: "fkey"
+  }, [_vm._v("因为那里装不下灵魂")])]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox5"
+  }, [_c('li', {
+    staticClass: "fnice"
+  }, [_vm._v("So sick and tired of all the hatred you harbor")]), _vm._v(" "), _c('li', {
+    staticClass: "fnice"
+  }, [_vm._v("如此恶心另人厌倦 全是罪恨")]), _vm._v(" "), _c('li', {
+    staticClass: "fnice"
+  }, [_vm._v("So you say")]), _vm._v(" "), _c('li', {
+    staticClass: "fnice"
+  }, [_vm._v("所以你说")])]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox5"
+  }, [_c('li', {
+    staticClass: "fblack"
+  }, [_vm._v("It's not okay to be gay")]), _vm._v(" "), _c('li', {
+    staticClass: "fblack"
+  }, [_vm._v("你不认同同性恋")]), _vm._v(" "), _c('li', {
+    staticClass: "fblack"
+  }, [_vm._v("Well I think you're just evil")]), _vm._v(" "), _c('li', {
+    staticClass: "fblack"
+  }, [_vm._v("然而我覺得你是個魔鬼")])]), _vm._v(" "), _c('div', [_vm._v("明亮色调")]), _vm._v(" "), _c('div', [_vm._v(".flight | .fwhite | .fgray")]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox10 bgimg-dark"
+  }, [_c('li', {
+    staticClass: "flight"
+  }, [_vm._v("You're just some racist who can't tie my laces")]), _vm._v(" "), _c('li', {
+    staticClass: "flight"
+  }, [_vm._v("你就是一种种族歧视 連鞋帶都不配給我系")]), _vm._v(" "), _c('li', {
+    staticClass: "flight"
+  }, [_vm._v("Your point of view is medieval")]), _vm._v(" "), _c('li', {
+    staticClass: "flight"
+  }, [_vm._v("你的觀點已經過時")])]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox10 bgimg-dark"
+  }, [_c('li', {
+    staticClass: "fgray"
+  }, [_vm._v("Fuck you (Fuck you)")]), _vm._v(" "), _c('li', {
+    staticClass: "fgray"
+  }, [_vm._v("去你的")]), _vm._v(" "), _c('li', {
+    staticClass: "fgray"
+  }, [_vm._v("Fuck you very, very much")]), _vm._v(" "), _c('li', {
+    staticClass: "fgray"
+  }, [_vm._v("真的是去你媽的")])]), _vm._v(" "), _c('ul', {
+    staticClass: "textbox10 bgimg-dark"
+  }, [_c('li', {
+    staticClass: "fwhite"
+  }, [_vm._v("Cause your words don't translate")]), _vm._v(" "), _c('li', {
+    staticClass: "fwhite"
+  }, [_vm._v("因为我们语言不通")]), _vm._v(" "), _c('li', {
+    staticClass: "fwhite"
+  }, [_vm._v("And it's getting quite late")]), _vm._v(" "), _c('li', {
+    staticClass: "fwhite"
+  }, [_vm._v("那只会耽误时间")])])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-57f76d5a", esExports)
+  }
+}
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_grid_vue__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_grid_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_grid_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_53fc9e1f_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_grid_vue__ = __webpack_require__(87);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(85)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_grid_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_53fc9e1f_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_grid_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-grid.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-grid.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-53fc9e1f", Component.options)
+  } else {
+    hotAPI.reload("data-v-53fc9e1f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(15);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(15, function() {
+			var newContent = __webpack_require__(15);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("布局")]), _vm._v(" "), _c('h3', [_vm._v(".grid .row .cell-5-1")]), _vm._v(" "), _c('div', [_vm._v("奇数等分，最小份为1/5")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-4"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("4")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-5"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("5")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".grid .row .cell-7-1")]), _vm._v(" "), _c('div', [_vm._v("奇数等分，最小份为1/7")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-4"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("4")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-5"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("5")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-6"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("6")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-7"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("7")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".grid .row .cell-12-1")]), _vm._v(" "), _c('div', [_vm._v("偶数等分，最小份为1/12")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("4")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("4")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("4")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-5"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("5")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-5"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("5")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("6")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("6")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-7"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("7")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-5"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("5")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-8"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("8")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("4")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-9"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("9")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-3"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("3")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-10"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("10")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("2")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-11"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("11")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("12")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".grid .grid-row-full")]), _vm._v(" "), _c('div', [_vm._v("无间隙")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row-full",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("嵌套布局")]), _vm._v(" "), _c('div', [_vm._v("通过.row的嵌套使用，可以完美实现10列和14列的布局")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "fillblock"
+  }, [_vm._v("1")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".grid-btngroup")]), _vm._v(" "), _c('div', [_vm._v("参见按钮组部分文档")]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-53fc9e1f", esExports)
+  }
+}
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_table_vue__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_table_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_table_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_6b5e4c45_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_table_vue__ = __webpack_require__(91);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(89)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_table_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_6b5e4c45_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_table_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-table.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-table.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6b5e4c45", Component.options)
+  } else {
+    hotAPI.reload("data-v-6b5e4c45", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(16);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(16, function() {
+			var newContent = __webpack_require__(16);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("表格")]), _vm._v(" "), _c('h3', [_vm._v(".table")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "50px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table 默认状态")]), _vm._v(" "), _c('table', {
+    staticClass: "table"
+  }, [_c('tr', [_c('td', [_vm._v("影片名")]), _vm._v(" "), _c('td', [_vm._v("主演")]), _vm._v(" "), _c('td', [_vm._v("类型")]), _vm._v(" "), _c('td', [_vm._v("地区")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超能陆战队")]), _vm._v(" "), _c('td', [_vm._v("斯科特·埃德希特、瑞恩·波特")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超体")]), _vm._v(" "), _c('td', [_vm._v("斯嘉丽·约翰逊")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v("使用th元素 表头样式")]), _vm._v(" "), _c('table', {
+    staticClass: "table"
+  }, [_c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("哆啦A梦:伴我同行")]), _vm._v(" "), _c('td', [_vm._v("水田山葵、大原惠美")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("杀破狼2")]), _vm._v(" "), _c('td', [_vm._v("托尼·贾、吴京")]), _vm._v(" "), _c('td', [_vm._v("犯罪")]), _vm._v(" "), _c('td', [_vm._v("大陆")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("匆匆那年")]), _vm._v(" "), _c('td', [_vm._v("倪妮、彭于晏")]), _vm._v(" "), _c('td', [_vm._v("爱情")]), _vm._v(" "), _c('td', [_vm._v("大陆")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "50px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table-line 行模式")]), _vm._v(" "), _c('table', {
+    staticClass: "table table-line"
+  }, [_c('caption', [_vm._v("今日热门影片")]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("夏洛特烦恼")]), _vm._v(" "), _c('td', [_vm._v("沈腾、马丽")]), _vm._v(" "), _c('td', [_vm._v("喜剧")]), _vm._v(" "), _c('td', [_vm._v("大陆")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("西游记之大圣归来")]), _vm._v(" "), _c('td', [_vm._v("张磊、林子杰")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("大陆")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table-grid-border .table-grid 边框模式")]), _vm._v(" "), _c('div', {
+    staticClass: "table-grid-border"
+  }, [_c('table', {
+    staticClass: "table table-grid"
+  }, [_c('caption', [_vm._v("今日热门影片")]), _vm._v(" "), _c('thead', [_c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("超能陆战队")]), _vm._v(" "), _c('td', [_vm._v("斯科特·埃德希特、瑞恩·波特")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超体")]), _vm._v(" "), _c('td', [_vm._v("斯嘉丽·约翰逊")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])]), _vm._v(" "), _c('tfoot', [_c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "50px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table-diff 奇偶行区分模式")]), _vm._v(" "), _c('table', {
+    staticClass: "table table-diff"
+  }, [_c('caption', [_vm._v("今日热门影片")]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超能陆战队")]), _vm._v(" "), _c('td', [_vm._v("斯科特·埃德希特、瑞恩·波特")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超体")]), _vm._v(" "), _c('td', [_vm._v("斯嘉丽·约翰逊")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table-hover 鼠标指向高亮")]), _vm._v(" "), _c('table', {
+    staticClass: "table table-hover"
+  }, [_c('caption', [_vm._v("今日热门影片")]), _vm._v(" "), _c('thead', [_c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("夏洛特烦恼")]), _vm._v(" "), _c('td', [_vm._v("沈腾、马丽")]), _vm._v(" "), _c('td', [_vm._v("喜剧")]), _vm._v(" "), _c('td', [_vm._v("大陆")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("西游记之大圣归来")]), _vm._v(" "), _c('td', [_vm._v("张磊、林子杰")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("大陆")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "50px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table-min 紧凑模式")]), _vm._v(" "), _c('table', {
+    staticClass: "table table-grid table-min"
+  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("超能陆战队")]), _vm._v(" "), _c('td', [_vm._v("斯科特·埃德希特、瑞恩·波特")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超体")]), _vm._v(" "), _c('td', [_vm._v("斯嘉丽·约翰逊")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])]), _vm._v(" "), _c('tfoot', [_c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "50px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v(".table-full 宽度100%")]), _vm._v(" "), _c('div', {
+    staticClass: "table-grid-border table-full"
+  }, [_c('table', {
+    staticClass: "table table-grid"
+  }, [_c('caption', [_vm._v("今日热门影片")]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("影片名")]), _vm._v(" "), _c('th', [_vm._v("主演")]), _vm._v(" "), _c('th', [_vm._v("类型")]), _vm._v(" "), _c('th', [_vm._v("地区")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超能陆战队")]), _vm._v(" "), _c('td', [_vm._v("斯科特·埃德希特、瑞恩·波特")]), _vm._v(" "), _c('td', [_vm._v("动画")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("超体")]), _vm._v(" "), _c('td', [_vm._v("斯嘉丽·约翰逊")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("星际穿越")]), _vm._v(" "), _c('td', [_vm._v("马修·麦康纳")]), _vm._v(" "), _c('td', [_vm._v("科幻")]), _vm._v(" "), _c('td', [_vm._v("美国")])])])])])])])])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-6b5e4c45", esExports)
+  }
+}
+
+/***/ }),
+/* 92 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_button_vue__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_button_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_button_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_721697cb_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_button_vue__ = __webpack_require__(95);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(93)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_button_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_721697cb_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_button_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-button.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-button.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-721697cb", Component.options)
+  } else {
+    hotAPI.reload("data-v-721697cb", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(17);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(17, function() {
+			var newContent = __webpack_require__(17);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("按钮")]), _vm._v(" "), _c('h3', [_vm._v(".btn")]), _vm._v(" "), _c('div', [_vm._v("buttn标签")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("default")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("默认")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn border"
+  }, [_vm._v("边框")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn hover"
+  }, [_vm._v("激活")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn active"
+  }, [_vm._v("按下")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn loading"
+  }, [_vm._v("繁忙")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn",
+    attrs: {
+      "disabled": ""
+    }
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', [_vm._v("a标签")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn"
+  }, [_vm._v("default")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn"
+  }, [_vm._v("默认")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn border"
+  }, [_vm._v("边框")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn hover"
+  }, [_vm._v("激活")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn active"
+  }, [_vm._v("按下")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn loading"
+  }, [_vm._v("繁忙")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('a', {
+    staticClass: "btn",
+    attrs: {
+      "disabled": ""
+    }
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btn-inverse")]), _vm._v(" "), _c('div', [_vm._v("反色按钮")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse"
+  }, [_vm._v("inverse")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse"
+  }, [_vm._v("反色")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse border"
+  }, [_vm._v("边框")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse hover"
+  }, [_vm._v("激活")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse active"
+  }, [_vm._v("按下")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse loading"
+  }, [_vm._v("繁忙")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-inverse",
+    attrs: {
+      "disabled": ""
+    }
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btn-border")]), _vm._v(" "), _c('div', [_vm._v("边框按钮")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid bgimg-dark",
+    staticStyle: {
+      "padding": "20px"
+    }
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border"
+  }, [_vm._v("border")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border"
+  }, [_vm._v("默认")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border hover"
+  }, [_vm._v("激活")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border active"
+  }, [_vm._v("按下")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border loading"
+  }, [_vm._v("繁忙")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border",
+    attrs: {
+      "disabled": ""
+    }
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btn-border-inverse")]), _vm._v(" "), _c('div', [_vm._v("反色边框按钮")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid bgimg-light",
+    staticStyle: {
+      "padding": "20px"
+    }
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border-inverse"
+  }, [_vm._v("inverse")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border-inverse"
+  }, [_vm._v("默认")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border-inverse hover"
+  }, [_vm._v("激活")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border-inverse active"
+  }, [_vm._v("按下")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border-inverse loading"
+  }, [_vm._v("繁忙")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-border-inverse",
+    attrs: {
+      "disabled": ""
+    }
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btn-link")]), _vm._v(" "), _c('div', [_vm._v("链接按钮")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-link"
+  }, [_vm._v("link")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-link"
+  }, [_vm._v("链接")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-link hover"
+  }, [_vm._v("激活")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-link active"
+  }, [_vm._v("按下")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-link loading"
+  }, [_vm._v("繁忙")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-link",
+    attrs: {
+      "disabled": ""
+    }
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btn-theme | .btn-key | .btn-light | .btn-nice")]), _vm._v(" "), _c('div', [_vm._v("其他风格按钮")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-theme"
+  }, [_vm._v("主题")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-key"
+  }, [_vm._v("关键")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-light"
+  }, [_vm._v("闪亮")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }, [_c('button', {
+    staticClass: "btn btn-nice"
+  }, [_vm._v("友好")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btn-big | .btn-min")]), _vm._v(" "), _c('div', [_vm._v("大尺寸、小尺寸")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-7-2"
+  }, [_c('a', {
+    staticClass: "btn btn-big"
+  }, [_vm._v("大尺寸按钮")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-2"
+  }, [_c('a', {
+    staticClass: "btn btn-min"
+  }, [_vm._v("小尺寸按钮")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "cell-7-1"
+  })])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("自定义尺寸")]), _vm._v(" "), _c('div', [_vm._v("自定义高度后，垂直居中问题，目前只能通过line-hight来解决")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('a', {
+    staticClass: "btn",
+    staticStyle: {
+      "height": "80px"
+    }
+  }, [_vm._v("默认状态")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('a', {
+    staticClass: "btn",
+    staticStyle: {
+      "height": "80px",
+      "line-height": "62px"
+    }
+  }, [_vm._v("设置行高")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('a', {
+    staticClass: "btn btn-min",
+    staticStyle: {
+      "height": "80px",
+      "line-height": "66px"
+    }
+  }, [_vm._v("小尺寸按钮")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('a', {
+    staticClass: "btn btn-big",
+    staticStyle: {
+      "height": "80px",
+      "line-height": "58px"
+    }
+  }, [_vm._v("大尺寸按钮")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  })])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("块级元素")]), _vm._v(" "), _c('div', [_vm._v("宽度100%")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row-full",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('a', {
+    staticClass: "btn btn-big btn-theme btn-full"
+  }, [_vm._v("提交")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('a', {
+    staticClass: "btn btn-big btn-full"
+  }, [_vm._v("取消")])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-5-5"
+  }, [_c('a', {
+    staticClass: "btn btn-big btn-inverse btn-full"
+  }, [_vm._v("浏览更多")])])])]), _vm._v(" "), _c('br')]), _vm._v(" "), _c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("按钮组")]), _vm._v(" "), _c('h3', [_vm._v(".btngroup")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("左栏")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("右栏")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_vm._v(" ")]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  })])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btngroup-list")]), _vm._v(" "), _c('div', [_vm._v(".btngroup-list默认为块元素，可自定义设置宽度")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "btngroup btngroup-list"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("顶栏")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("底栏")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_vm._v(" ")]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "btngroup btngroup-list",
+    staticStyle: {
+      "width": "160px"
+    }
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("顶栏")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")]), _vm._v(" "), _c('button', {
+    staticClass: "btn"
+  }, [_vm._v("底栏")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btngroup-table > .btn")]), _vm._v(" "), _c('div', [_vm._v(".btn只能使用a标签")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticClass: "btngroup btngroup-table"
+  }, [_c('a', {
+    staticClass: "btn",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("左栏")]), _vm._v(" "), _c('a', {
+    staticClass: "btn",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("中间")]), _vm._v(" "), _c('a', {
+    staticClass: "btn",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("右栏")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btngroup-table > .btngroup > .btn")]), _vm._v(" "), _c('div', [_vm._v("由于button标签不支持table-cell两端对齐，必须多嵌套一层.btngroup")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticClass: "btngroup btngroup-table"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("左栏")])]), _vm._v(" "), _c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")])]), _vm._v(" "), _c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("右栏")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".grid-btngroup .grid-row .btn")]), _vm._v(" "), _c('div', [_vm._v("如果嫌弃按钮间的边框无法重叠，可以使用.grid-full模拟（可是便不能根据数量动态变更，而渲染样式了）")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid grid-btngroup"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("左栏")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("中间")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("右栏")])])])])]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-721697cb", esExports)
+  }
+}
+
+/***/ }),
+/* 96 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_popmenu_vue__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_popmenu_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_popmenu_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_06150ae7_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_popmenu_vue__ = __webpack_require__(99);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(97)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_popmenu_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_06150ae7_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_popmenu_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-popmenu.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-popmenu.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-06150ae7", Component.options)
+  } else {
+    hotAPI.reload("data-v-06150ae7", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(18);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(18, function() {
+			var newContent = __webpack_require__(18);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("气泡菜单")]), _vm._v(" "), _c('h3', [_vm._v(".popmenu")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("后退")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("暂停")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item selected"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("前进")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("弹出")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("字幕")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu popmenu-selectable"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("名称排序")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("价格排序")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item disabled"
+  }, [_vm._v("信用排序")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item selected"
+  }, [_vm._v("倒序")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("正序")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }, [_vm._v("复制")]), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  }, [_c('small', [_vm._v("Ctrl + C")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }, [_vm._v("剪切")]), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  }, [_c('small', [_vm._v("Ctrl + X")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item selected"
+  }, [_c('div', {
+    staticClass: "hd"
+  }, [_vm._v("粘贴")]), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  }, [_c('small', [_vm._v("Ctrl + V")])])]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("字体")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("颜色")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }, [_vm._v("复制")]), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  }, [_c('label', [_vm._v("99")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }, [_vm._v("剪切")]), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  }, [_c('label', [_vm._v("99")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item selected"
+  }, [_c('div', {
+    staticClass: "hd"
+  }, [_vm._v("粘贴")]), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  }, [_c('label', [_vm._v("99")])])]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("字体")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("颜色")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".popmenu-icon")]), _vm._v(" "), _c('div', [_vm._v("自定义图标")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu popmenu-icon"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('i', {
+    staticClass: "icon iconfont icon-user-inverse"
+  }), _vm._v(" "), _c('span', [_vm._v("用户中心")])]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('i', {
+    staticClass: "icon iconfont icon-lock"
+  }), _vm._v(" "), _c('span', [_vm._v("修改密码")])]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('span', [_vm._v("我的收藏")])]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('i', {
+    staticClass: "icon iconfont icon-setting-inverse"
+  }), _vm._v(" "), _c('span', [_vm._v("设置")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("popmenu .popmenu-sub .popmenu-item")]), _vm._v(" "), _c('div', [_vm._v("多级嵌套菜单，向左弹出.popmenu-tree-left，向上弹出.popmenu-tree-top，显示箭头.hassub")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu popmenu-tree"
+  }, [_c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("市场部门")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("部门一")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("宣传组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("策划组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("公关组")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("部门二")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("宣传组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("策划组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("公关组")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("技术部")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("前端")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("设计组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("交互组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("程序组")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("后端")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("架构")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("业务组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("数据组")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item disabled"
+  }, [_vm._v("财务部")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("秘书处")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("总经办")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu popmenu-tree-left popmenu-tree-top"
+  }, [_c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("市场部门")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("部门一")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("宣传组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("策划组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("公关组")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("部门二")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("宣传组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("策划组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("公关组")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("技术部")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("前端")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("设计组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("交互组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("程序组")])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item hassub"
+  }, [_c('span', [_vm._v("后端")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-sub"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("架构")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("业务组")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("数据组")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item disabled"
+  }, [_vm._v("财务部")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("秘书处")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_vm._v("总经办")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".popmenu-big | .popmenu-min")]), _vm._v(" "), _c('div', [_vm._v("大尺寸、小尺寸")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu popmenu-min"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "popmenu popmenu-big"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4 demo-popmenuopen"
+  })])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".btngroup .btn-popmenu .popmenu")]), _vm._v(" "), _c('div', [_vm._v("弹出菜单按钮组，.popmenu必须放在.btngroup子元素的最后")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn btn-last btn-popmenu"
+  }, [_c('span', [_vm._v("默认")]), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down-min"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu active"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn btn-last btn-popmenu active"
+  }, [_c('span', [_vm._v("激活")]), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down-min"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu active"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn btn-popmenu-icon"
+  }, [_c('i', {
+    staticClass: "iconfont icon-down-min"
+  })]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-last"
+  }, [_vm._v("提交")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("提交")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-last btn-popmenu-icon btn-popmenu-left btn-popmenu-top"
+  }, [_c('i', {
+    staticClass: "iconfont icon-up-min"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "5px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "btngroup btngroup-full"
+  }, [_c('button', {
+    staticClass: "btn btn-last btn-full btn-popmenu active"
+  }, [_c('span', [_vm._v("自适应按钮组100%宽度")]), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down-min"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu popmenu-full active"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "btngroup"
+  }, [_c('button', {
+    staticClass: "btn btn-last btn-popmenu active"
+  }, [_c('span', [_vm._v("内容居中")]), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down-min"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu popmenu-full active"
+  }, [_c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("后退")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("暂停")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("前进")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("弹出")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu-item"
+  }, [_c('div', {
+    staticClass: "hd"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "md"
+  }, [_vm._v("字幕")]), _vm._v(" "), _c('div', {
+    staticClass: "ft"
+  })])])])])])]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-06150ae7", esExports)
+  }
+}
+
+/***/ }),
+/* 100 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_check_vue__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_check_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_check_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0cb26f02_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_check_vue__ = __webpack_require__(103);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(101)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_check_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0cb26f02_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_check_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-check.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-check.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0cb26f02", Component.options)
+  } else {
+    hotAPI.reload("data-v-0cb26f02", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(19);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(19, function() {
+			var newContent = __webpack_require__(19);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 103 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("单选、复选")]), _vm._v(" "), _c('h3', [_vm._v(".checkbox .radiobox")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("默认")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox hover"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("激活")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("选中")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox disabled"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "30px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group2",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("默认")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio hover"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group2",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("激活")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group2",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("选中")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio disabled"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group2",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("禁用")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "30px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('label', {
+    staticClass: "checkbox"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("煎饼")])]), _vm._v(" "), _c('label', {
+    staticClass: "checkbox checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("烧饼")])]), _vm._v(" "), _c('label', {
+    staticClass: "checkbox"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("炊饼")])]), _vm._v(" "), _c('label', {
+    staticClass: "checkbox"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("铁饼")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('label', {
+    staticClass: "radio"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("胖子")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("老子")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("腰子")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("鬼子")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "30px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('label', {
+    staticClass: "checkbox checkbox-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("煎饼")])]), _vm._v(" "), _c('label', {
+    staticClass: "checkbox checkbox-full checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("烧饼")])]), _vm._v(" "), _c('label', {
+    staticClass: "checkbox checkbox-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("炊饼")])]), _vm._v(" "), _c('label', {
+    staticClass: "checkbox checkbox-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group3",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("铁饼")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('label', {
+    staticClass: "radio radio-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("胖子")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio radio-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("老子")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio radio-full checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("腰子")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio radio-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group4",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("鬼子")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".checkbox-theme .radio-theme | *-key  | *-light  | *-nice ")]), _vm._v(" "), _c('div', [_vm._v("其他风格按钮")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox checkbox-theme checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("主题")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox checkbox-key checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("关键")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox checkbox-light checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("闪亮")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "checkbox checkbox-nice checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "name": "group1",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("友好")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio radio-theme checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group1",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("主题")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio radio-key checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group1",
+      "value": "2"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("关键")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio radio-light checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group1",
+      "value": "3"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("闪亮")])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('label', {
+    staticClass: "radio radio-nice checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "name": "group1",
+      "value": "4"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("友好")])])])])]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-0cb26f02", esExports)
+  }
+}
+
+/***/ }),
+/* 104 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_select_vue__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_select_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_select_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0bf89ed6_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_select_vue__ = __webpack_require__(107);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(105)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_select_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0bf89ed6_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_select_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-select.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-select.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0bf89ed6", Component.options)
+  } else {
+    hotAPI.reload("data-v-0bf89ed6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(20);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(20, function() {
+			var newContent = __webpack_require__(20);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 107 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("下拉框")]), _vm._v(" "), _c('h3', [_vm._v(".select")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid",
+    staticStyle: {
+      "margin": "150px 0px 350px"
+    }
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('div', {
+    staticClass: "select"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "disabled": "",
+      "type": "text",
+      "placeholder": "请选择",
+      "value": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('div', {
+    staticClass: "select active"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": "北京北京北京北京北京北京北京北京北京北京北京北京北京北京北京北京",
+      "readonly": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item disabled",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item disabled",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('div', {
+    staticClass: "select active"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": "上海"
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京北京北京北京北京北京北京北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item selected",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-2"
+  }, [_c('div', {
+    staticClass: "select active top"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": "上海"
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item selected",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])])])]), _vm._v(" "), _c('h3', [_vm._v(".select-big | .select-min")]), _vm._v(" "), _c('div', [_vm._v("大尺寸、小尺寸")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid",
+    staticStyle: {
+      "margin-bottom": "150px"
+    }
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn btn-min"
+  }, [_vm._v("参照按钮")]), _vm._v(" "), _c('div', {
+    staticClass: "select select-min active"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("参照按钮")]), _vm._v(" "), _c('div', {
+    staticClass: "select active"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn btn-big"
+  }, [_vm._v("参照按钮")]), _vm._v(" "), _c('div', {
+    staticClass: "select select-big active"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": "北京",
+      "readonly": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])])])]), _vm._v(" "), _c('h3', [_vm._v("块级元素")]), _vm._v(" "), _c('div', [_vm._v("宽度100%")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row-full",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('a', {
+    staticClass: "btn btn-big btn-theme btn-full"
+  }, [_vm._v("提交")])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "select select-big select-full select-center top"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": "北京",
+      "readonly": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "200px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-5"
+  }, [_c('div', {
+    staticClass: "select select-big select-full active"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "请选择",
+      "value": "北京",
+      "readonly": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])])])])])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-0bf89ed6", esExports)
+  }
+}
+
+/***/ }),
+/* 108 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tabs_vue__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tabs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tabs_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0c036a57_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_tabs_vue__ = __webpack_require__(111);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(109)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tabs_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0c036a57_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_tabs_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-tabs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-tabs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0c036a57", Component.options)
+  } else {
+    hotAPI.reload("data-v-0c036a57", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(21);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(21, function() {
+			var newContent = __webpack_require__(21);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 111 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("标签页")]), _vm._v(" "), _c('h3', [_vm._v(".tabs")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "tabs"
+  }, [_c('ul', {
+    staticClass: "tabs-navs"
+  }, [_c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("参数")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav active"
+  }, [_vm._v("详情")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("评论")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("图册")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("更多 "), _c('i', {
+    staticClass: "iconfont icon-right-min"
+  })])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".tabs.tabs-min")]), _vm._v(" "), _c('div', [_vm._v("小尺寸")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "tabs tabs-min"
+  }, [_c('ul', {
+    staticClass: "tabs-navs"
+  }, [_c('li', {
+    staticClass: "tabs-nav active"
+  }, [_vm._v("红色")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("蓝色")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("黑色")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("其他 "), _c('i', {
+    staticClass: "iconfont icon-right-min"
+  })])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".tabs .tabs-nav-popmenu .popmenu")]), _vm._v(" "), _c('div', [_vm._v("弹出气泡菜单")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-6 demo-popmenuopen"
+  }, [_c('div', {
+    staticClass: "tabs tabs-min"
+  }, [_c('ul', {
+    staticClass: "tabs-navs"
+  }, [_c('li', {
+    staticClass: "tabs-nav active"
+  }, [_vm._v("首页")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("基本信息")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav"
+  }, [_vm._v("详情")]), _vm._v(" "), _c('li', {
+    staticClass: "tabs-nav tabs-nav-popmenu active"
+  }, [_c('span', [_vm._v("更多")]), _vm._v(" "), _c('div', {
+    staticClass: "popmenu active"
+  }, [_c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新建")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("打开")]), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("保存")]), _vm._v(" "), _c('div', {
+    staticClass: "split"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "popmenu-item",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])])])])])]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-0c036a57", esExports)
+  }
+}
+
+/***/ }),
+/* 112 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tag_vue__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tag_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tag_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_a412945e_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_tag_vue__ = __webpack_require__(115);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(113)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_tag_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_a412945e_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_tag_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-tag.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-tag.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a412945e", Component.options)
+  } else {
+    hotAPI.reload("data-v-a412945e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(22);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(22, function() {
+			var newContent = __webpack_require__(22);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 115 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("标签")]), _vm._v(" "), _c('h3', [_vm._v(".tag")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-5"
+  }, [_c('p', {
+    staticClass: "fsize-32"
+  }, [_vm._v("\n                            据说这是一份最好吃的中国披萨 "), _c('span', {
+    staticClass: "tag"
+  }, [_vm._v("煎饼果子")])]), _vm._v(" "), _c('p', {
+    staticClass: "fsize-26"
+  }, [_vm._v("\n                            据说这是一份最好吃的中国披萨 "), _c('span', {
+    staticClass: "tag"
+  }, [_vm._v("煎饼果子")])]), _vm._v(" "), _c('p', {
+    staticClass: "fsize-18"
+  }, [_vm._v("\n                            据说这是一份最好吃的中国披萨 "), _c('span', {
+    staticClass: "tag"
+  }, [_vm._v("煎饼果子")])]), _vm._v(" "), _c('p', {
+    staticClass: "fsize-14"
+  }, [_vm._v("\n                            据说这是一份最好吃的中国披萨 "), _c('span', {
+    staticClass: "tag"
+  }, [_vm._v("煎饼果子")])]), _vm._v(" "), _c('p', {
+    staticClass: "fsize-12"
+  }, [_vm._v("\n                            据说这是一份最好吃的中国披萨 "), _c('span', {
+    staticClass: "tag"
+  }, [_vm._v("煎饼果子")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".tag-theme | .tag-key | .tag-light | .tag-nice ")]), _vm._v(" "), _c('div', [_vm._v("其他风格")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-5"
+  }, [_c('p', {
+    staticClass: "fsize-14"
+  }, [_vm._v("\n                            老板，我要\n                            "), _c('span', {
+    staticClass: "tag tag-theme"
+  }, [_vm._v("香菜")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-key"
+  }, [_vm._v("火腿")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-light"
+  }, [_vm._v("煎鸡蛋")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-nice"
+  }, [_vm._v("生菜")])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".tag-circle ")]), _vm._v(" "), _c('div', [_vm._v("椭圆")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-5"
+  }, [_c('p', {
+    staticClass: "fsize-14"
+  }, [_c('span', {
+    staticClass: "tag tag-circle tag-theme"
+  }, [_vm._v("套餐一")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-circle tag-key"
+  }, [_vm._v("套餐二")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-circle tag-light"
+  }, [_vm._v("套餐三")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-circle tag-nice"
+  }, [_vm._v("套餐四")]), _vm._v(" "), _c('span', {
+    staticClass: "tag tag-circle"
+  }, [_vm._v("9")])])])])]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-a412945e", esExports)
+  }
+}
+
+/***/ }),
+/* 116 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_input_vue__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_input_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_input_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_47a30a41_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_input_vue__ = __webpack_require__(119);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(117)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_input_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_47a30a41_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_input_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-input.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-input.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-47a30a41", Component.options)
+  } else {
+    hotAPI.reload("data-v-47a30a41", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(23);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(23, function() {
+			var newContent = __webpack_require__(23);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 119 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("输入框")]), _vm._v(" "), _c('h3', [_vm._v(".input")]), _vm._v(" "), _c('div', [_vm._v("默认样式（HTML5新类型各个浏览器支持程度不同）。")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "default",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "默认",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('input', {
+    staticClass: "input active",
+    attrs: {
+      "type": "text",
+      "value": "激活",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "只读",
+      "readonly": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "禁用",
+      "disabled": ""
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        text："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        password："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "password",
+      "value": "",
+      "placeholder": "请输入密码"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        number："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        search："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "search",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        email："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "email",
+      "value": "",
+      "placeholder": "邮件地址"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        month："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "month",
+      "value": "",
+      "placeholder": "月份"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        date："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "date",
+      "value": "",
+      "placeholder": "日期"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        time："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "time",
+      "value": "",
+      "placeholder": "时间"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        week："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "week",
+      "value": "",
+      "placeholder": "第几周"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        url："), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "url",
+      "value": "",
+      "placeholder": "网址"
+    }
+  })])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".input-theme | .input-key | .input-light | .input-nice")]), _vm._v(" "), _c('div', [_vm._v("其他风格输入框")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        theme："), _c('input', {
+    staticClass: "input input-theme",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        key："), _c('input', {
+    staticClass: "input input-key",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        light："), _c('input', {
+    staticClass: "input input-light",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        nice："), _c('input', {
+    staticClass: "input input-nice",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        active："), _c('input', {
+    staticClass: "input input-theme active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        active："), _c('input', {
+    staticClass: "input input-key active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        active："), _c('input', {
+    staticClass: "input input-light active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  }, [_vm._v("\n                        active："), _c('input', {
+    staticClass: "input input-nice active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-5-1"
+  })])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".input-min | .input-big")]), _vm._v(" "), _c('div', [_vm._v("大尺寸、小尺寸")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn btn-min"
+  }, [_vm._v("参照按钮")]), _vm._v(" "), _c('input', {
+    staticClass: "input input-min",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("参照按钮")]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('button', {
+    staticClass: "btn btn-big"
+  }, [_vm._v("参照按钮")]), _vm._v(" "), _c('input', {
+    staticClass: "input input-big",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".input-full")]), _vm._v(" "), _c('div', [_vm._v("宽度100%")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('input', {
+    staticClass: "input input-min input-full",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('input', {
+    staticClass: "input input-theme input-full active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })])])])]), _vm._v(" "), _c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("组合输入框")]), _vm._v(" "), _c('h3', [_vm._v(".inputgroup .addons .text")]), _vm._v(" "), _c('div', [_vm._v("组合输入框")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('div', {
+    staticClass: "addons"
+  }, [_c('span', {
+    staticClass: "text"
+  }, [_vm._v("￥")])]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('span', {
+    staticClass: "text"
+  }, [_vm._v("元")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('span', {
+    staticClass: "text"
+  }, [_vm._v("元")]), _vm._v(" "), _c('span', {
+    staticClass: "text"
+  }, [_vm._v("（人民币）")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn border"
+  }, [_vm._v("搜索")])]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('input', {
+    staticClass: "input input-theme",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn btn-theme border"
+  }, [_vm._v("搜索")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('input', {
+    staticClass: "input input-theme active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn btn-theme border"
+  }, [_vm._v("搜索")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("大尺寸、小尺寸")]), _vm._v(" "), _c('div', [_vm._v("*-min | *-big")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('input', {
+    staticClass: "input input-min",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('span', {
+    staticClass: "text text-min"
+  }, [_vm._v("元")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('div', {
+    staticClass: "addons"
+  }, [_c('span', {
+    staticClass: "text"
+  }, [_vm._v("￥")])]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-4"
+  }, [_c('div', {
+    staticClass: "inputgroup"
+  }, [_c('input', {
+    staticClass: "input input-big",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "数值"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('span', {
+    staticClass: "text text-big"
+  }, [_vm._v("元")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("自定义宽度")]), _vm._v(" "), _c('div', [_vm._v("设置.inputgroup元素的宽度")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticClass: "inputgroup",
+    staticStyle: {
+      "width": "528px"
+    }
+  }, [_c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn btn-theme border"
+  }, [_vm._v("搜索")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme border",
+    staticStyle: {
+      "padding": "8px 3px"
+    }
+  }, [_c('i', {
+    staticClass: "iconfont icon-down-min"
+  })])]), _vm._v(" "), _c('input', {
+    staticClass: "input input-theme active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  })])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".inputgroup-full")]), _vm._v(" "), _c('div', [_vm._v("宽度100%")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticClass: "inputgroup inputgroup-full"
+  }, [_c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn border"
+  }, [_vm._v("搜索")]), _vm._v(" "), _c('button', {
+    staticClass: "btn border"
+  }, [_vm._v("其他")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticClass: "inputgroup inputgroup-full"
+  }, [_c('input', {
+    staticClass: "input input-theme",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn btn-theme border"
+  }, [_vm._v("搜索")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme border"
+  }, [_vm._v("其他")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme border",
+    staticStyle: {
+      "padding": "8px 3px"
+    }
+  }, [_c('i', {
+    staticClass: "iconfont icon-down-min"
+  })])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "cell-12-12"
+  }, [_c('div', {
+    staticClass: "inputgroup inputgroup-full"
+  }, [_c('div', {
+    staticClass: "addons"
+  }, [_c('button', {
+    staticClass: "btn btn-theme btn-big border"
+  }, [_c('i', {
+    staticClass: "iconfont icon-search"
+  }), _vm._v(" 搜索")])]), _vm._v(" "), _c('input', {
+    staticClass: "input input-theme input-big active",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "搜索关键字"
+    }
+  })])])])])])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-47a30a41", esExports)
+  }
+}
+
+/***/ }),
+/* 120 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_form_vue__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_form_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_form_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_5d43309d_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_form_vue__ = __webpack_require__(123);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(121)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_form_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_5d43309d_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_form_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-form.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-form.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d43309d", Component.options)
+  } else {
+    hotAPI.reload("data-v-5d43309d", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(24);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(24, function() {
+			var newContent = __webpack_require__(24);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 123 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("表单")]), _vm._v(" "), _c('h3', [_vm._v(".form .formitem")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('form', {
+    staticClass: "form",
+    attrs: {
+      "action": "",
+      "method": "post",
+      "novalidate": "novalidate"
+    }
+  }, [_c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("账号 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "邮箱或手机"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("密码 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "登录密码"
+    }
+  }), _vm._v(" "), _c('small', [_vm._v("忘记密码，可以联系客服咨询。")])]), _vm._v(" "), _c('div', {
+    staticStyle: {
+      "padding-left": "85px"
+    }
+  }, [_c('label', {
+    staticClass: "checkbox checkbox-theme checkbox-min checkbox-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "id": "autologin",
+      "name": "autologin",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("30天免登录")])]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("立即登录")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".form .formsub .formitem")]), _vm._v(" "), _c('div', [_vm._v("字段分组")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('form', {
+    staticClass: "form",
+    attrs: {
+      "action": "",
+      "method": "post",
+      "novalidate": "novalidate"
+    }
+  }, [_c('div', {
+    staticClass: "formsub"
+  }, [_c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("用户名 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "昵称"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("电话 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "number",
+      "value": "",
+      "placeholder": "手机号码"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "formsub"
+  }, [_c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("性别")]), _vm._v(" "), _c('label', {
+    staticClass: "radio radio-theme checked"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "id": "formgender1",
+      "name": "formgender",
+      "value": "man",
+      "checked": ""
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("男")])]), _vm._v(" "), _c('label', {
+    staticClass: "radio radio-theme"
+  }, [_c('input', {
+    attrs: {
+      "type": "radio",
+      "id": "formgender2",
+      "name": "formgender",
+      "value": "woman"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "radio-text"
+  }, [_vm._v("女")])])]), _vm._v(" "), _c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("所在地区")]), _vm._v(" "), _c('div', {
+    staticClass: "select",
+    staticStyle: {
+      "margin-right": "10px"
+    }
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "省份",
+      "value": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("四川")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("浙江")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("内蒙古")])])]), _vm._v(" "), _c('div', {
+    staticClass: "select"
+  }, [_c('div', {
+    staticClass: "select-box"
+  }, [_c('input', {
+    staticClass: "select-text",
+    attrs: {
+      "type": "text",
+      "placeholder": "城市",
+      "value": ""
+    }
+  })]), _vm._v(" "), _c('ul', {
+    staticClass: "select-list"
+  }, [_c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "beijing"
+    }
+  }, [_vm._v("北京")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shanghai"
+    }
+  }, [_vm._v("上海")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "guangzhou"
+    }
+  }, [_vm._v("广州")]), _vm._v(" "), _c('li', {
+    staticClass: "select-item",
+    attrs: {
+      "value": "shenzhen"
+    }
+  }, [_vm._v("深圳")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "formsub"
+  }, [_c('div', {
+    staticClass: "formitem"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("个人简介")]), _vm._v(" "), _c('input', {
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "个人资料"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticStyle: {
+      "padding-left": "85px"
+    }
+  }, [_c('button', {
+    staticClass: "btn btn-theme",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("保存")])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".form .formitem-line")]), _vm._v(" "), _c('div', [_vm._v("行模式")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-8"
+  }, [_c('form', {
+    staticClass: "form",
+    attrs: {
+      "action": "",
+      "method": "post",
+      "novalidate": "novalidate"
+    }
+  }, [_c('div', {
+    staticClass: "formsub"
+  }, [_c('div', {
+    staticClass: "formitem-line"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("账号 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input input-full",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "邮箱或手机"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "formitem-line"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("旧密码 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input input-full",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "登录密码"
+    }
+  }), _vm._v(" "), _c('small', [_vm._v("忘记密码，可以联系客服咨询。")])])]), _vm._v(" "), _c('div', {
+    staticClass: "formsub"
+  }, [_c('div', {
+    staticClass: "formitem-line"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("新密码 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input input-full",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "6~30位数字、字母或特殊符号"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "formitem-line"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("确认密码 "), _c('i', {
+    staticClass: "must"
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "input input-full",
+    attrs: {
+      "type": "text",
+      "value": "",
+      "placeholder": "再次输入新密码"
+    }
+  })])]), _vm._v(" "), _c('div', [_c('label', {
+    staticClass: "checkbox checkbox-theme checkbox-min checkbox-full"
+  }, [_c('input', {
+    attrs: {
+      "type": "checkbox",
+      "id": "autologin",
+      "name": "autologin",
+      "value": "1"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "checkbox-text"
+  }, [_vm._v("同意《账号安全管理协议》条款")])]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("确定提交")])])])])])])])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-5d43309d", esExports)
+  }
+}
+
+/***/ }),
+/* 124 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_dialog_vue__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_dialog_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_dialog_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0a2972e1_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_dialog_vue__ = __webpack_require__(127);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(125)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_dialog_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_0a2972e1_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_dialog_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-dialog.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-dialog.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0a2972e1", Component.options)
+  } else {
+    hotAPI.reload("data-v-0a2972e1", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(25);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(25, function() {
+			var newContent = __webpack_require__(25);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("遮罩层")]), _vm._v(" "), _c('h3', [_vm._v(".mask")]), _vm._v(" "), _c('div'), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-6"
+  }, [_c('div', {
+    staticClass: "mask hide"
+  })])])]), _vm._v(" "), _c('br')]), _vm._v(" "), _c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("对话框")]), _vm._v(" "), _c('h3', [_vm._v(".dlg")]), _vm._v(" "), _c('div', [_vm._v("由于主张简洁统一的交互语言，这里的对话框都是模态。（如果需要非模态对话框，可以自己写一个，其实也很简单）")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-6 demo-dlg"
+  }, [_c('div', {
+    staticClass: "dlg"
+  }, [_c('div', {
+    staticClass: "mask"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "dlg-container"
+  }, [_c('div', {
+    staticClass: "dlg-head"
+  }, [_c('div', {
+    staticClass: "dlg-title"
+  }, [_vm._v("对话框标题")]), _vm._v(" "), _c('button', {
+    staticClass: "dlg-close"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-body"
+  }, [_vm._v("\n                                    这里是内容区...\n                                ")]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-foot"
+  }, [_c('div', {
+    staticClass: "fright"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("取消")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme"
+  }, [_vm._v("确认")])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6 demo-dlg"
+  }, [_c('div', {
+    staticClass: "dlg dlg-nomask"
+  }, [_c('div', {
+    staticClass: "mask"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "dlg-container"
+  }, [_c('div', {
+    staticClass: "dlg-head"
+  }, [_c('div', {
+    staticClass: "dlg-title"
+  }, [_vm._v("对话框标题")]), _vm._v(" "), _c('button', {
+    staticClass: "dlg-close"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-body"
+  }, [_vm._v("\n                                    这里是内容区...\n                                ")]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-foot"
+  }, [_c('div', {
+    staticClass: "fright"
+  }, [_c('button', {
+    staticClass: "btn"
+  }, [_vm._v("取消")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-theme"
+  }, [_vm._v("确认")])])])])])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v(".dlg-alert | .dlg-confirm | .dlg-prompt")]), _vm._v(" "), _c('div', [_vm._v("提示框、确认框、输入框")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row-full"
+  }, [_c('div', {
+    staticClass: "cell-12-6 demo-dlg"
+  }, [_c('div', {
+    staticClass: "dlg dlg-alert"
+  }, [_c('div', {
+    staticClass: "mask"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "dlg-container"
+  }, [_c('div', {
+    staticClass: "dlg-body"
+  }, [_vm._v("\n                                    信息保存成功\n                                ")]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-foot"
+  }, [_c('button', {
+    staticClass: "btn dlg-ok"
+  }, [_vm._v("确认")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6 demo-dlg"
+  }, [_c('div', {
+    staticClass: "dlg dlg-confirm"
+  }, [_c('div', {
+    staticClass: "mask"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "dlg-container"
+  }, [_c('div', {
+    staticClass: "dlg-body"
+  }, [_vm._v("\n                                    确定要删除吗？\n                                ")]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-foot"
+  }, [_c('button', {
+    staticClass: "btn dlg-cancel"
+  }, [_vm._v("取消")]), _vm._v(" "), _c('button', {
+    staticClass: "btn dlg-yes"
+  }, [_vm._v("确认")])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "grid-row-full"
+  }, [_c('div', {
+    staticClass: "cell-12-6 demo-dlg"
+  }, [_c('div', {
+    staticClass: "dlg dlg-prompt"
+  }, [_c('div', {
+    staticClass: "mask"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "dlg-container"
+  }, [_c('div', {
+    staticClass: "dlg-body"
+  }, [_c('label', {
+    staticClass: "dlg-label"
+  }, [_vm._v("用户手机号码")]), _vm._v(" "), _c('input', {
+    staticClass: "input input-full dlg-input",
+    attrs: {
+      "type": "text",
+      "name": "",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-foot"
+  }, [_c('button', {
+    staticClass: "btn dlg-cancel"
+  }, [_vm._v("取消")]), _vm._v(" "), _c('button', {
+    staticClass: "btn dlg-yes"
+  }, [_vm._v("确认")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cell-12-6 demo-dlg"
+  }, [_c('div', {
+    staticClass: "dlg dlg-prompt"
+  }, [_c('div', {
+    staticClass: "mask"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "dlg-container"
+  }, [_c('div', {
+    staticClass: "dlg-body"
+  }, [_c('label', {
+    staticClass: "dlg-label"
+  }, [_vm._v("个性签名")]), _vm._v(" "), _c('textarea', {
+    staticClass: "textarea textarea-full dlg-textarea",
+    attrs: {
+      "type": "text",
+      "name": "",
+      "value": "",
+      "placeholder": "请输入"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dlg-foot"
+  }, [_c('button', {
+    staticClass: "btn dlg-cancel"
+  }, [_vm._v("取消")]), _vm._v(" "), _c('button', {
+    staticClass: "btn dlg-yes"
+  }, [_vm._v("确认")])])])])])])]), _vm._v(" "), _c('br')])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-0a2972e1", esExports)
+  }
+}
+
+/***/ }),
+/* 128 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_icons_vue__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_icons_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_icons_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_dfe044de_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_icons_vue__ = __webpack_require__(131);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(129)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_theme_icons_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_dfe044de_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_theme_icons_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "vue\\apps\\admin\\theme-icons.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] theme-icons.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (true) {(function () {
+  var hotAPI = __webpack_require__(0)
+  hotAPI.install(__webpack_require__(1), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-dfe044de", Component.options)
+  } else {
+    hotAPI.reload("data-v-dfe044de", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(26);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept(26, function() {
+			var newContent = __webpack_require__(26);
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _vuex = __webpack_require__(2);
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {};
+    },
+
+    computed: {},
+    methods: {
+        //收起展开左栏
+        // ...mapActions([
+        //     'toggle_leftbar'
+        // ])
+    },
+    created: function created() {}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 131 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper wrapper-scroll wrapper-box wrapper-theme"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h2', [_vm._v("图标")]), _vm._v(" "), _c('h3', [_vm._v(".iconfont.icon-*")]), _vm._v(" "), _c('div', [_vm._v("字体图标生成工具："), _c('a', {
+    attrs: {
+      "href": "http://www.iconfont.cn/",
+      "target": "_blank"
+    }
+  }, [_vm._v("ICONFONT.CN")])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-12 demo-iconfont"
+  }, [_c('i', {
+    staticClass: "iconfont icon-done"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-delete"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-add"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-right"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-right-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-up"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-up-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-left"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-left-min"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-ok"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-error"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-plus"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-stop"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-info"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-warning"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-circle"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-dot"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-menu"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-list"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-load"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-refresh"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-back"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-search"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-trash"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-lock"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-lock-inverse"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-window"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-window-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-apps"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-layer"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-pc"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-pc-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-switch"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-switch-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-setting"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-setting-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-exit"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-document"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-file"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-file-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-edit"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-folder"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-pic"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-mail"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-link"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-chart"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-chart-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-cart"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-cart-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-money"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-download"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-download-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-upload"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-upload-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-date"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-time"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-location"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-show"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-hide"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-radio"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-radio-hover"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-radio-checked"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-checkbox"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-checkbox-hover"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-checkbox-checked"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-user"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-user-circle"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-user-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-chat"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-phone"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-phone-circle"
+  }), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-theme"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-theme-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-like"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-like-inverse"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-good"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-good-circle"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-notice"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-notice-circle"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-rocket"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-light"
+  }), _vm._v(" "), _c('br')])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("保留图标")]), _vm._v(" "), _c('div', [_vm._v("你可以使用工具生成自定义的字体图标文件，但是一定要包含以下这些图标样式，以保证UI的正常使用。")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+    staticClass: "grid"
+  }, [_c('div', {
+    staticClass: "grid-row"
+  }, [_c('div', {
+    staticClass: "cell-12-12 demo-iconfont-sys"
+  }, [_c('i', {
+    staticClass: "iconfont icon-done"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-delete"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-left"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-left-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-right"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-right-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-down-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-up"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-up-min"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-radio"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-radio-hover"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-radio-checked"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-checkbox"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-checkbox-hover"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-checkbox-checked"
+  }), _vm._v(" "), _c('i', {
+    staticClass: "iconfont icon-date"
+  }), _vm._v(" "), _c('br')])])])])])])
+}]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-dfe044de", esExports)
+  }
+}
+
+/***/ }),
+/* 132 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_script_index_0_index_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_0_2_vue_loader_lib_template_compiler_index_id_data_v_1c6caff7_hasScoped_false_node_modules_vue_loader_13_0_2_vue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(135);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(133)
 }
 var normalizeComponent = __webpack_require__(5)
 /* script */
@@ -18830,13 +29945,13 @@ if (true) {(function () {
 
 
 /***/ }),
-/* 62 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(13);
+var content = __webpack_require__(27);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18850,8 +29965,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(13, function() {
-			var newContent = __webpack_require__(13);
+		module.hot.accept(27, function() {
+			var newContent = __webpack_require__(27);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -18861,7 +29976,7 @@ if(true) {
 }
 
 /***/ }),
-/* 63 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18962,7 +30077,7 @@ exports.default = {
 //
 
 /***/ }),
-/* 64 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18983,7 +30098,7 @@ if (true) {
 }
 
 /***/ }),
-/* 65 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19001,15 +30116,15 @@ var _vuex = __webpack_require__(2);
 
 var _vuex2 = _interopRequireDefault(_vuex);
 
-var _mutaionsTypes = __webpack_require__(16);
+var _mutaionsTypes = __webpack_require__(30);
 
 var _mutaionsTypes2 = _interopRequireDefault(_mutaionsTypes);
 
-var _getter = __webpack_require__(66);
+var _getter = __webpack_require__(137);
 
 var _getter2 = _interopRequireDefault(_getter);
 
-var _action = __webpack_require__(67);
+var _action = __webpack_require__(138);
 
 var _action2 = _interopRequireDefault(_action);
 
@@ -19072,7 +30187,7 @@ export default new Vuex.Store({
 */
 
 /***/ }),
-/* 66 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19094,7 +30209,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 67 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19104,7 +30219,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _mutaionsTypes = __webpack_require__(16);
+var _mutaionsTypes = __webpack_require__(30);
 
 var _mutaionsTypes2 = _interopRequireDefault(_mutaionsTypes);
 

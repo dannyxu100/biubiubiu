@@ -23,8 +23,8 @@
                 display: inline-block;
                 width: 50px;
                 height: 50px;
-                line-height: 52px;
-                font-size: 26px;
+                line-height: 50px;
+                font-size: 22px;
                 color: #fff;
                 .prefix-transform(rotate(0deg));
                 .prefix-transition();
@@ -49,6 +49,7 @@
                 background-position: center;
                 background-size: 40px 40px;
                 cursor: pointer;
+                list-style: none;
                 .prefix-border-radius(9px);
                 .prefix-transition();
                 .tip {
@@ -93,7 +94,7 @@
 <template>
     <div class="leftpadsmall wrapper">
         <button class="btn-toggle" @click="toggle_leftbar()">
-            <i :class="{active:leftbarsmall.show}">=</i>
+            <i class="iconfont icon-down" :class="{active:leftbarsmall.show}"></i>
         </button>
         <ul class="appsbar">
             <li class="appsbar-item" style="background-image:url(/public/images/apps/users.svg)">

@@ -50,12 +50,12 @@
                         width: 50px;
                         height:50px;
                         line-height: 50px;
-                        font-size: 26px;
+                        font-size: 22px;
                         color: #fff;
-                        .prefix-transform(rotate(0deg));
+                        .prefix-transform(rotate(90deg));
                         .prefix-transition();
                         &.active {
-                            .prefix-transform(rotate(-90deg));
+                            .prefix-transform(rotate(0deg));
                         }
                     }
                 }
@@ -94,7 +94,14 @@
             }
         }
 
-        .menus-box {
+        .menusbox {
+            position: absolute;
+            top: 220px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
             .menus-group {
                 .groupname {
                     margin: 25px 20px 0;
@@ -170,7 +177,7 @@
         <div class="avatarbox">
             <div class="avatarbox-content">
                 <button class="btn-toggle" @click="toggle_leftbar()">
-                    <i :class="{active:leftbar.show}">=</i>
+                    <i class="iconfont icon-down" :class="{active:leftbar.show}"></i>
                 </button>
                 <div class="avatar-image" style="background-image:url(/public/images/avatar.png)"></div>
                 <div class="avatar-name">王小二</div>
@@ -178,7 +185,7 @@
             </div>
         </div>
 
-        <div class="menus-box">
+        <div class="menusbox">
             <div class="menus-group">
                 <div class="groupname"><!-- 常用功能 --></div>
                 <div class="menu">
@@ -194,13 +201,43 @@
                     <transition name="slide">
                     <div class="child" v-if="menu.theme" transition="slide">
                         <div class="menu">
-                            <a class="name" href="javascript:void(0)">配色</a>
+                            <router-link class="name" to="/admin-theme-color">配色</router-link>
                         </div>
                         <div class="menu">
-                            <a class="name" href="javascript:void(0)">字体图标</a>
+                            <router-link class="name" to="/admin-theme-grid">栅格</router-link>
                         </div>
                         <div class="menu">
-                            <a class="name" href="javascript:void(0)">栅格</a>
+                            <router-link class="name" to="/admin-theme-table">表格</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-button">按钮</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-popmenu">气泡菜单</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-check">选择项</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-select">下拉</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-tabs">标签页</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-tag">标签</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-input">输入框</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-form">表单</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-dialog">对话框</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-icons">字体图标</router-link>
                         </div>
                     </div>
                     </transition>

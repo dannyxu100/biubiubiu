@@ -4,11 +4,10 @@
 @import "mixins/normalize.less";
 
 /************************** 通用动画相关 **************************/
-.fade-transition {}
-.fade-enter {
+.fade-enter-active {
     .prefix-animation( fade-show .3s linear );
 }
-.fade-leave {
+.fade-leave-active {
     .prefix-animation( fade-hide .3s linear );
 }
 .prefix-keyframes(fade-show, {
@@ -114,6 +113,10 @@ textarea {
     // .prefix-border-radius(10px);
     // .prefix-box-shadow(0 5px 50px 0 rgba(0,0,0,.2));
 }
+.wrapper-white {
+    background-color: #fff;
+    color: #333;
+}
 
 
 .vueapp {
@@ -192,7 +195,7 @@ textarea {
 .adminpage {
     // background: #fff;
     color: #fff;
-    .topnavs {
+    .topbar {
         position: absolute;
         top: 0;
         left: 0;
@@ -200,37 +203,6 @@ textarea {
         // padding-left: 20px;
         height: 50px;
         background: rgba(255,255,255,.2);
-        font-size: 0;
-        // .prefix-box-shadow(0 2px 5px 1px rgba(0, 166, 124,.1));
-        .nav {
-            display: inline-block;
-            padding: 0 20px;
-            height: 50px;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 50px;
-            color: rgb(188, 255, 248);
-            cursor: pointer;
-            text-decoration: none;
-            .prefix-transition(all linear .2s);
-            &:hover {
-                color: rgb(255, 255, 255);
-                background: rgba(255,255,255,.2);
-            }
-            &.active {
-                color: rgb(0, 169, 180);
-                background: rgba(255,255,255,1);
-                cursor: default;
-            }
-            &.home {
-                padding: 0 16px;
-                .iconfont {
-                    font-size: 16px;
-                    font-weight: 400;
-                    vertical-align: middle;
-                }
-            }
-        }
     }
     .content {
         position: absolute;
@@ -240,4 +212,157 @@ textarea {
         bottom: 0;
         background: rgba(255,255,255,.1);
     }
+}
+
+
+
+
+/************************** Prime demo **************************/
+/*!
+ * prime v1.0.1 (https://github.com/dannyxu100/prime)
+ * 版权所有 danny.xu
+ */
+.wrapper-theme {
+    color: #333;
+    // background: rgb(186, 233, 232);
+    background: rgb(255, 255, 255);
+    .container {
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+h1 {
+    font-size: 60px;
+}
+.section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.colorblock,
+.colorblock-min {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 20px 0px;
+    text-align: center;
+    border: 0px;
+
+    -webkit-transition: all linear 0.125s;
+    -ms-transition: all linear 0.125s;
+    -moz-transition: all linear 0.125s;
+    transition: all linear 0.125s;
+}
+.colorblock.active {
+    border-bottom: 2px solid #A22613;
+}
+.colorblock-min{
+    height: 0px;
+    padding: 0px;
+    border: 15px solid #fff;
+    border-width: 15px 0 0;
+}
+.colorblock:not(.empty):hover,
+.colorblock-min:not(.empty):hover {
+    z-index: 2;
+    -webkit-box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
+    -ms-box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
+    -moz-box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
+    box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
+}
+
+.fillblock {
+    width:100%;
+    font-size: 12px;
+    color: #666;
+    background: #eee;
+    border: 1px solid transparent;
+    padding: 5px 0px;
+
+    -webkit-transition: all linear 0.125s;
+    -ms-transition: all linear 0.125s;
+    -moz-transition: all linear 0.125s;
+    transition: all linear 0.125s;
+}
+.fillblock:hover {
+    border-color: #ddd;
+    background: #f5f5f5;
+
+    -webkit-box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
+    -ms-box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
+    -moz-box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
+    box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
+}
+.fillblock:focus {
+    outline: none;
+}
+
+.rdsbox,
+.rdsboxp {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #ddd;
+    border:1px solid #ccc;
+    margin: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+.rdsboxp {
+    background: #F5F5F5;
+    border:1px solid #999;
+}
+
+.textbox5 {
+    padding-top: 0px; padding-bottom: 0px;
+}
+.textbox10 {
+    padding-top: 10px; padding-bottom: 10px;
+}
+
+.bgimg-light {
+    background:center url(/vue/images/prime/bg-1.png);
+}
+.bgimg-dark {
+    background:center url(/vue/images/prime/bg-2.png);
+}
+.bgimg-gray {
+    background:center url(/vue/images/prime/bg-3.png);
+}
+
+.demo-popmenuopen {
+    position: relative;
+    height: 260px;
+}
+.demo-popmenuopen > .popmenu {
+    display: block;
+}
+
+.demo-dlg {
+    position: relative;
+    height: 400px;
+}
+.demo-dlg .dlg{
+    position: absolute;
+}
+
+.demo-iconfont .iconfont,
+.demo-iconfont-sys .iconfont {
+    font-size: 26px;
+    margin: 20px;
+    color: #319DBB;
+    cursor: pointer;
+}
+.demo-iconfont .iconfont:hover {
+    color: #05C3F9;
+}
+.demo-iconfont-sys .iconfont {
+    color: #A22613;
+}
+.demo-iconfont-sys .iconfont:hover {
+    color: #F95339;
 }

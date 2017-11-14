@@ -10,18 +10,16 @@
     <body>
         <div id="vueapp" class="vueapp" :class="{small: leftbarsmall.show}">
             <div class="adminpage wrapper">
-                <div class="topnavs">
-                    <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
-                    <a class="nav home" @click="switchnav({name:'HOME', path:'/admin'})">
-                        <i class="iconfont icon-apps"></i>
-                    </a>
-                    <template v-for="(item,idx) in navlist">
-                        <a class="nav" :class="{active: currentnav===item.name}" @click="switchnav(item)">{{item.name}}</a>
-                    </template>
+                <div class="topbar">
+                    <c-navsbar
+                    v-model="navs.current"
+                    :list="navs.list"></c-navsbar>
                 </div>
                 <div></div>
                 <div class="content">
-                    <router-view></router-view>
+                    <transition name="fade">
+                        <router-view></router-view>
+                    </transition>
                 </div>
             </div>
 
@@ -45,5 +43,5 @@
                 <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
             </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?2e509547efc2ee550251"></script></body>
+    <script type="text/javascript" src="/public/dist/vue-main.js?ed869c210644e955c8ca"></script></body>
 </html>

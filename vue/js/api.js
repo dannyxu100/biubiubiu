@@ -1,6 +1,6 @@
-import Message          from '_IVIEW_/message';
-import Modal            from '_IVIEW_/modal';
-import Pinyin           from './pinyin';
+// import Message          from '_IVIEW_/message';
+// import Modal            from '_IVIEW_/modal';
+// import Pinyin           from './pinyin';
 // import MD5              from './md5';
 /*
 //                    _ooOoo_
@@ -390,7 +390,7 @@ const api = {
     },
 
     //统一信息提示
-    info() {
+    /*info() {
         Message.info.apply(this, arguments);
     },
     success() {
@@ -407,7 +407,7 @@ const api = {
             cancelText: textcancel || '取消',
             onCancel: fncancel || function(){}
         });
-    },
+    },*/
 
     //获得一个流水号
     nowid() {
@@ -868,7 +868,8 @@ function findvmfromfrag(frag) {
 //扩展部分
 api.extend(api, {
     install( Vue, options ) {
-        Vue.api = api;
+        Vue.$fn = api;
+        Vue.prototype.$fn = api;
 
         Vue.directive('floaded', {
             bind () {
