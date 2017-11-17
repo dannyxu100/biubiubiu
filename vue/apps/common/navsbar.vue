@@ -85,13 +85,12 @@
                         classes[classname] = true;
                     });
                 }
-                console.log(classes);
                 return classes;
             },
             //切换nav
             switchnav(item) {
                 this.$emit('input', item.value);
-                this.$router.push(item.path);
+                this.$emit('onswitch', item);
             }
         },
         mounted() {

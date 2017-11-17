@@ -1,3 +1,4 @@
+import axios            from 'axios';
 // import Message          from '_IVIEW_/message';
 // import Modal            from '_IVIEW_/modal';
 // import Pinyin           from './pinyin';
@@ -390,24 +391,32 @@ const api = {
     },
 
     //统一信息提示
-    /*info() {
-        Message.info.apply(this, arguments);
+    info() {
+        // Message.info.apply(this, arguments);
+        window.alert(arguments[0]);
     },
     success() {
-        Message.success.apply(this, arguments);
+        // Message.success.apply(this, arguments);
+        window.alert(arguments[0]);
     },
     error() {
-        Message.error.apply(this, arguments);
+        // Message.error.apply(this, arguments);
+        window.alert(arguments[0]);
     },
     confirm( content, fnok, fncancel, textok, textcancel ) {
-        Modal.confirm({
-            content: '<span style="font-size: 18px;">'+ content +'</span>',
-            okText: textok || '确定',
-            onOk: fnok || function(){},
-            cancelText: textcancel || '取消',
-            onCancel: fncancel || function(){}
-        });
-    },*/
+        // Modal.confirm({
+        //     content: '<span style="font-size: 18px;">'+ content +'</span>',
+        //     okText: textok || '确定',
+        //     onOk: fnok || function(){},
+        //     cancelText: textcancel || '取消',
+        //     onCancel: fncancel || function(){}
+        // });
+        if( confirm.apply(this, content) ){
+            fnok && fnok();
+        } else {
+            fncancel && fncancel();
+        }
+    },
 
     //获得一个流水号
     nowid() {
@@ -417,7 +426,7 @@ const api = {
     },
     //http工具
     http(){
-        return $.ajax.apply( this, arguments );         //可更换第三方支持promise的ajax工具
+        return axios.apply( this, arguments );              //可更换第三方支持promise的ajax工具
     },
     //数据统一接口
     ajax( url, data ) {
@@ -425,12 +434,13 @@ const api = {
             url = QUERY_SERVICE;
         }
         let params = {
-            type: 'POST',
+            method: 'post',
             url: url,
             data: data,
-            dataType: 'json'
+            responseType: 'json'
         };
-        return api.http( params ).then(( res )=>{
+        return api.http( params ).then(( result )=>{
+            let res = result.data;
             if ( !res ) {
                 return false;
             }
@@ -451,7 +461,7 @@ const api = {
                 api.error('操作超时，请重试或刷新页面！');
                 return false;
             }
-            if ( res.result.toUpperCase() !== 'TRUE' ) {
+            if ( res.result !== 'TRUE' ) {
                 if ( res.result === 'FALSE' && res.errorcode === 'COMPANY_CRM_PAYED_TIME_EXPIRED' ) {
                     viewUtil.isCRMNoPayed();
                     return false;

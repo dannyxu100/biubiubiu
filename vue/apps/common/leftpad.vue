@@ -239,6 +239,12 @@
                         <div class="menu">
                             <router-link class="name" to="/admin-theme-icons">字体图标</router-link>
                         </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-section">排版</router-link>
+                        </div>
+                        <div class="menu">
+                            <router-link class="name" to="/admin-theme-comm">通用类</router-link>
+                        </div>
                     </div>
                     </transition>
                 </div>

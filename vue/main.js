@@ -13,13 +13,13 @@ import CLeftpad                 from '_APPS_/common/leftpad.vue';
 import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
 
 //路由
-import Router                   from '_ROUTER_/index.js';
+// import Router                   from '_ROUTER_/index.js';
+import RouterAdmin              from '_ROUTER_/admin.js';
 
 
 //Vuex
-import Store                                from '_STORE_/store.js';
+import Store                                from './store';
 import { mapGetters, mapActions }           from 'vuex';
-
 
 //基础样式
 // import './less/app.less';
@@ -32,7 +32,7 @@ window.vueapp = new Vue({
         'c-leftpad':            CLeftpad,
         'c-leftpadsmall':       CLeftpadSmall
     },
-    router: Router,
+    router: RouterAdmin,
     store: Store,
     data() {
         return {
@@ -52,7 +52,11 @@ window.vueapp = new Vue({
     methods: {
         ...mapActions([
             'toggle_leftbar'
-        ])
+        ]),
+        //顶部导航切换
+        navswitch( item ) {
+            this.$router.push( item.path );
+        }
     },
     created(){
         // debugger;

@@ -13,7 +13,8 @@
                 <div class="topbar">
                     <c-navsbar
                     v-model="navs.current"
-                    :list="navs.list"></c-navsbar>
+                    :list="navs.list"
+                    @onswitch="navswitch"></c-navsbar>
                 </div>
                 <div></div>
                 <div class="content">
@@ -43,5 +44,5 @@
                 <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
             </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?ed869c210644e955c8ca"></script></body>
+    <script type="text/javascript" src="/public/dist/vue-main.js?df92fbdb87dd978c585c"></script></body>
 </html>

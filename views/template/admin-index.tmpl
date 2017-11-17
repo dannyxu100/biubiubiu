@@ -13,7 +13,8 @@
                 <div class="topbar">
                     <c-navsbar
                     v-model="navs.current"
-                    :list="navs.list"></c-navsbar>
+                    :list="navs.list"
+                    @onswitch="navswitch"></c-navsbar>
                 </div>
                 <div></div>
                 <div class="content">

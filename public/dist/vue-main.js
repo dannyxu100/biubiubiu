@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ed869c210644e955c8ca"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "df92fbdb87dd978c585c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -16821,33 +16821,38 @@ window.vueapp = new _vue2.default({
     },
 
     computed: _extends({}, (0, _vuex.mapGetters)(['topbar', 'leftbar', 'leftbarsmall'])),
-    methods: _extends({}, (0, _vuex.mapActions)(['toggle_leftbar'])),
+    methods: _extends({}, (0, _vuex.mapActions)(['toggle_leftbar']), {
+        //顶部导航切换
+        navswitch: function navswitch(item) {
+            debugger;
+        }
+    }),
     created: function created() {
         // debugger;
         // this.actions.marge_data();
-        this.navs.current = 'HOME';
+        this.navs.current = '';
         this.navs.list = [{
-            name: '',
+            value: '',
             icon: 'icon-apps',
             class: 'home',
             path: '/admin'
         }, {
-            name: '用户',
+            value: '用户',
             icon: '',
             class: '',
             path: '/admin-users'
         }, {
-            name: '角色',
+            value: '角色',
             icon: '',
             class: '',
             path: '/admin-roles'
         }, {
-            name: '权限',
+            value: '权限',
             icon: '',
             class: '',
             path: '/admin-power'
         }, {
-            name: '系统配置',
+            value: '系统配置',
             icon: '',
             class: '',
             path: '/admin-setting'
@@ -18037,7 +18042,7 @@ exports.default = {
             required: true
         },
         value: {
-            type: Object
+            type: String
         }
     },
     data: function data() {
@@ -18048,9 +18053,8 @@ exports.default = {
     methods: {
         //
         classesitem: function classesitem(item) {
-            debugger;
             var classes = {};
-            if (this.value === item.name) {
+            if (this.value === item.value) {
                 classes['active'] = true;
             }
             if (item.class) {
@@ -18064,9 +18068,9 @@ exports.default = {
 
         //切换nav
         switchnav: function switchnav(item) {
-            // this.value = item.name;
-            this.$emit('input', item.name);
-            this.$router.push(item.path);
+            debugger;
+            this.$emit('input', item.value);
+            this.$emit('onswitch', item);
         }
     },
     mounted: function mounted() {
@@ -18149,7 +18153,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }
     }, [(item.icon) ? _c('i', {
       staticClass: "iconfont icon-apps"
-    }) : _vm._e(), _vm._v(" "), (item.name) ? _c('span', [_vm._v(_vm._s(item.name))]) : _vm._e()])]
+    }) : _vm._e(), _vm._v(" "), (item.value) ? _c('span', [_vm._v(_vm._s(item.value))]) : _vm._e()])]
   })], 2)
 }
 var staticRenderFns = []

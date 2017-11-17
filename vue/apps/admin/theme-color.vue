@@ -5,6 +5,7 @@
 
 <template>
     <div class="wrapper wrapper-scroll wrapper-box wrapper-theme">
+        <button @click="submit">保存</button>
         <div class="container">
             <!-- 基调配色 -->
             <h2>基调配色</h2>
@@ -13,213 +14,22 @@
             <br/>
             <div class="grid">
                 <div class="grid-row" style="">
+                    <template v-for="(color, colorkey) in basic.colors">
                     <div class="cell-7-1">
-                        <div class="colorblock bgtheme-lightest">
-                            <div>主题-最亮</div>
-                            <div>.bgtheme-lightest</div>
-                            <div>#D8F6FE</div>
+                        <template v-for="(item, itemkey) in color.ladder">
+                        <div v-if="item" class="colorblock" :class="classesblock(item, itemkey)" :style="stylebgcolor(item, itemkey)">
+                            <div>{{item.name}}</div>
+                            <div>{{item.class}}</div>
+                            <div>{{item.hex}}</div>
+                            <div v-if="true === color.editable && 'normal'===itemkey">
+                                <input class="inputcolor" v-model="item.rgb" @blur="changecolor(color)"/>
+                            </div>
+                            <div v-else>{{item.rgb}}</div>
                         </div>
-                        <div class="colorblock bgtheme-lighter fwhite">
-                            <div>主题-较亮</div>
-                            <div>.bgtheme-lighter</div>
-                            <div>#74DEFC</div>
-                        </div>
-                        <div class="colorblock bgtheme-light fwhite">
-                            <div>主题-亮</div>
-                            <div>.bgtheme-light</div>
-                            <div>#43D3FC</div>
-                        </div>
-                        <div class="colorblock active bgtheme fwhite">
-                            <div>主题</div>
-                            <div>.bgtheme</div>
-                            <div>#05C3F9</div>
-                        </div>
-                        <div class="colorblock bgtheme-dark fwhite">
-                            <div>主题-暗</div>
-                            <div>.bgtheme-dark</div>
-                            <div>#319DBB</div>
-                        </div>
-                        <div class="colorblock bgtheme-darker fwhite">
-                            <div>主题-较暗</div>
-                            <div>.bgtheme-darker</div>
-                            <div>#027FA2</div>
-                        </div>
+                        <div v-else class="colorblock empty"></div>
+                        </template>
                     </div>
-                    <div class="cell-7-1">
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock bgkey-light fwhite">
-                            <div>关键的-亮</div>
-                            <div>.bgkey-light</div>
-                            <div>#FC7E6A</div>
-                        </div>
-                        <div class="colorblock active bgkey fwhite">
-                            <div>关键的</div>
-                            <div>.bgkey</div>
-                            <div>#F95339</div>
-                        </div>
-                        <div class="colorblock bgkey-dark fwhite">
-                            <div>关键的-暗</div>
-                            <div>.bgkey-dark</div>
-                            <div>#BB5D4F</div>
-                        </div>
-                        <div class="colorblock bgkey-darker fwhite">
-                            <div>关键的-较暗</div>
-                            <div>.bgkey-darker</div>
-                            <div>#A22613</div>
-                        </div>
-                    </div>
-                    <div class="cell-7-1">
-                        <div class="colorblock bglight-lightest">
-                            <div>闪亮的-最亮</div>
-                            <div>.bglight-lightest</div>
-                            <div>#FFFFC5</div>
-                        </div>
-                        <div class="colorblock bglight-lighter">
-                            <div>闪亮的-较亮</div>
-                            <div>.bglight-lighter</div>
-                            <div>#FFFF73</div>
-                        </div>
-                        <div class="colorblock bglight-light">
-                            <div>闪亮的-亮</div>
-                            <div>.bglight-light</div>
-                            <div>#FFFF41</div>
-                        </div>
-                        <div class="colorblock active bglight">
-                            <div>闪亮的</div>
-                            <div>.bglight</div>
-                            <div>#FFFF01</div>
-                        </div>
-                        <div class="colorblock bglight-dark ">
-                            <div>闪亮的-暗</div>
-                            <div>.bglight-dark</div>
-                            <div>#FFF201</div>
-                        </div>
-                        <div class="colorblock bglight-darker ">
-                            <div>闪亮的-较暗</div>
-                            <div>.bglight-darker</div>
-                            <div>#FFD301</div>
-                        </div>
-                    </div>
-                    <div class="cell-7-1">
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock bgnice-lighter fwhite">
-                            <div>友好的-较亮</div>
-                            <div>.bgnice-lighter</div>
-                            <div>#67E3B1</div>
-                        </div>
-                        <div class="colorblock bgnice-light fwhite">
-                            <div>友好的-亮</div>
-                            <div>.bgnice-light</div>
-                            <div>#39E39E</div>
-                        </div>
-                        <div class="colorblock active bgnice fwhite">
-                            <div>友好的</div>
-                            <div>.bgnice</div>
-                            <div>#01C677</div>
-                        </div>
-                        <div class="colorblock bgnice-dark fwhite">
-                            <div>友好的-暗</div>
-                            <div>.bgnice-dark</div>
-                            <div>#269568</div>
-                        </div>
-                        <div class="colorblock bgnice-darker fwhite">
-                            <div>友好的-较暗</div>
-                            <div>.bgnice-darker</div>
-                            <div>#00814D</div>
-                        </div>
-                    </div>
-                    <div class="cell-7-1">
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock bgblack-light fwhite">
-                            <div>黑-亮</div>
-                            <div>.bgblack-light</div>
-                            <div>#666</div>
-                        </div>
-                        <div class="colorblock active bgblack fwhite">
-                            <div>黑</div>
-                            <div>.bgblack</div>
-                            <div>#444</div>
-                        </div>
-                        <div class="colorblock bgblack-dark fwhite">
-                            <div>黑-基础</div>
-                            <div>.bgblack-dark</div>
-                            <div>#333</div>
-                        </div>
-                        <div class="colorblock bgblack-darker fwhite">
-                            <div>黑-暗</div>
-                            <div>.bgblack-darker</div>
-                            <div>#222</div>
-                        </div>
-                        <div class="colorblock bgblack-darkest fwhite">
-                            <div>黑-最暗</div>
-                            <div>.bgblack-darkest</div>
-                            <div>#000</div>
-                        </div>
-                    </div>
-                    <div class="cell-7-1">
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock bggray-lighter">
-                            <div>灰-较亮</div>
-                            <div>.bggray-lighter</div>
-                            <div>#EEE</div>
-                        </div>
-                        <div class="colorblock bggray-light">
-                            <div>灰-亮</div>
-                            <div>.bggray-light</div>
-                            <div>#DDD</div>
-                        </div>
-                        <div class="colorblock active bggray">
-                            <div>灰</div>
-                            <div>.bggray</div>
-                            <div>#CCC</div>
-                        </div>
-                        <div class="colorblock bggray-dark fwhite">
-                            <div>灰-暗</div>
-                            <div>.bggray-dark</div>
-                            <div>#BBB</div>
-                        </div>
-                        <div class="colorblock bggray-darker fwhite">
-                            <div>灰-较暗</div>
-                            <div>.bggray-darker</div>
-                            <div>#AAA</div>
-                        </div>
-                        <div class="colorblock bggray-darkest fwhite">
-                            <div>灰-最暗</div>
-                            <div>.bggray-darkest</div>
-                            <div>#999</div>
-                        </div>
-                    </div>
-                    <div class="cell-7-1">
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock empty"></div>
-                        <div class="colorblock bgwhite-light">
-                            <div>白-亮</div>
-                            <div>.bgwhite-light</div>
-                            <div>#FFF</div>
-                        </div>
-                        <div class="colorblock active bgwhite">
-                            <div>白</div>
-                            <div>.bgwhite</div>
-                            <div>#FAFAFA</div>
-                        </div>
-                        <div class="colorblock bgwhite-dark">
-                            <div>白-暗</div>
-                            <div>.bgwhite-dark</div>
-                            <div>#F7F7F7</div>
-                        </div>
-                        <div class="colorblock bgwhite-darker">
-                            <div>白-较暗</div>
-                            <div>.bgwhite-darker</div>
-                            <div>#F5F5F5</div>
-                        </div>
-                        <div class="colorblock bgwhite-darkest">
-                            <div>白-最暗</div>
-                            <div>.bgwhite-darkest</div>
-                            <div>#F3F3F3</div>
-                        </div>
-                    </div>
+                    </template>
                 </div>
             </div>
 
@@ -228,12 +38,15 @@
             <br/>
             <div class="grid">
                 <div class="grid-row" style="">
-                    <div class="cell-7-1">
-                        <div class="colorblock-min" style="border-color:#5ADBD3">
-                            <div>#5ADBD3</div>
+                    <template v-for="(color, colorkey) in basic.colors">
+                    <div v-if="color.complementary" class="cell-7-1">
+                        <div class="colorblock-min" :style="stylebgcolor4min(color)">
+                            <div>{{color.complementary.hex}}</div>
+                            <div>{{color.complementary.rgb}}</div>
                         </div>
                     </div>
-                    <div class="cell-7-1">
+                    </template>
+                    <!-- <div class="cell-7-1">
                         <div class="colorblock-min" style="border-color:#ED0145">
                             <div>#ED0145</div>
                         </div>
@@ -262,7 +75,7 @@
                         <div class="colorblock-min" style="border-color:#F8F1CE">
                             <div>#F8F1CE</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <br/>
@@ -329,14 +142,154 @@
         data() {
             return {}
         },
-        computed: {},
+        computed: {
+            //
+            ...mapGetters([
+                'basic'
+            ])
+
+        },
         methods: {
             //收起展开左栏
             // ...mapActions([
             //     'toggle_leftbar'
             // ])
+            //色块样式
+            classesblock( item, itemkey ) {
+                let classes = {};
+                if( !this.islight(item.rgb) ) {
+                    classes['fwhite'] = true;
+                }
+                if( 'normal' === itemkey ) {
+                    classes['active'] = true;
+                }
+                return classes;
+            },
+            //实时预览色块颜色
+            stylebgcolor( item, itemkey ) {
+                return {'background-color': 'rgb('+ item.rgb +')'};
+            },
+            //实时预览色块颜色(辅助色)
+            stylebgcolor4min( color ) {
+                return {'border-color': 'rgb('+ color.complementary.rgb +')'};
+            },
+            //拆分rgb数值
+            getrgb( str ){
+                let rgb;
+                if( /^\#[0-9A-F]{3,6}$/i.test(str) ){
+                    str = this.hex2rgb( str );
+                }
+                if ( /^\d{1,3}\,\d{1,3}\,\d{1,3}$/i.test(str) ) {
+                    rgb = str.split(',');
+                } else {
+                    rgb = [0,0,0];
+                }
+                let r, g, b;
+                r = rgb[0] < 0 ? 0 : ( 255 < rgb[0] ? 255 : rgb[0]);
+                g = rgb[1] < 0 ? 0 : ( 255 < rgb[1] ? 255 : rgb[1]);
+                b = rgb[2] < 0 ? 0 : ( 255 < rgb[2] ? 255 : rgb[2]);
+                return {
+                    $R: parseInt(r),
+                    $G: parseInt(g),
+                    $B: parseInt(b),
+                }
+            },
+            //rgb转hex
+            rgb2hex( rgb ) {
+                rgb = 'string' === typeof rgb ? this.getrgb(rgb) : rgb;
+                return "#" + ((1 << 24) + (rgb.$R << 16) + (rgb.$G << 8) + rgb.$B).toString(16).slice(1).toUpperCase();
+            },
+            //hex转rgb
+            hex2rgb( hex ) {
+                var rgb = []; // 定义rgb数组
+                if (/^\#[0-9A-F]{3}$/i.test(hex)) {                 //判断传入是否为#三位十六进制数
+                    let sizhex = '#';
+                    hex.replace(/[0-9A-F]/ig, function(kw) {
+                        sizhex += kw + kw;                          //把三位16进制数转化为六位
+                    });
+                    hex = sizhex;                                   //保存回hex
+                }
+                if (/^#[0-9A-F]{6}$/i.test(hex)) {                  //判断传入是否为#六位十六进制数
+                    hex.replace(/[0-9A-F]{2}/ig, function(kw) {
+                        rgb.push(eval('0x' + kw));                  //十六进制转化为十进制并存如数组
+                    });
+                    return rgb.join(',');                           //输出RGB格式颜色
+                } else {
+                    // console.log(`Input ${hex} is wrong!`);
+                    return '0,0,0';
+                }
+            },
+            //判断明暗(RGB 模式转换成 YUV 模式，而 Y 是明亮度（灰阶）)
+            islight( rgb ) {
+                let graylevel;
+                rgb = this.getrgb( rgb );
+                graylevel = rgb.$R * 0.299 + rgb.$G * 0.587 + rgb.$B * 0.114;
+                return graylevel >= 192 ? true : false;
+            },
+            //变亮
+            lighten( rgb, value ) {
+                rgb = 'string' === typeof rgb ? this.getrgb(rgb) : rgb;
+                let r, g, b;
+                r = rgb.$R+value;
+                r = r < 0 ? 0 : ( 255 < r ? 255 : r);
+                g = rgb.$G+value;
+                g = g < 0 ? 0 : ( 255 < g ? 255 : g);
+                b = rgb.$B+value;
+                b = b < 0 ? 0 : ( 255 < b ? 255 : b);
+                return [ r, g, b ].join(',');
+            },
+            //变暗
+            darken( rgb, value ) {
+                return this.lighten( rgb, -value );
+            },
+            //计算互补色
+            complementarycolor( rgb ) {
+                rgb = 'string' === typeof rgb ? this.getrgb(rgb) : rgb;
+                return [255-rgb.$R, 255-rgb.$G, 255-rgb.$B].join(',');
+            },
+            //设置颜色
+            changecolor( color ) {
+                let ladder, rgb;
+                ladder = color.ladder;
+                rgb = this.getrgb( ladder.normal.rgb );
+                ladder.normal.rgb = [rgb.$R, rgb.$G, rgb.$B].join(',');
+                ladder.normal.hex = this.rgb2hex( rgb );
+
+                if( ladder.light ){
+                    ladder.light.rgb = this.lighten( rgb, 30 );
+                    ladder.light.hex = this.rgb2hex( ladder.light.rgb );
+                }
+                if( ladder.lighter ){
+                    ladder.lighter.rgb = this.lighten( rgb, 90 );
+                    ladder.lighter.hex = this.rgb2hex( ladder.lighter.rgb );
+                }
+                if( ladder.lightest ){
+                    ladder.lightest.rgb = this.lighten( rgb, 196 );
+                    ladder.lightest.hex = this.rgb2hex( ladder.lightest.rgb );
+                }
+                if( ladder.dark ){
+                    ladder.dark.rgb = this.darken( rgb, 20 );
+                    ladder.dark.hex = this.rgb2hex( ladder.dark.rgb );
+                }
+                if( ladder.darker ){
+                    ladder.darker.rgb = this.darken( rgb, 60 );
+                    ladder.darker.hex = this.rgb2hex( ladder.darker.rgb );
+                }
+                if( ladder.darkest ){
+                    ladder.darkest.rgb = this.darken( rgb, 80 );
+                    ladder.darkest.hex = this.rgb2hex( ladder.darkest.rgb );
+                }
+
+                color.complementary.rgb = this.complementarycolor( rgb );
+                color.complementary.hex = this.rgb2hex( color.complementary.rgb );
+            },
+            //
+            submit() {
+                let promi = this.$fn.ajax('/admin/less', {
+                    data: JSON.stringify(this.basic)
+                });
+            }
         },
-        created() {
-        }
+        created() {}
     }
 </script>

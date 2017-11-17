@@ -17,6 +17,7 @@ const CONFIG        = tools.require('/config/config.json'),
 
 //路由
 const route_index   = tools.require('/routes/common/index.js'),
+      route_admin   = tools.require('/routes/admin/index.js'),
       route_access  = tools.require('/routes/home/access.js'),
       route_users   = tools.require('/routes/home/users.js');
 
@@ -88,6 +89,7 @@ app.use(session({
 }));
 
 app.use('/', route_index);
+app.use('/admin', route_admin);
 app.use('/access', route_access);
 app.use('/users', route_users);
 
