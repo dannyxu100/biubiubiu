@@ -87,6 +87,10 @@
                     <i class="ico" style="background-image:url(/public/images/apps/theme-color.svg)"></i>
                     <span class="tit">配色</span>
                 </router-link>
+                <router-link class="apps-item" to="/admin-theme-font">
+                    <i class="ico" style="background-image:url(/public/images/apps/theme-font.svg)"></i>
+                    <span class="tit">字体</span>
+                </router-link>
                 <router-link class="apps-item" to="/admin-theme-grid">
                     <i class="ico" style="background-image:url(/public/images/apps/theme-grid.svg)"></i>
                     <span class="tit">栅格</span>
@@ -100,7 +104,7 @@
                     <span class="tit">按钮</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-popmenu">
-                    <i class="ico" style="background-image:url(/public/images/apps/theme-list.svg)"></i>
+                    <i class="ico" style="background-image:url(/public/images/apps/theme-popmenu.svg)"></i>
                     <span class="tit">气泡菜单</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-check">
@@ -108,7 +112,7 @@
                     <span class="tit">选择项</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-select">
-                    <i class="ico" style="background-image:url(/public/images/apps/theme-menu.svg)"></i>
+                    <i class="ico" style="background-image:url(/public/images/apps/theme-list.svg)"></i>
                     <span class="tit">下拉</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-tabs">
@@ -133,7 +137,7 @@
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-icons">
                     <i class="ico" style="background-image:url(/public/images/apps/theme-heart.svg)"></i>
-                    <span class="tit">字体图标</span>
+                    <span class="tit">图标</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-section">
                     <i class="ico" style="background-image:url(/public/images/apps/theme-text.svg)"></i>

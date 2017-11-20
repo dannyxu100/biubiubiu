@@ -296,8 +296,17 @@ const State = {
                         },
                     }
                 },
-
             },
+            fontfamily: {
+                ios:    ['-apple-system', 'sf_ui_textlight'],
+                en:     ['"ff-tisa-web-pro-1"', '"ff-tisa-web-pro-2"', '"Lucida Grande"', '"Helvetica Neue"', 'Helvetica', '"Nimbus Sans L"', 'Arial'],
+                zh:     ['"Hiragino Sans GB"', '"Hiragino Sans GB W3"', '"Microsoft YaHei UI"', '"Microsoft YaHei"', '"WenQuanYi Micro Hei"'],
+                sys:    ['sans-serif'],
+                title:  ['inherit'],
+                html:   ['"Helvetica Neue", Helvetica, Arial, sans-serif'],
+                def:    '~"@{fontfamily-ios}, @{fontfamily-en}, @{fontfamily-zh}, @{fontfamily-sys}"',
+                icon:   '"iconfont"'
+            }
         }
     }
 };

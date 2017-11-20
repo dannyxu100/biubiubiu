@@ -5,6 +5,7 @@ import CAdminUsers              from '_APPS_/admin/users.vue';
 import CAdminPower              from '_APPS_/admin/power.vue';
 import CAdminRoles              from '_APPS_/admin/roles.vue';
 import CAdminThemeColor         from '_APPS_/admin/theme-color.vue';
+import CAdminThemeFont          from '_APPS_/admin/theme-font.vue';
 import CAdminThemeGrid          from '_APPS_/admin/theme-grid.vue';
 import CAdminThemeTable         from '_APPS_/admin/theme-table.vue';
 import CAdminThemeButton        from '_APPS_/admin/theme-button.vue';
@@ -31,6 +32,7 @@ const ROUTELIST = [
 
 
     { path: '/admin-theme-color',       component: CAdminThemeColor },
+    { path: '/admin-theme-font',        component: CAdminThemeFont },
     { path: '/admin-theme-grid',        component: CAdminThemeGrid },
     { path: '/admin-theme-table',       component: CAdminThemeTable },
     { path: '/admin-theme-button',      component: CAdminThemeButton },

@@ -204,6 +204,9 @@
                             <router-link class="name" to="/admin-theme-color">配色</router-link>
                         </div>
                         <div class="menu">
+                            <router-link class="name" to="/admin-theme-font">字体</router-link>
+                        </div>
+                        <div class="menu">
                             <router-link class="name" to="/admin-theme-grid">栅格</router-link>
                         </div>
                         <div class="menu">
