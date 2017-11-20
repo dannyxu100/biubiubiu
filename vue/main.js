@@ -46,7 +46,8 @@ window.vueapp = new Vue({
         ...mapGetters([
             'topbar',
             'leftbar',
-            'leftbarsmall'
+            'leftbarsmall',
+            'basic'
         ])
     },
     methods: {
@@ -56,6 +57,19 @@ window.vueapp = new Vue({
         //顶部导航切换
         navswitch( item ) {
             this.$router.push( item.path );
+        },
+        //
+        appclasses() {
+            return {
+                small: this.leftbarsmall.show
+            };
+        },
+        //
+        appstyles() {
+            let ff = this.basic.fontfamily;
+            return {
+                'font-family': ff.ios.concat( ff.en, ff.zh, ff.sys ).join(',')
+            };
         }
     },
     created(){
