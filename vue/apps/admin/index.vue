@@ -27,7 +27,7 @@
                     background-position: center;
                     background-size: 58px 58px;
                     .prefix-border-radius(9px);
-                    .prefix-box-shadow(0 3px 5px 0 rgba(19, 74, 94,.1));
+                    .prefix-box-shadow(0 2px 3px 0 rgba(19, 74, 94,.1));
                     .prefix-transition();
                 }
                 .tit {
@@ -61,7 +61,7 @@
                     top: -2px;
                     .ico {
                         background-color: rgba(255,255,255,1);
-                        .prefix-box-shadow(0 3px 30px 5px rgba(255, 255, 255,.5));
+                        .prefix-box-shadow(0 3px 30px 5px rgba(190, 243, 255,.5));
                     }
                     .tit {
                         color: rgb(255,255,255);
@@ -144,7 +144,7 @@
                     <span class="tit">排版</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-comm">
-                    <i class="ico" style="background-image:url(/public/images/apps/theme-comm.svg)"></i>
+                    <i class="ico" style="background-image:url(/public/images/apps/theme-patch.svg)"></i>
                     <span class="tit">通用类</span>
                 </router-link>
             </div>
