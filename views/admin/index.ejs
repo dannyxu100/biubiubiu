@@ -11,12 +11,23 @@
         <div id="vueapp" class="vueapp" :class="appclasses()" :style="appstyles()">
             <div class="adminpage wrapper">
                 <div class="topbar">
-                    <c-navsbar
-                    v-model="navs.current"
-                    :list="navs.list"
-                    @onswitch="navswitch"></c-navsbar>
+                    <div class="topbar-left">
+                        <c-navsbar
+                        v-model="navs.current"
+                        :list="navs.list"
+                        @switch="navswitch"></c-navsbar>
+                    </div>
+                    <div class="topbar-right">
+                        <c-searchbar
+                        v-model="search.key"
+                        @onsearch="search"></c-searchbar>
+
+                        <c-icons-docker
+                        :list="dockerlist"
+                        @hover="dockerhover"
+                        @click="dockerclick"></c-icons-docker>
+                    </div>
                 </div>
-                <div></div>
                 <div class="content">
                     <transition name="fade">
                         <router-view></router-view>
@@ -44,5 +55,5 @@
                 <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
             </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?d8b71ca7de45dd05da5f"></script></body>
+    <script type="text/javascript" src="/public/dist/vue-main.js?d09b1947e32bc00ff934"></script></body>
 </html>

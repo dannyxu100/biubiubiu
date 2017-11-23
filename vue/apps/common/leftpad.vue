@@ -9,7 +9,7 @@
             height: 220px;
             // background: rgba(93, 128, 184, .7);
             background-image: url(/public/images/bg-star.png);
-            &:after {
+            &::before {
                 content: "";
                 opacity: .9;
                 position: absolute;
@@ -42,21 +42,31 @@
                     background: rgba(255,255,255,0);
                     .prefix-appearance();
                     .prefix-transition();
-                    &:hover {
-                        background: rgba(255,255,255,.3);
-                    }
                     i {
                         display: inline-block;
                         width: 50px;
-                        height:50px;
+                        height: 50px;
                         line-height: 50px;
                         font-size: 22px;
                         color: #fff;
-                        .prefix-transform(rotate(90deg));
-                        .prefix-transition();
-                        &.active {
-                            .prefix-transform(rotate(0deg));
+                        .prefix-transform(rotate(-90deg));
+                        .prefix-transition(all linear .3s);
+                        &::before {
+                            position: relative;
+                            top: 0;
+                            .prefix-transition();
                         }
+                        &.active {
+                            .prefix-transform(rotate(90deg));
+                            &:hover {
+                                &::before {
+                                    top: 3px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        background: rgba(255,255,255,.3);
                     }
                 }
                 .avatar-image {
@@ -138,7 +148,7 @@
                         }
                         & > .name {
                             padding: 13px 20px;
-                            &:after {
+                            &::after {
                                 position: absolute;
                                 top: 0;
                                 right: 20px;
@@ -157,7 +167,7 @@
                                 // .prefix-transform(rotate(90deg));        //旋转向下
                             }
                             &.active {
-                                &:after {
+                                &::after {
                                     color: rgb(19, 74, 94);
                                 }
                             }

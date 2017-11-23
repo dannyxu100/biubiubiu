@@ -37,10 +37,10 @@
                     width: 96px;
                     height: 26px;
                     line-height: 28px;
-                    color: rgb(26, 182, 171);
+                    color: rgb(0, 184, 171);
                     font-size: 13px;
                     text-align: center;
-                    .prefix-transition();
+                    .prefix-transition(color linear .3s);
                 }
                 &:after {
                     opacity: 0;
@@ -120,7 +120,7 @@
                     <span class="tit">标签页</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-tag">
-                    <i class="ico" style="background-image:url(/public/images/apps/theme-tag.svg)"></i>
+                    <i class="ico" style="background-image:url(/public/images/apps/theme-badge.svg)"></i>
                     <span class="tit">标签</span>
                 </router-link>
                 <router-link class="apps-item" to="/admin-theme-input">

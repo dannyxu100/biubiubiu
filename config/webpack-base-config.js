@@ -13,6 +13,8 @@ module.exports = {
     entry: {
         'vue-main': [
             R('../vue/less/app.less'),
+            R('../vue/less/style.less'),
+            R('../vue/less/prime-tool.less'),
             R('../vue/main.js')
         ]
     },

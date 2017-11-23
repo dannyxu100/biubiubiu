@@ -1,0 +1,129 @@
+// 混合
+@import "mixins/prefix.less";
+@import "mixins/common.less";
+@import "mixins/normalize.less";
+
+
+.wrapper-box {
+    padding: 20px;
+    // background: rgba(255,255,255,.9);
+    // .prefix-border-radius(10px);
+    // .prefix-box-shadow(0 5px 50px 0 rgba(0,0,0,.2));
+}
+.wrapper-white {
+    background-color: #fff;
+    color: #333;
+}
+
+
+.vueapp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 240px;
+    overflow: hidden;
+    // background: linear-gradient(left to right, #1bb3eb, #40f1d1);
+    .prefix-gradient(225deg, #1bb3eb, #40f1d1);
+    &>.wrapper {
+        left: 260px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        .prefix-transition(left ease-out .3s);
+    }
+    &.small {
+        padding-left: 60px;
+        &>.wrapper {
+            left: 80px;
+        }
+    }
+}
+.topbar {
+    height: 50px;
+    // background: rgb(52, 138, 199);
+    // .prefix-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
+    // .prefix-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
+}
+.leftbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    background: rgba(240, 245, 255, .9);
+    // .prefix-gradient(240deg, rgba(255, 255, 255, .2), rgba(52, 138, 199, .2));
+    // .prefix-gradient(240deg, rgba(116, 116, 191, .5), rgba(52, 138, 199, .8));
+    .prefix-box-shadow(0 5px 50px 0 rgba(0,0,0,.2));
+    &.small {
+        width: 60px;
+        background: rgba(240, 245, 255, .2);
+        .prefix-box-shadow(0 3px 8px 0 rgba(0,0,0,.1));
+    }
+}
+
+.leftbar-enter-active {
+    left: -240px;
+    .prefix-animation(leftbar .3s ease-out .3s);
+}
+.leftbar-leave-active {
+    .prefix-animation(leftbar .3s ease-out reverse);
+}
+.prefix-keyframes(leftbar, {
+    0% { left: -240px; }
+    100% { left: 0; }
+});
+
+
+.leftbarsmall-enter-active {
+    left: -60px;
+    .prefix-animation(leftbarsmall .3s ease-out .3s);
+}
+.leftbarsmall-leave-active {
+    .prefix-animation(leftbarsmall .3s ease-out reverse);
+}
+.prefix-keyframes(leftbarsmall, {
+    0% { left: -60px; }
+    100% { left: 0; }
+});
+
+
+.adminpage {
+    // background: #fff;
+    color: #fff;
+    .topbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        // padding-left: 20px;
+        height: 50px;
+        background: rgba(255,255,255,.3);
+        .topbar-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            padding-right: 360px;
+        }
+        .topbar-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 360px;
+            padding: 0 20px;
+        }
+    }
+    .content {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,.1);
+    }
+}

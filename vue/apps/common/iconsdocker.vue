@@ -1,15 +1,17 @@
 <style lang="less">
     @import "../../less/mixins/prefix.less";
 
-    .navbar {
+    .iconsdocker {
+        display: inline-block;
         position: relative;
         // padding-left: 20px;
         height: 50px;
         font-size: 0;
+        vertical-align: middle;
         // .prefix-box-shadow(0 2px 5px 1px rgba(0, 166, 124,.1));
-        .nav {
+        .icon {
             display: inline-block;
-            padding: 0 20px;
+            padding: 0 10px;
             height: 50px;
             font-size: 14px;
             font-weight: 700;
@@ -22,31 +24,32 @@
             .prefix-transition(all linear .2s);
             &:hover {
                 color: rgb(255, 255, 255);
-                background: rgba(255,255,255,.2);
             }
-            &.active {
-                color: rgb(0, 169, 180);
-                background: rgba(255,255,255,1);
-                cursor: default;
-            }
-            &.home {
-                padding: 0 16px;
-                .iconfont {
-                    font-size: 16px;
-                    font-weight: 400;
-                    vertical-align: middle;
-                }
+            i {
+                display: block;
+                margin: 0 auto 10px;
+                width: 58px;
+                height: 58px;
+                // border: 1px solid rgba(255,255,255,.2);
+                background-color: rgba(255,255,255,1);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 58px 58px;
+                .prefix-border-radius(9px);
+                .prefix-box-shadow(0 2px 3px 0 rgba(19, 74, 94,.1));
+                .prefix-transition();
             }
         }
     }
 </style>
 
 <template>
-    <div class="navbar">
+    <div class="iconsdocker">
         <!-- welcome to you! {{mode}} - qqq23324112222 - {{showdetail}} 544 {{userid4modal}} -->
         <template v-for="(item,idx) in list">
-            <a class="nav" :class="classesitem(item)" @click="switchnav(item)">
+            <a class="icon" :class="classesitem(item)" @hover="hover(item)" @click="click(item)">
                 <i v-if="item.icon" class="iconfont icon-apps"></i>
+                <i class="ico" :style="iconstyles(item)"></i>
                 <span v-if="item.value">{{item.value}}</span>
             </a>
         </template>
@@ -66,7 +69,6 @@
             value: {
                 type: String
             }
-            //@switch()                     //切换事件
         },
         data() {
             return {}
@@ -86,10 +88,19 @@
                 }
                 return classes;
             },
-            //切换nav
-            switchnav(item) {
-                this.$emit('input', item.value);
-                this.$emit('switch', item);
+            //图标动态样式
+            iconstyles( item ) {
+                return {
+                    'background-image': `url(${item.iconpath || ''})`
+                };
+            },
+            //
+            hover( item ) {
+                this.$emit('hover', item);
+            },
+            //
+            click( item ) {
+                this.$emit('click', item);
             }
         },
         mounted() {

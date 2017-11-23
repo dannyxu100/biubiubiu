@@ -26,10 +26,23 @@
                 line-height: 50px;
                 font-size: 22px;
                 color: #fff;
-                .prefix-transform(rotate(0deg));
-                .prefix-transition();
+                .prefix-transform(rotate(90deg));
+                .prefix-transition(all linear .3s);
+                &::before {
+                    position: relative;
+                    top: 0;
+                    .prefix-transition();
+                }
                 &.active {
-                    .prefix-transform(rotate(90deg));
+                    .prefix-transform(rotate(-90deg));
+                    &::before {
+                        top: 3px;
+                    }
+                    &:hover {
+                        &::before {
+                            top: 6px;
+                        }
+                    }
                 }
             }
         }

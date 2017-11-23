@@ -9,6 +9,8 @@ Vue.use(Api);
 //组件
 // import CMyComponent            from '_PLUGIN_/mycomponent.vue';
 import CNavsbar                 from '_APPS_/common/navsbar.vue';
+import CSearchbar               from '_APPS_/common/searchbar.vue';
+import CIconsDocker             from '_APPS_/common/iconsdocker.vue';
 import CLeftpad                 from '_APPS_/common/leftpad.vue';
 import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
 
@@ -29,6 +31,8 @@ window.vueapp = new Vue({
 	el: '#vueapp',
     components: {
         'c-navsbar':            CNavsbar,
+        'c-searchbar':          CSearchbar,
+        'c-icons-docker':       CIconsDocker,
         'c-leftpad':            CLeftpad,
         'c-leftpadsmall':       CLeftpadSmall
     },
@@ -39,7 +43,11 @@ window.vueapp = new Vue({
             navs: {
                 list: [],
                 current: ''
-            }
+            },
+            search: {
+                key: ''
+            },
+            dockerlist: []
         };
     },
     computed: {
@@ -54,10 +62,6 @@ window.vueapp = new Vue({
         ...mapActions([
             'toggle_leftbar'
         ]),
-        //顶部导航切换
-        navswitch( item ) {
-            this.$router.push( item.path );
-        },
         //
         appclasses() {
             return {
@@ -70,6 +74,14 @@ window.vueapp = new Vue({
             return {
                 'font-family': ff.ios.concat( ff.en, ff.zh, ff.sys ).join(',')
             };
+        },
+        //顶部导航切换
+        navswitch( item ) {
+            this.$router.push( item.path );
+        },
+        //搜索
+        search() {
+
         }
     },
     created(){
@@ -101,6 +113,20 @@ window.vueapp = new Vue({
             icon: '',
             class: '',
             path: '/admin-setting'
+        }];
+
+        this.dockerlist = [{
+            value: '消息',
+            iconpath: '/public/images/comment.svg',
+            class: ''
+        }, {
+            value: '设置',
+            iconpath: '',
+            class: ''
+        }, {
+            value: '用户',
+            iconpath: '',
+            class: ''
         }];
     }
 });
