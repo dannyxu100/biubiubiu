@@ -8,6 +8,7 @@
 
 <template>
 	<div class="rightpad wrapper">
+        <slot></slot>
 	</div>
 </template>
 
