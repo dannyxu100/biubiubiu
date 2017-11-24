@@ -39,6 +39,7 @@
                     border: none;
                     cursor: pointer;
                     outline: none;
+                    color: rgba(255,255,255,1);
                     background: rgba(255,255,255,0);
                     .prefix-appearance();
                     .prefix-transition();
@@ -48,9 +49,9 @@
                         height: 50px;
                         line-height: 50px;
                         font-size: 22px;
-                        color: #fff;
+                        color: rgba(255,255,255,.8);
                         .prefix-transform(rotate(-90deg));
-                        .prefix-transition(all linear .3s);
+                        .prefix-transition();
                         &::before {
                             position: relative;
                             top: 0;
@@ -67,6 +68,9 @@
                     }
                     &:hover {
                         background: rgba(255,255,255,.3);
+                        i {
+                            color: rgba(255,255,255,1);
+                        }
                     }
                 }
                 .avatar-image {
@@ -186,8 +190,8 @@
 	<div class="leftpad wrapper">
         <div class="avatarbox">
             <div class="avatarbox-content">
-                <button class="btn-toggle" @click="toggle_leftbar()">
-                    <i class="iconfont icon-down" :class="{active:leftbar.show}"></i>
+                <button class="btn-toggle" @click="toggle_leftpad()">
+                    <i class="iconfont icon-down" :class="{active:leftpad.show}"></i>
                 </button>
                 <div class="avatar-image" style="background-image:url(/public/images/avatar.png)"></div>
                 <div class="avatar-name">王小二</div>
@@ -322,12 +326,12 @@
         },
         computed: {
             ...mapGetters([
-                'leftbar'
+                'leftpad'
             ])
         },
         methods:{
             ...mapActions([
-                'toggle_leftbar'
+                'toggle_leftpad'
             ]),
             //展开收起子菜单
             togglemenu( type ){

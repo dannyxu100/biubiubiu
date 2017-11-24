@@ -66,7 +66,7 @@
             value: {
                 type: String
             }
-            //@switch()                     //切换事件
+            //@on-switch()                     //切换事件
         },
         data() {
             return {}
@@ -89,7 +89,7 @@
             //切换nav
             switchnav(item) {
                 this.$emit('input', item.value);
-                this.$emit('switch', item);
+                this.$emit('on-switch', item);
             }
         },
         mounted() {

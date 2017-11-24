@@ -8,13 +8,21 @@ export default {
 	},
 
     //展开收起左侧栏
-    toggle_leftbar({dispatch, state}, force ){
+    toggle_leftpad({dispatch, state}, force ){
         if( 'undefined' !== typeof force) {
-            state.data.leftbar.show = force;
-            state.data.leftbarsmall.show = !force;
+            state.data.leftpad.show = force;
+            state.data.leftpadsmall.show = !force;
         } else {
-            state.data.leftbar.show = !state.data.leftbar.show;
-            state.data.leftbarsmall.show = !state.data.leftbarsmall.show;
+            state.data.leftpad.show = !state.data.leftpad.show;
+            state.data.leftpadsmall.show = !state.data.leftpadsmall.show;
+        }
+    },
+    //展开收起右侧栏
+    toggle_rightpad({dispatch, state}, force ){
+        if( 'undefined' !== typeof force) {
+            state.data.rightpad.show = force;
+        } else {
+            state.data.rightpad.show = !state.data.rightpad.show;
         }
     }
 };

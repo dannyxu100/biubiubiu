@@ -20,7 +20,7 @@
             .prefix-transition(background linear .3s);
             // .prefix-box-shadow(inset 0 0 0 1px rgba(45, 135, 164, .05));
             &.active {
-                background: rgba(82, 172, 200, 0.5);
+                background: rgba(82, 172, 200, 0.8);
             }
             .searchbar-box {
                 position: absolute;
@@ -68,6 +68,7 @@
             value: {
                 type: String
             }
+            // @on-search()
         },
         data() {
             return {
@@ -93,7 +94,7 @@
             //搜索
             search() {
                 this.$emit('input', this.value);
-                this.$emit('onsearch', this.value);
+                this.$emit('on-search', this.value);
             },
         },
         mounted() {

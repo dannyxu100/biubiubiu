@@ -15,17 +15,17 @@
                         <c-navsbar
                         v-model="navs.current"
                         :list="navs.list"
-                        @switch="navswitch"></c-navsbar>
+                        @on-switch="navswitch"></c-navsbar>
                     </div>
                     <div class="topbar-right">
                         <c-searchbar
                         v-model="search.key"
-                        @onsearch="search"></c-searchbar>
+                        @on-search="searchhandle"></c-searchbar>
 
                         <c-icons-docker
                         :list="dockerlist"
-                        @hover="dockerhover"
-                        @click="dockerclick"></c-icons-docker>
+                        @on-hover="dockerhover"
+                        @on-click="dockerclick"></c-icons-docker>
                     </div>
                 </div>
                 <div class="content">
@@ -35,25 +35,22 @@
                 </div>
             </div>
 
-            <transition name="leftbar">
-                <div class="leftbar" v-show="leftbar.show">
+            <transition name="leftpad">
+                <div class="layout-left" v-show="leftpad.show">
                     <c-leftpad></c-leftpad>
                 </div>
             </transition>
-            <transition name="leftbarsmall">
-                <div class="leftbar small" v-show="leftbarsmall.show" >
+            <transition name="leftpadsmall">
+                <div class="layout-left small" v-show="leftpadsmall.show" >
                     <c-leftpadsmall></c-leftpadsmall>
                 </div>
             </transition>
-            <!-- <transition name="slide">
-                <c-topbar :show="topbar.show"></c-topbar>
+
+            <transition name="rightpad">
+                <div class="layout-right" v-show="rightpad.show" >
+                    <c-rightpad></c-rightpad>
+                </div>
             </transition>
-            <transition name="leftbar">
-                <c-leftbar :show="leftbar.show"></c-leftbar>
-            </transition>
-            <transition name="leftbarsmall">
-                <c-leftbar :show="leftbarsmall.show" class="small"></c-leftbar>
-            </transition> -->
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?d09b1947e32bc00ff934"></script></body>
+    <script type="text/javascript" src="/public/dist/vue-main.js?0db5b2ede608cdc3db33"></script></body>
 </html>

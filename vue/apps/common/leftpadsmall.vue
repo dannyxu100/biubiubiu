@@ -12,22 +12,19 @@
             background: rgba(255,255,255,.2);
             cursor: pointer;
             outline: none;
-            color: #fff;
+            color: rgba(255,255,255,1);
             font-size: 24px;
             .prefix-appearance();
             .prefix-transition();
-            &:hover {
-                background: rgba(255,255,255,.4);
-            }
             i {
                 display: inline-block;
                 width: 50px;
                 height: 50px;
                 line-height: 50px;
                 font-size: 22px;
-                color: #fff;
+                color: rgba(255,255,255,.8);
                 .prefix-transform(rotate(90deg));
-                .prefix-transition(all linear .3s);
+                .prefix-transition();
                 &::before {
                     position: relative;
                     top: 0;
@@ -43,6 +40,12 @@
                             top: 6px;
                         }
                     }
+                }
+            }
+            &:hover {
+                background: rgba(255,255,255,.3);
+                i {
+                    color: rgba(255,255,255,1);
                 }
             }
         }
@@ -97,17 +100,17 @@
             }
         }
         .appsbar-split {
-            margin: 10px auto;
+            margin: 13px auto;
             width: 40px;
-            border-top: 1px solid rgba(255,255,255,.3);
+            border-top: 1px solid rgba(255,255,255, .2);
         }
     }
 </style>
 
 <template>
     <div class="leftpadsmall wrapper">
-        <button class="btn-toggle" @click="toggle_leftbar()">
-            <i class="iconfont icon-down" :class="{active:leftbarsmall.show}"></i>
+        <button class="btn-toggle" @click="toggle_leftpad()">
+            <i class="iconfont icon-down" :class="{active:leftpadsmall.show}"></i>
         </button>
         <ul class="appsbar">
             <li class="appsbar-item" style="background-image:url(/public/images/apps/users.svg)">
@@ -144,12 +147,12 @@
         },
         computed: {
             ...mapGetters([
-                'leftbarsmall'
+                'leftpadsmall'
             ])
         },
         methods:{
             ...mapActions([
-                'toggle_leftbar'
+                'toggle_leftpad'
             ])
         },
         created() {

@@ -11,12 +11,15 @@ const State = {
         topbar: {
             show: false
         },
-        leftbar: {
+        leftpad: {
             show: false
         },
-        leftbarsmall: {
+        leftpadsmall: {
             show: true
-        }
+        },
+        rightpad: {
+            show: false
+        },
     }
 };
 

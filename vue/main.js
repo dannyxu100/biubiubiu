@@ -13,6 +13,7 @@ import CSearchbar               from '_APPS_/common/searchbar.vue';
 import CIconsDocker             from '_APPS_/common/iconsdocker.vue';
 import CLeftpad                 from '_APPS_/common/leftpad.vue';
 import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
+import CRightpad                from '_APPS_/common/rightpad.vue';
 
 //路由
 // import Router                   from '_ROUTER_/index.js';
@@ -34,7 +35,8 @@ window.vueapp = new Vue({
         'c-searchbar':          CSearchbar,
         'c-icons-docker':       CIconsDocker,
         'c-leftpad':            CLeftpad,
-        'c-leftpadsmall':       CLeftpadSmall
+        'c-leftpadsmall':       CLeftpadSmall,
+        'c-rightpad':           CRightpad
     },
     router: RouterAdmin,
     store: Store,
@@ -53,19 +55,84 @@ window.vueapp = new Vue({
     computed: {
         ...mapGetters([
             'topbar',
-            'leftbar',
-            'leftbarsmall',
+            'leftpad',
+            'leftpadsmall',
+            'rightpad',
             'basic'
         ])
     },
+    watch: {
+        ['leftbarsmall.show']( newvalue, oldvalue ){
+            this.dockerlist.splice(2, 1, {
+                title: '用户',
+                iconpath: '/public/images/avatar.png',
+                show: this.leftpadsmall.show,
+                class: 'large circle'
+            });
+        }
+    },
     methods: {
         ...mapActions([
-            'toggle_leftbar'
+            'toggle_leftpad',
+            'toggle_rightpad'
         ]),
+
+        //初始化
+        init() {
+            // debugger;
+            // this.actions.marge_data();
+            this.navs.current = '';
+            this.navs.list = [{
+                value: '',
+                icon: 'icon-apps',
+                class: 'home',
+                path: '/admin',
+            }, {
+                value: '用户',
+                icon: '',
+                class: '',
+                path: '/admin-users',
+            }, {
+                value: '角色',
+                icon: '',
+                class: '',
+                path: '/admin-roles',
+            }, {
+                value: '权限',
+                icon: '',
+                class: '',
+                path: '/admin-power',
+            }, {
+                value: '系统配置',
+                icon: '',
+                class: '',
+                path: '/admin-setting'
+            }];
+
+            this.dockerlist = [{
+                title: '消息',
+                iconpath: '/public/images/comment.svg',
+                show: true,
+                class: ' animate animate-shake',
+                badge: 16
+            }, {
+                title: '设置',
+                iconpath: '/public/images/setting.svg',
+                show: true,
+                class: 'animate animate-rotate'
+            }, {
+                title: '用户',
+                iconpath: '/public/images/avatar.png',
+                show: this.leftpadsmall.show,
+                class: 'large circle'
+            }];
+        },
         //
         appclasses() {
             return {
-                small: this.leftbarsmall.show
+                'showleftpad': this.leftpad.show,
+                'showleftpad-small': this.leftpadsmall.show,
+                'showrightpad': this.rightpad.show
             };
         },
         //
@@ -80,53 +147,21 @@ window.vueapp = new Vue({
             this.$router.push( item.path );
         },
         //搜索
-        search() {
+        searchhandle() {
 
+        },
+        //右上图标hover
+        dockerhover( icon, iconidx, list ){
+
+        },
+        //右上图标点击
+        dockerclick( icon, iconidx, list ){
+            if( '设置' === icon.title ) {
+                this.toggle_rightpad();
+            }
         }
     },
     created(){
-        // debugger;
-        // this.actions.marge_data();
-        this.navs.current = '';
-        this.navs.list = [{
-            value: '',
-            icon: 'icon-apps',
-            class: 'home',
-            path: '/admin',
-        }, {
-            value: '用户',
-            icon: '',
-            class: '',
-            path: '/admin-users',
-        }, {
-            value: '角色',
-            icon: '',
-            class: '',
-            path: '/admin-roles',
-        }, {
-            value: '权限',
-            icon: '',
-            class: '',
-            path: '/admin-power',
-        }, {
-            value: '系统配置',
-            icon: '',
-            class: '',
-            path: '/admin-setting'
-        }];
-
-        this.dockerlist = [{
-            value: '消息',
-            iconpath: '/public/images/comment.svg',
-            class: ''
-        }, {
-            value: '设置',
-            iconpath: '',
-            class: ''
-        }, {
-            value: '用户',
-            iconpath: '',
-            class: ''
-        }];
+        this.init();
     }
 });
