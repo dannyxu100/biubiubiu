@@ -30,7 +30,7 @@
                 </div>
                 <div class="content">
                     <transition name="fade">
-                        <router-view></router-view>
+                        <router-view name="main"></router-view>
                     </transition>
                 </div>
             </div>
@@ -49,10 +49,12 @@
             <transition name="rightpad">
                 <div class="layout-right" v-show="rightpad.show" >
                     <c-rightpad>
-                        <theme-tool-controler></theme-tool-controler>
+                        <transition name="fade">
+                            <router-view name="right"></router-view>
+                        </transition>
                     </c-rightpad>
                 </div>
             </transition>
         </div>
-    <script type="text/javascript" src="/public/dist/vue-main.js?31896b3e265598852ca8"></script></body>
+    <script type="text/javascript" src="/public/dist/vue-main.js?e2d43e28d816bc0f40bc"></script></body>
 </html>

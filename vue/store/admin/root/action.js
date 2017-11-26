@@ -1,5 +1,7 @@
-import mt from './mutaions-types';
-import Vue from 'vue';
+import mt                       from './mutaions-types';
+import Vue                      from 'vue';
+import VueRouter                from 'vue-router';
+Vue.use(VueRouter);
 
 //将native_apps_data的数据结构合并入store
 export default {
@@ -7,6 +9,10 @@ export default {
 	    dispatch( mt.MERGE_DATA, $data );
 	},
 
+    //路由跳转
+    path({dispatch, state}, path ){
+        this.$router.push(path);
+    },
     //展开收起左侧栏
     toggle_leftpad({dispatch, state}, force ){
         if( 'undefined' !== typeof force) {
@@ -24,5 +30,5 @@ export default {
         } else {
             state.data.rightpad.show = !state.data.rightpad.show;
         }
-    }
+    },
 };

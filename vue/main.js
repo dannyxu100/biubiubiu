@@ -14,7 +14,6 @@ import CIconsDocker             from '_APPS_/common/iconsdocker.vue';
 import CLeftpad                 from '_APPS_/common/leftpad.vue';
 import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
 import CRightpad                from '_APPS_/common/rightpad.vue';
-import ThemeToolControler       from '_APPS_/admin/theme-tool-controler.vue';
 
 //路由
 // import Router                   from '_ROUTER_/index.js';
@@ -37,8 +36,7 @@ window.vueapp = new Vue({
         'c-icons-docker':               CIconsDocker,
         'c-leftpad':                    CLeftpad,
         'c-leftpadsmall':               CLeftpadSmall,
-        'c-rightpad':                   CRightpad,
-        'theme-tool-controler':         ThemeToolControler
+        'c-rightpad':                   CRightpad
     },
     router: RouterAdmin,
     store: Store,

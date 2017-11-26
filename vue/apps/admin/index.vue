@@ -1,82 +1,6 @@
 <style lang="less">
     @import "../../less/mixins/prefix.less";
 
-    .apps-container {
-        margin: 20px;
-        .apps-group {
-            padding: 20px 0 0;
-            border-bottom: 1px solid rgba(255,255,255,.15);
-            font-size: 0;
-            .apps-item {
-                position: relative;
-                top: 0;
-                display: inline-block;
-                font-size: 14px;
-                margin-right: 20px;
-                margin-bottom: 20px;
-                text-decoration: none;
-                .prefix-transition();
-                .ico {
-                    display: block;
-                    margin: 0 auto 10px;
-                    width: 58px;
-                    height: 58px;
-                    // border: 1px solid rgba(255,255,255,.2);
-                    background-color: rgba(255,255,255,1);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 58px 58px;
-                    .prefix-border-radius(9px);
-                    .prefix-box-shadow(0 2px 3px 0 rgba(19, 74, 94,.1));
-                    .prefix-transition();
-                }
-                .tit {
-                    display: block;
-                    position: relative;
-                    z-index: 2;
-                    width: 96px;
-                    height: 26px;
-                    line-height: 28px;
-                    color: rgb(0, 184, 171);
-                    font-size: 13px;
-                    text-align: center;
-                    .prefix-transition(color linear .3s);
-                }
-                &:after {
-                    opacity: 0;
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    z-index: 1;
-                    top: 70px;
-                    left: 48px;
-                    bottom: 0;
-                    right: 0;
-                    width: 0;
-                    .prefix-border-radius(13px);
-                    .prefix-gradient(25deg, rgba(0, 79, 147, .7), rgba(0, 166, 124, .8));
-                    .prefix-transition();
-                }
-                &:hover {
-                    top: -2px;
-                    .ico {
-                        background-color: rgba(255,255,255,1);
-                        .prefix-box-shadow(0 3px 30px 5px rgba(190, 243, 255,.5));
-                    }
-                    .tit {
-                        color: rgb(255,255,255);
-                    }
-                    &:after {
-                        opacity: 1;
-                        width: 96px;
-                        left: 0;
-                        .prefix-box-shadow(0 5px 10px 3px rgba(0, 166, 124,.3));
-                    }
-                }
-            }
-        }
-    }
-
 </style>
 
 <template>
@@ -227,9 +151,9 @@
         computed: {},
         methods: {
             //收起展开左栏
-            // ...mapActions([
-            //     'toggle_leftbar'
-            // ])
+            ...mapActions([
+                'toggle_leftbar'
+            ])
         },
         created() {
         }

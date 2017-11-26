@@ -4,13 +4,8 @@
 </style>
 
 <template>
-    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme">
+    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme-ctrl">
         <div class="container">
-            <!-- 颜色 -->
-            <div class="section">
-                主题色：<input class="inputcolor" v-model="basic.colors.theme.rgb" @blur="changecolor(color)"/>
-            </div>
-
             <!-- 字体 -->
             <div class="section">
                 <h2>字体&nbsp;&nbsp;<small>优先级从上而下，自左向右</small></h2>
