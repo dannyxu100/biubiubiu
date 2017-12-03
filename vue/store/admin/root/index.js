@@ -20,6 +20,18 @@ const State = {
         rightpad: {
             show: false
         },
+        navs: {
+            maps: {},
+            list: [],
+            home: {
+                'name': '',
+                'icon': 'icon-apps',
+                'image': '',
+                'class': '',
+                'path': '/admin'
+            },
+            current: ''
+        },
     }
 };
 

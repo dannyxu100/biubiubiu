@@ -31,54 +31,11 @@
                     </span>
                     <transition name="slide">
                     <div class="child" v-if="menu.theme" transition="slide">
+                        <template v-for="(nav,path) in navs.maps" v-if="'/admin'!==path">
                         <div class="menu">
-                            <router-link class="name" to="/admin-theme-color">配色</router-link>
+                            <a class="name" href="javascript:;" @click="$root.routerpath(path)">{{nav.name}}</a>
                         </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-font">字体</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-grid">栅格</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-table">表格</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-button">按钮</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-popmenu">气泡菜单</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-check">选择项</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-select">下拉</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-tabs">标签页</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-tag">标签</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-input">输入框</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-form">表单</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-dialog">对话框</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-icons">字体图标</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-section">排版</router-link>
-                        </div>
-                        <div class="menu">
-                            <router-link class="name" to="/admin-theme-comm">通用类</router-link>
-                        </div>
+                        </template>
                     </div>
                     </transition>
                 </div>
@@ -143,7 +100,8 @@
         },
         computed: {
             ...mapGetters([
-                'leftpad'
+                'leftpad',
+                'navs'
             ])
         },
         methods:{
