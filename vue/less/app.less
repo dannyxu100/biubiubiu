@@ -47,6 +47,40 @@
     }
 });
 
+.navs-enter-active {
+    .prefix-transformorigin( left );
+    .prefix-animation( navs-show .3s ease-out );
+}
+.navs-leave-active {
+    position: absolute !important;
+    .prefix-transformorigin( left );
+    .prefix-animation( navs-hide .3s ease-out );
+}
+.prefix-keyframes(navs-show, {
+    0% {
+        opacity: 0;
+        .prefix-transform( scale(0, 1) );
+        // .prefix-transform( translateY(50px) );
+    }
+    100% {
+        opacity: 1;
+        .prefix-transform( scale(1, 1) );
+        // .prefix-transform( translateY(0) );
+    }
+});
+.prefix-keyframes(navs-hide, {
+    0% {
+        opacity: 1;
+        .prefix-transform( scale(1, 1) );
+        // .prefix-transform( translateY(0) );
+    }
+    100% {
+        opacity: 0;
+        .prefix-transform( scale(0, 1) );
+        // .prefix-transform( translateY(50px) );
+    }
+});
+
 
 .slide-enter-active {
     .prefix-transformorigin( left top );

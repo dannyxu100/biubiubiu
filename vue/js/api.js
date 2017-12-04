@@ -429,9 +429,13 @@ const api = {
         return axios.apply( this, arguments );              //可更换第三方支持promise的ajax工具
     },
     //数据统一接口
-    ajax( url, data ) {
+    ajax( url, opts, data ) {
         if (url === false) {
             url = QUERY_SERVICE;
+        }
+        if( !data ) {
+            data = opts;
+            opts = {};
         }
         let params = {
             method: 'post',
@@ -439,6 +443,8 @@ const api = {
             data: data,
             responseType: 'json'
         };
+        api.extend(params, opts);
+
         return api.http( params ).then(( result )=>{
             let res = result.data;
             if ( !res ) {
@@ -494,10 +500,17 @@ const api = {
                 api.error('操作失败');
             }
             return res;
-
         }, ( res )=>{
             api.error('操作超时，请重试或刷新页面！');
         });
+    },
+    //
+    get( url, opts ) {
+        return api.ajax( url, { method: 'get' }, {} );
+    },
+    //
+    post( url, opts, data ) {
+        return api.ajax( url, { method: 'post' }, data );
     },
 
     //upyun上传接口

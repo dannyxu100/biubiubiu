@@ -1,0 +1,117 @@
+{
+    "result": "TRUE",
+    "data": {
+        "/admin-theme-color": {
+            "name": "配色",
+            "icon": "",
+            "image": "/public/images/apps/theme-color.svg",
+            "class": "",
+            "path": "/admin-theme-color"
+        },
+        "/admin-theme-font": {
+            "name": "字体",
+            "icon": "",
+            "image": "/public/images/apps/theme-font.svg",
+            "class": "",
+            "path": "/admin-theme-font"
+        },
+        "/admin-theme-grid": {
+            "name": "栅格",
+            "icon": "",
+            "image": "/public/images/apps/theme-grid.svg",
+            "class": "",
+            "path": "/admin-theme-grid"
+        },
+        "/admin-theme-table": {
+            "name": "表格",
+            "icon": "",
+            "image": "/public/images/apps/theme-table.svg",
+            "class": "",
+            "path": "/admin-theme-table"
+        },
+        "/admin-theme-button": {
+            "name": "按钮",
+            "icon": "",
+            "image": "/public/images/apps/theme-button-play.svg",
+            "class": "",
+            "path": "/admin-theme-button"
+        },
+        "/admin-theme-popmenu": {
+            "name": "气泡菜单",
+            "icon": "",
+            "image": "/public/images/apps/theme-popmenu.svg",
+            "class": "",
+            "path": "/admin-theme-popmenu"
+        },
+        "/admin-theme-check": {
+            "name": "选择项",
+            "icon": "",
+            "image": "/public/images/apps/theme-checked.svg",
+            "class": "",
+            "path": "/admin-theme-check"
+        },
+        "/admin-theme-select": {
+            "name": "下拉",
+            "icon": "",
+            "image": "/public/images/apps/theme-list.svg",
+            "class": "",
+            "path": "/admin-theme-select"
+        },
+        "/admin-theme-tabs": {
+            "name": "分页栏",
+            "icon": "",
+            "image": "/public/images/apps/theme-tabs.svg",
+            "class": "",
+            "path": "/admin-theme-tabs"
+        },
+        "/admin-theme-tag": {
+            "name": "标签",
+            "icon": "",
+            "image": "/public/images/apps/theme-badge.svg",
+            "class": "",
+            "path": "/admin-theme-tag"
+        },
+        "/admin-theme-input": {
+            "name": "输入框",
+            "icon": "",
+            "image": "/public/images/apps/theme-input.svg",
+            "class": "",
+            "path": "/admin-theme-input"
+        },
+        "/admin-theme-form": {
+            "name": "表单",
+            "icon": "",
+            "image": "/public/images/apps/theme-form.svg",
+            "class": "",
+            "path": "/admin-theme-form"
+        },
+        "/admin-theme-dialog": {
+            "name": "对话框",
+            "icon": "",
+            "image": "/public/images/apps/theme-window.svg",
+            "class": "",
+            "path": "/admin-theme-dialog"
+        },
+        "/admin-theme-icons": {
+            "name": "图标",
+            "icon": "",
+            "image": "/public/images/apps/theme-heart.svg",
+            "class": "",
+            "path": "/admin-theme-icons"
+        },
+        "/admin-theme-section": {
+            "name": "排版",
+            "icon": "",
+            "image": "/public/images/apps/theme-text.svg",
+            "class": "",
+            "path": "/admin-theme-section"
+        },
+        "/admin-theme-comm": {
+            "name": "通用类",
+            "icon": "",
+            "image": "/public/images/apps/theme-patch.svg",
+            "class": "",
+            "path": "/admin-theme-comm"
+        }
+    }
+}

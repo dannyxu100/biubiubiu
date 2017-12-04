@@ -25,6 +25,12 @@
                 <span class="tip">报表</span>
             </li>
         </ul>
+        <div class="appsbar-split"></div>
+        <ul class="appsbar">
+            <li class="appsbar-item" style="background-image:url(/public/images/apps/plus.svg)">
+                <div class="tip">新增常用</div>
+            </li>
+        </ul>
     </div>
 </template>
 

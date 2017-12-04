@@ -63,9 +63,17 @@
         height: 50px;
         font-size: 0;
         // .prefix-box-shadow(0 2px 5px 1px rgba(0, 166, 124,.1));
+        .navs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
         .nav {
             display: inline-block;
-            padding: 0 20px;
+            position: relative;
+            padding: 0 25px 0 25px;
             height: 50px;
             font-size: 14px;
             font-weight: 700;
@@ -74,26 +82,82 @@
             color: rgba(255, 255, 255, .6);
             // color: transparent;
             // text-shadow: 0 0 2px #fff;
-            cursor: pointer;
+            cursor: default;
             text-decoration: none;
-            .prefix-transition(all linear .2s);
+            overflow: hidden;
+            .prefix-transition(all ease-out .3s);
+            .close {
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                opacity: 0;
+                width: 16px;
+                height: 16px;
+                line-height: 16px;
+                cursor: pointer;
+                text-align: center;
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(255, 255, 255, .6);
+                background: rgba(0, 169, 180,.1);
+                .prefix-border-radius(8px);
+                .prefix-transition();
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                    background: rgba(0,0,0,.2);
+                    .prefix-box-shadow(0 2px 5px 0 rgba(0, 169, 180, .5));
+                }
+            }
             &:hover {
                 color: rgba(255,255,255,1);
                 background: rgba(255,255,255,.2);
+                .close {
+                    opacity: 1;
+                }
+            }
+            &.home,
+            &.more {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                color: rgba(255, 255, 255, 1);
+                padding: 0 16px;
+                cursor: pointer;
+                .iconfont {
+                    font-size: 16px;
+                    font-weight: 400;
+                    vertical-align: middle;
+                }
+            }
+            &.home {
+                left: 0;
+            }
+            &.more {
+                right: 0;
             }
             &.active {
                 color: rgb(0, 169, 180);
                 // color: rgba(109, 67, 123, 1);
                 background: rgba(255,255,255,1);
                 cursor: default;
-            }
-            &.home {
-                padding: 0 16px;
-                .iconfont {
-                    font-size: 16px;
-                    font-weight: 400;
-                    vertical-align: middle;
+                .close {
+                    color: rgba(0, 169, 180, .6);
+                    background: rgba(0, 169, 180, .1);
+                    &:hover {
+                        color: rgba(255, 255, 255, 1);
+                        background: rgba(0, 169, 180, .6);
+                    }
                 }
+            }
+        }
+        &.hashome {
+            .navs {
+                padding-left: 48px;
+            }
+        }
+        &.hasmore {
+            .navs {
+                padding-right: 48px;
             }
         }
     }

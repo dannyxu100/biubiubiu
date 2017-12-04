@@ -1,7 +1,7 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
 import VueRouter                from 'vue-router';
-import Api                      from './js/api.js';
+import Api                      from '_JS_/api.js';
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(Api);
@@ -24,8 +24,9 @@ import RouterAdmin              from '_ROUTER_/admin.js';
 import Store                                from './store';
 import { mapGetters, mapActions }           from 'vuex';
 
-//基础样式
-// import './less/app.less';
+//Mixin
+import Base                                 from '_JS_/mixin-base.js';
+Vue.mixin(Base);
 
 //实例
 window.vueapp = new Vue({
@@ -42,14 +43,14 @@ window.vueapp = new Vue({
     store: Store,
     data() {
         return {
-            navs: {
-                list: [],
-                current: ''
-            },
             search: {
                 key: ''
             },
-            dockerlist: []
+            dockerlist: [],
+            events: {
+                click: [],
+                resize: []
+            }
         };
     },
     computed: {
@@ -58,6 +59,7 @@ window.vueapp = new Vue({
             'leftpad',
             'leftpadsmall',
             'rightpad',
+            'navs',
             'basic'
         ])
     },
@@ -81,34 +83,7 @@ window.vueapp = new Vue({
         init() {
             // debugger;
             // this.actions.marge_data();
-            this.navs.current = '';
-            this.navs.list = [{
-                value: '',
-                icon: 'icon-apps',
-                class: 'home',
-                path: '/admin',
-            }, {
-                value: '用户',
-                icon: '',
-                class: '',
-                path: '/admin-users',
-            }, {
-                value: '角色',
-                icon: '',
-                class: '',
-                path: '/admin-roles',
-            }, {
-                value: '权限',
-                icon: '',
-                class: '',
-                path: '/admin-power',
-            }, {
-                value: '系统配置',
-                icon: '',
-                class: '',
-                path: '/admin-setting'
-            }];
-
+            this.loadnavmaps();
             this.dockerlist = [{
                 title: '消息',
                 iconpath: '/public/images/comment.svg',
@@ -126,6 +101,8 @@ window.vueapp = new Vue({
                 show: this.leftpadsmall.show,
                 class: 'large circle'
             }];
+
+            window.addEventListener('resize', this.$fn.later(this.resize, 100), false);
         },
         //
         appclasses() {
@@ -159,6 +136,75 @@ window.vueapp = new Vue({
             if( '设置' === icon.title ) {
                 this.toggle_rightpad();
             }
+        },
+        //
+        loadnavmaps() {
+            this.$fn.get('/public/data/admin-navs.json').then((res)=>{
+                this.navs.maps = res.data;
+            });
+        },
+
+        //判断路由是否存在nav标签
+        isopenpath( path ) {
+            let res = false;
+            this.$fn.each(this.navs.list, (nav, idx)=>{
+                if( nav.path === path ){
+                    res = idx;
+                    return false;
+                }
+            });
+            return res;
+        },
+        //根据path提取nav数据对象
+        getnav4path( path ) {
+            return this.navs.maps[path] || false;
+        },
+        //添加nav标签
+        pushnav( path ) {
+            let nav, idx;
+            idx = this.isopenpath(path);
+            if( false === idx ){
+                if( nav = this.getnav4path(path) ){
+                    this.navs.list.push(nav);
+                    this.navs.current = nav.name;
+                } else {
+                    this.$fn.error('path尚未配置nav信息');
+                }
+            } else {
+                nav = this.navs.list[idx];
+                this.navs.current = nav.name;
+            }
+        },
+
+        //路由跳转
+        routerpath( path ){
+            this.$router.push(path);
+            this.pushnav( path );
+        },
+
+        //添加窗口尺寸监听
+        resizeadd( fn, name ) {
+            this.events.resize.push({
+                name: name || '',
+                handle: fn
+            });
+        },
+        //移除窗口尺寸监听
+        resizeremove( name ) {
+            this.$fn.each(this.events.resize, (item, idx)=>{
+                if( item.name === name ){
+                    this.events.resize.splice(idx, 1);
+                    return false;
+                }
+            });
+        },
+        //执行窗口尺寸监听处理
+        resize() {
+            this.$fn.each(this.events.resize, (item, idx)=>{
+                if( item.handle ){
+                    item.handle();
+                }
+            });
         }
     },
     created(){

@@ -9,6 +9,7 @@ import AdminThemeColor_C       from '_APPS_/admin/theme-color-controler.vue';
 import AdminThemeFont          from '_APPS_/admin/theme-font.vue';
 import AdminThemeFont_C        from '_APPS_/admin/theme-font-controler.vue';
 import AdminThemeGrid          from '_APPS_/admin/theme-grid.vue';
+import AdminThemeGrid_C        from '_APPS_/admin/theme-grid-controler.vue';
 import AdminThemeTable         from '_APPS_/admin/theme-table.vue';
 import AdminThemeButton        from '_APPS_/admin/theme-button.vue';
 import AdminThemePopmenu       from '_APPS_/admin/theme-popmenu.vue';
@@ -74,7 +75,8 @@ const ROUTES = [
     {
         path: '/admin-theme-grid',
         components: {
-            main:       AdminThemeGrid
+            main:       AdminThemeGrid,
+            right:      AdminThemeGrid_C
         }
     },
     {
