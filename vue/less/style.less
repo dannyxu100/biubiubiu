@@ -26,7 +26,8 @@
     overflow: hidden;
     // background: linear-gradient(left to right, #1bb3eb, #40f1d1);
     // .prefix-gradient(225deg, rgba(195, 55, 100, 1), rgba(29, 38, 113, 1));
-    .prefix-gradient(225deg, rgba(27, 179, 235, 1), rgba(64, 241, 209, 1));
+    // .prefix-gradient(225deg, rgba(27, 179, 235, 1), rgba(64, 241, 209, 1));
+    .prefix-gradient(225deg, rgba(142,84,233, 1), rgba(0,198,255, 1));
     // .prefix-gradient(225deg, rgba(78,67,118, 1), rgba(43,88,118, 1));
     & > .wrapper {
         .prefix-transition(all ease-out .25s);
@@ -111,13 +112,14 @@
             right: 0;
             bottom: 0;
             height: 36px;
-            background: rgba(82, 172, 200, 0.32);
+            // background: rgba(82, 172, 200, .3);
+            background: rgba(0, 0, 0, .08);
             // background: rgba(154, 45, 93, .3);
             .prefix-border-radius(18px);
             .prefix-transition(background linear .3s);
             // .prefix-box-shadow(inset 0 0 0 1px rgba(45, 135, 164, .05));
             &.active {
-                background: rgba(82, 172, 200, 0.8);
+                background: rgba(0, 0, 0, .2);
                 // background: rgba(154, 45, 93, .8);
             }
             .searchbar-box {
@@ -182,7 +184,8 @@
                 right: 0;
                 bottom: 0;
                 // .prefix-gradient(0deg, rgb(12,235,235), rgb(32,227,178));
-                .prefix-gradient(25deg, rgb(0, 208, 255), rgb(0, 255, 196));
+                // .prefix-gradient(25deg, rgb(0, 208, 255), rgb(0, 255, 196));
+                .prefix-gradient(25deg, rgba(167, 111, 255, 1), rgba(0,198,255, 1));
                 // .prefix-gradient(25deg, rgba(195, 55, 100, 1), rgba(29, 38, 113, 1));
             }
             .avatarbox-content {
@@ -436,20 +439,22 @@
                     color: rgb(255,255,255);
                     background: rgba(0, 132, 176, .9);
                     .prefix-border-radius(13px);
-                    .prefix-gradient(25deg, rgba(0, 79, 147, .8), rgba(0, 166, 124, .9));
+                    // .prefix-gradient(25deg, rgba(0, 79, 147, .8), rgba(0, 166, 124, .9));
+                    .prefix-gradient(25deg, rgba(113, 56, 238, .9), rgba(38, 155, 194, .9));
                     // .prefix-gradient(25deg, rgba(195, 55, 100, 1), rgba(29, 38, 113, 1));
                     .prefix-transition();
                 }
                 &:hover {
                     left: 2px;
                     background-color: rgba(255,255,255,1);
-                    .prefix-box-shadow(0 3px 30px 0 rgba(255, 255, 255,.5));
+                    .prefix-box-shadow(0 3px 30px 0 rgba(255, 255, 255, .6));
                     // .prefix-box-shadow(0 3px 20px 0 rgba(190, 243, 255, .4));
                     .tip {
                         opacity: 1;
                         width: auto;
                         padding: 0 20px;
-                        .prefix-box-shadow(0 5px 10px 0 rgba(0, 166, 124, .4));
+                        // .prefix-box-shadow(0 5px 10px 0 rgba(0, 166, 124, .4));
+                        .prefix-box-shadow(0 3px 10px 0 rgba(53, 25, 255, 0.3));
                         // .prefix-box-shadow(0 3px 15px 0 rgba(255, 255, 255, .4));
                         // .prefix-box-shadow(0 3px 15px 0 rgba(255, 255, 255, .08));
                     }
@@ -596,8 +601,8 @@
                 width: 96px;
                 height: 26px;
                 line-height: 28px;
-                color: rgb(0, 184, 171);
-                // color: rgba(255, 255, 255, .2);
+                // color: rgb(0, 184, 171);
+                color: rgba(255, 255, 255, .3);
                 font-size: 13px;
                 text-align: center;
                 .prefix-transition(color linear .3s);
@@ -614,7 +619,8 @@
                 right: 0;
                 width: 0;
                 .prefix-border-radius(13px);
-                .prefix-gradient(25deg, rgba(0, 79, 147, .8), rgba(0, 166, 124, .9));
+                // .prefix-gradient(25deg, rgba(0, 79, 147, .8), rgba(0, 166, 124, .9));
+                .prefix-gradient(25deg, rgba(113, 56, 238, .9), rgba(38, 155, 194, .9));
                 // .prefix-gradient(25deg, rgba(195, 55, 100, 1), rgba(29, 38, 113, 1));
                 .prefix-transition();
             }
@@ -622,7 +628,7 @@
                 top: -2px;
                 .ico {
                     background-color: rgba(255,255,255,1);
-                    .prefix-box-shadow(0 5px 30px 3px rgba(190, 243, 255, .6));
+                    .prefix-box-shadow(0 5px 30px 3px rgba(165, 222, 255, .5));
                 }
                 .tit {
                     color: rgb(255,255,255);
@@ -631,7 +637,8 @@
                     opacity: 1;
                     width: 96px;
                     left: 0;
-                    .prefix-box-shadow(0 5px 10px 0 rgba(0, 166, 124, .4));
+                    // .prefix-box-shadow(0 5px 10px 0 rgba(0, 166, 124, .4));
+                    .prefix-box-shadow(0 3px 10px 0 rgba(53, 25, 255, 0.3));
                     // .prefix-box-shadow(0 8px 15px 0 rgba(195, 55, 100, .5));
                     // .prefix-box-shadow(0 5px 15px 0 rgba(255, 255, 255, .4));
                     // .prefix-box-shadow(0 5px 15px 0 rgba(255, 255, 255, .07));
