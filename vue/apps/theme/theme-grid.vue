@@ -12,6 +12,26 @@
                 <h3>.grid .row .cell-5-1</h3>
                 <div>奇数等分，最小份为1/5</div>
                 <br/>
+                <c-grid>
+                    <c-grid-row style="margin-bottom:10px;">
+                        <c-grid-cell :max="5" :span="1">
+                            <button class="fillblock" >1</button>
+                        </c-grid-cell>
+                        <c-grid-cell :max="5" :span="1">
+                            <button class="fillblock" >1</button>
+                        </c-grid-cell>
+                        <c-grid-cell :max="5" :span="1">
+                            <button class="fillblock" >1</button>
+                        </c-grid-cell>
+                        <c-grid-cell :max="5" :span="1">
+                            <button class="fillblock" >1</button>
+                        </c-grid-cell>
+                        <c-grid-cell :max="5" :span="1">
+                            <button class="fillblock" >1</button>
+                        </c-grid-cell>
+                    </c-grid-row>
+                </c-grid>
+
                 <div class="grid">
                     <div class="grid-row" style="margin-bottom:10px;">
                         <div class="cell-5-1">
@@ -457,10 +477,15 @@
 </template>
 
 <script>
-    import {mapGetters, mapActions}         from 'vuex';
+    import {mapGetters, mapActions}             from 'vuex';
+    import CGrid                                from './common/grid';
 
     export default {
-        components: {},
+        components: {
+            'c-grid':             CGrid,
+            'c-grid-row':         CGrid.Row,
+            'c-grid-cell':        CGrid.Cell
+        },
         data() {
             return {}
         },

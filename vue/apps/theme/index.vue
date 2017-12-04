@@ -7,6 +7,14 @@
     <div class="wrapper wrapper-scroll wrapper-box">
         <div class="apps-container">
             <div class="apps-group">
+                <template v-for="(nav,path) in navs.maps" v-if="'/theme'!==path">
+                    <a class="apps-item" :key="nav.name" href="javascript:;" @click="$root.routerpath(path)">
+                        <i class="ico" :style="styleimage(nav)"></i>
+                        <span class="tit">{{nav.name}}</span>
+                    </a>
+                </template>
+            </div>
+            <div class="apps-group">
                 <router-link class="apps-item" to="">
                     <i class="ico" style="background-image:url(/public/images/apps/users.svg)"></i>
                     <span class="tit">用户</span>
@@ -89,9 +97,9 @@
         },
         methods: {
             //收起展开左栏
-            // ...mapActions([
-            //     'toggle_leftbar'
-            // ]),
+            ...mapActions([
+                'toggle_leftbar'
+            ]),
             //
             init() {
                 // debugger;

@@ -306,6 +306,9 @@ const State = {
                 html:   ['"Helvetica Neue", Helvetica, Arial, sans-serif'],
                 def:    '~"@{fontfamily-ios}, @{fontfamily-en}, @{fontfamily-zh}, @{fontfamily-sys}"',
                 icon:   '"iconfont"'
+            },
+            grid: {
+                padding: 2
             }
         }
     }

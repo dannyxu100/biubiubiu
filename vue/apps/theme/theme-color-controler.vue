@@ -9,7 +9,7 @@
             <!-- 颜色 -->
             <div class="section">
                 <div class="grid">
-                    <div class="row">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             主题
                         </div>
@@ -17,7 +17,7 @@
                             <input class="inputcolor" v-model="basic.colors.theme.ladder.normal.rgb" @blur="changecolor(basic.colors.theme)"/>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             关键的
                         </div>
@@ -25,7 +25,7 @@
                             <input class="inputcolor" v-model="basic.colors.key.ladder.normal.rgb" @blur="changecolor(basic.colors.key)"/>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             闪亮的
                         </div>

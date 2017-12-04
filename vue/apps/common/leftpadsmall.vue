@@ -9,25 +9,15 @@
             <i class="iconfont icon-down" :class="{active:leftpadsmall.show}"></i>
         </button>
         <ul class="appsbar">
-            <li class="appsbar-item" style="background-image:url(/public/images/apps/users.svg)">
-                <div class="tip">用户管理</div>
+            <template v-for="(nav,path) in navs.used">
+            <li class="appsbar-item" :style="styleimage(nav)" @click="$root.routerpath(path)">
+                <div class="tip">{{nav.name}}</div>
             </li>
-            <li class="appsbar-item" style="background-image:url(/public/images/apps/password.svg)">
-                <span class="tip">修改密码</span>
-            </li>
+            </template>
         </ul>
         <div class="appsbar-split"></div>
         <ul class="appsbar">
-            <li class="appsbar-item" style="background-image:url(/public/images/apps/check.svg)">
-                <div class="tip">审核</div>
-            </li>
-            <li class="appsbar-item" style="background-image:url(/public/images/apps/charts.svg)">
-                <span class="tip">报表</span>
-            </li>
-        </ul>
-        <div class="appsbar-split"></div>
-        <ul class="appsbar">
-            <li class="appsbar-item" style="background-image:url(/public/images/apps/plus.svg)">
+            <li class="appsbar-item add" style="background-image:url(/public/images/apps/plus.svg)">
                 <div class="tip">新增常用</div>
             </li>
         </ul>
@@ -49,13 +39,18 @@
         },
         computed: {
             ...mapGetters([
-                'leftpadsmall'
+                'leftpadsmall',
+                'navs'
             ])
         },
         methods:{
             ...mapActions([
                 'toggle_leftpad'
-            ])
+            ]),
+            //应用图标
+            styleimage( nav ) {
+                return {'background-image':`url(${nav.image})`};
+            }
         },
         created() {
             // debugger;

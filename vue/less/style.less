@@ -168,6 +168,7 @@
         min-width: 130px;
         height: 50px;
         vertical-align: middle;
+        .prefix-transition(min-width linear .15s);
         .searchbar-wrapper {
             display: block;
             position: absolute;
@@ -180,12 +181,8 @@
             background: rgba(0, 0, 0, .08);
             // background: rgba(154, 45, 93, .3);
             .prefix-border-radius(18px);
-            .prefix-transition(background linear .3s);
+            .prefix-transition(background linear .15s);
             // .prefix-box-shadow(inset 0 0 0 1px rgba(45, 135, 164, .05));
-            &.active {
-                background: rgba(0, 0, 0, .2);
-                // background: rgba(154, 45, 93, .8);
-            }
             .searchbar-box {
                 position: absolute;
                 top: 0;
@@ -208,6 +205,12 @@
                     color: rgba(255,255,255,.9);
                     .prefix-placeholder(rgba(255,255,255,.4));
                 }
+            }
+        }
+        &.active {
+            min-width: 150px;
+            .searchbar-wrapper {
+                background: rgba(0, 0, 0, .2);
             }
         }
     }
@@ -333,8 +336,9 @@
                     margin: 3px auto 0;
                     width: 160px;
                     text-align: center;
-                    color: rgb(144, 255, 227);
+                    // color: rgb(144, 255, 227);
                     // color: rgb(195, 100, 146);
+                    color: rgba(141, 177, 255, 1);
                     font-size: 13px;
                 }
             }
@@ -476,7 +480,7 @@
             .appsbar-item {
                 position: relative;
                 left: 0;
-                margin: 10px auto;
+                margin: 20px auto;
                 width: 40px;
                 height: 40px;
                 border: 1px solid rgba(255,255,255,.2);
@@ -486,6 +490,7 @@
                 background-size: 40px 40px;
                 cursor: pointer;
                 list-style: none;
+                opacity: .4;
                 .prefix-border-radius(9px);
                 .prefix-transition();
                 .tip {
@@ -509,6 +514,7 @@
                     .prefix-transition();
                 }
                 &:hover {
+                    opacity: 1;
                     left: 2px;
                     background-color: rgba(255,255,255,1);
                     .prefix-box-shadow(0 3px 30px 0 rgba(255, 255, 255, .6));
@@ -522,6 +528,9 @@
                         // .prefix-box-shadow(0 3px 15px 0 rgba(255, 255, 255, .4));
                         // .prefix-box-shadow(0 3px 15px 0 rgba(255, 255, 255, .08));
                     }
+                }
+                &.add {
+                    opacity: 1;
                 }
             }
         }

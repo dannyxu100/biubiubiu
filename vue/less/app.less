@@ -59,25 +59,25 @@
 .prefix-keyframes(navs-show, {
     0% {
         opacity: 0;
-        .prefix-transform( scale(0, 1) );
-        // .prefix-transform( translateY(50px) );
+        // .prefix-transform( scale(0, 1) );
+        .prefix-transform( translateX(-20px) );
     }
     100% {
         opacity: 1;
-        .prefix-transform( scale(1, 1) );
-        // .prefix-transform( translateY(0) );
+        // .prefix-transform( scale(1, 1) );
+        .prefix-transform( translateX(0) );
     }
 });
 .prefix-keyframes(navs-hide, {
     0% {
         opacity: 1;
-        .prefix-transform( scale(1, 1) );
-        // .prefix-transform( translateY(0) );
+        // .prefix-transform( scale(1, 1) );
+        .prefix-transform( translateX(0) );
     }
     100% {
         opacity: 0;
-        .prefix-transform( scale(0, 1) );
-        // .prefix-transform( translateY(50px) );
+        // .prefix-transform( scale(0, 1) );
+        .prefix-transform( translateX(-20px) );
     }
 });
 

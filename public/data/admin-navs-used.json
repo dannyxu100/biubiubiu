@@ -1,0 +1,54 @@
+{
+    "result": "TRUE",
+    "data": {
+        "/theme-tag": {
+            "name": "标签",
+            "icon": "",
+            "image": "/public/images/apps/theme-badge.svg",
+            "class": "",
+            "path": "/theme-tag"
+        },
+        "/theme-input": {
+            "name": "输入框",
+            "icon": "",
+            "image": "/public/images/apps/theme-input.svg",
+            "class": "",
+            "path": "/theme-input"
+        },
+        "/theme-form": {
+            "name": "表单",
+            "icon": "",
+            "image": "/public/images/apps/theme-form.svg",
+            "class": "",
+            "path": "/theme-form"
+        },
+        "/theme-dialog": {
+            "name": "对话框",
+            "icon": "",
+            "image": "/public/images/apps/theme-window.svg",
+            "class": "",
+            "path": "/theme-dialog"
+        },
+        "/theme-icons": {
+            "name": "图标",
+            "icon": "",
+            "image": "/public/images/apps/theme-heart.svg",
+            "class": "",
+            "path": "/theme-icons"
+        },
+        "/theme-section": {
+            "name": "排版",
+            "icon": "",
+            "image": "/public/images/apps/theme-text.svg",
+            "class": "",
+            "path": "/theme-section"
+        },
+        "/theme-comm": {
+            "name": "通用类",
+            "icon": "",
+            "image": "/public/images/apps/theme-patch.svg",
+            "class": "",
+            "path": "/theme-comm"
+        }
+    }
+}

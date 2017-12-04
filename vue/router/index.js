@@ -1,12 +1,12 @@
 import VueRouter                from 'vue-router';
 
-import CHome                    from '_APPS_/home/index.vue';
+import Index                    from '_APPS_/theme/index.vue';
 
-const ROUTELIST = [
-    { path: '/home',            component: CHome }
+export default [
+    {
+        path: '/',
+        components: {
+            main: Index
+        }
+    }
 ];
-
-export default new VueRouter({
-    routes: ROUTELIST
-});
-

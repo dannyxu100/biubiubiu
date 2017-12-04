@@ -4,8 +4,8 @@
 </style>
 
 <template>
-    <div class="searchbar">
-        <label class="searchbar-wrapper" :class="wrapperclasses">
+    <div class="searchbar" :class="classessearch">
+        <label class="searchbar-wrapper">
             <div class="searchbar-box">
                 <input placeholder="搜索内容..." @focus="focus" @blur="blur"/>
             </div>
@@ -30,7 +30,8 @@
             }
         },
         computed: {
-            wrapperclasses() {
+            //
+            classessearch() {
                 return {
                     'active': this.isfocus
                 }

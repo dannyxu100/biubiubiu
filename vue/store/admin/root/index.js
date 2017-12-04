@@ -22,13 +22,14 @@ const State = {
         },
         navs: {
             maps: {},
+            used: [],
             list: [],
             home: {
                 'name': '',
                 'icon': 'icon-apps',
                 'image': '',
                 'class': '',
-                'path': '/admin'
+                'path': '/theme'
             },
             current: ''
         },

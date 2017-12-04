@@ -6,6 +6,7 @@ Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(Api);
 
+
 //组件
 // import CMyComponent            from '_PLUGIN_/mycomponent.vue';
 import CNavsbar                 from '_APPS_/common/navsbar.vue';
@@ -15,18 +16,25 @@ import CLeftpad                 from '_APPS_/common/leftpad.vue';
 import CLeftpadSmall            from '_APPS_/common/leftpadsmall.vue';
 import CRightpad                from '_APPS_/common/rightpad.vue';
 
+
 //路由
-// import Router                   from '_ROUTER_/index.js';
-import RouterAdmin              from '_ROUTER_/admin.js';
+import RIndex                               from '_ROUTER_/index.js';
+import RAdmin                               from '_ROUTER_/admin.js';
+import RTheme                               from '_ROUTER_/theme.js';
+const Router = new VueRouter({
+    routes: RIndex.concat( RAdmin, RTheme )
+});
 
 
 //Vuex
 import Store                                from './store';
 import { mapGetters, mapActions }           from 'vuex';
 
+
 //Mixin
 import Base                                 from '_JS_/mixin-base.js';
 Vue.mixin(Base);
+
 
 //实例
 window.vueapp = new Vue({
@@ -39,7 +47,7 @@ window.vueapp = new Vue({
         'c-leftpadsmall':               CLeftpadSmall,
         'c-rightpad':                   CRightpad
     },
-    router: RouterAdmin,
+    router: Router,
     store: Store,
     data() {
         return {
@@ -142,6 +150,9 @@ window.vueapp = new Vue({
             this.$fn.get('/public/data/admin-navs.json').then((res)=>{
                 this.navs.maps = res.data;
             });
+            this.$fn.get('/public/data/admin-navs-used.json').then((res)=>{
+                this.navs.used = res.data;
+            });
         },
 
         //判断路由是否存在nav标签
@@ -159,13 +170,28 @@ window.vueapp = new Vue({
         getnav4path( path ) {
             return this.navs.maps[path] || false;
         },
+        //提取当前nav索引
+        getnavcurrentidx() {
+            let index = -1;
+            this.$fn.each(this.navs.list, (nav, idx)=>{
+                if( nav.name === this.navs.current ){
+                    index = idx;
+                    return false;
+                }
+            });
+            return index;
+        },
         //添加nav标签
         pushnav( path ) {
             let nav, idx;
             idx = this.isopenpath(path);
             if( false === idx ){
                 if( nav = this.getnav4path(path) ){
-                    this.navs.list.push(nav);
+                    idx = this.getnavcurrentidx();
+                    if( -1 === idx ) {
+                        idx = this.navs.list.length - 1;        //如果没有当前选择索引，就放在最后
+                    }
+                    this.navs.list.splice(idx+1, 0, nav);
                     this.navs.current = nav.name;
                 } else {
                     this.$fn.error('path尚未配置nav信息');
