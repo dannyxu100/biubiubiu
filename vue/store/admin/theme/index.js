@@ -389,7 +389,7 @@ const State = {
                 bgcolor: {
                     def:        'linear-gradient(225deg, rgb(26,165,232), rgb(19,144,195))',
                     diff:       'rgb(0, 136, 191)',
-                    hover:      'rgb(0, 169, 249)'
+                    hover:      'rgb(29, 171, 234)'
                 },
                 bordercolor:{
                     def:        'rgb(0, 143, 210)',
