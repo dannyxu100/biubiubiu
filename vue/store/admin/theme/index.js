@@ -393,7 +393,7 @@ const State = {
                 },
                 bordercolor:{
                     def:        'rgb(0, 143, 210)',
-                    box:        'rgba(181, 231, 255, 0.3)',
+                    box:        'rgba(181, 231, 255, 0.6)',
                     head:       'rgb(62, 167, 214)'
                 },
                 fontsize:   0,
