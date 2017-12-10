@@ -19,10 +19,10 @@
                             <div style="margin-bottom:10px;">.table 默认状态</div>
                             <table class="table">
                                 <tr>
-                                    <td>影片名</td>
-                                    <td>主演</td>
-                                    <td>类型</td>
-                                    <td>地区</td>
+                                    <th>影片名</th>
+                                    <th>主演</th>
+                                    <th>类型</th>
+                                    <th>地区</th>
                                 </tr>
                                 <tr>
                                     <td>超能陆战队</td>
@@ -78,36 +78,38 @@
                     <div class="grid-row" style="margin-bottom:50px;">
                         <div class="cell-12-6">
                             <div style="margin-bottom:10px;">.table-line 行模式</div>
-                            <table class="table table-line">
-                                <caption>今日热门影片</caption>
-                                <tr>
-                                    <th>影片名</th>
-                                    <th>主演</th>
-                                    <th>类型</th>
-                                    <th>地区</th>
-                                </tr>
-                                <tr>
-                                    <td>夏洛特烦恼</td>
-                                    <td>沈腾、马丽</td>
-                                    <td>喜剧</td>
-                                    <td>大陆</td>
-                                </tr>
-                                <tr>
-                                    <td>西游记之大圣归来</td>
-                                    <td>张磊、林子杰</td>
-                                    <td>动画</td>
-                                    <td>大陆</td>
-                                </tr>
-                                <tr>
-                                    <td>星际穿越</td>
-                                    <td>马修·麦康纳</td>
-                                    <td>科幻</td>
-                                    <td>美国</td>
-                                </tr>
-                            </table>
+                            <div class="table-grid-border">
+                                <table class="table table-line">
+                                    <caption>今日热门影片</caption>
+                                    <tr>
+                                        <th>影片名</th>
+                                        <th>主演</th>
+                                        <th>类型</th>
+                                        <th>地区</th>
+                                    </tr>
+                                    <tr>
+                                        <td>夏洛特烦恼</td>
+                                        <td>沈腾、马丽</td>
+                                        <td>喜剧</td>
+                                        <td>大陆</td>
+                                    </tr>
+                                    <tr>
+                                        <td>西游记之大圣归来</td>
+                                        <td>张磊、林子杰</td>
+                                        <td>动画</td>
+                                        <td>大陆</td>
+                                    </tr>
+                                    <tr>
+                                        <td>星际穿越</td>
+                                        <td>马修·麦康纳</td>
+                                        <td>科幻</td>
+                                        <td>美国</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                         <div class="cell-12-6">
-                            <div style="margin-bottom:10px;">.table-grid-border .table-grid 边框模式</div>
+                            <div style="margin-bottom:10px;">.table-grid-border .table-grid 网格模式</div>
                             <div class="table-grid-border">
                                 <table class="table table-grid">
                                     <caption>今日热门影片</caption>
@@ -151,30 +153,34 @@
                             <div style="margin-bottom:10px;">.table-diff 奇偶行区分模式</div>
                             <table class="table table-diff">
                                 <caption>今日热门影片</caption>
-                                <tr>
-                                    <th>影片名</th>
-                                    <th>主演</th>
-                                    <th>类型</th>
-                                    <th>地区</th>
-                                </tr>
-                                <tr>
-                                    <td>超能陆战队</td>
-                                    <td>斯科特·埃德希特、瑞恩·波特</td>
-                                    <td>动画</td>
-                                    <td>美国</td>
-                                </tr>
-                                <tr>
-                                    <td>超体</td>
-                                    <td>斯嘉丽·约翰逊</td>
-                                    <td>科幻</td>
-                                    <td>美国</td>
-                                </tr>
-                                <tr>
-                                    <td>星际穿越</td>
-                                    <td>马修·麦康纳</td>
-                                    <td>科幻</td>
-                                    <td>美国</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>影片名</th>
+                                        <th>主演</th>
+                                        <th>类型</th>
+                                        <th>地区</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>超能陆战队</td>
+                                        <td>斯科特·埃德希特、瑞恩·波特</td>
+                                        <td>动画</td>
+                                        <td>美国</td>
+                                    </tr>
+                                    <tr>
+                                        <td>超体</td>
+                                        <td>斯嘉丽·约翰逊</td>
+                                        <td>科幻</td>
+                                        <td>美国</td>
+                                    </tr>
+                                    <tr>
+                                        <td>星际穿越</td>
+                                        <td>马修·麦康纳</td>
+                                        <td>科幻</td>
+                                        <td>美国</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div class="cell-12-6">
@@ -189,24 +195,26 @@
                                         <th>地区</th>
                                     </tr>
                                 </thead>
-                                <tr>
-                                    <td>夏洛特烦恼</td>
-                                    <td>沈腾、马丽</td>
-                                    <td>喜剧</td>
-                                    <td>大陆</td>
-                                </tr>
-                                <tr>
-                                    <td>西游记之大圣归来</td>
-                                    <td>张磊、林子杰</td>
-                                    <td>动画</td>
-                                    <td>大陆</td>
-                                </tr>
-                                <tr>
-                                    <td>星际穿越</td>
-                                    <td>马修·麦康纳</td>
-                                    <td>科幻</td>
-                                    <td>美国</td>
-                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>夏洛特烦恼</td>
+                                        <td>沈腾、马丽</td>
+                                        <td>喜剧</td>
+                                        <td>大陆</td>
+                                    </tr>
+                                    <tr>
+                                        <td>西游记之大圣归来</td>
+                                        <td>张磊、林子杰</td>
+                                        <td>动画</td>
+                                        <td>大陆</td>
+                                    </tr>
+                                    <tr>
+                                        <td>星际穿越</td>
+                                        <td>马修·麦康纳</td>
+                                        <td>科幻</td>
+                                        <td>美国</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -255,30 +263,34 @@
                             <div class="table-grid-border table-full">
                                 <table class="table table-grid">
                                     <caption>今日热门影片</caption>
-                                    <tr>
-                                        <th>影片名</th>
-                                        <th>主演</th>
-                                        <th>类型</th>
-                                        <th>地区</th>
-                                    </tr>
-                                    <tr>
-                                        <td>超能陆战队</td>
-                                        <td>斯科特·埃德希特、瑞恩·波特</td>
-                                        <td>动画</td>
-                                        <td>美国</td>
-                                    </tr>
-                                    <tr>
-                                        <td>超体</td>
-                                        <td>斯嘉丽·约翰逊</td>
-                                        <td>科幻</td>
-                                        <td>美国</td>
-                                    </tr>
-                                    <tr>
-                                        <td>星际穿越</td>
-                                        <td>马修·麦康纳</td>
-                                        <td>科幻</td>
-                                        <td>美国</td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th>影片名</th>
+                                            <th>主演</th>
+                                            <th>类型</th>
+                                            <th>地区</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>超能陆战队</td>
+                                            <td>斯科特·埃德希特、瑞恩·波特</td>
+                                            <td>动画</td>
+                                            <td>美国</td>
+                                        </tr>
+                                        <tr>
+                                            <td>超体</td>
+                                            <td>斯嘉丽·约翰逊</td>
+                                            <td>科幻</td>
+                                            <td>美国</td>
+                                        </tr>
+                                        <tr>
+                                            <td>星际穿越</td>
+                                            <td>马修·麦康纳</td>
+                                            <td>科幻</td>
+                                            <td>美国</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -292,9 +304,12 @@
 
 <script>
     import {mapGetters, mapActions}         from 'vuex';
+    import CTable                           from './common/table';
 
     export default {
-        components: {},
+        components: {
+            'c-table':             CTable
+        },
         data() {
             return {}
         },

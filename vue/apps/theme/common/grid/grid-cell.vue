@@ -35,8 +35,8 @@
             //
             stylecell() {
                 return {
-                    'padding-left': this.basic.grid.padding +'px',
-                    'padding-right': this.basic.grid.padding +'px'
+                    'padding-left': this.basic.grid.colspace +'px',
+                    'padding-right': this.basic.grid.colspace +'px'
                 };
             }
         },

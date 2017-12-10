@@ -12,67 +12,38 @@
                 <h3>.grid .row .cell-5-1</h3>
                 <div>奇数等分，最小份为1/5</div>
                 <br/>
-                <c-grid>
-                    <c-grid-row style="margin-bottom:10px;">
-                        <c-grid-cell :max="5" :span="1">
-                            <button class="fillblock" >1</button>
-                        </c-grid-cell>
-                        <c-grid-cell :max="5" :span="1">
-                            <button class="fillblock" >1</button>
-                        </c-grid-cell>
-                        <c-grid-cell :max="5" :span="1">
-                            <button class="fillblock" >1</button>
-                        </c-grid-cell>
-                        <c-grid-cell :max="5" :span="1">
-                            <button class="fillblock" >1</button>
-                        </c-grid-cell>
-                        <c-grid-cell :max="5" :span="1">
-                            <button class="fillblock" >1</button>
-                        </c-grid-cell>
-                    </c-grid-row>
-                </c-grid>
-
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
+                        <template v-for="i in 5">
                         <div class="cell-5-1">
                             <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-2">
                             <button class="fillblock" >2</button>
                         </div>
-                        <div class="cell-5-2">
-                            <button class="fillblock" >2</button>
-                        </div>
+                        <template v-for="i in 3">
                         <div class="cell-5-1">
                             <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-3">
                             <button class="fillblock" >3</button>
                         </div>
-                        <div class="cell-5-2">
-                            <button class="fillblock" >2</button>
+                        <template v-for="i in 2">
+                        <div class="cell-5-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-4">
                             <button class="fillblock" >4</button>
                         </div>
@@ -81,7 +52,7 @@
                         </div>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-5">
                             <button class="fillblock" >5</button>
                         </div>
@@ -93,76 +64,59 @@
                 <div>奇数等分，最小份为1/7</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
+                        <template v-for="i in 7">
                         <div class="cell-7-1">
                             <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-7-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-7-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-7-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-7-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-7-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-7-1">
-                            <button class="fillblock" >1</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-7-2">
                             <button class="fillblock" >2</button>
                         </div>
-                        <div class="cell-7-2">
-                            <button class="fillblock" >2</button>
-                        </div>
-                        <div class="cell-7-2">
-                            <button class="fillblock" >2</button>
-                        </div>
+                        <template v-for="i in 5">
                         <div class="cell-7-1">
                             <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-7-3">
                             <button class="fillblock" >3</button>
                         </div>
-                        <div class="cell-7-3">
-                            <button class="fillblock" >3</button>
-                        </div>
+                        <template v-for="i in 4">
                         <div class="cell-7-1">
                             <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-7-4">
                             <button class="fillblock" >4</button>
                         </div>
-                        <div class="cell-7-3">
-                            <button class="fillblock" >3</button>
+                        <template v-for="i in 3">
+                        <div class="cell-7-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-7-5">
                             <button class="fillblock" >5</button>
                         </div>
-                        <div class="cell-7-2">
-                            <button class="fillblock" >2</button>
+                        <template v-for="i in 2">
+                        <div class="cell-7-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-7-6">
                             <button class="fillblock" >6</button>
                         </div>
@@ -171,7 +125,7 @@
                         </div>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-7-7">
                             <button class="fillblock" >7</button>
                         </div>
@@ -183,151 +137,114 @@
                 <div>偶数等分，最小份为1/12</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
+                        <template v-for="i in 12">
                         <div class="cell-12-1">
                             <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-12-1">
-                            <button class="fillblock" >1</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-2">
                             <button class="fillblock" >2</button>
                         </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
+                        <template v-for="i in 10">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
-                        </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
-                        </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
-                        </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-3">
                             <button class="fillblock" >3</button>
                         </div>
-                        <div class="cell-12-3">
-                            <button class="fillblock" >3</button>
+                        <template v-for="i in 9">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-12-3">
-                            <button class="fillblock" >3</button>
-                        </div>
-                        <div class="cell-12-3">
-                            <button class="fillblock" >3</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             <button class="fillblock" >4</button>
                         </div>
-                        <div class="cell-12-4">
-                            <button class="fillblock" >4</button>
+                        <template v-for="i in 8">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-12-4">
-                            <button class="fillblock" >4</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-5">
                             <button class="fillblock" >5</button>
                         </div>
-                        <div class="cell-12-5">
-                            <button class="fillblock" >5</button>
+                        <template v-for="i in 7">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-6">
                             <button class="fillblock" >6</button>
                         </div>
-                        <div class="cell-12-6">
-                            <button class="fillblock" >6</button>
+                        <template v-for="i in 6">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-7">
                             <button class="fillblock" >7</button>
                         </div>
-                        <div class="cell-12-5">
-                            <button class="fillblock" >5</button>
+                        <template v-for="i in 5">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-8">
                             <button class="fillblock" >8</button>
                         </div>
-                        <div class="cell-12-4">
-                            <button class="fillblock" >4</button>
+                        <template v-for="i in 4">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-9">
                             <button class="fillblock" >9</button>
                         </div>
-                        <div class="cell-12-3">
-                            <button class="fillblock" >3</button>
+                        <template v-for="i in 3">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-10">
                             <button class="fillblock" >10</button>
                         </div>
-                        <div class="cell-12-2">
-                            <button class="fillblock" >2</button>
+                        <template v-for="i in 2">
+                        <div class="cell-12-1">
+                            <button class="fillblock" >1</button>
                         </div>
+                        </template>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-11">
                             <button class="fillblock" >11</button>
                         </div>
@@ -336,7 +253,7 @@
                         </div>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-12">
                             <button class="fillblock" >12</button>
                         </div>
@@ -348,22 +265,12 @@
                 <div>无间隙</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row-full" style="margin-bottom:10px;">
+                    <div class="grid-row-full">
+                        <template v-for="i in 5">
                         <div class="cell-5-1">
                             <button class="fillblock" >1</button>
                         </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
-                        <div class="cell-5-1">
-                            <button class="fillblock" >1</button>
-                        </div>
+                        </template>
                     </div>
                 </div>
                 <br/>
@@ -372,43 +279,23 @@
                 <div>通过.row的嵌套使用，可以完美实现10列和14列的布局</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom: 10px;">
+                    <div class="grid-row">
                         <div class="cell-12-6">
                             <div class="grid-row">
+                                <template v-for="i in 5">
                                 <div class="cell-5-1">
                                     <button class="fillblock" >1</button>
                                 </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
+                                </template>
                             </div>
                         </div>
                         <div class="cell-12-6">
                             <div class="grid-row">
+                                <template v-for="i in 5">
                                 <div class="cell-5-1">
                                     <button class="fillblock" >1</button>
                                 </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-5-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
+                                </template>
                             </div>
                         </div>
                     </div>
@@ -416,52 +303,20 @@
                     <div class="grid-row">
                         <div class="cell-12-6">
                             <div class="grid-row">
+                                <template v-for="i in 7">
                                 <div class="cell-7-1">
                                     <button class="fillblock" >1</button>
                                 </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
+                                </template>
                             </div>
                         </div>
                         <div class="cell-12-6">
                             <div class="grid-row">
+                                <template v-for="i in 7">
                                 <div class="cell-7-1">
                                     <button class="fillblock" >1</button>
                                 </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
-                                <div class="cell-7-1">
-                                    <button class="fillblock" >1</button>
-                                </div>
+                                </template>
                             </div>
                         </div>
                     </div>

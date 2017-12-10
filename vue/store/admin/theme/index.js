@@ -1,15 +1,15 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
-import MT                       from './mutaions-types.js';
-import Getters                  from './getter.js';
-import Actions                  from './action.js';
+import Mutations                from './mutations.js';
+import Getters                  from './getters.js';
+import Actions                  from './actions.js';
 Vue.use(Vuex);
 
 const State = {
     data_copy: {},
     data: {
         basic: {
-            prefix: '~""',
+            namespace:  '',
             colors: {
                 theme: {
                     editable:   true,
@@ -297,6 +297,19 @@ const State = {
                     }
                 },
             },
+            fontcolor: {
+                def:        '',
+                weak:       '',
+                title:      'inherit',
+                hr:         '',
+                small:      '',
+                link:       '',
+                linkhover:  '',
+            },
+            bgcolor: {
+                def:        '',
+                weak:       ''
+            },
             fontfamily: {
                 ios:    ['-apple-system', 'sf_ui_textlight'],
                 en:     ['"ff-tisa-web-pro-1"', '"ff-tisa-web-pro-2"', '"Lucida Grande"', '"Helvetica Neue"', 'Helvetica', '"Nimbus Sans L"', 'Arial'],
@@ -304,20 +317,90 @@ const State = {
                 sys:    ['sans-serif'],
                 title:  ['inherit'],
                 html:   ['"Helvetica Neue", Helvetica, Arial, sans-serif'],
-                def:    '~"@{fontfamily-ios}, @{fontfamily-en}, @{fontfamily-zh}, @{fontfamily-sys}"',
+                def:    '',
                 icon:   '"iconfont"'
             },
+            defpx:      16,
+            rem2px:     0,
+            fontsize: {
+                s:          0.75,                   // 12px
+                def:        0.875,                  // 14px
+                m:          1,                      // 16px
+                l:          1.125,                  // 16px
+                xl:         1.5,                    // 18px
+                xxl:        1.875,                  // 30px
+                xxxl:       2.25                    // 36px
+            },
+            fontweight: {
+                def:        400,                    // normal
+                bold:       700,                    // bold
+                title:      500                     // medium
+            },
+            border: {
+                style: {
+                    def:        'solid',
+                    dotted:     'dotted',
+                    double:     'double',
+                    dashed:     'dashed'
+                },
+                width: 1,
+                color: ''
+            },
+            zindex: {
+                def:        0,
+                bg:         1,
+                control:    100,
+                layer:      1000
+            },
+            radius: {
+                def:        0.3,           //em
+                r1:         0.1,
+                r2:         0.2,
+                r3:         0.3,
+                r4:         0.4,
+                r5:         0.5,
+                r6:         0.6,
+                r7:         0.7,
+                r8:         0.8,
+                r9:         0.9,
+                r10:        1,
+            },
+            lineheight: {
+                def:        1.5,
+                auto:       0,
+                title:      1.1
+            },
             grid: {
-                padding: 2
+                colspace: 2,
+                rowspace: 2
+            },
+            table: {
+                caption: {
+                    color:      'rgb(255,255,255)',
+                    bgcolor:    'linear-gradient(225deg, rgb(0, 83, 185), rgb(163, 108, 249))'
+                },
+                color: {
+                    def:        'rgb(255,255,255)',
+                    head:       'rgb(255,255,255)',
+                    body:       'rgb(211,255,255)',
+                    foot:       'rgb(211,255,255)',
+                    hover:      'rgb(255,255,255)'
+                },
+                bgcolor: {
+                    def:        'linear-gradient(225deg, rgb(26,165,232), rgb(19,144,195))',
+                    diff:       'rgb(0, 136, 191)',
+                    hover:      'rgb(0, 169, 249)'
+                },
+                bordercolor:{
+                    def:        'rgb(0, 143, 210)',
+                    box:        'rgba(181, 231, 255, 0.3)',
+                    head:       'rgb(62, 167, 214)'
+                },
+                fontsize:   0,
+                radius:     0              //em
             }
-        }
-    }
-};
-
-const Mutations = {
-    [MT.MERGE_DATA] ( state, newdata ) {
-        state.data_copy = Vue.api.copy( state.data );       //备份，做重置覆盖使用
-        state.data = Object.assign( state.data, newdata );
+        },
+        csstext: ''
     }
 };
 

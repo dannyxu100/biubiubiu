@@ -8,6 +8,7 @@ import ThemeFont_C              from '_APPS_/theme/theme-font-controler.vue';
 import ThemeGrid                from '_APPS_/theme/theme-grid.vue';
 import ThemeGrid_C              from '_APPS_/theme/theme-grid-controler.vue';
 import ThemeTable               from '_APPS_/theme/theme-table.vue';
+import ThemeTable_C             from '_APPS_/theme/theme-table-controler.vue';
 import ThemeButton              from '_APPS_/theme/theme-button.vue';
 import ThemePopmenu             from '_APPS_/theme/theme-popmenu.vue';
 import ThemeCheck               from '_APPS_/theme/theme-check.vue';
@@ -48,7 +49,8 @@ export default [
     }, {
         path: '/theme-table',
         components: {
-            main:       ThemeTable
+            main:       ThemeTable,
+            right:      ThemeTable_C
         }
     }, {
         path: '/theme-button',

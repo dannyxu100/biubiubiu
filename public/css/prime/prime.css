@@ -925,6 +925,12 @@ textarea::-webkit-input-placeholder {
 .grid-row-full:after {
   clear: both;
 }
+.grid-row {
+  margin-top: 4px;
+}
+.grid-row:first-child {
+  margin-top: 0;
+}
 .cell-5-1, .cell-5-2, .cell-5-3, .cell-5-4, .cell-5-5 {
   position: relative;
   float: left;
@@ -1018,6 +1024,9 @@ textarea::-webkit-input-placeholder {
 [class^="cell-"]:last-child {
   padding-right: 0;
 }
+.grid-row-full {
+  margin: 0 !important;
+}
 .grid-row-full > [class^="cell-"] {
   padding: 0 !important;
 }
@@ -1025,11 +1034,14 @@ textarea::-webkit-input-placeholder {
   border-collapse: collapse;
   color: #444;
   font-size: 0.875em;
+  background: #FFF;
 }
 .table > caption {
   padding: 8px 15px;
   color: #999;
   text-align: left;
+  font-weight: 700;
+  background: #FFF;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -1050,6 +1062,18 @@ textarea::-webkit-input-placeholder {
   border-bottom: 1px solid #DDD;
   color: #222;
   font-weight: 700;
+}
+.table > thead > tr > th,
+.table > thead > tr > td {
+  color: #222;
+}
+.table > tbody > tr > th,
+.table > tbody > tr > td {
+  color: #222;
+}
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  color: #222;
 }
 .table-full {
   width: 100%;
@@ -1096,7 +1120,8 @@ textarea::-webkit-input-placeholder {
 }
 .table-grid-border {
   display: inline-table;
-  border: 1px solid #DDD;
+  border: 3px solid #DDD;
+  overflow: hidden;
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
@@ -1125,6 +1150,9 @@ textarea::-webkit-input-placeholder {
 }
 .table-hover > tbody > tr:hover {
   background-color: #F7F7F7;
+}
+.table-hover > tbody > tr:hover > td {
+  color: #000;
 }
 .btn,
 .btn-def {

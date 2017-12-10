@@ -1,8 +1,8 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
-import MT                       from './mutaions-types.js';
-import Getters                  from './getter.js';
-import Actions                  from './action.js';
+import Mutations                from './mutations.js';
+import Getters                  from './getters.js';
+import Actions                  from './actions.js';
 Vue.use(Vuex);
 
 const State = {
@@ -33,13 +33,6 @@ const State = {
             },
             current: ''
         },
-    }
-};
-
-const Mutations = {
-    [MT.MERGE_DATA] ( state, newdata ) {
-        state.data_copy = Vue.api.copy( state.data );       //备份，做重置覆盖使用
-        state.data = Object.assign( state.data, newdata );
     }
 };
 

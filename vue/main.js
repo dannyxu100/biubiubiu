@@ -58,7 +58,8 @@ window.vueapp = new Vue({
             events: {
                 click: [],
                 resize: []
-            }
+            },
+            nodestyle: null
         };
     },
     computed: {
@@ -72,25 +73,37 @@ window.vueapp = new Vue({
         ])
     },
     watch: {
-        ['leftbarsmall.show']( newvalue, oldvalue ){
+        ['leftbarsmall.show']( newvalue, oldvalue ) {
             this.dockerlist.splice(2, 1, {
                 title: '用户',
                 iconpath: '/public/images/avatar.png',
                 show: this.leftpadsmall.show,
                 class: 'large circle'
             });
+        },
+        ['basic']: {
+            handler( newvalue, oldvalue ) {
+                this.changestyle( this.nodestyle );
+            },
+            deep: true
         }
     },
     methods: {
         ...mapActions([
             'toggle_leftpad',
-            'toggle_rightpad'
+            'toggle_rightpad',
+            'init_basic',
+            'appendstyle',
+            'changestyle'
         ]),
 
         //初始化
         init() {
             // debugger;
             // this.actions.marge_data();
+            this.init_basic();                              //初始化主题变量
+            this.nodestyle = this.appendstyle();
+
             this.loadnavmaps();
             this.dockerlist = [{
                 title: '消息',
@@ -122,10 +135,11 @@ window.vueapp = new Vue({
         },
         //
         appstyles() {
-            let ff = this.basic.fontfamily;
+            return {};
+            /*let ff = this.basic.fontfamily;
             return {
                 'font-family': ff.ios.concat( ff.en, ff.zh, ff.sys ).join(',')
-            };
+            };*/
         },
         //顶部导航切换
         navswitch( item ) {
@@ -231,7 +245,17 @@ window.vueapp = new Vue({
                     item.handle();
                 }
             });
-        }
+        },
+
+
+        //动态添加style标签
+        appendstyle() {
+            let node = document.createElement('style');
+            node.type='text/css';
+            document.getElementsByTagName('head')[0].appendChild(node);
+            return node;
+        },
+
     },
     created(){
         this.init();
