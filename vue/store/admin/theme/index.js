@@ -398,6 +398,13 @@ const State = {
                 },
                 fontsize:   0,
                 radius:     0              //em
+            },
+            btn: {
+                height: {
+                    def:        '',
+                    small:      '',
+                    large:      ''
+                }
             }
         },
         csstext: ''

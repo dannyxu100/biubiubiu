@@ -1,48 +1,8 @@
 import Vue                      from 'vue';
 import MT                       from './mutations-types.js';
-import Api                      from '_JS_/api.js';
-import Color                    from '_JS_/color.js';
-
-const prefix = {
-    font_size(state, rem) {
-        let basic = state.data.basic;
-        return `font-size: ${rem/basic.rem2px}px; font-size: ${rem};`;
-    },
-    box_sizing(state, mode) {
-        mode = mode || 'border-box';
-        return `-webkit-box-sizing: ${mode};
-            -moz-box-sizing: ${mode};
-            box-sizing: ${mode};`;
-    },
-    border_radius(state, angle) {
-        return `
-            -moz-border-radius: ${angle};
-            -webkit-border-radius: ${angle};
-            border-radius: ${angle};
-        `;
-    }
-};
-
-const comm = {
-    font_size(state, rem) {
-        return prefix.font_size(state, rem );
-    },
-    clearfix(state, classname) {
-        return `
-            ${classname}::before,
-            ${classname}::after {
-                content: " ";
-                display: table;
-            }
-            ${classname}::after {
-                clear: both;
-            }
-            ${classname} {
-                *zoom: 1;
-            }
-        `;
-    }
-};
+import Btn                      from './mutations-btn.js';
+import Prefix                   from './css-prefix.js';
+import Comm                     from './css-comm.js';
 
 export default {
     [MT.MERGE_DATA] ( state, newdata ) {
@@ -74,7 +34,6 @@ export default {
         let basic, csstext;
         basic = state.data.basic;
         basic.fontfamily.def = basic.fontfamily.ios.concat( basic.fontfamily.en, basic.fontfamily.zh, basic.fontfamily.sys ).join(',');
-
     },
     [MT.CSS_FRAMEWORK]( state ) {
         let basic, namespace;
@@ -87,11 +46,11 @@ export default {
 
             ====================================================*/
             *{
-                ${prefix.box_sizing(state)}
+                ${Prefix.box_sizing(state)}
             }
             *:after,
             *:before{
-                ${prefix.box_sizing(state)}
+                ${Prefix.box_sizing(state)}
             }
 
             html{
@@ -159,12 +118,12 @@ export default {
                 color: ${basic.fontcolor.small};
                 font-size: 0.65em;
             }
-            .${namespace}h1, h1 { ${comm.font_size(state, basic.fontsize.xxxl)} }
-            .${namespace}h2, h2 { ${comm.font_size(state, basic.fontsize.xxl)} }
-            .${namespace}h3, h3 { ${comm.font_size(state, basic.fontsize.xl)} }
-            .${namespace}h4, h4 { ${comm.font_size(state, basic.fontsize.l)} }
-            .${namespace}h5, h5 { ${comm.font_size(state, basic.fontsize.m)} }
-            .${namespace}h6, h6 { ${comm.font_size(state, basic.fontsize.def)} }
+            .${namespace}h1, h1 { ${Comm.font_size(state, basic.fontsize.xxxl)} }
+            .${namespace}h2, h2 { ${Comm.font_size(state, basic.fontsize.xxl)} }
+            .${namespace}h3, h3 { ${Comm.font_size(state, basic.fontsize.xl)} }
+            .${namespace}h4, h4 { ${Comm.font_size(state, basic.fontsize.l)} }
+            .${namespace}h5, h5 { ${Comm.font_size(state, basic.fontsize.m)} }
+            .${namespace}h6, h6 { ${Comm.font_size(state, basic.fontsize.def)} }
 
             hr {
                 margin: ${basic.lineheight.def} 0 ${basic.lineheight.def};
@@ -260,7 +219,7 @@ export default {
             }
             .${namespace}grid-row,
             .${namespace}grid-row-full {
-                ${comm.clearfix(state, `.${namespace}grid-row-full`)}
+                ${Comm.clearfix(state, `.${namespace}grid-row-full`)}
             }
             .${namespace}grid-row {
                 margin-top: ${basic.grid.rowspace*2}px;
@@ -397,7 +356,7 @@ export default {
                 display: inline-table;
                 border: 3px solid ${basic.table.bordercolor.box};
                 overflow: hidden;
-                ${prefix.border_radius(state, basic.table.radius+'em')}
+                ${Prefix.border_radius(state, basic.table.radius+'em')}
             }
             .${namespace}table-grid-border .table {
                 width: 100%;
@@ -428,7 +387,8 @@ export default {
                 color: ${basic.table.color.hover};
             }
         `;
-    }
+    },
+    ...Btn,
 };
 
 

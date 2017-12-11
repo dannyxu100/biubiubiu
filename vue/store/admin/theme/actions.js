@@ -30,6 +30,9 @@ export default {
         commit('CSS_FRAMEWORK');
         commit('CSS_GRID');
         commit('CSS_TABLE');
+        commit('CSS_BTN');
+        commit('CSS_BTNGROUP');
+        commit('CSS_BTNGROUP_GRID');
 
         if(node.styleSheet){                                                   //ie下
             node.styleSheet.cssText = state.data.csstext;

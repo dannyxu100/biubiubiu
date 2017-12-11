@@ -10,6 +10,7 @@ import ThemeGrid_C              from '_APPS_/theme/theme-grid-controler.vue';
 import ThemeTable               from '_APPS_/theme/theme-table.vue';
 import ThemeTable_C             from '_APPS_/theme/theme-table-controler.vue';
 import ThemeButton              from '_APPS_/theme/theme-button.vue';
+import ThemeButton_C            from '_APPS_/theme/theme-button-controler.vue';
 import ThemePopmenu             from '_APPS_/theme/theme-popmenu.vue';
 import ThemeCheck               from '_APPS_/theme/theme-check.vue';
 import ThemeSelect              from '_APPS_/theme/theme-select.vue';
@@ -55,7 +56,8 @@ export default [
     }, {
         path: '/theme-button',
         components: {
-            main:       ThemeButton
+            main:       ThemeButton,
+            right:      ThemeButton_C
         }
     }, {
         path: '/theme-popmenu',

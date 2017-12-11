@@ -19,9 +19,9 @@
                             <option :value="sfont"><span :style="styleoption(sfont)">{{sfont | symbolclear}}</span></option>
                             </template>
                         </select>
+                        <br/>
                     </template>
                 </div>
-                <br/>
 
                 <h3>中文</h3>
                 <div></div>
@@ -33,9 +33,9 @@
                             <option :value="sfont"><span :style="styleoption(sfont)">{{sfont | symbolclear}}</span></option>
                             </template>
                         </select>
+                        <br/>
                     </template>
                 </div>
-                <br/>
 
                 <h3>英文</h3>
                 <div></div>
@@ -47,9 +47,9 @@
                             <option :value="sfont"><span :style="styleoption(sfont)">{{sfont | symbolclear}}</span></option>
                             </template>
                         </select>
+                        <br/>
                     </template>
                 </div>
-                <br/>
 
                 <h3>系统</h3>
                 <div></div>
@@ -61,11 +61,11 @@
                             <option :value="sfont"><span :style="styleoption(sfont)">{{sfont | symbolclear}}</span></option>
                             </template>
                         </select>
+                        <br/>
                     </template>
                 </div>
-                <br/>
-            </div>
 
+            </div>
         </div>
     </div>
 </template>
