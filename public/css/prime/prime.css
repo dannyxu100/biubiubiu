@@ -1129,20 +1129,20 @@ textarea::-webkit-input-placeholder {
 .table-grid-border .table {
   width: 100%;
 }
-.table-min > thead > tr > th,
-.table-min > tbody > tr > th,
-.table-min > tfoot > tr > th,
-.table-min > tr > th,
-.table-min > thead > tr > td,
-.table-min > tbody > tr > td,
-.table-min > tfoot > tr > td,
-.table-min > tr > td {
+.table-small > thead > tr > th,
+.table-small > tbody > tr > th,
+.table-small > tfoot > tr > th,
+.table-small > tr > th,
+.table-small > thead > tr > td,
+.table-small > tbody > tr > td,
+.table-small > tfoot > tr > td,
+.table-small > tr > td {
   padding: 1px 5px;
 }
-.table-min > thead > tr > th,
-.table-min > tbody > tr > th,
-.table-min > tfoot > tr > th,
-.table-min > tr > th {
+.table-small > thead > tr > th,
+.table-small > tbody > tr > th,
+.table-small > tfoot > tr > th,
+.table-small > tr > th {
   padding: 3px 5px;
 }
 .table-diff > tbody > tr:nth-of-type(even) {
@@ -1323,7 +1323,7 @@ fieldset[disabled] a.btn,
 fieldset[disabled] a.btn-def {
   pointer-events: none;
 }
-.btn-min {
+.btn-small {
   padding: 6px 14px;
   height: 28px;
   line-height: 14px;
@@ -1333,7 +1333,7 @@ fieldset[disabled] a.btn-def {
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
 }
-.btn-big {
+.btn-large {
   padding: 10px 30px;
   height: 45px;
   line-height: 23px;
@@ -1909,12 +1909,12 @@ fieldset[disabled] .btn-border-inverse.active {
 .btn-border-inverse {
   line-height: 15px;
 }
-.btn-border.btn-min,
-.btn-border-inverse.btn-min {
+.btn-border.btn-small,
+.btn-border-inverse.btn-small {
   line-height: 12px;
 }
-.btn-border.btn-big,
-.btn-border-inverse.btn-big {
+.btn-border.btn-large,
+.btn-border-inverse.btn-large {
   line-height: 21px;
 }
 .btn-link {
@@ -2417,29 +2417,29 @@ fieldset[disabled] .btn-link.active {
   min-width: 100%;
   width: 100%;
 }
-.popmenu-min,
-.popmenu-min .popmenu-sub {
+.popmenu-small,
+.popmenu-small .popmenu-sub {
   min-width: 140px;
   font-size: 12px;
   font-weight: 400;
   padding: 5px 0 5px;
 }
-.popmenu-min .popmenu-item,
-.popmenu-min .popmenu-sub .popmenu-item {
+.popmenu-small .popmenu-item,
+.popmenu-small .popmenu-sub .popmenu-item {
   height: 26px;
   line-height: 26px;
   padding-left: 15px;
   padding-right: 15px;
 }
-.popmenu-big,
-.popmenu-big .popmenu-sub {
+.popmenu-large,
+.popmenu-large .popmenu-sub {
   min-width: 180px;
   font-size: 16px;
   font-weight: 400;
   padding: 5px 0 5px;
 }
-.popmenu-big .popmenu-item,
-.popmenu-big .popmenu-sub .popmenu-item {
+.popmenu-large .popmenu-item,
+.popmenu-large .popmenu-sub .popmenu-item {
   height: 30px;
   line-height: 30px;
   padding-left: 15px;
@@ -2470,10 +2470,10 @@ fieldset[disabled] .btn-link.active {
   margin-top: 0;
   margin-bottom: 35px;
 }
-.btngroup .btn-popmenu-top.btn-min ~ .popmenu {
+.btngroup .btn-popmenu-top.btn-small ~ .popmenu {
   margin-bottom: 28px;
 }
-.btngroup .btn-popmenu-top.btn-big ~ .popmenu {
+.btngroup .btn-popmenu-top.btn-large ~ .popmenu {
   margin-bottom: 45px;
 }
 .tag,
@@ -3062,53 +3062,53 @@ fieldset[disabled] .btn-link.active {
 .select-center .select-text {
   text-align: center;
 }
-.select-min {
+.select-small {
   height: 28px;
   font-size: 12px;
 }
-.select-min.top .select-list {
+.select-small.top .select-list {
   margin-bottom: 28px;
 }
-.select-min .select-box {
+.select-small .select-box {
   height: 28px;
 }
-.select-min .select-box:after {
+.select-small .select-box:after {
   line-height: 26px;
 }
-.select-min .select-box .select-text {
+.select-small .select-box .select-text {
   height: 28px;
   line-height: 26px;
   font-size: 12px;
 }
-.select-min .select-list {
+.select-small .select-list {
   font-size: 12px;
 }
-.select-min .select-list .select-item {
+.select-small .select-list .select-item {
   height: 26px;
   line-height: 26px;
 }
-.select-big {
+.select-large {
   height: 45px;
   font-size: 16px;
 }
-.select-big.top .select-list {
+.select-large.top .select-list {
   margin-bottom: 45px;
 }
-.select-big .select-box {
+.select-large .select-box {
   height: 45px;
 }
-.select-big .select-box:after {
+.select-large .select-box:after {
   line-height: 43px;
 }
-.select-big .select-box .select-text {
+.select-large .select-box .select-text {
   height: 45px;
   line-height: 43px;
   font-size: 16px;
 }
-.select-big .select-list {
+.select-large .select-list {
   font-size: 14px;
 }
-.select-big .select-list .select-item {
+.select-large .select-list .select-item {
   height: 30px;
   line-height: 30px;
 }
@@ -3212,7 +3212,7 @@ fieldset[disabled] .btn-link.active {
 .tabs .tabs-navs .tabs-nav.active {
   cursor: default;
 }
-.tabs-min .tabs-navs .tabs-nav {
+.tabs-small .tabs-navs .tabs-nav {
   padding: 8px 15px;
   height: 32px;
   line-height: 14px;
@@ -3387,7 +3387,7 @@ week
 .textarea-full {
   width: 100%;
 }
-.input-min {
+.input-small {
   height: 28px;
   line-height: 18px;
   font-size: 12px;
@@ -3398,7 +3398,7 @@ week
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
 }
-.input-big {
+.input-large {
   height: 45px;
   line-height: 35px;
   font-size: 16px;
@@ -3539,12 +3539,12 @@ week
   color: #999;
   background-color: #F7F7F7;
 }
-.inputgroup .addons .text-min {
+.inputgroup .addons .text-small {
   height: 28px;
   line-height: 20px;
   font-size: 12px;
 }
-.inputgroup .addons .text-big {
+.inputgroup .addons .text-large {
   height: 45px;
   line-height: 37px;
   font-size: 16px;

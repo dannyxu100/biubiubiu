@@ -9,7 +9,9 @@ const State = {
     data_copy: {},
     data: {
         basic: {
+            //命名空间（前缀）
             namespace:  '',
+            //主题色
             colors: {
                 theme: {
                     editable:   true,
@@ -297,6 +299,7 @@ const State = {
                     }
                 },
             },
+            //字色
             fontcolor: {
                 def:        '',
                 weak:       '',
@@ -304,12 +307,47 @@ const State = {
                 hr:         '',
                 small:      '',
                 link:       '',
-                linkhover:  '',
+                linkhover:  ''
             },
+            //底色
             bgcolor: {
                 def:        '',
                 weak:       ''
             },
+            //控件
+            control: {
+                height: {
+                    def:    35,                         //px
+                    small:  28,
+                    large:  45
+                },
+                fontsize: {
+                    def:    14,
+                    small:  12,
+                    large:  16
+                },
+                padding: {
+                    def: {
+                        top:        8,
+                        bottom:     8,
+                        left:       18,
+                        right:      18
+                    },
+                    small: {
+                        top:        6,
+                        bottom:     6,
+                        left:       14,
+                        right:      14
+                    },
+                    large: {
+                        top:        10,
+                        bottom:     10,
+                        left:       30,
+                        right:      30
+                    },
+                }
+            },
+            //字体
             fontfamily: {
                 ios:    ['-apple-system', 'sf_ui_textlight'],
                 en:     ['"ff-tisa-web-pro-1"', '"ff-tisa-web-pro-2"', '"Lucida Grande"', '"Helvetica Neue"', 'Helvetica', '"Nimbus Sans L"', 'Arial'],
@@ -320,6 +358,7 @@ const State = {
                 def:    '',
                 icon:   '"iconfont"'
             },
+            //字号
             defpx:      16,
             rem2px:     0,
             fontsize: {
@@ -336,6 +375,13 @@ const State = {
                 bold:       700,                    // bold
                 title:      500                     // medium
             },
+            //行高
+            lineheight: {
+                def:        1.5,
+                auto:       0,
+                title:      1.1
+            },
+            //边框
             border: {
                 style: {
                     def:        'solid',
@@ -346,12 +392,14 @@ const State = {
                 width: 1,
                 color: ''
             },
+            //层级
             zindex: {
                 def:        0,
                 bg:         1,
                 control:    100,
                 layer:      1000
             },
+            //倒角
             radius: {
                 def:        0.3,           //em
                 r1:         0.1,
@@ -365,15 +413,19 @@ const State = {
                 r9:         0.9,
                 r10:        1,
             },
-            lineheight: {
-                def:        1.5,
-                auto:       0,
-                title:      1.1
+            //指针样式
+            cursor: {
+                def:        'default',
+                pointer:    'pointer',
+                no:         'not-allowed',
+                loading:    'wait'
             },
+            //栅格
             grid: {
                 colspace: 2,
                 rowspace: 2
             },
+            //表格
             table: {
                 caption: {
                     color:      'rgb(255,255,255)',
@@ -399,11 +451,82 @@ const State = {
                 fontsize:   0,
                 radius:     0              //em
             },
+            //按钮
             btn: {
                 height: {
-                    def:        '',
-                    small:      '',
-                    large:      ''
+                    def:        0,
+                    small:      0,
+                    large:      0
+                },
+                lineheight: {
+                    def:        0,
+                    small:      0,
+                    larget:     0
+                },
+                fontsize: {
+                    def:        0,
+                    small:      0,
+                    larget:     0
+                },
+                padding: {
+                    def: {
+                        top:        0,
+                        bottom:     0,
+                        left:       0,
+                        right:      0
+                    },
+                    small: {
+                        top:        0,
+                        bottom:     0,
+                        left:       0,
+                        right:      0
+                    },
+                    large: {
+                        top:        0,
+                        bottom:     0,
+                        left:       0,
+                        right:      0
+                    },
+                },
+                radius:         0,
+                zindex: {
+                    def:        0,
+                    active:     0
+                },
+                style: {
+                    def: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            'none',
+                            hover:          '0 4px 10px rgba(0, 0, 0, .05)',
+                            focus:          'none',
+                            active:         'inset 0 1px 3px rgba(0, 0, 0, .08)',
+                            disabled:       'none'
+                        }
+                    },
+                    inverse: {
+
+                    }
                 }
             }
         },

@@ -3,15 +3,15 @@ import MT                       from './mutations-types.js';
 import Prefix                   from './css-prefix.js';
 import Comm                     from './css-comm.js';
 
-function buttonsize( state, paddingtb, paddinglr, fontsize, height, lineheight, radius, fontweight ){
+function buttonsize( state, padding, fontsize, height, lineheight, radius, fontweight ){
     fontweight = fontweight || state.data.basic.fontweight.def;
     return `
-        padding: ${paddingtb} ${paddinglr};
-        height: ${height};
-        line-height: ${lineheight};
-        font-size: ${fontsize};
+        padding: ${padding.top}px ${padding.right}px ${padding.bottom}px ${padding.left}px;
+        height: ${height}px;
+        line-height: ${lineheight}px;
+        font-size: ${fontsize}px;
         font-weight: ${fontweight};
-        ${Prefix.border_radius(radius)}
+        ${Prefix.border_radius(state, radius+'em')}
     `;
 }
 
@@ -22,33 +22,37 @@ export default {
         namespace = basic.namespace;
 
         state.data.csstext += `
+            /*====================================================
+
+                 btn
+
+            ====================================================*/
             .btn,
             .btn-def {
                 display: inline-block;
                 position: relative;
-                z-index: 100;
-                margin-bottom: 0;
+                z-index: ${basic.btn.zindex.def};
+                margin-bottom: 0;                       /*For input.btn*/
                 text-align: center;
                 vertical-align: middle;
-                touch-action: manipulation;
-                color: #444;
-                background-image: none;
-                border: 1px solid #DDD;
-                background-color: #FFF;
-                cursor: pointer;
+                color: ${basic.btn.style.def.color.def};
+                background-image: none;                 /*Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214*/
+                border: 1px solid ${basic.btn.style.def.bordercolor.def};
+                background-color: ${basic.btn.style.def.bgcolor.def};
+                cursor: ${basic.cursor.pointer};
                 white-space: nowrap;
+                touch-action: manipulation;             /*支持手势操作*/
 
                 ${buttonsize(
-                    basic.
+                    state,
+                    basic.btn.padding.def,
+                    basic.btn.fontsize.def,
+                    basic.btn.height.def,
+                    basic.btn.lineheight.def,
+                    basic.btn.radius
                 )}
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-                -webkit-transition: all linear 0.15s;
-                -ms-transition: all linear 0.15s;
-                -moz-transition: all linear 0.15s;
-                transition: all linear 0.15s;
+                ${Prefix.user_select(state)}
+                ${Prefix.transition(state)}
             }
             .btn:focus,
             .btn-def:focus,
@@ -66,36 +70,31 @@ export default {
             .btn-def.active.focus,
             .btn.loading.focus,
             .btn-def.loading.focus {
-              border-color: #CCC;
-              z-index: 110;
-              outline: thin dotted;
-              outline: 2px auto -webkit-focus-ring-color;
-              outline-offset: -2px;
-              outline: none;
+                border-color: ${basic.btn.style.def.bordercolor.focus};
+                z-index: ${basic.btn.zindex.active};
+
+                ${Prefix.outline()}
             }
             .btn:hover,
             .btn-def:hover,
             .btn.hover,
             .btn-def.hover {
-              color: #222;
-              border-color: #CCC;
-              background-color: #FFF;
-              text-decoration: none;
-              z-index: 110;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                color: ${basic.btn.style.def.color.hover};
+                border-color: ${basic.btn.style.def.bordercolor.hover};
+                background-color: ${basic.btn.style.def.bgcolor.hover};
+                text-decoration: none;
+                z-index: ${basic.btn.zindex.active};
+                ${Prefix.box_shadow(state, basic.btn.style.def.shadow.hover)}
             }
             .btn:focus,
             .btn-def:focus,
             .btn.focus,
             .btn-def.focus {
-              color: #222;
-              border-color: #CCC;
-              background-color: #FFF;
+              color: ${basic.btn.style.def.color.focus};
+              border-color: ${basic.btn.style.def.bordercolor.focus};
+              background-color: ${basic.btn.style.def.bgcolor.focus};
               text-decoration: none;
-              z-index: 110;
+              z-index: ${basic.btn.zindex.active};
             }
             .btn:active,
             .btn-def:active,
@@ -103,14 +102,11 @@ export default {
             .btn-def.active,
             .btn.loading,
             .btn-def.loading {
-              color: #666;
-              border-color: #CCC;
-              background-color: #FAFAFA;
-              z-index: 110;
-              -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
-              -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
-              -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
-              box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+              color: ${basic.btn.style.def.color.active};
+              border-color: ${basic.btn.style.def.bordercolor.active};
+              background-color: ${basic.btn.style.def.bgcolor.active};
+              z-index: ${basic.btn.zindex.active};
+              ${Prefix.box_shadow(state, basic.btn.style.def.shadow.active)}
             }
             .btn:active,
             .btn-def:active {
@@ -126,7 +122,7 @@ export default {
             }
             .btn.border,
             .btn-def.border {
-              border-color: #CCC;
+              border-color: ${basic.btn.style.def.bordercolor.active};
             }
             .btn.disabled,
             .btn-def.disabled,
@@ -164,18 +160,13 @@ export default {
             .btn-def[disabled].active,
             fieldset[disabled] .btn.active,
             fieldset[disabled] .btn-def.active {
-              color: #666;
-              border-color: transparent;
-              background-color: #F5F5F5;
+              color: ${basic.btn.style.def.color.disabled};
+              border-color: ${basic.btn.style.def.bordercolor.disabled};
+              background-color: ${basic.btn.style.def.bgcolor.disabled};
               cursor: not-allowed;
-              -moz-opacity: 0.55;
-              -khtml-opacity: 0.55;
-              opacity: 0.55;
-              filter: Alpha(Opacity=55.00000000000001);
-              -webkit-box-shadow: none !important;
-              -ms-box-shadow: none !important;
-              -moz-box-shadow: none !important;
-              box-shadow: none !important;
+
+              ${Prefix.opacity(state, 0.55)}
+              ${Prefix.box_shadow(state, basic.btn.style.def.shadow.disabled)}
             }
             a.btn,
             a.btn-def {

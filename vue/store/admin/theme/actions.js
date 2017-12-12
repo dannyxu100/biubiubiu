@@ -26,7 +26,6 @@ export default {
     //
     changestyle({dispatch, commit, state}, node, css) {
         state.data.csstext = '';
-        commit('CSS_BASIC');
         commit('CSS_FRAMEWORK');
         commit('CSS_GRID');
         commit('CSS_TABLE');
