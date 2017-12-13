@@ -277,40 +277,36 @@ export default {
                 background-color: ${basic.colors.black.ladder.normal.hex};
             }
             .${namespace}btn-theme {
-              color: #F7F7F7;
-              border-color: #05C3F9;
-              background-color: #05C3F9;
+                color: ${basic.btn.style.theme.color.def};
+                border-color: ${basic.btn.style.theme.bordercolor.def};
+                background-color: ${basic.btn.style.theme.bgcolor.def};
             }
             .${namespace}btn-theme.border {
-              border-color: #05C3F9;
+                border-color: ${basic.btn.style.theme.bordercolor.active};
             }
             .${namespace}btn-theme:focus,
             .${namespace}btn-theme.focus {
-              color: #FFF;
-              border-color: #05C3F9;
-              background-color: #43D3FC;
+                color: ${basic.btn.style.theme.color.focus};
+                border-color: ${basic.btn.style.theme.bordercolor.focus};
+                background-color: ${basic.btn.style.theme.bgcolor.focus};
             }
             .${namespace}btn-theme:hover,
             .${namespace}btn-theme.hover {
-              color: #FFF;
-              border-color: #43D3FC;
-              background-color: #74DEFC;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                color: ${basic.btn.style.theme.color.hover};
+                border-color: ${basic.btn.style.theme.bordercolor.hover};
+                background-color: ${basic.btn.style.theme.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.hover)}
             }
             .${namespace}btn-theme:active,
             .${namespace}btn-theme.active,
             .${namespace}btn-theme.loading,
             .open > .dropdown-toggle.${namespace}btn-theme {
-              color: #FAFAFA;
-              border-color: #05C3F9;
-              background-color: #43D3FC;
-              -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-              -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-              -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-              box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+                color: ${basic.btn.style.theme.color.active};
+                border-color: ${basic.btn.style.theme.bordercolor.active};
+                background-color: ${basic.btn.style.theme.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.active)}
             }
             .${namespace}btn-theme:active:hover,
             .${namespace}btn-theme.active:hover,
@@ -324,9 +320,9 @@ export default {
             .${namespace}btn-theme.active.focus,
             .${namespace}btn-theme.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-theme.focus {
-              color: #FFF;
-              border-color: #05C3F9;
-              background-color: #43D3FC;
+                color: ${basic.btn.style.theme.color.focus};
+                border-color: ${basic.btn.style.theme.bordercolor.focus};
+                background-color: ${basic.btn.style.theme.bgcolor.focus};
             }
             .${namespace}btn-theme.disabled,
             .${namespace}btn-theme[disabled],
@@ -346,49 +342,45 @@ export default {
             .${namespace}btn-theme.disabled.active,
             .${namespace}btn-theme[disabled].active,
             fieldset[disabled] .${namespace}btn-theme.active {
-              color: #FFF;
-              border-color: transparent;
-              background-color: #43D3FC;
+                color: ${basic.btn.style.theme.color.disabled};
+                border-color: ${basic.btn.style.theme.bordercolor.disabled};
+                background-color: ${basic.btn.style.theme.bgcolor.disabled};
             }
             .${namespace}btn-theme .badge {
-              color: #F7F7F7;
-              background-color: #05C3F9;
+                color: ${basic.colors.white.ladder.normal.hex};
+                background-color: ${basic.colors.black.ladder.normal.hex};
             }
             .${namespace}btn-key {
-              color: #F7F7F7;
-              border-color: #F95339;
-              background-color: #F95339;
+                color: ${basic.btn.style.key.color.def};
+                border-color: ${basic.btn.style.key.bordercolor.def};
+                background-color: ${basic.btn.style.key.bgcolor.def};
             }
             .${namespace}btn-key.border {
-              border-color: #F95339;
+                border-color: ${basic.btn.style.key.bordercolor.active};
             }
             .${namespace}btn-key:focus,
             .${namespace}btn-key.focus {
-              color: #FAFAFA;
-              border-color: #F95339;
-              background-color: #FB6C56;
+                color: ${basic.btn.style.key.color.focus};
+                border-color: ${basic.btn.style.key.bordercolor.focus};
+                background-color: ${basic.btn.style.key.bgcolor.focus};
             }
             .${namespace}btn-key:hover,
             .${namespace}btn-key.hover {
-              color: #FAFAFA;
-              border-color: #F95339;
-              background-color: #FB6C56;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                color: ${basic.btn.style.key.color.hover};
+                border-color: ${basic.btn.style.key.bordercolor.hover};
+                background-color: ${basic.btn.style.key.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.hover)}
             }
             .${namespace}btn-key:active,
             .${namespace}btn-key.active,
             .${namespace}btn-key.loading,
             .open > .dropdown-toggle.${namespace}btn-key {
-              color: #FAFAFA;
-              border-color: #F95339;
-              background-color: #FB6C56;
-              -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-              -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-              -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+                color: ${basic.btn.style.key.color.active};
+                border-color: ${basic.btn.style.key.bordercolor.active};
+                background-color: ${basic.btn.style.key.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.active)}
             }
             .${namespace}btn-key:active:hover,
             .${namespace}btn-key.active:hover,
@@ -402,15 +394,15 @@ export default {
             .${namespace}btn-key.active.focus,
             .${namespace}btn-key.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-key.focus {
-              color: #FAFAFA;
-              border-color: #F95339;
-              background-color: #FB6C56;
+                color: ${basic.btn.style.key.color.focus};
+                border-color: ${basic.btn.style.key.bordercolor.focus};
+                background-color: ${basic.btn.style.key.bgcolor.focus};
             }
             .${namespace}btn-key:active,
             .${namespace}btn-key.active,
             .${namespace}btn-key.loading,
             .open > .dropdown-toggle.${namespace}btn-key {
-              background-image: none;
+                background-image: none;
             }
             .${namespace}btn-key.disabled,
             .${namespace}btn-key[disabled],
@@ -430,49 +422,45 @@ export default {
             .${namespace}btn-key.disabled.active,
             .${namespace}btn-key[disabled].active,
             fieldset[disabled] .${namespace}btn-key.active {
-              color: #FAFAFA;
-              border-color: transparent;
-              background-color: #FB6C56;
+                color: ${basic.btn.style.key.color.disabled};
+                border-color: ${basic.btn.style.key.bordercolor.disabled};
+                background-color: ${basic.btn.style.key.bgcolor.disabled};
             }
             .${namespace}btn-key .badge {
-              color: #F7F7F7;
-              background-color: #F95339;
+                color: ${basic.colors.white.ladder.normal.hex};
+                background-color: ${basic.colors.black.ladder.normal.hex};
             }
             .${namespace}btn-light {
-              color: #333;
-              border-color: #FFFF41;
-              background-color: #FFFF41;
+                color: ${basic.btn.style.light.color.def};
+                border-color: ${basic.btn.style.light.bordercolor.def};
+                background-color: ${basic.btn.style.light.bgcolor.def};
             }
             .${namespace}btn-light.border {
-              border-color: #FFF201;
+                border-color: ${basic.btn.style.light.bordercolor.active};
             }
             .${namespace}btn-light:focus,
             .${namespace}btn-light.focus {
-              color: #222;
-              border-color: #FFF201;
-              background-color: #FFFF73;
+                color: ${basic.btn.style.light.color.focus};
+                border-color: ${basic.btn.style.light.bordercolor.focus};
+                background-color: ${basic.btn.style.light.bgcolor.focus};
             }
             .${namespace}btn-light:hover,
             .${namespace}btn-light.hover {
-              color: #222;
-              border-color: #FFF201;
-              background-color: #FFFF73;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+                color: ${basic.btn.style.light.color.hover};
+                border-color: ${basic.btn.style.light.bordercolor.hover};
+                background-color: ${basic.btn.style.light.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.hover)}
             }
             .${namespace}btn-light:active,
             .${namespace}btn-light.active,
             .${namespace}btn-light.loading,
             .open > .dropdown-toggle.${namespace}btn-light {
-              color: #333;
-              border-color: #FFF201;
-              background-color: #FFFF73;
-              -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-              -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-              -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-              box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+                color: ${basic.btn.style.light.color.active};
+                border-color: ${basic.btn.style.light.bordercolor.active};
+                background-color: ${basic.btn.style.light.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.active)}
             }
             .${namespace}btn-light:active:hover,
             .${namespace}btn-light.active:hover,
@@ -486,15 +474,15 @@ export default {
             .${namespace}btn-light.active.focus,
             .${namespace}btn-light.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-light.focus {
-              color: #222;
-              border-color: #FFF201;
-              background-color: #FFFF73;
+                color: ${basic.btn.style.light.color.focus};
+                border-color: ${basic.btn.style.light.bordercolor.focus};
+                background-color: ${basic.btn.style.light.bgcolor.focus};
             }
             .${namespace}btn-light:active,
             .${namespace}btn-light.active,
             .${namespace}btn-light.loading,
             .open > .dropdown-toggle.${namespace}btn-light {
-              background-image: none;
+                background-image: none;
             }
             .${namespace}btn-light.disabled,
             .${namespace}btn-light[disabled],
@@ -514,49 +502,45 @@ export default {
             .${namespace}btn-light.disabled.active,
             .${namespace}btn-light[disabled].active,
             fieldset[disabled] .${namespace}btn-light.active {
-              color: #222;
-              border-color: transparent;
-              background-color: #FFFF73;
+                color: ${basic.btn.style.light.color.disabled};
+                border-color: ${basic.btn.style.light.bordercolor.disabled};
+                background-color: ${basic.btn.style.light.bgcolor.disabled};
             }
             .${namespace}btn-light .badge {
-              color: #333;
-              background-color: #FFFF41;
+                color: ${basic.colors.white.ladder.normal.hex};
+                background-color: ${basic.colors.black.ladder.normal.hex};
             }
             .${namespace}btn-nice {
-              color: #F7F7F7;
-              border-color: #01C677;
-              background-color: #01C677;
+                color: ${basic.btn.style.nice.color.def};
+                border-color: ${basic.btn.style.nice.bordercolor.def};
+                background-color: ${basic.btn.style.nice.bgcolor.def};
             }
             .${namespace}btn-nice.border {
-              border-color: #01C677;
+                border-color: ${basic.btn.style.nice.bordercolor.active};
             }
             .${namespace}btn-nice:focus,
             .${namespace}btn-nice.focus {
-              color: #FFF;
-              border-color: #01C677;
-              background-color: #39E39E;
+                color: ${basic.btn.style.nice.color.focus};
+                border-color: ${basic.btn.style.nice.bordercolor.focus};
+                background-color: ${basic.btn.style.nice.bgcolor.focus};
             }
             .${namespace}btn-nice:hover,
             .${namespace}btn-nice.hover {
-              color: #FFF;
-              border-color: #01C677;
-              background-color: #67E3B1;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                color: ${basic.btn.style.nice.color.hover};
+                border-color: ${basic.btn.style.nice.bordercolor.hover};
+                background-color: ${basic.btn.style.nice.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.hover)}
             }
             .${namespace}btn-nice:active,
             .${namespace}btn-nice.active,
             .${namespace}btn-nice.loading,
             .open > .dropdown-toggle.${namespace}btn-nice {
-              color: #FAFAFA;
-              border-color: #01C677;
-              background-color: #39E39E;
-              -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-              -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-              -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-              box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+                color: ${basic.btn.style.nice.color.active};
+                border-color: ${basic.btn.style.nice.bordercolor.active};
+                background-color: ${basic.btn.style.nice.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.active)}
             }
             .${namespace}btn-nice:active:hover,
             .${namespace}btn-nice.active:hover,
@@ -570,9 +554,9 @@ export default {
             .${namespace}btn-nice.active.focus,
             .${namespace}btn-nice.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-nice.focus {
-              color: #FFF;
-              border-color: #01C677;
-              background-color: #39E39E;
+                color: ${basic.btn.style.nice.color.focus};
+                border-color: ${basic.btn.style.nice.bordercolor.focus};
+                background-color: ${basic.btn.style.nice.bgcolor.focus};
             }
             .${namespace}btn-nice.disabled,
             .${namespace}btn-nice[disabled],
@@ -592,13 +576,13 @@ export default {
             .${namespace}btn-nice.disabled.active,
             .${namespace}btn-nice[disabled].active,
             fieldset[disabled] .${namespace}btn-nice.active {
-              color: #FFF;
-              border-color: transparent;
-              background-color: #39E39E;
+                color: ${basic.btn.style.nice.color.disabled};
+                border-color: ${basic.btn.style.nice.bordercolor.disabled};
+                background-color: ${basic.btn.style.nice.bgcolor.disabled};
             }
             .${namespace}btn-nice .badge {
-              color: #F7F7F7;
-              background-color: #01C677;
+                color: ${basic.colors.white.ladder.normal.hex};
+                background-color: ${basic.colors.black.ladder.normal.hex};
             }
             .${namespace}btn-border {
               border-width: 2px;

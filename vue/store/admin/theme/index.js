@@ -553,6 +553,126 @@ const State = {
                             active:         '',
                             disabled:       ''
                         }
+                    },
+                    theme: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
+                    },
+                    key: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
+                    },
+                    light: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
+                    },
+                    nice: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
                     }
                 }
             }
