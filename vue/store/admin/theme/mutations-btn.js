@@ -27,8 +27,8 @@ export default {
                  btn
 
             ====================================================*/
-            .btn,
-            .btn-def {
+            .${namespace}btn,
+            .${namespace}btn-def {
                 display: inline-block;
                 position: relative;
                 z-index: ${basic.btn.zindex.def};
@@ -54,31 +54,31 @@ export default {
                 ${Prefix.user_select(state)}
                 ${Prefix.transition(state)}
             }
-            .btn:focus,
-            .btn-def:focus,
-            .btn:active:focus,
-            .btn-def:active:focus,
-            .btn.active:focus,
-            .btn-def.active:focus,
-            .btn.loading:focus,
-            .btn-def.loading:focus,
-            .btn.focus,
-            .btn-def.focus,
-            .btn:active.focus,
-            .btn-def:active.focus,
-            .btn.active.focus,
-            .btn-def.active.focus,
-            .btn.loading.focus,
-            .btn-def.loading.focus {
+            .${namespace}btn:focus,
+            .${namespace}btn-def:focus,
+            .${namespace}btn:active:focus,
+            .${namespace}btn-def:active:focus,
+            .${namespace}btn.active:focus,
+            .${namespace}btn-def.active:focus,
+            .${namespace}btn.loading:focus,
+            .${namespace}btn-def.loading:focus,
+            .${namespace}btn.focus,
+            .${namespace}btn-def.focus,
+            .${namespace}btn:active.focus,
+            .${namespace}btn-def:active.focus,
+            .${namespace}btn.active.focus,
+            .${namespace}btn-def.active.focus,
+            .${namespace}btn.loading.focus,
+            .${namespace}btn-def.loading.focus {
                 border-color: ${basic.btn.style.def.bordercolor.focus};
                 z-index: ${basic.btn.zindex.active};
 
                 ${Prefix.outline()}
             }
-            .btn:hover,
-            .btn-def:hover,
-            .btn.hover,
-            .btn-def.hover {
+            .${namespace}btn:hover,
+            .${namespace}btn-def:hover,
+            .${namespace}btn.hover,
+            .${namespace}btn-def.hover {
                 color: ${basic.btn.style.def.color.hover};
                 border-color: ${basic.btn.style.def.bordercolor.hover};
                 background-color: ${basic.btn.style.def.bgcolor.hover};
@@ -86,216 +86,212 @@ export default {
                 z-index: ${basic.btn.zindex.active};
                 ${Prefix.box_shadow(state, basic.btn.style.def.shadow.hover)}
             }
-            .btn:focus,
-            .btn-def:focus,
-            .btn.focus,
-            .btn-def.focus {
-              color: ${basic.btn.style.def.color.focus};
-              border-color: ${basic.btn.style.def.bordercolor.focus};
-              background-color: ${basic.btn.style.def.bgcolor.focus};
-              text-decoration: none;
-              z-index: ${basic.btn.zindex.active};
+            .${namespace}btn:focus,
+            .${namespace}btn-def:focus,
+            .${namespace}btn.focus,
+            .${namespace}btn-def.focus {
+                color: ${basic.btn.style.def.color.focus};
+                border-color: ${basic.btn.style.def.bordercolor.focus};
+                background-color: ${basic.btn.style.def.bgcolor.focus};
+                text-decoration: none;
+                z-index: ${basic.btn.zindex.active};
             }
-            .btn:active,
-            .btn-def:active,
-            .btn.active,
-            .btn-def.active,
-            .btn.loading,
-            .btn-def.loading {
-              color: ${basic.btn.style.def.color.active};
-              border-color: ${basic.btn.style.def.bordercolor.active};
-              background-color: ${basic.btn.style.def.bgcolor.active};
-              z-index: ${basic.btn.zindex.active};
-              ${Prefix.box_shadow(state, basic.btn.style.def.shadow.active)}
+            .${namespace}btn:active,
+            .${namespace}btn-def:active,
+            .${namespace}btn.active,
+            .${namespace}btn-def.active,
+            .${namespace}btn.loading,
+            .${namespace}btn-def.loading {
+                color: ${basic.btn.style.def.color.active};
+                border-color: ${basic.btn.style.def.bordercolor.active};
+                background-color: ${basic.btn.style.def.bgcolor.active};
+                z-index: ${basic.btn.zindex.active};
+                ${Prefix.box_shadow(state, basic.btn.style.def.shadow.active)}
             }
-            .btn:active,
-            .btn-def:active {
-              background-image: none;
+            .${namespace}btn:active,
+            .${namespace}btn-def:active {
+                background-image: none;
             }
-            .btn.active,
-            .btn-def.active {
-              cursor: default;
+            .${namespace}btn.active,
+            .${namespace}btn-def.active {
+                cursor: default;
             }
-            .btn.loading,
-            .btn-def.loading {
-              cursor: wait;
+            .${namespace}btn.loading,
+            .${namespace}btn-def.loading {
+                cursor: wait;
             }
-            .btn.border,
-            .btn-def.border {
-              border-color: ${basic.btn.style.def.bordercolor.active};
+            .${namespace}btn.border,
+            .${namespace}btn-def.border {
+                border-color: ${basic.btn.style.def.bordercolor.active};
             }
-            .btn.disabled,
-            .btn-def.disabled,
-            .btn[disabled],
-            .btn-def[disabled],
-            fieldset[disabled] .btn,
-            fieldset[disabled] .btn-def,
-            .btn.disabled:hover,
-            .btn-def.disabled:hover,
-            .btn[disabled]:hover,
-            .btn-def[disabled]:hover,
-            fieldset[disabled] .btn:hover,
-            fieldset[disabled] .btn-def:hover,
-            .btn.disabled:focus,
-            .btn-def.disabled:focus,
-            .btn[disabled]:focus,
-            .btn-def[disabled]:focus,
-            fieldset[disabled] .btn:focus,
-            fieldset[disabled] .btn-def:focus,
-            .btn.disabled.focus,
-            .btn-def.disabled.focus,
-            .btn[disabled].focus,
-            .btn-def[disabled].focus,
-            fieldset[disabled] .btn.focus,
-            fieldset[disabled] .btn-def.focus,
-            .btn.disabled:active,
-            .btn-def.disabled:active,
-            .btn[disabled]:active,
-            .btn-def[disabled]:active,
-            fieldset[disabled] .btn:active,
-            fieldset[disabled] .btn-def:active,
-            .btn.disabled.active,
-            .btn-def.disabled.active,
-            .btn[disabled].active,
-            .btn-def[disabled].active,
-            fieldset[disabled] .btn.active,
-            fieldset[disabled] .btn-def.active {
-              color: ${basic.btn.style.def.color.disabled};
-              border-color: ${basic.btn.style.def.bordercolor.disabled};
-              background-color: ${basic.btn.style.def.bgcolor.disabled};
-              cursor: not-allowed;
+            .${namespace}btn.disabled,
+            .${namespace}btn-def.disabled,
+            .${namespace}btn[disabled],
+            .${namespace}btn-def[disabled],
+            fieldset[disabled] .${namespace}btn,
+            fieldset[disabled] .${namespace}btn-def,
+            .${namespace}btn.disabled:hover,
+            .${namespace}btn-def.disabled:hover,
+            .${namespace}btn[disabled]:hover,
+            .${namespace}btn-def[disabled]:hover,
+            fieldset[disabled] .${namespace}btn:hover,
+            fieldset[disabled] .${namespace}btn-def:hover,
+            .${namespace}btn.disabled:focus,
+            .${namespace}btn-def.disabled:focus,
+            .${namespace}btn[disabled]:focus,
+            .${namespace}btn-def[disabled]:focus,
+            fieldset[disabled] .${namespace}btn:focus,
+            fieldset[disabled] .${namespace}btn-def:focus,
+            .${namespace}btn.disabled.focus,
+            .${namespace}btn-def.disabled.focus,
+            .${namespace}btn[disabled].focus,
+            .${namespace}btn-def[disabled].focus,
+            fieldset[disabled] .${namespace}btn.focus,
+            fieldset[disabled] .${namespace}btn-def.focus,
+            .${namespace}btn.disabled:active,
+            .${namespace}btn-def.disabled:active,
+            .${namespace}btn[disabled]:active,
+            .${namespace}btn-def[disabled]:active,
+            fieldset[disabled] .${namespace}btn:active,
+            fieldset[disabled] .${namespace}btn-def:active,
+            .${namespace}btn.disabled.active,
+            .${namespace}btn-def.disabled.active,
+            .${namespace}btn[disabled].active,
+            .${namespace}btn-def[disabled].active,
+            fieldset[disabled] .${namespace}btn.active,
+            fieldset[disabled] .${namespace}btn-def.active {
+                color: ${basic.btn.style.def.color.disabled};
+                border-color: ${basic.btn.style.def.bordercolor.disabled};
+                background-color: ${basic.btn.style.def.bgcolor.disabled};
+                cursor: not-allowed;
 
-              ${Prefix.opacity(state, 0.55)}
-              ${Prefix.box_shadow(state, basic.btn.style.def.shadow.disabled)}
+                ${Prefix.opacity(state, 0.55)}
+                ${Prefix.box_shadow(state, basic.btn.style.def.shadow.disabled)}
             }
-            a.btn,
-            a.btn-def {
-              text-decoration: none;
+            a.${namespace}btn,
+            a.${namespace}btn-def {
+                text-decoration: none;
             }
-            a.btn.disabled,
-            a.btn-def.disabled,
-            fieldset[disabled] a.btn,
-            fieldset[disabled] a.btn-def {
-              pointer-events: none;
+            a.${namespace}btn.disabled,
+            a.${namespace}btn-def.disabled,
+            fieldset[disabled] a.${namespace}btn,
+            fieldset[disabled] a.${namespace}btn-def {
+                pointer-events: none;
             }
-            .btn-min {
-              padding: 6px 14px;
-              height: 28px;
-              line-height: 14px;
-              font-size: 12px;
-              font-weight: 400;
-              -moz-border-radius: 0.3em;
-              -webkit-border-radius: 0.3em;
-              border-radius: 0.3em;
+            .${namespace}btn-small {
+                ${buttonsize(
+                    state,
+                    basic.btn.padding.small,
+                    basic.btn.fontsize.small,
+                    basic.btn.height.small,
+                    basic.btn.lineheight.small,
+                    basic.btn.radius
+                )}
             }
-            .btn-big {
-              padding: 10px 30px;
-              height: 45px;
-              line-height: 23px;
-              font-size: 16px;
-              font-weight: 400;
-              -moz-border-radius: 0.3em;
-              -webkit-border-radius: 0.3em;
-              border-radius: 0.3em;
+            .${namespace}btn-large {
+                ${buttonsize(
+                    state,
+                    basic.btn.padding.large,
+                    basic.btn.fontsize.large,
+                    basic.btn.height.large,
+                    basic.btn.lineheight.large,
+                    basic.btn.radius
+                )}
             }
-            .btn-full {
-              display: block;
-              width: 100%;
+            .${namespace}btn-full {
+                display: block;
+                width: 100%;
             }
-            .btn-inverse {
-              color: #F7F7F7;
-              border-color: #666;
-              background-color: #666;
+            .${namespace}btn-inverse {
+                color: ${basic.btn.style.inverse.color.def};
+                border-color: ${basic.btn.style.inverse.bordercolor.def};
+                background-color: ${basic.btn.style.inverse.bgcolor.def};
             }
-            .btn-inverse.border {
-              border-color: #333;
+            .${namespace}btn-inverse.border {
+                border-color: ${basic.btn.style.inverse.bordercolor.active};
             }
-            .btn-inverse:focus,
-            .btn-inverse.focus {
-              color: #FFF;
-              border-color: #333;
-              background-color: #444;
+            .${namespace}btn-inverse:focus,
+            .${namespace}btn-inverse.focus {
+                color: ${basic.btn.style.inverse.color.focus};
+                border-color: ${basic.btn.style.inverse.bordercolor.focus};
+                background-color: ${basic.btn.style.inverse.bgcolor.focus};
             }
-            .btn-inverse:hover,
-            .btn-inverse.hover {
-              color: #FFF;
-              border-color: #333;
-              background-color: #444;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            .${namespace}btn-inverse:hover,
+            .${namespace}btn-inverse.hover {
+                color: ${basic.btn.style.inverse.color.hover};
+                border-color: ${basic.btn.style.inverse.bordercolor.hover};
+                background-color: ${basic.btn.style.inverse.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.hover)}
             }
-            .btn-inverse:active,
-            .btn-inverse.active,
-            .btn-inverse.loading,
-            .open > .dropdown-toggle.btn-inverse {
-              color: #FAFAFA;
-              border-color: #222;
-              background-color: #333;
-              -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
-              -ms-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
-              -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
-              box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
+            .${namespace}btn-inverse:active,
+            .${namespace}btn-inverse.active,
+            .${namespace}btn-inverse.loading,
+            .open > .dropdown-toggle.${namespace}btn-inverse {
+                color: ${basic.btn.style.inverse.color.active};
+                border-color: ${basic.btn.style.inverse.bordercolor.active};
+                background-color: ${basic.btn.style.inverse.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.active)}
             }
-            .btn-inverse:active:hover,
-            .btn-inverse.active:hover,
-            .btn-inverse.loading:hover,
-            .open > .dropdown-toggle.btn-inverse:hover,
-            .btn-inverse:active:focus,
-            .btn-inverse.active:focus,
-            .btn-inverse.loading:focus,
-            .open > .dropdown-toggle.btn-inverse:focus,
-            .btn-inverse:active.focus,
-            .btn-inverse.active.focus,
-            .btn-inverse.loading.focus,
-            .open > .dropdown-toggle.btn-inverse.focus {
-              color: #FFF;
-              border-color: #222;
-              background-color: #333;
+            .${namespace}btn-inverse:active:hover,
+            .${namespace}btn-inverse.active:hover,
+            .${namespace}btn-inverse.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-inverse:hover,
+            .${namespace}btn-inverse:active:focus,
+            .${namespace}btn-inverse.active:focus,
+            .${namespace}btn-inverse.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-inverse:focus,
+            .${namespace}btn-inverse:active.focus,
+            .${namespace}btn-inverse.active.focus,
+            .${namespace}btn-inverse.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-inverse.focus {
+                color: ${basic.btn.style.inverse.color.focus};
+                border-color: ${basic.btn.style.inverse.bordercolor.focus};
+                background-color: ${basic.btn.style.inverse.bgcolor.focus};
             }
-            .btn-inverse.disabled,
-            .btn-inverse[disabled],
-            fieldset[disabled] .btn-inverse,
-            .btn-inverse.disabled:hover,
-            .btn-inverse[disabled]:hover,
-            fieldset[disabled] .btn-inverse:hover,
-            .btn-inverse.disabled:focus,
-            .btn-inverse[disabled]:focus,
-            fieldset[disabled] .btn-inverse:focus,
-            .btn-inverse.disabled.focus,
-            .btn-inverse[disabled].focus,
-            fieldset[disabled] .btn-inverse.focus,
-            .btn-inverse.disabled:active,
-            .btn-inverse[disabled]:active,
-            fieldset[disabled] .btn-inverse:active,
-            .btn-inverse.disabled.active,
-            .btn-inverse[disabled].active,
-            fieldset[disabled] .btn-inverse.active {
-              color: #FFF;
-              border-color: transparent;
-              background-color: #444;
+            .${namespace}btn-inverse.disabled,
+            .${namespace}btn-inverse[disabled],
+            fieldset[disabled] .${namespace}btn-inverse,
+            .${namespace}btn-inverse.disabled:hover,
+            .${namespace}btn-inverse[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-inverse:hover,
+            .${namespace}btn-inverse.disabled:focus,
+            .${namespace}btn-inverse[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-inverse:focus,
+            .${namespace}btn-inverse.disabled.focus,
+            .${namespace}btn-inverse[disabled].focus,
+            fieldset[disabled] .${namespace}btn-inverse.focus,
+            .${namespace}btn-inverse.disabled:active,
+            .${namespace}btn-inverse[disabled]:active,
+            fieldset[disabled] .${namespace}btn-inverse:active,
+            .${namespace}btn-inverse.disabled.active,
+            .${namespace}btn-inverse[disabled].active,
+            fieldset[disabled] .${namespace}btn-inverse.active {
+                color: ${basic.btn.style.inverse.color.disabled};
+                border-color: ${basic.btn.style.inverse.bordercolor.disabled};
+                background-color: ${basic.btn.style.inverse.bgcolor.disabled};
             }
-            .btn-inverse .badge {
-              color: #F7F7F7;
-              background-color: #333;
+            .${namespace}btn-inverse .badge {
+                color: ${basic.colors.white.ladder.normal.hex};
+                background-color: ${basic.colors.black.ladder.normal.hex};
             }
-            .btn-theme {
+            .${namespace}btn-theme {
               color: #F7F7F7;
               border-color: #05C3F9;
               background-color: #05C3F9;
             }
-            .btn-theme.border {
+            .${namespace}btn-theme.border {
               border-color: #05C3F9;
             }
-            .btn-theme:focus,
-            .btn-theme.focus {
+            .${namespace}btn-theme:focus,
+            .${namespace}btn-theme.focus {
               color: #FFF;
               border-color: #05C3F9;
               background-color: #43D3FC;
             }
-            .btn-theme:hover,
-            .btn-theme.hover {
+            .${namespace}btn-theme:hover,
+            .${namespace}btn-theme.hover {
               color: #FFF;
               border-color: #43D3FC;
               background-color: #74DEFC;
@@ -304,10 +300,10 @@ export default {
               -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             }
-            .btn-theme:active,
-            .btn-theme.active,
-            .btn-theme.loading,
-            .open > .dropdown-toggle.btn-theme {
+            .${namespace}btn-theme:active,
+            .${namespace}btn-theme.active,
+            .${namespace}btn-theme.loading,
+            .open > .dropdown-toggle.${namespace}btn-theme {
               color: #FAFAFA;
               border-color: #05C3F9;
               background-color: #43D3FC;
@@ -316,64 +312,64 @@ export default {
               -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
               box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
             }
-            .btn-theme:active:hover,
-            .btn-theme.active:hover,
-            .btn-theme.loading:hover,
-            .open > .dropdown-toggle.btn-theme:hover,
-            .btn-theme:active:focus,
-            .btn-theme.active:focus,
-            .btn-theme.loading:focus,
-            .open > .dropdown-toggle.btn-theme:focus,
-            .btn-theme:active.focus,
-            .btn-theme.active.focus,
-            .btn-theme.loading.focus,
-            .open > .dropdown-toggle.btn-theme.focus {
+            .${namespace}btn-theme:active:hover,
+            .${namespace}btn-theme.active:hover,
+            .${namespace}btn-theme.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-theme:hover,
+            .${namespace}btn-theme:active:focus,
+            .${namespace}btn-theme.active:focus,
+            .${namespace}btn-theme.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-theme:focus,
+            .${namespace}btn-theme:active.focus,
+            .${namespace}btn-theme.active.focus,
+            .${namespace}btn-theme.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-theme.focus {
               color: #FFF;
               border-color: #05C3F9;
               background-color: #43D3FC;
             }
-            .btn-theme.disabled,
-            .btn-theme[disabled],
-            fieldset[disabled] .btn-theme,
-            .btn-theme.disabled:hover,
-            .btn-theme[disabled]:hover,
-            fieldset[disabled] .btn-theme:hover,
-            .btn-theme.disabled:focus,
-            .btn-theme[disabled]:focus,
-            fieldset[disabled] .btn-theme:focus,
-            .btn-theme.disabled.focus,
-            .btn-theme[disabled].focus,
-            fieldset[disabled] .btn-theme.focus,
-            .btn-theme.disabled:active,
-            .btn-theme[disabled]:active,
-            fieldset[disabled] .btn-theme:active,
-            .btn-theme.disabled.active,
-            .btn-theme[disabled].active,
-            fieldset[disabled] .btn-theme.active {
+            .${namespace}btn-theme.disabled,
+            .${namespace}btn-theme[disabled],
+            fieldset[disabled] .${namespace}btn-theme,
+            .${namespace}btn-theme.disabled:hover,
+            .${namespace}btn-theme[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-theme:hover,
+            .${namespace}btn-theme.disabled:focus,
+            .${namespace}btn-theme[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-theme:focus,
+            .${namespace}btn-theme.disabled.focus,
+            .${namespace}btn-theme[disabled].focus,
+            fieldset[disabled] .${namespace}btn-theme.focus,
+            .${namespace}btn-theme.disabled:active,
+            .${namespace}btn-theme[disabled]:active,
+            fieldset[disabled] .${namespace}btn-theme:active,
+            .${namespace}btn-theme.disabled.active,
+            .${namespace}btn-theme[disabled].active,
+            fieldset[disabled] .${namespace}btn-theme.active {
               color: #FFF;
               border-color: transparent;
               background-color: #43D3FC;
             }
-            .btn-theme .badge {
+            .${namespace}btn-theme .badge {
               color: #F7F7F7;
               background-color: #05C3F9;
             }
-            .btn-key {
+            .${namespace}btn-key {
               color: #F7F7F7;
               border-color: #F95339;
               background-color: #F95339;
             }
-            .btn-key.border {
+            .${namespace}btn-key.border {
               border-color: #F95339;
             }
-            .btn-key:focus,
-            .btn-key.focus {
+            .${namespace}btn-key:focus,
+            .${namespace}btn-key.focus {
               color: #FAFAFA;
               border-color: #F95339;
               background-color: #FB6C56;
             }
-            .btn-key:hover,
-            .btn-key.hover {
+            .${namespace}btn-key:hover,
+            .${namespace}btn-key.hover {
               color: #FAFAFA;
               border-color: #F95339;
               background-color: #FB6C56;
@@ -382,10 +378,10 @@ export default {
               -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             }
-            .btn-key:active,
-            .btn-key.active,
-            .btn-key.loading,
-            .open > .dropdown-toggle.btn-key {
+            .${namespace}btn-key:active,
+            .${namespace}btn-key.active,
+            .${namespace}btn-key.loading,
+            .open > .dropdown-toggle.${namespace}btn-key {
               color: #FAFAFA;
               border-color: #F95339;
               background-color: #FB6C56;
@@ -394,70 +390,70 @@ export default {
               -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
               box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
             }
-            .btn-key:active:hover,
-            .btn-key.active:hover,
-            .btn-key.loading:hover,
-            .open > .dropdown-toggle.btn-key:hover,
-            .btn-key:active:focus,
-            .btn-key.active:focus,
-            .btn-key.loading:focus,
-            .open > .dropdown-toggle.btn-key:focus,
-            .btn-key:active.focus,
-            .btn-key.active.focus,
-            .btn-key.loading.focus,
-            .open > .dropdown-toggle.btn-key.focus {
+            .${namespace}btn-key:active:hover,
+            .${namespace}btn-key.active:hover,
+            .${namespace}btn-key.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-key:hover,
+            .${namespace}btn-key:active:focus,
+            .${namespace}btn-key.active:focus,
+            .${namespace}btn-key.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-key:focus,
+            .${namespace}btn-key:active.focus,
+            .${namespace}btn-key.active.focus,
+            .${namespace}btn-key.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-key.focus {
               color: #FAFAFA;
               border-color: #F95339;
               background-color: #FB6C56;
             }
-            .btn-key:active,
-            .btn-key.active,
-            .btn-key.loading,
-            .open > .dropdown-toggle.btn-key {
+            .${namespace}btn-key:active,
+            .${namespace}btn-key.active,
+            .${namespace}btn-key.loading,
+            .open > .dropdown-toggle.${namespace}btn-key {
               background-image: none;
             }
-            .btn-key.disabled,
-            .btn-key[disabled],
-            fieldset[disabled] .btn-key,
-            .btn-key.disabled:hover,
-            .btn-key[disabled]:hover,
-            fieldset[disabled] .btn-key:hover,
-            .btn-key.disabled:focus,
-            .btn-key[disabled]:focus,
-            fieldset[disabled] .btn-key:focus,
-            .btn-key.disabled.focus,
-            .btn-key[disabled].focus,
-            fieldset[disabled] .btn-key.focus,
-            .btn-key.disabled:active,
-            .btn-key[disabled]:active,
-            fieldset[disabled] .btn-key:active,
-            .btn-key.disabled.active,
-            .btn-key[disabled].active,
-            fieldset[disabled] .btn-key.active {
+            .${namespace}btn-key.disabled,
+            .${namespace}btn-key[disabled],
+            fieldset[disabled] .${namespace}btn-key,
+            .${namespace}btn-key.disabled:hover,
+            .${namespace}btn-key[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-key:hover,
+            .${namespace}btn-key.disabled:focus,
+            .${namespace}btn-key[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-key:focus,
+            .${namespace}btn-key.disabled.focus,
+            .${namespace}btn-key[disabled].focus,
+            fieldset[disabled] .${namespace}btn-key.focus,
+            .${namespace}btn-key.disabled:active,
+            .${namespace}btn-key[disabled]:active,
+            fieldset[disabled] .${namespace}btn-key:active,
+            .${namespace}btn-key.disabled.active,
+            .${namespace}btn-key[disabled].active,
+            fieldset[disabled] .${namespace}btn-key.active {
               color: #FAFAFA;
               border-color: transparent;
               background-color: #FB6C56;
             }
-            .btn-key .badge {
+            .${namespace}btn-key .badge {
               color: #F7F7F7;
               background-color: #F95339;
             }
-            .btn-light {
+            .${namespace}btn-light {
               color: #333;
               border-color: #FFFF41;
               background-color: #FFFF41;
             }
-            .btn-light.border {
+            .${namespace}btn-light.border {
               border-color: #FFF201;
             }
-            .btn-light:focus,
-            .btn-light.focus {
+            .${namespace}btn-light:focus,
+            .${namespace}btn-light.focus {
               color: #222;
               border-color: #FFF201;
               background-color: #FFFF73;
             }
-            .btn-light:hover,
-            .btn-light.hover {
+            .${namespace}btn-light:hover,
+            .${namespace}btn-light.hover {
               color: #222;
               border-color: #FFF201;
               background-color: #FFFF73;
@@ -466,10 +462,10 @@ export default {
               -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
             }
-            .btn-light:active,
-            .btn-light.active,
-            .btn-light.loading,
-            .open > .dropdown-toggle.btn-light {
+            .${namespace}btn-light:active,
+            .${namespace}btn-light.active,
+            .${namespace}btn-light.loading,
+            .open > .dropdown-toggle.${namespace}btn-light {
               color: #333;
               border-color: #FFF201;
               background-color: #FFFF73;
@@ -478,70 +474,70 @@ export default {
               -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
               box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
             }
-            .btn-light:active:hover,
-            .btn-light.active:hover,
-            .btn-light.loading:hover,
-            .open > .dropdown-toggle.btn-light:hover,
-            .btn-light:active:focus,
-            .btn-light.active:focus,
-            .btn-light.loading:focus,
-            .open > .dropdown-toggle.btn-light:focus,
-            .btn-light:active.focus,
-            .btn-light.active.focus,
-            .btn-light.loading.focus,
-            .open > .dropdown-toggle.btn-light.focus {
+            .${namespace}btn-light:active:hover,
+            .${namespace}btn-light.active:hover,
+            .${namespace}btn-light.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-light:hover,
+            .${namespace}btn-light:active:focus,
+            .${namespace}btn-light.active:focus,
+            .${namespace}btn-light.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-light:focus,
+            .${namespace}btn-light:active.focus,
+            .${namespace}btn-light.active.focus,
+            .${namespace}btn-light.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-light.focus {
               color: #222;
               border-color: #FFF201;
               background-color: #FFFF73;
             }
-            .btn-light:active,
-            .btn-light.active,
-            .btn-light.loading,
-            .open > .dropdown-toggle.btn-light {
+            .${namespace}btn-light:active,
+            .${namespace}btn-light.active,
+            .${namespace}btn-light.loading,
+            .open > .dropdown-toggle.${namespace}btn-light {
               background-image: none;
             }
-            .btn-light.disabled,
-            .btn-light[disabled],
-            fieldset[disabled] .btn-light,
-            .btn-light.disabled:hover,
-            .btn-light[disabled]:hover,
-            fieldset[disabled] .btn-light:hover,
-            .btn-light.disabled:focus,
-            .btn-light[disabled]:focus,
-            fieldset[disabled] .btn-light:focus,
-            .btn-light.disabled.focus,
-            .btn-light[disabled].focus,
-            fieldset[disabled] .btn-light.focus,
-            .btn-light.disabled:active,
-            .btn-light[disabled]:active,
-            fieldset[disabled] .btn-light:active,
-            .btn-light.disabled.active,
-            .btn-light[disabled].active,
-            fieldset[disabled] .btn-light.active {
+            .${namespace}btn-light.disabled,
+            .${namespace}btn-light[disabled],
+            fieldset[disabled] .${namespace}btn-light,
+            .${namespace}btn-light.disabled:hover,
+            .${namespace}btn-light[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-light:hover,
+            .${namespace}btn-light.disabled:focus,
+            .${namespace}btn-light[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-light:focus,
+            .${namespace}btn-light.disabled.focus,
+            .${namespace}btn-light[disabled].focus,
+            fieldset[disabled] .${namespace}btn-light.focus,
+            .${namespace}btn-light.disabled:active,
+            .${namespace}btn-light[disabled]:active,
+            fieldset[disabled] .${namespace}btn-light:active,
+            .${namespace}btn-light.disabled.active,
+            .${namespace}btn-light[disabled].active,
+            fieldset[disabled] .${namespace}btn-light.active {
               color: #222;
               border-color: transparent;
               background-color: #FFFF73;
             }
-            .btn-light .badge {
+            .${namespace}btn-light .badge {
               color: #333;
               background-color: #FFFF41;
             }
-            .btn-nice {
+            .${namespace}btn-nice {
               color: #F7F7F7;
               border-color: #01C677;
               background-color: #01C677;
             }
-            .btn-nice.border {
+            .${namespace}btn-nice.border {
               border-color: #01C677;
             }
-            .btn-nice:focus,
-            .btn-nice.focus {
+            .${namespace}btn-nice:focus,
+            .${namespace}btn-nice.focus {
               color: #FFF;
               border-color: #01C677;
               background-color: #39E39E;
             }
-            .btn-nice:hover,
-            .btn-nice.hover {
+            .${namespace}btn-nice:hover,
+            .${namespace}btn-nice.hover {
               color: #FFF;
               border-color: #01C677;
               background-color: #67E3B1;
@@ -550,10 +546,10 @@ export default {
               -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             }
-            .btn-nice:active,
-            .btn-nice.active,
-            .btn-nice.loading,
-            .open > .dropdown-toggle.btn-nice {
+            .${namespace}btn-nice:active,
+            .${namespace}btn-nice.active,
+            .${namespace}btn-nice.loading,
+            .open > .dropdown-toggle.${namespace}btn-nice {
               color: #FAFAFA;
               border-color: #01C677;
               background-color: #39E39E;
@@ -562,62 +558,62 @@ export default {
               -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
               box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
             }
-            .btn-nice:active:hover,
-            .btn-nice.active:hover,
-            .btn-nice.loading:hover,
-            .open > .dropdown-toggle.btn-nice:hover,
-            .btn-nice:active:focus,
-            .btn-nice.active:focus,
-            .btn-nice.loading:focus,
-            .open > .dropdown-toggle.btn-nice:focus,
-            .btn-nice:active.focus,
-            .btn-nice.active.focus,
-            .btn-nice.loading.focus,
-            .open > .dropdown-toggle.btn-nice.focus {
+            .${namespace}btn-nice:active:hover,
+            .${namespace}btn-nice.active:hover,
+            .${namespace}btn-nice.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-nice:hover,
+            .${namespace}btn-nice:active:focus,
+            .${namespace}btn-nice.active:focus,
+            .${namespace}btn-nice.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-nice:focus,
+            .${namespace}btn-nice:active.focus,
+            .${namespace}btn-nice.active.focus,
+            .${namespace}btn-nice.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-nice.focus {
               color: #FFF;
               border-color: #01C677;
               background-color: #39E39E;
             }
-            .btn-nice.disabled,
-            .btn-nice[disabled],
-            fieldset[disabled] .btn-nice,
-            .btn-nice.disabled:hover,
-            .btn-nice[disabled]:hover,
-            fieldset[disabled] .btn-nice:hover,
-            .btn-nice.disabled:focus,
-            .btn-nice[disabled]:focus,
-            fieldset[disabled] .btn-nice:focus,
-            .btn-nice.disabled.focus,
-            .btn-nice[disabled].focus,
-            fieldset[disabled] .btn-nice.focus,
-            .btn-nice.disabled:active,
-            .btn-nice[disabled]:active,
-            fieldset[disabled] .btn-nice:active,
-            .btn-nice.disabled.active,
-            .btn-nice[disabled].active,
-            fieldset[disabled] .btn-nice.active {
+            .${namespace}btn-nice.disabled,
+            .${namespace}btn-nice[disabled],
+            fieldset[disabled] .${namespace}btn-nice,
+            .${namespace}btn-nice.disabled:hover,
+            .${namespace}btn-nice[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-nice:hover,
+            .${namespace}btn-nice.disabled:focus,
+            .${namespace}btn-nice[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-nice:focus,
+            .${namespace}btn-nice.disabled.focus,
+            .${namespace}btn-nice[disabled].focus,
+            fieldset[disabled] .${namespace}btn-nice.focus,
+            .${namespace}btn-nice.disabled:active,
+            .${namespace}btn-nice[disabled]:active,
+            fieldset[disabled] .${namespace}btn-nice:active,
+            .${namespace}btn-nice.disabled.active,
+            .${namespace}btn-nice[disabled].active,
+            fieldset[disabled] .${namespace}btn-nice.active {
               color: #FFF;
               border-color: transparent;
               background-color: #39E39E;
             }
-            .btn-nice .badge {
+            .${namespace}btn-nice .badge {
               color: #F7F7F7;
               background-color: #01C677;
             }
-            .btn-border {
+            .${namespace}btn-border {
               border-width: 2px;
               color: #CCC;
               border-color: #CCC;
               background-color: transparent;
             }
-            .btn-border:focus,
-            .btn-border.focus {
+            .${namespace}btn-border:focus,
+            .${namespace}btn-border.focus {
               color: #FAFAFA;
               border-color: #FAFAFA;
               background-color: transparent;
             }
-            .btn-border:hover,
-            .btn-border.hover {
+            .${namespace}btn-border:hover,
+            .${namespace}btn-border.hover {
               color: #FAFAFA;
               border-color: #FAFAFA;
               background-color: transparent;
@@ -626,10 +622,10 @@ export default {
               -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             }
-            .btn-border:active,
-            .btn-border.active,
-            .btn-border.loading,
-            .open > .dropdown-toggle.btn-border {
+            .${namespace}btn-border:active,
+            .${namespace}btn-border.active,
+            .${namespace}btn-border.loading,
+            .open > .dropdown-toggle.${namespace}btn-border {
               color: #CCC;
               border-color: #CCC;
               background-color: transparent;
@@ -638,40 +634,40 @@ export default {
               -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
               box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
             }
-            .btn-border:active:hover,
-            .btn-border.active:hover,
-            .btn-border.loading:hover,
-            .open > .dropdown-toggle.btn-border:hover,
-            .btn-border:active:focus,
-            .btn-border.active:focus,
-            .btn-border.loading:focus,
-            .open > .dropdown-toggle.btn-border:focus,
-            .btn-border:active.focus,
-            .btn-border.active.focus,
-            .btn-border.loading.focus,
-            .open > .dropdown-toggle.btn-border.focus {
+            .${namespace}btn-border:active:hover,
+            .${namespace}btn-border.active:hover,
+            .${namespace}btn-border.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-border:hover,
+            .${namespace}btn-border:active:focus,
+            .${namespace}btn-border.active:focus,
+            .${namespace}btn-border.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-border:focus,
+            .${namespace}btn-border:active.focus,
+            .${namespace}btn-border.active.focus,
+            .${namespace}btn-border.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-border.focus {
               color: #CCC;
               border-color: #CCC;
               background-color: transparent;
             }
-            .btn-border.disabled,
-            .btn-border[disabled],
-            fieldset[disabled] .btn-border,
-            .btn-border.disabled:hover,
-            .btn-border[disabled]:hover,
-            fieldset[disabled] .btn-border:hover,
-            .btn-border.disabled:focus,
-            .btn-border[disabled]:focus,
-            fieldset[disabled] .btn-border:focus,
-            .btn-border.disabled.focus,
-            .btn-border[disabled].focus,
-            fieldset[disabled] .btn-border.focus,
-            .btn-border.disabled:active,
-            .btn-border[disabled]:active,
-            fieldset[disabled] .btn-border:active,
-            .btn-border.disabled.active,
-            .btn-border[disabled].active,
-            fieldset[disabled] .btn-border.active {
+            .${namespace}btn-border.disabled,
+            .${namespace}btn-border[disabled],
+            fieldset[disabled] .${namespace}btn-border,
+            .${namespace}btn-border.disabled:hover,
+            .${namespace}btn-border[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-border:hover,
+            .${namespace}btn-border.disabled:focus,
+            .${namespace}btn-border[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-border:focus,
+            .${namespace}btn-border.disabled.focus,
+            .${namespace}btn-border[disabled].focus,
+            fieldset[disabled] .${namespace}btn-border.focus,
+            .${namespace}btn-border.disabled:active,
+            .${namespace}btn-border[disabled]:active,
+            fieldset[disabled] .${namespace}btn-border:active,
+            .${namespace}btn-border.disabled.active,
+            .${namespace}btn-border[disabled].active,
+            fieldset[disabled] .${namespace}btn-border.active {
               color: #EEE;
               border-color: #EEE;
               background-color: transparent;
@@ -680,24 +676,24 @@ export default {
               opacity: 0.8;
               filter: Alpha(Opacity=80);
             }
-            .btn-border .badge {
+            .${namespace}btn-border .badge {
               color: #EEE;
               background-color: transparent;
             }
-            .btn-border-inverse {
+            .${namespace}btn-border-inverse {
               border-width: 2px;
               color: #666;
               border-color: #666;
               background-color: transparent;
             }
-            .btn-border-inverse:focus,
-            .btn-border-inverse.focus {
+            .${namespace}btn-border-inverse:focus,
+            .${namespace}btn-border-inverse.focus {
               color: #444;
               border-color: #333;
               background-color: transparent;
             }
-            .btn-border-inverse:hover,
-            .btn-border-inverse.hover {
+            .${namespace}btn-border-inverse:hover,
+            .${namespace}btn-border-inverse.hover {
               color: #444;
               border-color: #333;
               background-color: transparent;
@@ -706,10 +702,10 @@ export default {
               -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             }
-            .btn-border-inverse:active,
-            .btn-border-inverse.active,
-            .btn-border-inverse.loading,
-            .open > .dropdown-toggle.btn-border-inverse {
+            .${namespace}btn-border-inverse:active,
+            .${namespace}btn-border-inverse.active,
+            .${namespace}btn-border-inverse.loading,
+            .open > .dropdown-toggle.${namespace}btn-border-inverse {
               color: #666;
               border-color: #333;
               background-color: transparent;
@@ -718,73 +714,73 @@ export default {
               -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
               box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
             }
-            .btn-border-inverse:active:hover,
-            .btn-border-inverse.active:hover,
-            .btn-border-inverse.loading:hover,
-            .open > .dropdown-toggle.btn-border-inverse:hover,
-            .btn-border-inverse:active:focus,
-            .btn-border-inverse.active:focus,
-            .btn-border-inverse.loading:focus,
-            .open > .dropdown-toggle.btn-border-inverse:focus,
-            .btn-border-inverse:active.focus,
-            .btn-border-inverse.active.focus,
-            .btn-border-inverse.loading.focus,
-            .open > .dropdown-toggle.btn-border-inverse.focus {
+            .${namespace}btn-border-inverse:active:hover,
+            .${namespace}btn-border-inverse.active:hover,
+            .${namespace}btn-border-inverse.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-border-inverse:hover,
+            .${namespace}btn-border-inverse:active:focus,
+            .${namespace}btn-border-inverse.active:focus,
+            .${namespace}btn-border-inverse.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-border-inverse:focus,
+            .${namespace}btn-border-inverse:active.focus,
+            .${namespace}btn-border-inverse.active.focus,
+            .${namespace}btn-border-inverse.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-border-inverse.focus {
               color: #666;
               border-color: #333;
               background-color: transparent;
             }
-            .btn-border-inverse.disabled,
-            .btn-border-inverse[disabled],
-            fieldset[disabled] .btn-border-inverse,
-            .btn-border-inverse.disabled:hover,
-            .btn-border-inverse[disabled]:hover,
-            fieldset[disabled] .btn-border-inverse:hover,
-            .btn-border-inverse.disabled:focus,
-            .btn-border-inverse[disabled]:focus,
-            fieldset[disabled] .btn-border-inverse:focus,
-            .btn-border-inverse.disabled.focus,
-            .btn-border-inverse[disabled].focus,
-            fieldset[disabled] .btn-border-inverse.focus,
-            .btn-border-inverse.disabled:active,
-            .btn-border-inverse[disabled]:active,
-            fieldset[disabled] .btn-border-inverse:active,
-            .btn-border-inverse.disabled.active,
-            .btn-border-inverse[disabled].active,
-            fieldset[disabled] .btn-border-inverse.active {
+            .${namespace}btn-border-inverse.disabled,
+            .${namespace}btn-border-inverse[disabled],
+            fieldset[disabled] .${namespace}btn-border-inverse,
+            .${namespace}btn-border-inverse.disabled:hover,
+            .${namespace}btn-border-inverse[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-border-inverse:hover,
+            .${namespace}btn-border-inverse.disabled:focus,
+            .${namespace}btn-border-inverse[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-border-inverse:focus,
+            .${namespace}btn-border-inverse.disabled.focus,
+            .${namespace}btn-border-inverse[disabled].focus,
+            fieldset[disabled] .${namespace}btn-border-inverse.focus,
+            .${namespace}btn-border-inverse.disabled:active,
+            .${namespace}btn-border-inverse[disabled]:active,
+            fieldset[disabled] .${namespace}btn-border-inverse:active,
+            .${namespace}btn-border-inverse.disabled.active,
+            .${namespace}btn-border-inverse[disabled].active,
+            fieldset[disabled] .${namespace}btn-border-inverse.active {
               color: #666;
               border-color: #666;
               background-color: transparent;
             }
-            .btn-border-inverse .badge {
+            .${namespace}btn-border-inverse .badge {
               color: #444;
               background-color: transparent;
             }
-            .btn-border,
-            .btn-border-inverse {
+            .${namespace}btn-border,
+            .${namespace}btn-border-inverse {
               line-height: 15px;
             }
-            .btn-border.btn-min,
-            .btn-border-inverse.btn-min {
+            .${namespace}btn-border.${namespace}btn-small,
+            .${namespace}btn-border-inverse.${namespace}btn-small {
               line-height: 12px;
             }
-            .btn-border.btn-big,
-            .btn-border-inverse.btn-big {
+            .${namespace}btn-border.${namespace}btn-large,
+            .${namespace}btn-border-inverse.${namespace}btn-large {
               line-height: 21px;
             }
-            .btn-link {
+            .${namespace}btn-link {
               color: #319DBB;
               border-color: transparent;
               background-color: transparent;
             }
-            .btn-link:focus,
-            .btn-link.focus {
+            .${namespace}btn-link:focus,
+            .${namespace}btn-link.focus {
               color: #43D3FC;
               border-color: transparent;
               background-color: transparent;
             }
-            .btn-link:hover,
-            .btn-link.hover {
+            .${namespace}btn-link:hover,
+            .${namespace}btn-link.hover {
               text-decoration: underline;
               color: #43D3FC;
               border-color: transparent;
@@ -794,10 +790,10 @@ export default {
               -moz-box-shadow: none;
               box-shadow: none;
             }
-            .btn-link:active,
-            .btn-link.active,
-            .btn-link.loading,
-            .open > .dropdown-toggle.btn-link {
+            .${namespace}btn-link:active,
+            .${namespace}btn-link.active,
+            .${namespace}btn-link.loading,
+            .open > .dropdown-toggle.${namespace}btn-link {
               color: #319DBB;
               border-color: transparent;
               background-color: transparent;
@@ -806,210 +802,53 @@ export default {
               -moz-box-shadow: none;
               box-shadow: none;
             }
-            .btn-link:active:hover,
-            .btn-link.active:hover,
-            .btn-link.loading:hover,
-            .open > .dropdown-toggle.btn-link:hover,
-            .btn-link:active:focus,
-            .btn-link.active:focus,
-            .btn-link.loading:focus,
-            .open > .dropdown-toggle.btn-link:focus,
-            .btn-link:active.focus,
-            .btn-link.active.focus,
-            .btn-link.loading.focus,
-            .open > .dropdown-toggle.btn-link.focus {
+            .${namespace}btn-link:active:hover,
+            .${namespace}btn-link.active:hover,
+            .${namespace}btn-link.loading:hover,
+            .open > .dropdown-toggle.${namespace}btn-link:hover,
+            .${namespace}btn-link:active:focus,
+            .${namespace}btn-link.active:focus,
+            .${namespace}btn-link.loading:focus,
+            .open > .dropdown-toggle.${namespace}btn-link:focus,
+            .${namespace}btn-link:active.focus,
+            .${namespace}btn-link.active.focus,
+            .${namespace}btn-link.loading.focus,
+            .open > .dropdown-toggle.${namespace}btn-link.focus {
               color: #319DBB;
               border-color: transparent;
               background-color: transparent;
             }
-            .btn-link:active,
-            .btn-link.active,
-            .btn-link.loading,
-            .open > .dropdown-toggle.btn-link {
+            .${namespace}btn-link:active,
+            .${namespace}btn-link.active,
+            .${namespace}btn-link.loading,
+            .open > .dropdown-toggle.${namespace}btn-link {
               text-decoration: none;
               color: #319DBB;
             }
-            .btn-link.disabled,
-            .btn-link[disabled],
-            fieldset[disabled] .btn-link,
-            .btn-link.disabled:hover,
-            .btn-link[disabled]:hover,
-            fieldset[disabled] .btn-link:hover,
-            .btn-link.disabled:focus,
-            .btn-link[disabled]:focus,
-            fieldset[disabled] .btn-link:focus,
-            .btn-link.disabled.focus,
-            .btn-link[disabled].focus,
-            fieldset[disabled] .btn-link.focus,
-            .btn-link.disabled:active,
-            .btn-link[disabled]:active,
-            fieldset[disabled] .btn-link:active,
-            .btn-link.disabled.active,
-            .btn-link[disabled].active,
-            fieldset[disabled] .btn-link.active {
+            .${namespace}btn-link.disabled,
+            .${namespace}btn-link[disabled],
+            fieldset[disabled] .${namespace}btn-link,
+            .${namespace}btn-link.disabled:hover,
+            .${namespace}btn-link[disabled]:hover,
+            fieldset[disabled] .${namespace}btn-link:hover,
+            .${namespace}btn-link.disabled:focus,
+            .${namespace}btn-link[disabled]:focus,
+            fieldset[disabled] .${namespace}btn-link:focus,
+            .${namespace}btn-link.disabled.focus,
+            .${namespace}btn-link[disabled].focus,
+            fieldset[disabled] .${namespace}btn-link.focus,
+            .${namespace}btn-link.disabled:active,
+            .${namespace}btn-link[disabled]:active,
+            fieldset[disabled] .${namespace}btn-link:active,
+            .${namespace}btn-link.disabled.active,
+            .${namespace}btn-link[disabled].active,
+            fieldset[disabled] .${namespace}btn-link.active {
               color: #319DBB;
               background-color: transparent;
               text-decoration: line-through;
             }
-            .btn-link .badge {
+            .${namespace}btn-link .badge {
               color: #05C3F9;
-            }
-            .btngroup {
-              display: inline-block;
-              position: relative;
-            }
-            .btngroup > .btngroup,
-            .btngroup > .btn {
-              display: inline-block;
-              position: relative;
-              float: left;
-              margin-left: -1px;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
-            }
-            .btngroup > .btngroup:first-child,
-            .btngroup > .btn:first-child,
-            .btngroup > .btngroup.btn-first,
-            .btngroup > .btn.btn-first {
-              margin-left: 0;
-              -moz-border-bottom-left-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-              border-top-left-radius: 0.3em;
-            }
-            .btngroup > .btngroup:last-child,
-            .btngroup > .btn:last-child,
-            .btngroup > .btngroup.btn-last,
-            .btngroup > .btn.btn-last {
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-top-right-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-top-right-radius: 0.3em;
-            }
-            .btngroup-list {
-              display: block;
-            }
-            .btngroup-list > .btngroup,
-            .btngroup-list > .btn {
-              display: inline-block;
-              position: relative;
-              float: none;
-              width: 100%;
-              margin-left: 0;
-              margin-top: -1px;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
-            }
-            .btngroup-list > .btngroup:first-child,
-            .btngroup-list > .btn:first-child,
-            .btngroup-list > .btngroup.btn-first,
-            .btngroup-list > .btn.btn-first {
-              -moz-border-bottom-left-radius: 0;
-              -moz-border-top-left-radius: 0;
-              -webkit-border-bottom-left-radius: 0;
-              -webkit-border-top-left-radius: 0;
-              border-bottom-left-radius: 0;
-              border-top-left-radius: 0;
-              -moz-border-top-right-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-top-right-radius: 0.3em;
-              border-top-left-radius: 0.3em;
-            }
-            .btngroup-list > .btngroup:last-child,
-            .btngroup-list > .btn:last-child,
-            .btngroup-list > .btngroup.btn-last,
-            .btngroup-list > .btn.btn-last {
-              -moz-border-bottom-right-radius: 0;
-              -moz-border-top-right-radius: 0;
-              -webkit-border-bottom-right-radius: 0;
-              -webkit-border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-              border-top-right-radius: 0;
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-bottom-left-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-            }
-            .btngroup-table {
-              display: table;
-              border-collapse: separate;
-              width: 100%;
-            }
-            .btngroup-table > .btngroup,
-            .btngroup-table > .btn {
-              display: table-cell;
-              float: none;
-              width: 1%;
-            }
-            .btngroup-table > .btngroup > .btn {
-              width: 100%;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
-            }
-            .btngroup-table > .btngroup:first-child > .btn {
-              -moz-border-bottom-left-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-              border-top-left-radius: 0.3em;
-            }
-            .btngroup-table > .btngroup:last-child > .btn {
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-top-right-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-top-right-radius: 0.3em;
-            }
-            .btngroup-full {
-              width: 100%;
-            }
-            .grid-btngroup .grid-row > [class^="cell-"] {
-              padding: 0 !important;
-              margin-left: -1px;
-              font-size: 0;
-              white-space: nowrap;
-            }
-            .grid-btngroup .grid-row > [class^="cell-"]:first-child {
-              margin-left: 0;
-            }
-            .grid-btngroup .grid-row > [class^="cell-"] > .btn,
-            .grid-btngroup .grid-row > [class^="cell-"] > .btngroup,
-            .grid-btngroup .grid-row > [class^="cell-"] > .btngroup > .btn {
-              width: 100%;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
-            }
-            .grid-btngroup .grid-row > [class^="cell-"]:first-child > .btn,
-            .grid-btngroup .grid-row > [class^="cell-"]:first-child > .btngroup > .btn {
-              -moz-border-bottom-left-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-              border-top-left-radius: 0.3em;
-            }
-            .grid-btngroup .grid-row > [class^="cell-"]:last-child > .btn,
-            .grid-btngroup .grid-row > [class^="cell-"]:last-child > .btngroup > .btn {
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-top-right-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-top-right-radius: 0.3em;
             }
         `;
     },
@@ -1019,12 +858,12 @@ export default {
         namespace = basic.namespace;
 
         state.data.csstext += `
-            .btngroup {
+            .${namespace}btngroup {
               display: inline-block;
               position: relative;
             }
-            .btngroup > .btngroup,
-            .btngroup > .btn {
+            .${namespace}btngroup > .${namespace}btngroup,
+            .${namespace}btngroup > .${namespace}btn {
               display: inline-block;
               position: relative;
               float: left;
@@ -1033,10 +872,10 @@ export default {
               -webkit-border-radius: 0;
               border-radius: 0;
             }
-            .btngroup > .btngroup:first-child,
-            .btngroup > .btn:first-child,
-            .btngroup > .btngroup.btn-first,
-            .btngroup > .btn.btn-first {
+            .${namespace}btngroup > .${namespace}btngroup:first-child,
+            .${namespace}btngroup > .${namespace}btn:first-child,
+            .${namespace}btngroup > .${namespace}btngroup.${namespace}btn-first,
+            .${namespace}btngroup > .${namespace}btn.${namespace}btn-first {
               margin-left: 0;
               -moz-border-bottom-left-radius: 0.3em;
               -moz-border-top-left-radius: 0.3em;
@@ -1045,10 +884,10 @@ export default {
               border-bottom-left-radius: 0.3em;
               border-top-left-radius: 0.3em;
             }
-            .btngroup > .btngroup:last-child,
-            .btngroup > .btn:last-child,
-            .btngroup > .btngroup.btn-last,
-            .btngroup > .btn.btn-last {
+            .${namespace}btngroup > .${namespace}btngroup:last-child,
+            .${namespace}btngroup > .${namespace}btn:last-child,
+            .${namespace}btngroup > .${namespace}btngroup.${namespace}btn-last,
+            .${namespace}btngroup > .${namespace}btn.${namespace}btn-last {
               -moz-border-bottom-right-radius: 0.3em;
               -moz-border-top-right-radius: 0.3em;
               -webkit-border-bottom-right-radius: 0.3em;
@@ -1056,11 +895,11 @@ export default {
               border-bottom-right-radius: 0.3em;
               border-top-right-radius: 0.3em;
             }
-            .btngroup-list {
+            .${namespace}btngroup-list {
               display: block;
             }
-            .btngroup-list > .btngroup,
-            .btngroup-list > .btn {
+            .${namespace}btngroup-list > .${namespace}btngroup,
+            .${namespace}btngroup-list > .${namespace}btn {
               display: inline-block;
               position: relative;
               float: none;
@@ -1071,10 +910,10 @@ export default {
               -webkit-border-radius: 0;
               border-radius: 0;
             }
-            .btngroup-list > .btngroup:first-child,
-            .btngroup-list > .btn:first-child,
-            .btngroup-list > .btngroup.btn-first,
-            .btngroup-list > .btn.btn-first {
+            .${namespace}btngroup-list > .${namespace}btngroup:first-child,
+            .${namespace}btngroup-list > .${namespace}btn:first-child,
+            .${namespace}btngroup-list > .${namespace}btngroup.${namespace}btn-first,
+            .${namespace}btngroup-list > .${namespace}btn.${namespace}btn-first {
               -moz-border-bottom-left-radius: 0;
               -moz-border-top-left-radius: 0;
               -webkit-border-bottom-left-radius: 0;
@@ -1088,10 +927,10 @@ export default {
               border-top-right-radius: 0.3em;
               border-top-left-radius: 0.3em;
             }
-            .btngroup-list > .btngroup:last-child,
-            .btngroup-list > .btn:last-child,
-            .btngroup-list > .btngroup.btn-last,
-            .btngroup-list > .btn.btn-last {
+            .${namespace}btngroup-list > .${namespace}btngroup:last-child,
+            .${namespace}btngroup-list > .${namespace}btn:last-child,
+            .${namespace}btngroup-list > .${namespace}btngroup.${namespace}btn-last,
+            .${namespace}btngroup-list > .${namespace}btn.${namespace}btn-last {
               -moz-border-bottom-right-radius: 0;
               -moz-border-top-right-radius: 0;
               -webkit-border-bottom-right-radius: 0;
@@ -1105,24 +944,24 @@ export default {
               border-bottom-right-radius: 0.3em;
               border-bottom-left-radius: 0.3em;
             }
-            .btngroup-table {
+            .${namespace}btngroup-table {
               display: table;
               border-collapse: separate;
               width: 100%;
             }
-            .btngroup-table > .btngroup,
-            .btngroup-table > .btn {
+            .${namespace}btngroup-table > .${namespace}btngroup,
+            .${namespace}btngroup-table > .${namespace}btn {
               display: table-cell;
               float: none;
               width: 1%;
             }
-            .btngroup-table > .btngroup > .btn {
+            .${namespace}btngroup-table > .${namespace}btngroup > .${namespace}btn {
               width: 100%;
               -moz-border-radius: 0;
               -webkit-border-radius: 0;
               border-radius: 0;
             }
-            .btngroup-table > .btngroup:first-child > .btn {
+            .${namespace}btngroup-table > .${namespace}btngroup:first-child > .${namespace}btn {
               -moz-border-bottom-left-radius: 0.3em;
               -moz-border-top-left-radius: 0.3em;
               -webkit-border-bottom-left-radius: 0.3em;
@@ -1130,7 +969,7 @@ export default {
               border-bottom-left-radius: 0.3em;
               border-top-left-radius: 0.3em;
             }
-            .btngroup-table > .btngroup:last-child > .btn {
+            .${namespace}btngroup-table > .${namespace}btngroup:last-child > .${namespace}btn {
               -moz-border-bottom-right-radius: 0.3em;
               -moz-border-top-right-radius: 0.3em;
               -webkit-border-bottom-right-radius: 0.3em;
@@ -1138,7 +977,7 @@ export default {
               border-bottom-right-radius: 0.3em;
               border-top-right-radius: 0.3em;
             }
-            .btngroup-full {
+            .${namespace}btngroup-full {
               width: 100%;
             }
         `;
@@ -1149,25 +988,25 @@ export default {
         namespace = basic.namespace;
 
         state.data.csstext += `
-            .grid-btngroup .grid-row > [class^="cell-"] {
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] {
               padding: 0 !important;
               margin-left: -1px;
               font-size: 0;
               white-space: nowrap;
             }
-            .grid-btngroup .grid-row > [class^="cell-"]:first-child {
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:first-child {
               margin-left: 0;
             }
-            .grid-btngroup .grid-row > [class^="cell-"] > .btn,
-            .grid-btngroup .grid-row > [class^="cell-"] > .btngroup,
-            .grid-btngroup .grid-row > [class^="cell-"] > .btngroup > .btn {
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] > .${namespace}btn,
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] > .${namespace}btngroup,
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] > .${namespace}btngroup > .${namespace}btn {
               width: 100%;
               -moz-border-radius: 0;
               -webkit-border-radius: 0;
               border-radius: 0;
             }
-            .grid-btngroup .grid-row > [class^="cell-"]:first-child > .btn,
-            .grid-btngroup .grid-row > [class^="cell-"]:first-child > .btngroup > .btn {
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:first-child > .${namespace}btn,
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:first-child > .${namespace}btngroup > .${namespace}btn {
               -moz-border-bottom-left-radius: 0.3em;
               -moz-border-top-left-radius: 0.3em;
               -webkit-border-bottom-left-radius: 0.3em;
@@ -1175,8 +1014,8 @@ export default {
               border-bottom-left-radius: 0.3em;
               border-top-left-radius: 0.3em;
             }
-            .grid-btngroup .grid-row > [class^="cell-"]:last-child > .btn,
-            .grid-btngroup .grid-row > [class^="cell-"]:last-child > .btngroup > .btn {
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:last-child > .${namespace}btn,
+            .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:last-child > .${namespace}btngroup > .${namespace}btn {
               -moz-border-bottom-right-radius: 0.3em;
               -moz-border-top-right-radius: 0.3em;
               -webkit-border-bottom-right-radius: 0.3em;

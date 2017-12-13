@@ -200,7 +200,7 @@
                 </div>
                 <br/>
 
-                <h3>.btn-big | .btn-min</h3>
+                <h3>.btn-big | .btn-small</h3>
                 <div>大尺寸、小尺寸</div>
                 <br/>
                 <div class="grid">
@@ -209,7 +209,7 @@
                             <a class="btn btn-big">大尺寸按钮</a>
                         </div>
                         <div class="cell-7-2">
-                            <a class="btn btn-min">小尺寸按钮</a>
+                            <a class="btn btn-small">小尺寸按钮</a>
                         </div>
                         <div class="cell-7-1">
                         </div>
@@ -233,7 +233,7 @@
                             <a class="btn" style="height:80px; line-height:62px;">设置行高</a>
                         </div>
                         <div class="cell-5-1">
-                            <a class="btn btn-min" style="height:80px; line-height:66px;">小尺寸按钮</a>
+                            <a class="btn btn-small" style="height:80px; line-height:66px;">小尺寸按钮</a>
                         </div>
                         <div class="cell-5-1">
                             <a class="btn btn-big" style="height:80px; line-height:58px;">大尺寸按钮</a>

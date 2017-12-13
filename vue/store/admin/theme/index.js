@@ -517,15 +517,42 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            'none',
-                            hover:          '0 4px 10px rgba(0, 0, 0, .05)',
-                            focus:          'none',
-                            active:         'inset 0 1px 3px rgba(0, 0, 0, .08)',
-                            disabled:       'none'
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
                         }
                     },
                     inverse: {
-
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
                     }
                 }
             }

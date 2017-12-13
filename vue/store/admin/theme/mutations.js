@@ -51,11 +51,11 @@ export default {
             style: {
                 def: {
                     color: {
-                        def:        basic.colors.white.ladder.darker.hex,
-                        hover:      basic.colors.white.ladder.light.hex,
-                        focus:      basic.colors.white.ladder.light.hex,
-                        active:     basic.colors.white.ladder.light.hex,
-                        disabled:   basic.colors.white.ladder.darker.hex
+                        def:        basic.colors.black.ladder.light.hex,
+                        hover:      basic.colors.black.ladder.dark.hex,
+                        focus:      basic.colors.black.ladder.dark.hex,
+                        active:     basic.colors.black.ladder.light.hex,
+                        disabled:   basic.colors.black.ladder.light.hex
                     },
                     bordercolor: {
                         def:        basic.colors.theme.ladder.dark.hex,
@@ -65,17 +65,47 @@ export default {
                         disabled:   basic.colors.theme.ladder.dark.hex
                     },
                     bgcolor: {
-                        def:        basic.colors.theme.ladder.dark.hex,
-                        hover:      basic.colors.theme.ladder.normal.hex,
-                        focus:      basic.colors.theme.ladder.normal.hex,
-                        active:     basic.colors.theme.ladder.normal.hex,
-                        disabled:   basic.colors.theme.ladder.dark.hex
+                        def:        basic.colors.white.ladder.dark.hex,
+                        hover:      basic.colors.white.ladder.normal.hex,
+                        focus:      basic.colors.white.ladder.normal.hex,
+                        active:     basic.colors.white.ladder.normal.hex,
+                        disabled:   basic.colors.white.ladder.dark.hex
                     },
                     shadow: {
                         def:            'none',
-                        hover:          '0 4px 10px rgba(0, 0, 0, .05)',
+                        hover:          `0 5px 15px 0 rgba(${basic.colors.theme.ladder.darker.rgb}, .5)`,
                         focus:          'none',
-                        active:         'inset 0 1px 3px rgba(0, 0, 0, .08)',
+                        active:         `0 1px 3px 0 rgba(${basic.colors.theme.ladder.darker.rgb}, .5)`,
+                        disabled:       'none !important'
+                    }
+                },
+                inverse: {
+                    color: {
+                        def:        basic.colors.white.ladder.normal.hex,
+                        hover:      basic.colors.white.ladder.light.hex,
+                        focus:      basic.colors.white.ladder.normal.hex,
+                        active:     basic.colors.white.ladder.light.hex,
+                        disabled:   basic.colors.white.ladder.normal.hex
+                    },
+                    bordercolor: {
+                        def:        basic.colors.black.ladder.dark.hex,
+                        hover:      basic.colors.black.ladder.darker.hex,
+                        focus:      basic.colors.black.ladder.darker.hex,
+                        active:     basic.colors.black.ladder.darker.hex,
+                        disabled:   basic.colors.black.ladder.dark.hex
+                    },
+                    bgcolor: {
+                        def:        basic.colors.black.ladder.dark.hex,
+                        hover:      basic.colors.black.ladder.normal.hex,
+                        focus:      basic.colors.black.ladder.normal.hex,
+                        active:     basic.colors.black.ladder.normal.hex,
+                        disabled:   basic.colors.black.ladder.dark.hex
+                    },
+                    shadow: {
+                        def:            'none',
+                        hover:          `0 5px 15px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .5)`,
+                        focus:          'none',
+                        active:         `0 1px 3px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .5)`,
                         disabled:       'none !important'
                     }
                 }
