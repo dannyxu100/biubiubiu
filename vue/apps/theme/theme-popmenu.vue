@@ -284,13 +284,13 @@
                 </div>
                 <br/>
 
-                <h3>.popmenu-big | .popmenu-min</h3>
+                <h3>.popmenu-large | .popmenu-small</h3>
                 <div>大尺寸、小尺寸</div>
                 <br/>
                 <div class="grid">
                     <div class="grid-row" style="margin-bottom:5px;">
                         <div class="cell-12-4 demo-popmenuopen">
-                            <div class="popmenu popmenu-min">
+                            <div class="popmenu popmenu-small">
                                 <a class="popmenu-item" href="javascript:;">新建</a>
                                 <a class="popmenu-item" href="javascript:;">打开</a>
                                 <a class="popmenu-item" href="javascript:;">保存</a>
@@ -300,7 +300,7 @@
                         </div>
 
                         <div class="cell-12-4 demo-popmenuopen">
-                            <div class="popmenu popmenu-big">
+                            <div class="popmenu popmenu-large">
                                 <a class="popmenu-item" href="javascript:;">新建</a>
                                 <a class="popmenu-item" href="javascript:;">打开</a>
                                 <a class="popmenu-item" href="javascript:;">保存</a>
@@ -323,7 +323,7 @@
                     <div class="grid-row" style="margin-bottom:5px;">
                         <div class="cell-5-1 demo-popmenuopen">
                             <div class="btngroup">
-                                <button class="btn btn-last btn-popmenu">
+                                <button class="btn btn-popmenu active">
                                     <span>默认</span> <i class="iconfont icon-down-min"></i>
                                 </button>
 
@@ -339,7 +339,7 @@
 
                         <div class="cell-5-1">
                             <div class="btngroup">
-                                <button class="btn btn-last btn-popmenu active">
+                                <button class="btn btn-popmenu active">
                                     <span>激活</span>
                                     <i class="iconfont icon-down-min"></i>
                                 </button>
@@ -356,12 +356,12 @@
 
                         <div class="cell-5-1">
                             <div class="btngroup">
-                                <button class="btn btn-popmenu-icon">
+                                <button class="btn btn-popmenu-icon active">
                                     <i class="iconfont icon-down-min"></i>
                                 </button>
-                                <button class="btn btn-last">提交</button>
+                                <button class="btn">提交</button>
 
-                                <div class="popmenu">
+                                <div class="popmenu active">
                                     <a class="popmenu-item" href="javascript:;">新建</a>
                                     <a class="popmenu-item" href="javascript:;">打开</a>
                                     <a class="popmenu-item" href="javascript:;">保存</a>
@@ -374,11 +374,11 @@
                         <div class="cell-5-1">
                             <div class="btngroup">
                                 <button class="btn">提交</button>
-                                <button class="btn btn-last btn-popmenu-icon btn-popmenu-left btn-popmenu-top">
+                                <button class="btn btn-popmenu-icon btn-popmenu-left btn-popmenu-top active">
                                     <i class="iconfont icon-up-min"></i>
                                 </button>
 
-                                <div class="popmenu">
+                                <div class="popmenu active">
                                     <a class="popmenu-item" href="javascript:;">新建</a>
                                     <a class="popmenu-item" href="javascript:;">打开</a>
                                     <a class="popmenu-item" href="javascript:;">保存</a>
@@ -395,7 +395,7 @@
                     <div class="grid-row" style="margin-bottom:5px;">
                         <div class="cell-12-6 demo-popmenuopen">
                             <div class="btngroup btngroup-full">
-                                <button class="btn btn-last btn-full btn-popmenu active">
+                                <button class="btn btn-full btn-popmenu active">
                                     <span>自适应按钮组100%宽度</span> <i class="iconfont icon-down-min"></i>
                                 </button>
 
@@ -411,7 +411,7 @@
 
                         <div class="cell-12-6 demo-popmenuopen">
                             <div class="btngroup">
-                                <button class="btn btn-last btn-popmenu active">
+                                <button class="btn btn-popmenu active">
                                     <span>内容居中</span> <i class="iconfont icon-down-min"></i>
                                 </button>
 

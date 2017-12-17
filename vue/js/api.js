@@ -971,7 +971,7 @@ api.extend(api, {
 
                 if (!refs) { return; }
 
-                if (Array.isArray(refs)) {
+                if (api.isarray(refs)) {
                     refs.push(findvmfromfrag(this._frag));
                 } else {
                     refs[key] = findvmfromfrag(this._frag);

@@ -585,38 +585,34 @@ export default {
                 background-color: ${basic.colors.black.ladder.normal.hex};
             }
             .${namespace}btn-border {
-              border-width: 2px;
-              color: #CCC;
-              border-color: #CCC;
-              background-color: transparent;
+                border-width: ${basic.btn.style.border.borderwidth}px;
+                color: ${basic.btn.style.border.color.def};
+                border-color: ${basic.btn.style.border.bordercolor.def};
+                background-color: ${basic.btn.style.border.bgcolor.def};
             }
             .${namespace}btn-border:focus,
             .${namespace}btn-border.focus {
-              color: #FAFAFA;
-              border-color: #FAFAFA;
-              background-color: transparent;
+                color: ${basic.btn.style.border.color.focus};
+                border-color: ${basic.btn.style.border.bordercolor.focus};
+                background-color: ${basic.btn.style.border.bgcolor.focus};
             }
             .${namespace}btn-border:hover,
             .${namespace}btn-border.hover {
-              color: #FAFAFA;
-              border-color: #FAFAFA;
-              background-color: transparent;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                color: ${basic.btn.style.border.color.hover};
+                border-color: ${basic.btn.style.border.bordercolor.hover};
+                background-color: ${basic.btn.style.border.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.hover)}
             }
             .${namespace}btn-border:active,
             .${namespace}btn-border.active,
             .${namespace}btn-border.loading,
             .open > .dropdown-toggle.${namespace}btn-border {
-              color: #CCC;
-              border-color: #CCC;
-              background-color: transparent;
-              -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
-              -ms-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
-              -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
-              box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+                color: ${basic.btn.style.border.color.active};
+                border-color: ${basic.btn.style.border.bordercolor.active};
+                background-color: ${basic.btn.style.border.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.active)}
             }
             .${namespace}btn-border:active:hover,
             .${namespace}btn-border.active:hover,
@@ -630,9 +626,9 @@ export default {
             .${namespace}btn-border.active.focus,
             .${namespace}btn-border.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-border.focus {
-              color: #CCC;
-              border-color: #CCC;
-              background-color: transparent;
+                color: ${basic.btn.style.border.color.focus};
+                border-color: ${basic.btn.style.border.bordercolor.focus};
+                background-color: ${basic.btn.style.border.bgcolor.focus};
             }
             .${namespace}btn-border.disabled,
             .${namespace}btn-border[disabled],
@@ -652,51 +648,45 @@ export default {
             .${namespace}btn-border.disabled.active,
             .${namespace}btn-border[disabled].active,
             fieldset[disabled] .${namespace}btn-border.active {
-              color: #EEE;
-              border-color: #EEE;
-              background-color: transparent;
-              -moz-opacity: 0.8;
-              -khtml-opacity: 0.8;
-              opacity: 0.8;
-              filter: Alpha(Opacity=80);
+                color: ${basic.btn.style.border.color.disabled};
+                border-color: ${basic.btn.style.border.bordercolor.disabled};
+                background-color: ${basic.btn.style.border.bgcolor.disabled};
+
+                ${Prefix.opacity(state, 0.8)}
             }
             .${namespace}btn-border .badge {
-              color: #EEE;
-              background-color: transparent;
+                color: ${basic.colors.gray.ladder.lighter.hex};
+                background-color: transparent;
             }
             .${namespace}btn-border-inverse {
-              border-width: 2px;
-              color: #666;
-              border-color: #666;
-              background-color: transparent;
+                border-width: ${basic.btn.style.border.borderwidth}px;
+                color: ${basic.btn.style.borderinverse.color.def};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.def};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.def};
             }
             .${namespace}btn-border-inverse:focus,
             .${namespace}btn-border-inverse.focus {
-              color: #444;
-              border-color: #333;
-              background-color: transparent;
+                color: ${basic.btn.style.borderinverse.color.focus};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.focus};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.focus};
             }
             .${namespace}btn-border-inverse:hover,
             .${namespace}btn-border-inverse.hover {
-              color: #444;
-              border-color: #333;
-              background-color: transparent;
-              -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-              -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-              -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                color: ${basic.btn.style.borderinverse.color.hover};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.hover};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.hover};
+
+                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.hover)}
             }
             .${namespace}btn-border-inverse:active,
             .${namespace}btn-border-inverse.active,
             .${namespace}btn-border-inverse.loading,
             .open > .dropdown-toggle.${namespace}btn-border-inverse {
-              color: #666;
-              border-color: #333;
-              background-color: transparent;
-              -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-              -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-              -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-              box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+                color: ${basic.btn.style.borderinverse.color.active};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.active};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.active)}
             }
             .${namespace}btn-border-inverse:active:hover,
             .${namespace}btn-border-inverse.active:hover,
@@ -710,9 +700,9 @@ export default {
             .${namespace}btn-border-inverse.active.focus,
             .${namespace}btn-border-inverse.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-border-inverse.focus {
-              color: #666;
-              border-color: #333;
-              background-color: transparent;
+                color: ${basic.btn.style.borderinverse.color.focus};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.focus};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.focus};
             }
             .${namespace}btn-border-inverse.disabled,
             .${namespace}btn-border-inverse[disabled],
@@ -732,25 +722,25 @@ export default {
             .${namespace}btn-border-inverse.disabled.active,
             .${namespace}btn-border-inverse[disabled].active,
             fieldset[disabled] .${namespace}btn-border-inverse.active {
-              color: #666;
-              border-color: #666;
-              background-color: transparent;
+                color: ${basic.btn.style.borderinverse.color.disabled};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.disabled};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.disabled};
             }
             .${namespace}btn-border-inverse .badge {
-              color: #444;
-              background-color: transparent;
+                color: ${basic.colors.black.ladder.light.hex};
+                background-color: transparent;
             }
             .${namespace}btn-border,
             .${namespace}btn-border-inverse {
-              line-height: 15px;
+                line-height: ${basic.btn.lineheight.def-basic.btn.style.border.borderwidth}px;
             }
             .${namespace}btn-border.${namespace}btn-small,
             .${namespace}btn-border-inverse.${namespace}btn-small {
-              line-height: 12px;
+              line-height: ${basic.btn.lineheight.small-basic.btn.style.border.borderwidth}px;
             }
             .${namespace}btn-border.${namespace}btn-large,
             .${namespace}btn-border-inverse.${namespace}btn-large {
-              line-height: 21px;
+              line-height: ${basic.btn.lineheight.large-basic.btn.style.border.borderwidth}px;
             }
             .${namespace}btn-link {
               color: #319DBB;
@@ -842,127 +832,84 @@ export default {
         namespace = basic.namespace;
 
         state.data.csstext += `
+            /*====================================================
+
+                 btngroup
+
+            ====================================================*/
             .${namespace}btngroup {
-              display: inline-block;
-              position: relative;
+                display: inline-block;
+                position: relative;
             }
             .${namespace}btngroup > .${namespace}btngroup,
             .${namespace}btngroup > .${namespace}btn {
-              display: inline-block;
-              position: relative;
-              float: left;
-              margin-left: -1px;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
+                display: inline-block;
+                position: relative;
+                float: left;
+                margin-left: -1px;
+                ${Prefix.border_radius(state, 0)}
             }
-            .${namespace}btngroup > .${namespace}btngroup:first-child,
-            .${namespace}btngroup > .${namespace}btn:first-child,
-            .${namespace}btngroup > .${namespace}btngroup.${namespace}btn-first,
-            .${namespace}btngroup > .${namespace}btn.${namespace}btn-first {
-              margin-left: 0;
-              -moz-border-bottom-left-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-              border-top-left-radius: 0.3em;
+            .${namespace}btngroup > .${namespace}btngroup:first-of-type,
+            .${namespace}btngroup > .${namespace}btn:first-of-type {
+                margin-left: 0;
+                ${Prefix.border_radius(state, basic.btn.radius +'em 0 0 '+ basic.btn.radius +'em')}
             }
-            .${namespace}btngroup > .${namespace}btngroup:last-child,
-            .${namespace}btngroup > .${namespace}btn:last-child,
-            .${namespace}btngroup > .${namespace}btngroup.${namespace}btn-last,
-            .${namespace}btngroup > .${namespace}btn.${namespace}btn-last {
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-top-right-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-top-right-radius: 0.3em;
+            .${namespace}btngroup > .${namespace}btngroup:last-of-type,
+            .${namespace}btngroup > .${namespace}btn:last-of-type {
+                ${Prefix.border_radius(state, '0 '+ basic.btn.radius +'em '+ basic.btn.radius +'em 0')}
+            }
+            .${namespace}btngroup > .${namespace}btngroup:only-of-type,
+            .${namespace}btngroup > .${namespace}btn:only-of-type {
+                ${Prefix.border_radius(state, basic.btn.radius +'em')}
             }
             .${namespace}btngroup-list {
-              display: block;
+                display: block;
             }
             .${namespace}btngroup-list > .${namespace}btngroup,
             .${namespace}btngroup-list > .${namespace}btn {
-              display: inline-block;
-              position: relative;
-              float: none;
-              width: 100%;
-              margin-left: 0;
-              margin-top: -1px;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
+                display: inline-block;
+                position: relative;
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-top: -1px;
+                ${Prefix.border_radius(state, 0)}
             }
-            .${namespace}btngroup-list > .${namespace}btngroup:first-child,
-            .${namespace}btngroup-list > .${namespace}btn:first-child,
-            .${namespace}btngroup-list > .${namespace}btngroup.${namespace}btn-first,
-            .${namespace}btngroup-list > .${namespace}btn.${namespace}btn-first {
-              -moz-border-bottom-left-radius: 0;
-              -moz-border-top-left-radius: 0;
-              -webkit-border-bottom-left-radius: 0;
-              -webkit-border-top-left-radius: 0;
-              border-bottom-left-radius: 0;
-              border-top-left-radius: 0;
-              -moz-border-top-right-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-top-right-radius: 0.3em;
-              border-top-left-radius: 0.3em;
+            .${namespace}btngroup-list > .${namespace}btngroup:first-of-type,
+            .${namespace}btngroup-list > .${namespace}btn:first-of-type {
+                ${Prefix.border_radius(state, basic.btn.radius +'em '+ basic.btn.radius +'em 0 0')}
             }
-            .${namespace}btngroup-list > .${namespace}btngroup:last-child,
-            .${namespace}btngroup-list > .${namespace}btn:last-child,
-            .${namespace}btngroup-list > .${namespace}btngroup.${namespace}btn-last,
-            .${namespace}btngroup-list > .${namespace}btn.${namespace}btn-last {
-              -moz-border-bottom-right-radius: 0;
-              -moz-border-top-right-radius: 0;
-              -webkit-border-bottom-right-radius: 0;
-              -webkit-border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-              border-top-right-radius: 0;
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-bottom-left-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
+            .${namespace}btngroup-list > .${namespace}btngroup:last-of-type,
+            .${namespace}btngroup-list > .${namespace}btn:last-of-type {
+                ${Prefix.border_radius(state, '0 0 '+ basic.btn.radius +'em '+ basic.btn.radius +'em')}
+            }
+            .${namespace}btngroup-list > .${namespace}btngroup:only-of-type,
+            .${namespace}btngroup-list > .${namespace}btn:only-of-type {
+                ${Prefix.border_radius(state, basic.btn.radius +'em')}
             }
             .${namespace}btngroup-table {
-              display: table;
-              border-collapse: separate;
-              width: 100%;
+                display: table;
+                border-collapse: separate;
+                width: 100%;
             }
             .${namespace}btngroup-table > .${namespace}btngroup,
             .${namespace}btngroup-table > .${namespace}btn {
-              display: table-cell;
-              float: none;
-              width: 1%;
+                display: table-cell;
+                float: none;
+                width: 1%;
             }
             .${namespace}btngroup-table > .${namespace}btngroup > .${namespace}btn {
-              width: 100%;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
+                width: 100%;
+                ${Prefix.border_radius(state, 0)}
             }
-            .${namespace}btngroup-table > .${namespace}btngroup:first-child > .${namespace}btn {
-              -moz-border-bottom-left-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-              border-top-left-radius: 0.3em;
+            .${namespace}btngroup-table > .${namespace}btngroup:first-of-type > .${namespace}btn {
+                ${Prefix.border_radius(state, basic.btn.radius +'em 0 0 '+ basic.btn.radius +'em')}
             }
-            .${namespace}btngroup-table > .${namespace}btngroup:last-child > .${namespace}btn {
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-top-right-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-top-right-radius: 0.3em;
+            .${namespace}btngroup-table > .${namespace}btngroup:last-of-type > .${namespace}btn {
+                ${Prefix.border_radius(state, '0 '+ basic.btn.radius +'em '+ basic.btn.radius +'em 0')}
             }
             .${namespace}btngroup-full {
-              width: 100%;
+                width: 100%;
             }
         `;
     },
@@ -972,40 +919,32 @@ export default {
         namespace = basic.namespace;
 
         state.data.csstext += `
+            /*====================================================
+
+                 grid-btngroup
+
+            ====================================================*/
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] {
-              padding: 0 !important;
-              margin-left: -1px;
-              font-size: 0;
-              white-space: nowrap;
+                padding: 0 !important;
+                margin-left: -1px;
+                ${Comm.inlineblock_clearspace()}
             }
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:first-child {
-              margin-left: 0;
+                margin-left: 0;
             }
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] > .${namespace}btn,
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] > .${namespace}btngroup,
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"] > .${namespace}btngroup > .${namespace}btn {
-              width: 100%;
-              -moz-border-radius: 0;
-              -webkit-border-radius: 0;
-              border-radius: 0;
+                width: 100%;
+                ${Prefix.border_radius(state, 0)}
             }
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:first-child > .${namespace}btn,
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:first-child > .${namespace}btngroup > .${namespace}btn {
-              -moz-border-bottom-left-radius: 0.3em;
-              -moz-border-top-left-radius: 0.3em;
-              -webkit-border-bottom-left-radius: 0.3em;
-              -webkit-border-top-left-radius: 0.3em;
-              border-bottom-left-radius: 0.3em;
-              border-top-left-radius: 0.3em;
+                ${Prefix.border_radius(state, basic.btn.radius +'em 0 0 '+ basic.btn.radius +'em')}
             }
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:last-child > .${namespace}btn,
             .${namespace}grid-btngroup .${namespace}grid-row > [class^="cell-"]:last-child > .${namespace}btngroup > .${namespace}btn {
-              -moz-border-bottom-right-radius: 0.3em;
-              -moz-border-top-right-radius: 0.3em;
-              -webkit-border-bottom-right-radius: 0.3em;
-              -webkit-border-top-right-radius: 0.3em;
-              border-bottom-right-radius: 0.3em;
-              border-top-right-radius: 0.3em;
+                ${Prefix.border_radius(state, '0 '+ basic.btn.radius +'em '+ basic.btn.radius +'em 0')}
             }
         `;
     },

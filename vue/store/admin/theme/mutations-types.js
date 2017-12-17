@@ -6,5 +6,7 @@ export default {
     CSS_TABLE:           'CSS_TABLE',
     CSS_BTN:             'CSS_BTN',
     CSS_BTNGROUP:        'CSS_BTNGROUP',
-    CSS_BTNGROUP_GRID:   'CSS_BTNGROUP_GRID'
+    CSS_BTNGROUP_GRID:   'CSS_BTNGROUP_GRID',
+    CSS_POPMENU:         'CSS_POPMENU',
+    CSS_CHECKBOXRADIO:   'CSS_CHECKBOXRADIO'
 };

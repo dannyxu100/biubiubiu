@@ -152,56 +152,153 @@
                 <div>其他风格按钮</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-2">
-                            <label class="checkbox checkbox-theme checked">
+                            <label class="checkbox checkbox-theme">
                                 <input type="checkbox" name="group1" value="1"/>
                                 <span class="checkbox-text">主题</span>
                             </label>
+                            <label class="checkbox checkbox-theme hover">
+                                <input type="checkbox" name="group1" value="1"/>
+                                <span class="checkbox-text">激活</span>
+                            </label>
+                            <label class="checkbox checkbox-theme checked">
+                                <input type="checkbox" name="group1" value="1"/>
+                                <span class="checkbox-text">选中</span>
+                            </label>
+                            <label class="checkbox checkbox-theme disabled">
+                                <input type="checkbox" name="group1" value="1"/>
+                                <span class="checkbox-text">禁用</span>
+                            </label>
                         </div>
                         <div class="cell-12-2">
-                            <label class="checkbox checkbox-key checked">
+                            <label class="checkbox checkbox-key">
                                 <input type="checkbox" name="group1" value="2"/>
                                 <span class="checkbox-text">关键</span>
                             </label>
+                            <label class="checkbox checkbox-key hover">
+                                <input type="checkbox" name="group1" value="2"/>
+                                <span class="checkbox-text">激活</span>
+                            </label>
+                            <label class="checkbox checkbox-key checked">
+                                <input type="checkbox" name="group1" value="2"/>
+                                <span class="checkbox-text">选中</span>
+                            </label>
+                            <label class="checkbox checkbox-key disabled">
+                                <input type="checkbox" name="group1" value="2"/>
+                                <span class="checkbox-text">禁用</span>
+                            </label>
                         </div>
                         <div class="cell-12-2">
-                            <label class="checkbox checkbox-light checked">
+                            <label class="checkbox checkbox-light">
                                 <input type="checkbox" name="group1" value="3"/>
                                 <span class="checkbox-text">闪亮</span>
                             </label>
+                            <label class="checkbox checkbox-light hover">
+                                <input type="checkbox" name="group1" value="3"/>
+                                <span class="checkbox-text">激活</span>
+                            </label>
+                            <label class="checkbox checkbox-light checked">
+                                <input type="checkbox" name="group1" value="3"/>
+                                <span class="checkbox-text">选中</span>
+                            </label>
+                            <label class="checkbox checkbox-light disabled">
+                                <input type="checkbox" name="group1" value="3"/>
+                                <span class="checkbox-text">禁用</span>
+                            </label>
                         </div>
                         <div class="cell-12-2">
-                            <label class="checkbox checkbox-nice checked">
+                            <label class="checkbox checkbox-nice">
                                 <input type="checkbox" name="group1" value="4"/>
                                 <span class="checkbox-text">友好</span>
                             </label>
+                            <label class="checkbox checkbox-nice hover">
+                                <input type="checkbox" name="group1" value="4"/>
+                                <span class="checkbox-text">激活</span>
+                            </label>
+                            <label class="checkbox checkbox-nice checked">
+                                <input type="checkbox" name="group1" value="4"/>
+                                <span class="checkbox-text">选中</span>
+                            </label>
+                            <label class="checkbox checkbox-nice disabled">
+                                <input type="checkbox" name="group1" value="4"/>
+                                <span class="checkbox-text">禁用</span>
+                            </label>
                         </div>
                     </div>
+                    <br/>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-2">
-                            <label class="radio radio-theme checked">
+                            <label class="radio radio-theme">
                                 <input type="radio" name="group1" value="1"/>
                                 <span class="radio-text">主题</span>
                             </label>
+                            <label class="radio radio-theme hover">
+                                <input type="radio" name="group1" value="1"/>
+                                <span class="radio-text">激活</span>
+                            </label>
+                            <label class="radio radio-theme checked">
+                                <input type="radio" name="group1" value="1"/>
+                                <span class="radio-text">选中</span>
+                            </label>
+                            <label class="radio radio-theme disabled">
+                                <input type="radio" name="group1" value="1"/>
+                                <span class="radio-text">禁用</span>
+                            </label>
                         </div>
                         <div class="cell-12-2">
-                            <label class="radio radio-key checked">
+                            <label class="radio radio-key">
                                 <input type="radio" name="group1" value="2"/>
                                 <span class="radio-text">关键</span>
                             </label>
-                        </div>
-                        <div class="cell-12-2">
-                            <label class="radio radio-light checked">
-                                <input type="radio" name="group1" value="3"/>
-                                <span class="radio-text">闪亮</span>
+                            <label class="radio radio-key hover">
+                                <input type="radio" name="group1" value="2"/>
+                                <span class="radio-text">激活</span>
+                            </label>
+                            <label class="radio radio-key checked">
+                                <input type="radio" name="group1" value="2"/>
+                                <span class="radio-text">选中</span>
+                            </label>
+                            <label class="radio radio-key disabled">
+                                <input type="radio" name="group1" value="2"/>
+                                <span class="radio-text">禁用</span>
                             </label>
                         </div>
                         <div class="cell-12-2">
-                            <label class="radio radio-nice checked">
+                            <label class="radio radio-light">
+                                <input type="radio" name="group1" value="3"/>
+                                <span class="radio-text">闪亮</span>
+                            </label>
+                            <label class="radio radio-light hover">
+                                <input type="radio" name="group1" value="3"/>
+                                <span class="radio-text">激活</span>
+                            </label>
+                            <label class="radio radio-light checked">
+                                <input type="radio" name="group1" value="3"/>
+                                <span class="radio-text">选中</span>
+                            </label>
+                            <label class="radio radio-light disabled">
+                                <input type="radio" name="group1" value="3"/>
+                                <span class="radio-text">禁用</span>
+                            </label>
+                        </div>
+                        <div class="cell-12-2">
+                            <label class="radio radio-nice">
                                 <input type="radio" name="group1" value="4"/>
                                 <span class="radio-text">友好</span>
+                            </label>
+                            <label class="radio radio-nice hover">
+                                <input type="radio" name="group1" value="4"/>
+                                <span class="radio-text">激活</span>
+                            </label>
+                            <label class="radio radio-nice checked">
+                                <input type="radio" name="group1" value="4"/>
+                                <span class="radio-text">选中</span>
+                            </label>
+                            <label class="radio radio-nice disabled">
+                                <input type="radio" name="group1" value="4"/>
+                                <span class="radio-text">禁用</span>
                             </label>
                         </div>
                     </div>

@@ -81,6 +81,16 @@ const prefix = {
             -moz-box-shadow: ${shadow};       /*firefox*/
             box-shadow: ${shadow};
         `;
+    },
+    //线性渐变背景
+    gradient(state, opt){
+        opt = opt || 'top, rgb(255,255,255), rgb(0,0,255)';
+        return `
+            background: -webkit-linear-gradient(${opt});
+            background: -moz-linear-gradient(${opt});
+            background: -o-linear-gradient(${opt});
+            background: linear-gradient(${opt});
+        `;
     }
 };
 export default prefix;

@@ -32,6 +32,8 @@ export default {
         commit('CSS_BTN');
         commit('CSS_BTNGROUP');
         commit('CSS_BTNGROUP_GRID');
+        commit('CSS_POPMENU');
+        commit('CSS_CHECKBOXRADIO');
 
         if(node.styleSheet){                                                   //ie下
             node.styleSheet.cssText = state.data.csstext;

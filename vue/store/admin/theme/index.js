@@ -189,31 +189,31 @@ const State = {
                         lighter:    null,
                         light:      {
                             name:   '黑-亮',
-                            class:  '.bgnice-light',
+                            class:  '.bgblack-light',
                             hex:    '#666666',
                             rgb:    '102,102,102',
                         },
                         normal:     {
                             name:   '黑',
-                            class:  '.bgnice',
+                            class:  '.bgblack',
                             hex:    '#444444',
                             rgb:    '68,68,68',
                         },
                         dark:       {
                             name:   '黑-暗',
-                            class:  '.bgnice-dark',
+                            class:  '.bgblack-dark',
                             hex:    '#333333',
                             rgb:    '51,51,51',
                         },
                         darker:     {
                             name:   '黑-较暗',
-                            class:  '.bgnice-darker',
+                            class:  '.bgblack-darker',
                             hex:    '#141414',
                             rgb:    '20,20,20',
                         },
                         darkest:    {
                             name:   '黑-最暗',
-                            class:  '.bgnice-darker',
+                            class:  '.bgblack-darkest',
                             hex:    '#000000',
                             rgb:    '0,0,0',
                         },
@@ -255,7 +255,7 @@ const State = {
                         },
                         darkest:    {
                             name:   '灰-最暗',
-                            class:  '.bggray-darker',
+                            class:  '.bggray-darkest',
                             hex:    '#99999',
                             rgb:    '153,153,153',
                         },
@@ -292,7 +292,7 @@ const State = {
                         },
                         darkest:    {
                             name:   '白-最暗',
-                            class:  '.bgwhite-darker',
+                            class:  '.bgwhite-darkest',
                             hex:    '#F3F3F3',
                             rgb:    '243,243,243',
                         },
@@ -357,6 +357,29 @@ const State = {
                 html:   ['"Helvetica Neue", Helvetica, Arial, sans-serif'],
                 def:    '',
                 icon:   '"iconfont"'
+            },
+            //图标（必要功能图标）
+            icons: {
+                done:                           '"\\e60b"',
+                delete:                         '"\\e608"',
+
+                checkboxbefore:                 '"\\e620"',
+                checkboxafter:                  '"\\e621"',
+                checkboxafterchecked:           '"\\e622"',
+                radiobefore:                    '"\\e64b"',
+                radioafter:                     '"\\e64c"',
+                radioafterchecked:              '"\\e64a"',
+
+                left:                           '"\\e603"',
+                leftsmall:                      '"\\e61f"',
+                right:                          '"\\e601"',
+                rightsmall:                     '"\\e652"',
+                down:                           '"\\e600"',
+                downsmall:                      '"\\e64d"',
+                up:                             '"\\e602"',
+                upsmall:                        '"\\e615"',
+
+                snow:                           '*',
             },
             //字号
             defpx:      16,
@@ -673,7 +696,185 @@ const State = {
                             active:         '',
                             disabled:       ''
                         }
+                    },
+                    border: {
+                        borderwidth:    2,
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
+                    },
+                    borderinverse: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
+                    },
+                    link: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        shadow: {
+                            def:            '',
+                            hover:          '',
+                            focus:          '',
+                            active:         '',
+                            disabled:       ''
+                        }
                     }
+                }
+            },
+            //气泡菜单
+            popmenu: {
+                color: {
+                    def:        '',
+                    hover:      '',
+                    active:     '',
+                    disabled:   '',
+                    icon:       ''
+                },
+                bgcolor: {
+                    def:        '',
+                    hover:      '',
+                    active:     '',
+                    disabled:   ''
+                },
+                bordercolor:    '',
+                borderwidth:    0,
+                zindex: {
+                    def:        0,
+                    hover:      0,
+                    active:     0
+                },
+                radius:         0,
+                shadow:         '',
+                minwidth: {
+                    def:        0,
+                    small:      0,
+                    large:      0
+                },
+                fontsize: {
+                    def:        0,
+                    small:      0,
+                    large:      0
+                },
+                fontweight: {
+                    def:        0,
+                    small:      0,
+                    large:      0
+                },
+                padding: {
+                    top:        0,
+                    bottom:     0,
+                    left:       0,
+                    right:      0
+                },
+                selectableright:    0,
+                itemheight: {
+                    def:        0,
+                    small:      0,
+                    large:      0
+                },
+                itempadding: {
+                    top:        0,
+                    bottom:     0,
+                    left:       0,
+                    right:      0,
+                    iconleft:   0,
+                    treeright:  0
+                },
+                itemshadow:     {
+                    active:     '',
+                    disabled:   ''
+                },
+                itemselected: {
+                    color:      '',
+                    bgcolor:    '',
+                    iconcolor:  '',
+                    icon:       ''
+                },
+                itemhassub: {
+                    icon:               '',
+                    iconcolor:          '',
+                    iconfontsize:       0
+                },
+                split: {
+                    height:             0,
+                    borderwidth: {
+                        top:            0,
+                        bottom:         0
+                    },
+                    bordercolor: {
+                        top:            '',
+                        bottom:         ''
+                    }
+
                 }
             }
         },
