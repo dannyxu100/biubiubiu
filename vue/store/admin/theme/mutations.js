@@ -20,7 +20,7 @@ export default {
     [MT.INIT_BASIC]( state ) {
         let basic = state.data.basic;
 
-        Api.extend(basic.fontcolor, {
+        Api.extend(true, basic.fontcolor, {
             def:        basic.colors.black.ladder.normal.hex,
             weak:       basic.colors.gray.ladder.darker.hex,
             hr:         basic.colors.gray.ladder.lighter.hex,
@@ -28,7 +28,7 @@ export default {
             link:       basic.colors.theme.ladder.dark.hex,
             linkhover:  basic.colors.theme.ladder.darker.hex
         });
-        Api.extend(basic.fontcolor, {
+        Api.extend(true, basic.fontcolor, {
             def:        basic.colors.white.ladder.light.hex,
             weak:       basic.colors.white.ladder.normal.hex
         });
@@ -38,8 +38,8 @@ export default {
         basic.table.fontsize        = basic.fontsize.def;
         basic.table.radius          = basic.radius.r6;
 
-        Api.extend(basic.btn, basic.control);
-        Api.extend(basic.btn, {
+        Api.extend(true, basic.btn, basic.control);
+        Api.extend(true, basic.btn, {
             lineheight: {
                 def:        basic.btn.height.def-(basic.control.padding.def.top+basic.control.padding.def.bottom)-2,
                 small:      basic.btn.height.small-(basic.control.padding.small.top+basic.control.padding.small.bottom)-2,
@@ -324,7 +324,7 @@ export default {
                 }
             }
         });
-        Api.extend(basic.popmenu, {
+        Api.extend(true, basic.popmenu, {
             color: {
                 def:        basic.colors.black.ladder.normal.hex,
                 hover:      basic.colors.white.ladder.light.hex,
@@ -338,20 +338,12 @@ export default {
                 active:     basic.colors.theme.ladder.darker.hex,
                 disabled:   basic.colors.white.ladder.normal.hex
             },
-            bordercolor:    'transparent',
-            borderwidth:    0,
             zindex: {
                 def:        basic.zindex.control,
                 active:     basic.zindex.control + 10,
                 hover:      basic.zindex.control + 20
             },
             radius:         basic.radius.def,
-            shadow:         '0 15px 50px rgba(0, 0, 0, .3)',
-            minwidth: {
-                def:        160,
-                small:      140,
-                large:      180
-            },
             fontsize: {
                 def:        basic.control.fontsize.def,
                 small:      basic.control.fontsize.small,
@@ -362,54 +354,130 @@ export default {
                 small:      basic.fontweight.def,
                 large:      basic.fontweight.def
             },
-            padding: {
-                top:        5,
-                bottom:     5,
-                left:       0,
-                right:      0
-            },
-            selectableright:    35,
-            itemheight: {
-                def:        28,
-                small:      26,
-                large:      34
-            },
-            itempadding: {
-                top:        0,
-                bottom:     0,
-                left:       15,
-                right:      15,
-                iconleft:   40,
-                treeright:  40
-            },
-            itemshadow:     {
-                active:             'none',
-                disabled:           'none'
-            },
-            itemselected: {
+            item_selected: {
                 color:              basic.colors.black.ladder.light.hex,
                 bgcolor:            basic.colors.gray.ladder.lighter.hex,
                 icon:               basic.icons.done,
-                iconcolor:          basic.colors.theme.ladder.darker.hex,
-                iconfontsize:       14,
-                shadow:             'none'
+                iconcolor:          basic.colors.theme.ladder.darker.hex
             },
-            itemhassub: {
+            item_hassub: {
                 icon:               basic.icons.rightsmall,
-                iconcolor:          basic.colors.theme.ladder.dark.hex,
-                iconfontsize:       14
+                iconcolor:          basic.colors.theme.ladder.dark.hex
             },
             split: {
-                height:             10,
-                borderwidth: {
-                    top:            1,
-                    bottom:         1
-                },
                 bordercolor: {
                     top:            basic.colors.gray.ladder.lighter.hex,
                     bottom:         basic.colors.white.ladder.light.hex
                 }
 
+            }
+        });
+        Api.extend(true, basic.chkradio, {
+            fontsize:               basic.control.fontsize.def,
+            zindex: {
+                before:             basic.zindex.control,
+                after:              basic.zindex.control + 10
+            },
+            icon_after:             basic.icons.done,
+            color: {
+                def:                basic.colors.black.ladder.dark.hex,
+                hover:              basic.colors.black.ladder.dark.hex,
+                checked:            basic.colors.black.ladder.dark.hex,
+                disabled:           basic.colors.gray.ladder.light.hex
+            },
+            style: {
+                def: {
+                    bordercolor_before: {
+                        def:                basic.colors.gray.ladder.normal.hex,
+                        hover:              basic.colors.gray.ladder.lighter.hex,
+                        checked:            basic.colors.gray.ladder.darker.hex,
+                        disabled:           basic.colors.gray.ladder.lighter.hex
+                    },
+                    bgcolor_after: {
+                        hover:              basic.colors.black.ladder.light.hex,
+                        checked:            basic.colors.black.ladder.dark.hex
+                    },
+                    color_after: {
+                        hover:              basic.colors.black.ladder.dark.hex,
+                        checked:            basic.colors.black.ladder.darker.hex
+                    }
+                },
+                theme: {
+                    bordercolor_before: {
+                        def:                basic.colors.theme.ladder.darker.hex,
+                        hover:              basic.colors.theme.ladder.darker.hex,
+                        checked:            basic.colors.theme.ladder.darker.hex,
+                        disabled:           basic.colors.theme.ladder.darker.hex
+                    },
+                    bgcolor_before: {
+                        checked:            basic.colors.theme.ladder.darker.hex
+                    },
+                    bgcolor_after: {
+                        hover:              basic.colors.theme.ladder.darker.hex,
+                        checked:            basic.colors.white.ladder.light.hex
+                    },
+                    color_after: {
+                        hover:              basic.colors.theme.ladder.darker.hex,
+                        checked:            basic.colors.white.ladder.light.hex
+                    }
+                },
+                key: {
+                    bordercolor_before: {
+                        def:                basic.colors.key.ladder.normal.hex,
+                        hover:              basic.colors.key.ladder.light.hex,
+                        checked:            basic.colors.key.ladder.normal.hex,
+                        disabled:           basic.colors.key.ladder.light.hex
+                    },
+                    bgcolor_before: {
+                        checked:            basic.colors.key.ladder.normal.hex
+                    },
+                    bgcolor_after: {
+                        hover:              basic.colors.key.ladder.darker.hex,
+                        checked:            basic.colors.white.ladder.light.hex
+                    },
+                    color_after: {
+                        hover:              basic.colors.key.ladder.darker.hex,
+                        checked:            basic.colors.white.ladder.light.hex
+                    }
+                },
+                light: {
+                    bordercolor_before: {
+                        def:                basic.colors.light.ladder.darker.hex,
+                        hover:              basic.colors.light.ladder.darker.hex,
+                        checked:            basic.colors.light.ladder.darker.hex,
+                        disabled:           basic.colors.light.ladder.darker.hex
+                    },
+                    bgcolor_before: {
+                        checked:            basic.colors.light.ladder.darker.hex
+                    },
+                    bgcolor_after: {
+                        hover:              basic.colors.black.ladder.light.hex,
+                        checked:            basic.colors.black.ladder.dark.hex
+                    },
+                    color_after: {
+                        hover:              basic.colors.black.ladder.light.hex,
+                        checked:            basic.colors.black.ladder.dark.hex
+                    }
+                },
+                nice: {
+                    bordercolor_before: {
+                        def:                basic.colors.nice.ladder.darker.hex,
+                        hover:              basic.colors.nice.ladder.darker.hex,
+                        checked:            basic.colors.nice.ladder.darker.hex,
+                        disabled:           basic.colors.nice.ladder.normal.hex
+                    },
+                    bgcolor_before: {
+                        checked:            basic.colors.nice.ladder.darker.hex
+                    },
+                    bgcolor_after: {
+                        hover:              basic.colors.nice.ladder.darker.hex,
+                        checked:            basic.colors.white.ladder.light.hex
+                    },
+                    color_after: {
+                        hover:              basic.colors.nice.ladder.darker.hex,
+                        checked:            basic.colors.white.ladder.light.hex
+                    }
+                }
             }
         });
         // debugger;

@@ -5,7 +5,7 @@ import Prefix                   from './css-prefix.js';
 function makeiconfont ( fontsize, fontfamily ) {
     return `
         font-family: ${fontfamily} !important;
-        font-size: ${fontsize}px;
+        font-size: ${fontsize};
         font-style: normal;
         -webkit-font-smoothing: antialiased;
         // -webkit-text-stroke-width: 0.2px;

@@ -805,7 +805,7 @@ const State = {
                     active:     '',
                     disabled:   ''
                 },
-                bordercolor:    '',
+                bordercolor:    'transparent',
                 borderwidth:    0,
                 zindex: {
                     def:        0,
@@ -813,11 +813,11 @@ const State = {
                     active:     0
                 },
                 radius:         0,
-                shadow:         '',
+                shadow:         '0 15px 50px rgba(0, 0, 0, .3)',
                 minwidth: {
-                    def:        0,
-                    small:      0,
-                    large:      0
+                    def:        160,
+                    small:      140,
+                    large:      180
                 },
                 fontsize: {
                     def:        0,
@@ -830,51 +830,200 @@ const State = {
                     large:      0
                 },
                 padding: {
-                    top:        0,
-                    bottom:     0,
+                    top:        5,
+                    bottom:     5,
                     left:       0,
                     right:      0
                 },
-                selectableright:    0,
-                itemheight: {
-                    def:        0,
-                    small:      0,
-                    large:      0
+                selectable_right:    35,
+                item_height: {
+                    def:        28,
+                    small:      26,
+                    large:      34
                 },
-                itempadding: {
+                item_padding: {
                     top:        0,
                     bottom:     0,
-                    left:       0,
-                    right:      0,
-                    iconleft:   0,
-                    treeright:  0
+                    left:       15,
+                    right:      15,
+                    iconleft:   40,
+                    treeright:  40
                 },
-                itemshadow:     {
-                    active:     '',
-                    disabled:   ''
+                item_shadow:     {
+                    active:             'none',
+                    disabled:           'none'
                 },
-                itemselected: {
-                    color:      '',
-                    bgcolor:    '',
-                    iconcolor:  '',
-                    icon:       ''
+                item_selected: {
+                    color:              '',
+                    bgcolor:            '',
+                    iconfontsize:       14,
+                    shadow:             'none'
                 },
-                itemhassub: {
+                item_hassub: {
                     icon:               '',
                     iconcolor:          '',
-                    iconfontsize:       0
+                    iconfontsize:       14
                 },
                 split: {
-                    height:             0,
+                    height:             10,
                     borderwidth: {
-                        top:            0,
-                        bottom:         0
+                        top:            1,
+                        bottom:         1
                     },
                     bordercolor: {
                         top:            '',
                         bottom:         ''
                     }
 
+                }
+            },
+            //单选复选框
+            chkradio: {
+                fontsize:       0,
+                zindex: {
+                    before:     0,
+                    after:      0
+                },
+                padding: {
+                    top:        3,
+                    bottom:     3,
+                    left:       25,
+                    right:      10
+                },
+                height:         20,
+                icon_after:     '',
+                color: {
+                    def:                '',
+                    hover:              '',
+                    checked:            '',
+                    disabled:           ''
+                },
+                borderwidth_before:     2,
+                radius_before: {
+                    chk:                0.2,
+                    radio:              1
+                },
+                style: {
+                    def: {
+                        bordercolor_before: {
+                            def:                '',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           ''
+                        },
+                        bgcolor_before: {
+                            def:                'transparent',
+                            hover:              'transparent',
+                            checked:            'transparent',
+                            disabled:           'transparent'
+                        },
+                        bgcolor_after: {
+                            def:                'transparent',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        color_after: {
+                            hover:              '',
+                            checked:            ''
+                        }
+                    },
+                    theme: {
+                        bordercolor_before: {
+                            def:                '',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           ''
+                        },
+                        bgcolor_before: {
+                            def:                'transparent',
+                            hover:              'transparent',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        bgcolor_after: {
+                            def:                'transparent',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        color_after: {
+                            hover:              '',
+                            checked:            ''
+                        }
+                    },
+                    key: {
+                        bordercolor_before: {
+                            def:                '',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           ''
+                        },
+                        bgcolor_before: {
+                            def:                'transparent',
+                            hover:              'transparent',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        bgcolor_after: {
+                            def:                'transparent',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        color_after: {
+                            hover:              '',
+                            checked:            ''
+                        }
+                    },
+                    light: {
+                        bordercolor_before: {
+                            def:                '',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           ''
+                        },
+                        bgcolor_before: {
+                            def:                'transparent',
+                            hover:              'transparent',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        bgcolor_after: {
+                            def:                'transparent',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        color_after: {
+                            hover:              '',
+                            checked:            ''
+                        }
+                    },
+                    nice: {
+                        bordercolor_before: {
+                            def:                '',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           ''
+                        },
+                        bgcolor_before: {
+                            def:                'transparent',
+                            hover:              'transparent',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        bgcolor_after: {
+                            def:                'transparent',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           'transparent'
+                        },
+                        color_after: {
+                            hover:              '',
+                            checked:            ''
+                        }
+                    }
                 }
             }
         },

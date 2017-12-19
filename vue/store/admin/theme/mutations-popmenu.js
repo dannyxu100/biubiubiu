@@ -69,9 +69,9 @@ export default {
             .${namespace}popmenu-sub .${namespace}popmenu-item {
                 ${itemsize(
                     state,
-                    basic.popmenu.itemheight.def,
-                    basic.popmenu.itemheight.def - basic.popmenu.itempadding.top - basic.popmenu.itempadding.bottom,
-                    basic.popmenu.itempadding
+                    basic.popmenu.item_height.def,
+                    basic.popmenu.item_height.def - basic.popmenu.item_padding.top - basic.popmenu.item_padding.bottom,
+                    basic.popmenu.item_padding
                 )}
             }
             .${namespace}popmenu:active,
@@ -114,7 +114,7 @@ export default {
             .${namespace}popmenu-sub .${namespace}popmenu-item .md,
             .${namespace}popmenu .${namespace}popmenu-item .ft,
             .${namespace}popmenu-sub .${namespace}popmenu-item .ft {
-                line-height: ${basic.popmenu.itemheight.def - basic.popmenu.itempadding.top - basic.popmenu.itempadding.bottom}px;
+                line-height: ${basic.popmenu.item_height.def - basic.popmenu.item_padding.top - basic.popmenu.item_padding.bottom}px;
             }
             .${namespace}popmenu .${namespace}popmenu-item .icon,
             .${namespace}popmenu-sub .${namespace}popmenu-item .icon,
@@ -122,7 +122,7 @@ export default {
             .${namespace}popmenu-sub .${namespace}popmenu-item .hd {
                 position: absolute;
                 top: 0;
-                left: ${basic.popmenu.itempadding.left}px;
+                left: ${basic.popmenu.item_padding.left}px;
                 bottom: 0;
             }
             .${namespace}popmenu .${namespace}popmenu-item .md,
@@ -133,7 +133,7 @@ export default {
             .${namespace}popmenu-sub .${namespace}popmenu-item .ft {
                 position: absolute;
                 top: 0;
-                right: ${basic.popmenu.itempadding.right}px;
+                right: ${basic.popmenu.item_padding.right}px;
                 bottom: 0;
             }
             .${namespace}popmenu .${namespace}popmenu-item small,
@@ -170,7 +170,7 @@ export default {
             .${namespace}popmenu-sub .${namespace}popmenu-item.selected {
                 color: ${basic.popmenu.color.active};
                 background: ${basic.popmenu.bgcolor.active};
-                ${Prefix.box_shadow(state, basic.popmenu.itemshadow.active)}
+                ${Prefix.box_shadow(state, basic.popmenu.item_shadow.active)}
             }
             .${namespace}popmenu .${namespace}popmenu-item:active small,
             .${namespace}popmenu-sub .${namespace}popmenu-item:active small,
@@ -188,39 +188,39 @@ export default {
             }
             .${namespace}popmenu .${namespace}popmenu-item.selected,
             .${namespace}popmenu-sub .${namespace}popmenu-item.selected {
-                color: ${basic.popmenu.itemselected.color};
-                background: ${basic.popmenu.itemselected.bgcolor};
+                color: ${basic.popmenu.item_selected.color};
+                background: ${basic.popmenu.item_selected.bgcolor};
                 cursor: ${basic.cursor.def};
-                ${Prefix.box_shadow(state, basic.popmenu.itemselected.shadow)}
+                ${Prefix.box_shadow(state, basic.popmenu.item_selected.shadow)}
             }
             .${namespace}popmenu .${namespace}popmenu-item.selected small,
             .${namespace}popmenu-sub .${namespace}popmenu-item.selected small,
             .${namespace}popmenu .${namespace}popmenu-item.selected .small,
             .${namespace}popmenu-sub .${namespace}popmenu-item.selected .small {
-                color: ${basic.popmenu.itemselected.color};
+                color: ${basic.popmenu.item_selected.color};
             }
             .${namespace}popmenu .${namespace}popmenu-item.selected::after,
             .${namespace}popmenu-sub .${namespace}popmenu-item.selected::after {
                 position: absolute;
                 top: 0;
-                right: ${basic.popmenu.itempadding.right}px;
-                height: ${basic.popmenu.itemheight.def}px;
-                line-height: ${basic.popmenu.itemheight.def - basic.popmenu.itempadding.top - basic.popmenu.itempadding.bottom}px;
-                color: ${basic.popmenu.itemselected.iconcolor};
+                right: ${basic.popmenu.item_padding.right}px;
+                height: ${basic.popmenu.item_height.def}px;
+                line-height: ${basic.popmenu.item_height.def - basic.popmenu.item_padding.top - basic.popmenu.item_padding.bottom}px;
+                color: ${basic.popmenu.item_selected.iconcolor};
                 display: none \\9;      /* ie hack */
                 ${Prefix.opacity(state, 0)}
-                ${Comm.iconfont(state, basic.popmenu.itemselected.icon, basic.popmenu.itemselected.iconfontsize)}
+                ${Comm.iconfont(state, basic.popmenu.item_selected.icon, basic.popmenu.item_selected.iconfontsize+'px')}
             }
             .${namespace}popmenu .${namespace}popmenu-item.hassub::after,
             .${namespace}popmenu-sub .${namespace}popmenu-item.hassub::after {
                 position: absolute;
                 top: 0;
-                right: ${basic.popmenu.itempadding.right}px;
-                height: ${basic.popmenu.itemheight.def}px;
-                line-height: ${basic.popmenu.itemheight.def - basic.popmenu.itempadding.top - basic.popmenu.itempadding.bottom}px;
-                color: ${basic.popmenu.itemhassub.iconcolor};
+                right: ${basic.popmenu.item_padding.right}px;
+                height: ${basic.popmenu.item_height.def}px;
+                line-height: ${basic.popmenu.item_height.def - basic.popmenu.item_padding.top - basic.popmenu.item_padding.bottom}px;
+                color: ${basic.popmenu.item_hassub.iconcolor};
                 display: none;
-                ${Comm.iconfont(state, basic.popmenu.itemhassub.icon, basic.popmenu.itemhassub.iconfontsize)}
+                ${Comm.iconfont(state, basic.popmenu.item_hassub.icon, basic.popmenu.item_hassub.iconfontsize+'px')}
             }
             .${namespace}popmenu .${namespace}popmenu-item.disabled,
             .${namespace}popmenu-sub .${namespace}popmenu-item.disabled,
@@ -237,7 +237,7 @@ export default {
                 color: ${basic.popmenu.color.disabled};
                 cursor: ${basic.cursor.no};
                 background: ${basic.popmenu.bgcolor.disabled};
-                ${Prefix.box_shadow(state, basic.popmenu.itemshadow.disabled)}
+                ${Prefix.box_shadow(state, basic.popmenu.item_shadow.disabled)}
             }
             .${namespace}popmenu .split,
             .${namespace}popmenu-sub .split {
@@ -248,14 +248,14 @@ export default {
                 font-size: 0;
             }
             .${namespace}popmenu-selectable .${namespace}popmenu-item {
-                padding-right: ${basic.popmenu.selectableright}px;
+                padding-right: ${basic.popmenu.selectable_right}px;
             }
             .${namespace}popmenu-selectable .${namespace}popmenu-item.selected::after {
                 display: block \\9;       /* ie hack */
                 ${Prefix.opacity(state, 1)}
             }
             .${namespace}popmenu-icon .${namespace}popmenu-item {
-                padding-left: ${basic.popmenu.itempadding.iconleft}px;
+                padding-left: ${basic.popmenu.item_padding.iconleft}px;
             }
             .${namespace}popmenu-icon .${namespace}popmenu-item .icon {
                 color: ${basic.popmenu.color.icon};
@@ -263,7 +263,7 @@ export default {
                 ${Prefix.transition(state, 'all linear .08s')}
             }
             .${namespace}popmenu-icon .${namespace}popmenu-item .hd {
-                left: ${basic.popmenu.itempadding.iconleft}px;
+                left: ${basic.popmenu.item_padding.iconleft}px;
             }
             .${namespace}popmenu-icon .${namespace}popmenu-item:hover .icon {
                 color: ${basic.popmenu.color.hover};
@@ -276,7 +276,7 @@ export default {
             .${namespace}popmenu-tree .${namespace}popmenu-item,
             .${namespace}popmenu-tree-left .${namespace}popmenu-item,
             .${namespace}popmenu-tree-top .${namespace}popmenu-item {
-                padding-right: ${basic.popmenu.itempadding.treeright}px;
+                padding-right: ${basic.popmenu.item_padding.treeright}px;
             }
             .${namespace}popmenu-tree .${namespace}popmenu-item > .${namespace}popmenu-sub,
             .${namespace}popmenu-tree-left .${namespace}popmenu-item > .${namespace}popmenu-sub,
@@ -340,9 +340,9 @@ export default {
             .${namespace}popmenu-small .${namespace}popmenu-sub .${namespace}popmenu-item {
                 ${itemsize(
                     state,
-                    basic.popmenu.itemheight.small,
-                    basic.popmenu.itemheight.small - basic.popmenu.itempadding.top - basic.popmenu.itempadding.bottom,
-                    basic.popmenu.itempadding
+                    basic.popmenu.item_height.small,
+                    basic.popmenu.item_height.small - basic.popmenu.item_padding.top - basic.popmenu.item_padding.bottom,
+                    basic.popmenu.item_padding
                 )}
             }
             .${namespace}popmenu-large,
@@ -359,9 +359,9 @@ export default {
             .${namespace}popmenu-large .${namespace}popmenu-sub .${namespace}popmenu-item {
                 ${itemsize(
                     state,
-                    basic.popmenu.itemheight.large,
-                    basic.popmenu.itemheight.large - basic.popmenu.itempadding.top - basic.popmenu.itempadding.bottom,
-                    basic.popmenu.itempadding
+                    basic.popmenu.item_height.large,
+                    basic.popmenu.item_height.large - basic.popmenu.item_padding.top - basic.popmenu.item_padding.bottom,
+                    basic.popmenu.item_padding
                 )}
             }
         `;

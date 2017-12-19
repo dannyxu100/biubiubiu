@@ -2697,7 +2697,7 @@ fieldset[disabled] .btn-link.active {
 }
 .checkbox:hover:before,
 .checkbox.hover:before {
-  border: 2px solid #DDD;
+  border-color: #DDD;
   background: transparent;
 }
 .checkbox:hover:after,
@@ -2714,7 +2714,7 @@ fieldset[disabled] .btn-link.active {
   color: #222;
 }
 .checkbox.checked:before {
-  border: 2px solid #999;
+  border-color: #999;
   background: transparent;
 }
 .checkbox.checked:after {
@@ -2734,7 +2734,7 @@ fieldset[disabled] .btn-link.active {
 .checkbox[disabled]:before,
 .checkbox.disabled:hover:before,
 .checkbox[disabled]:hover:before {
-  border: 2px solid #DDD;
+  border-color: #DDD;
   background: transparent;
 }
 .checkbox.disabled:after,
@@ -2766,13 +2766,13 @@ fieldset[disabled] .btn-link.active {
   left: 9px;
   width: 5px;
   height: 5px;
+  background: transparent;
   display: none \9;
   /* ie hack */
   -moz-opacity: 0;
   -khtml-opacity: 0;
   opacity: 0;
   filter: Alpha(Opacity=0);
-  background: transparent;
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
   border-radius: 1em;
@@ -2783,7 +2783,7 @@ fieldset[disabled] .btn-link.active {
 }
 .radio:hover:before,
 .radio.hover:before {
-  border: 2px solid #DDD;
+  border-color: #DDD;
   background: transparent;
 }
 .radio:hover:after,
@@ -2800,7 +2800,7 @@ fieldset[disabled] .btn-link.active {
   color: #222;
 }
 .radio.checked:before {
-  border: 2px solid #999;
+  border-color: #999;
   background: transparent;
 }
 .radio.checked:after {
@@ -2820,7 +2820,7 @@ fieldset[disabled] .btn-link.active {
 .radio[disabled]:before,
 .radio.disabled:hover:before,
 .radio[disabled]:hover:before {
-  border: 2px solid #DDD;
+  border-color: #DDD;
   color: #EEE;
 }
 .radio.disabled:after,

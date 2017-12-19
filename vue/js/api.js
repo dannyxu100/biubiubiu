@@ -158,7 +158,7 @@ const api = {
                         iscopyarr = false;
                         clone = obj[key] && api.isarray(obj[key]) ? obj[key] : [];
                     } else {
-                        clone = obj[key] && api.isPlainObject(obj[key]) ? obj[key] : {};
+                        clone = obj[key] && api.isplainobject(obj[key]) ? obj[key] : {};
                     }
                     obj[key] = api.extend( isdeep, clone, source[key] );
                 } else if ( void 0 !== source[key] ) {
