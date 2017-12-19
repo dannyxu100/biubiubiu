@@ -155,7 +155,7 @@
                 <h3>.btn-link</h3>
                 <div>链接按钮</div>
                 <br/>
-                <div class="grid">
+                <div class="grid bgimg-light" style="padding:20px;">
                     <div class="grid-row" style="">
                         <div class="cell-7-1">
                             <button class="btn btn-link">link</button>
@@ -183,7 +183,22 @@
                 <div>其他风格按钮</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="">
+                    <div class="grid-row bgimg-light" style="padding:20px;">
+                        <div class="cell-7-1">
+                            <button class="btn btn-theme">主题</button>
+                        </div>
+                        <div class="cell-7-1">
+                            <button class="btn btn-key">关键</button>
+                        </div>
+                        <div class="cell-7-1">
+                            <button class="btn btn-light">闪亮</button>
+                        </div>
+                        <div class="cell-7-1">
+                            <button class="btn btn-nice">友好</button>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="grid-row bgimg-dark" style="padding:20px;">
                         <div class="cell-7-1">
                             <button class="btn btn-theme">主题</button>
                         </div>

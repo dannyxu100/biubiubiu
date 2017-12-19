@@ -540,11 +540,11 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     inverse: {
@@ -570,11 +570,11 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     theme: {
@@ -600,11 +600,11 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     key: {
@@ -630,11 +630,11 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     light: {
@@ -660,11 +660,11 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     nice: {
@@ -690,15 +690,15 @@ const State = {
                             disabled:   ''
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     border: {
-                        borderwidth:    2,
+                        borderwidth:    1,
                         color: {
                             def:        '',
                             hover:      '',
@@ -714,18 +714,18 @@ const State = {
                             disabled:   ''
                         },
                         bgcolor: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     borderinverse: {
@@ -744,18 +744,18 @@ const State = {
                             disabled:   ''
                         },
                         bgcolor: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     },
                     link: {
@@ -767,25 +767,25 @@ const State = {
                             disabled:   ''
                         },
                         bordercolor: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
                         },
                         bgcolor: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
                         },
                         shadow: {
-                            def:            '',
-                            hover:          '',
-                            focus:          '',
-                            active:         '',
-                            disabled:       ''
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
                         }
                     }
                 }

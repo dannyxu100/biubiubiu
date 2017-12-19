@@ -732,49 +732,45 @@ export default {
             }
             .${namespace}btn-border,
             .${namespace}btn-border-inverse {
-                line-height: ${basic.btn.lineheight.def-basic.btn.style.border.borderwidth}px;
+                line-height: ${basic.btn.lineheight.def-basic.btn.style.border.borderwidth*2}px;
             }
             .${namespace}btn-border.${namespace}btn-small,
             .${namespace}btn-border-inverse.${namespace}btn-small {
-              line-height: ${basic.btn.lineheight.small-basic.btn.style.border.borderwidth}px;
+                line-height: ${basic.btn.lineheight.small-basic.btn.style.border.borderwidth*2}px;
             }
             .${namespace}btn-border.${namespace}btn-large,
             .${namespace}btn-border-inverse.${namespace}btn-large {
-              line-height: ${basic.btn.lineheight.large-basic.btn.style.border.borderwidth}px;
+                line-height: ${basic.btn.lineheight.large-basic.btn.style.border.borderwidth*2}px;
             }
             .${namespace}btn-link {
-              color: #319DBB;
-              border-color: transparent;
-              background-color: transparent;
+                color: ${basic.btn.style.link.color.def};
+                border-color: ${basic.btn.style.link.bordercolor.def};
+                background-color: ${basic.btn.style.link.bgcolor.def};
             }
             .${namespace}btn-link:focus,
             .${namespace}btn-link.focus {
-              color: #43D3FC;
-              border-color: transparent;
-              background-color: transparent;
+                color: ${basic.btn.style.link.color.focus};
+                border-color: ${basic.btn.style.link.bordercolor.focus};
+                background-color: ${basic.btn.style.link.bgcolor.focus};
             }
             .${namespace}btn-link:hover,
             .${namespace}btn-link.hover {
-              text-decoration: underline;
-              color: #43D3FC;
-              border-color: transparent;
-              background-color: transparent;
-              -webkit-box-shadow: none;
-              -ms-box-shadow: none;
-              -moz-box-shadow: none;
-              box-shadow: none;
+                color: ${basic.btn.style.link.color.hover};
+                border-color: ${basic.btn.style.link.bordercolor.hover};
+                background-color: ${basic.btn.style.link.bgcolor.hover};
+                text-decoration: underline;
+
+                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.hover)}
             }
             .${namespace}btn-link:active,
             .${namespace}btn-link.active,
             .${namespace}btn-link.loading,
             .open > .dropdown-toggle.${namespace}btn-link {
-              color: #319DBB;
-              border-color: transparent;
-              background-color: transparent;
-              -webkit-box-shadow: none;
-              -ms-box-shadow: none;
-              -moz-box-shadow: none;
-              box-shadow: none;
+                color: ${basic.btn.style.link.color.active};
+                border-color: ${basic.btn.style.link.bordercolor.active};
+                background-color: ${basic.btn.style.link.bgcolor.active};
+
+                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.active)}
             }
             .${namespace}btn-link:active:hover,
             .${namespace}btn-link.active:hover,
@@ -788,16 +784,18 @@ export default {
             .${namespace}btn-link.active.focus,
             .${namespace}btn-link.loading.focus,
             .open > .dropdown-toggle.${namespace}btn-link.focus {
-              color: #319DBB;
-              border-color: transparent;
-              background-color: transparent;
+                color: ${basic.btn.style.link.color.focus};
+                border-color: ${basic.btn.style.link.bordercolor.focus};
+                background-color: ${basic.btn.style.link.bgcolor.focus};
             }
             .${namespace}btn-link:active,
             .${namespace}btn-link.active,
             .${namespace}btn-link.loading,
             .open > .dropdown-toggle.${namespace}btn-link {
-              text-decoration: none;
-              color: #319DBB;
+                color: ${basic.btn.style.link.color.active};
+                border-color: ${basic.btn.style.link.bordercolor.active};
+                background-color: ${basic.btn.style.link.bgcolor.active};
+                text-decoration: none;
             }
             .${namespace}btn-link.disabled,
             .${namespace}btn-link[disabled],
@@ -817,12 +815,14 @@ export default {
             .${namespace}btn-link.disabled.active,
             .${namespace}btn-link[disabled].active,
             fieldset[disabled] .${namespace}btn-link.active {
-              color: #319DBB;
-              background-color: transparent;
-              text-decoration: line-through;
+                color: ${basic.btn.style.link.color.disabled};
+                border-color: ${basic.btn.style.link.bordercolor.disabled};
+                background-color: ${basic.btn.style.link.bgcolor.disabled};
+                text-decoration: line-through;
             }
             .${namespace}btn-link .badge {
-              color: #05C3F9;
+                color: ${basic.colors.black.ladder.light.hex};
+                background-color: transparent;
             }
         `;
     },
