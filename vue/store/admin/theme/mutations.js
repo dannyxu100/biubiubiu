@@ -115,11 +115,11 @@ export default {
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     bordercolor: {
-                        def:        basic.colors.theme.ladder.dark.hex,
+                        def:        basic.colors.theme.ladder.darker.hex,
                         hover:      basic.colors.theme.ladder.darker.hex,
                         focus:      basic.colors.theme.ladder.darker.hex,
                         active:     basic.colors.theme.ladder.darker.hex,
-                        disabled:   basic.colors.theme.ladder.dark.hex
+                        disabled:   basic.colors.theme.ladder.darker.hex
                     },
                     bgcolor: {
                         def:        basic.colors.theme.ladder.dark.hex,
@@ -142,11 +142,11 @@ export default {
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     bordercolor: {
-                        def:        basic.colors.key.ladder.dark.hex,
+                        def:        basic.colors.key.ladder.darker.hex,
                         hover:      basic.colors.key.ladder.darker.hex,
                         focus:      basic.colors.key.ladder.darker.hex,
                         active:     basic.colors.key.ladder.darker.hex,
-                        disabled:   basic.colors.key.ladder.dark.hex
+                        disabled:   basic.colors.key.ladder.darker.hex
                     },
                     bgcolor: {
                         def:        basic.colors.key.ladder.dark.hex,
@@ -169,11 +169,11 @@ export default {
                         disabled:   basic.colors.black.ladder.normal.hex
                     },
                     bordercolor: {
-                        def:        basic.colors.light.ladder.normal.hex,
+                        def:        basic.colors.gray.ladder.darkest.hex,
                         hover:      basic.colors.gray.ladder.darker.hex,
                         focus:      basic.colors.gray.ladder.darker.hex,
                         active:     basic.colors.gray.ladder.darker.hex,
-                        disabled:   basic.colors.light.ladder.normal.hex
+                        disabled:   basic.colors.gray.ladder.darkest.hex
                     },
                     bgcolor: {
                         def:        basic.colors.light.ladder.normal.hex,
@@ -203,11 +203,11 @@ export default {
                         disabled:   basic.colors.nice.ladder.darker.hex
                     },
                     bgcolor: {
-                        def:        basic.colors.nice.ladder.darker.hex,
-                        hover:      basic.colors.nice.ladder.dark.hex,
-                        focus:      basic.colors.nice.ladder.dark.hex,
-                        active:     basic.colors.nice.ladder.dark.hex,
-                        disabled:   basic.colors.nice.ladder.darker.hex
+                        def:        basic.colors.nice.ladder.dark.hex,
+                        hover:      basic.colors.nice.ladder.normal.hex,
+                        focus:      basic.colors.nice.ladder.normal.hex,
+                        active:     basic.colors.nice.ladder.normal.hex,
+                        disabled:   basic.colors.nice.ladder.dark.hex
                     },
                     shadow: {
                         hover:      `0 3px 10px 0 rgba(${basic.colors.nice.ladder.darker.rgb}, .3)`,

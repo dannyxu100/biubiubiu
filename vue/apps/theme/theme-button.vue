@@ -183,7 +183,7 @@
                 <div>其他风格按钮</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row bgimg-light" style="padding:20px;">
+                    <div class="grid-row" style="padding:20px;">
                         <div class="cell-7-1">
                             <button class="btn btn-theme">主题</button>
                         </div>
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                     <br/>
-                    <div class="grid-row bgimg-dark" style="padding:20px;">
+                    <div class="grid-row bgimg-light" style="padding:20px;">
                         <div class="cell-7-1">
                             <button class="btn btn-theme">主题</button>
                         </div>
