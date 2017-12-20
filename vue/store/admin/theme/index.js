@@ -256,7 +256,7 @@ const State = {
                         darkest:    {
                             name:   '灰-最暗',
                             class:  '.bggray-darkest',
-                            hex:    '#99999',
+                            hex:    '#999999',
                             rgb:    '153,153,153',
                         },
                     }
@@ -698,7 +698,7 @@ const State = {
                         }
                     },
                     border: {
-                        borderwidth:    1,
+                        borderwidth:    2,
                         color: {
                             def:        '',
                             hover:      '',

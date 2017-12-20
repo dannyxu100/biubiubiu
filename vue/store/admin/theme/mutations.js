@@ -123,9 +123,9 @@ export default {
                     },
                     bgcolor: {
                         def:        basic.colors.theme.ladder.dark.hex,
-                        hover:      basic.colors.theme.ladder.dark.hex,
-                        focus:      basic.colors.theme.ladder.dark.hex,
-                        active:     basic.colors.theme.ladder.dark.hex,
+                        hover:      basic.colors.theme.ladder.normal.hex,
+                        focus:      basic.colors.theme.ladder.normal.hex,
+                        active:     basic.colors.theme.ladder.normal.hex,
                         disabled:   basic.colors.theme.ladder.dark.hex
                     },
                     shadow: {
@@ -256,11 +256,11 @@ export default {
                 },
                 link: {
                     color: {
-                        def:        basic.colors.theme.ladder.darker.hex,
-                        hover:      basic.colors.theme.ladder.dark.hex,
-                        focus:      basic.colors.theme.ladder.dark.hex,
-                        active:     basic.colors.theme.ladder.dark.hex,
-                        disabled:   basic.colors.theme.ladder.dark.hex
+                        def:        basic.colors.theme.ladder.dark.hex,
+                        hover:      basic.colors.theme.ladder.darker.hex,
+                        focus:      basic.colors.theme.ladder.darker.hex,
+                        active:     basic.colors.theme.ladder.darker.hex,
+                        disabled:   basic.colors.theme.ladder.darker.hex
                     }
                 }
             }
