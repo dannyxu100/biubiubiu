@@ -1750,7 +1750,7 @@ fieldset[disabled] .btn-nice.active {
   background-color: #01C677;
 }
 .btn-border {
-  border-width: 2px;
+  border-width: 1px;
   color: #CCC;
   border-color: #CCC;
   background-color: transparent;
@@ -1830,7 +1830,7 @@ fieldset[disabled] .btn-border.active {
   background-color: transparent;
 }
 .btn-border-inverse {
-  border-width: 2px;
+  border-width: 1px;
   color: #666;
   border-color: #666;
   background-color: transparent;
@@ -2593,6 +2593,7 @@ fieldset[disabled] .btn-link.active {
   padding: 3px 10px 3px 25px;
   vertical-align: middle;
   font-size: 0;
+  color: #222;
   cursor: pointer;
 }
 .checkbox input[type="checkbox"],
@@ -2657,10 +2658,10 @@ fieldset[disabled] .btn-link.active {
 .radio.disabled:hover:before,
 .checkbox[disabled]:hover:before,
 .radio[disabled]:hover:before {
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
-  opacity: 0.6;
-  filter: Alpha(Opacity=60);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  filter: Alpha(Opacity=50);
 }
 .checkbox .checkbox-text {
   color: #222;
@@ -2705,10 +2706,10 @@ fieldset[disabled] .btn-link.active {
   color: #222;
   display: block \9;
   /* ie hack */
-  -moz-opacity: 0.8;
-  -khtml-opacity: 0.8;
-  opacity: 0.8;
-  filter: Alpha(Opacity=80);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  filter: Alpha(Opacity=100);
 }
 .checkbox.checked .checkbox-text {
   color: #222;
@@ -2791,10 +2792,10 @@ fieldset[disabled] .btn-link.active {
   background: #666;
   display: block \9;
   /* ie hack */
-  -moz-opacity: 0.8;
-  -khtml-opacity: 0.8;
-  opacity: 0.8;
-  filter: Alpha(Opacity=80);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  filter: Alpha(Opacity=100);
 }
 .radio.checked .radio-text {
   color: #222;

@@ -468,7 +468,7 @@ const State = {
                 },
                 bordercolor:{
                     def:        'rgb(0, 143, 210)',
-                    box:        'rgba(181, 231, 255, 0.6)',
+                    box:        'rgba(181, 231, 255, 0.3)',
                     head:       'rgb(62, 167, 214)'
                 },
                 fontsize:   0,
@@ -900,7 +900,7 @@ const State = {
                 },
                 borderwidth_before:     2,
                 radius_before: {
-                    chk:                0.2,
+                    chk:                0.1,
                     radio:              1
                 },
                 style: {
@@ -912,10 +912,10 @@ const State = {
                             disabled:           ''
                         },
                         bgcolor_before: {
-                            def:                'transparent',
-                            hover:              'transparent',
-                            checked:            'transparent',
-                            disabled:           'transparent'
+                            def:                '',
+                            hover:              '',
+                            checked:            '',
+                            disabled:           ''
                         },
                         bgcolor_after: {
                             def:                'transparent',

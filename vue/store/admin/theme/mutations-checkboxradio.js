@@ -21,6 +21,7 @@ export default {
                 padding: ${basic.chkradio.padding.top}px ${basic.chkradio.padding.right}px ${basic.chkradio.padding.bottom}px ${basic.chkradio.padding.left}px;
                 vertical-align: middle;
                 font-size: 0;
+                color: ${basic.chkradio.color.def};
                 cursor: ${basic.cursor.pointer};
             }
             .${namespace}checkbox input[type="checkbox"],
@@ -79,7 +80,7 @@ export default {
             .${namespace}radio.disabled:hover:before,
             .${namespace}checkbox[disabled]:hover:before,
             .${namespace}radio[disabled]:hover:before {
-                ${Prefix.opacity(state, 0.6)}
+                ${Prefix.opacity(state, 0.4)}
             }
             .${namespace}checkbox .${namespace}checkbox-text {
                 color: ${basic.chkradio.color.def};
@@ -97,7 +98,7 @@ export default {
                 line-height: 16px;
                 display: none \\9;           /* ie hack */
                 ${Prefix.opacity(state, 0)}
-                ${Comm.iconfont(state, basic.chkradio.icon_after, basic.chkradio.fontisze +'px')}
+                ${Comm.iconfont(state, basic.chkradio.icon_after, basic.chkradio.fontsize +'px')}
             }
             .${namespace}checkbox:hover .${namespace}checkbox-text,
             .${namespace}checkbox.hover .${namespace}checkbox-text {
@@ -112,7 +113,7 @@ export default {
             .${namespace}checkbox.hover:after {
                 color: ${basic.chkradio.style.def.color_after.hover};
                 display: block \\9;          /* ie hack */
-                ${Prefix.opacity(state, 0.8)}
+                ${Prefix.opacity(state, 1)}
             }
             .${namespace}checkbox.checked .${namespace}checkbox-text {
                 color: ${basic.chkradio.color.checked};
@@ -179,7 +180,7 @@ export default {
             .${namespace}radio.hover:after {
                 background: ${basic.chkradio.style.def.bgcolor_after.hover};
                 display: block \\9;              /* ie hack */
-                ${Prefix.opacity(state, 0.8)}
+                ${Prefix.opacity(state, 1)}
             }
             .${namespace}radio.checked .${namespace}radio-text {
                 color: ${basic.chkradio.color.checked};
