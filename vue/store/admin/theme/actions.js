@@ -35,6 +35,7 @@ export default {
         commit('CSS_POPMENU');
         commit('CSS_CHECKBOXRADIO');
         commit('CSS_TABS');
+        commit('CSS_TABS_POPMENU');
 
         if(node.styleSheet){                                                   //ie下
             node.styleSheet.cssText = state.data.csstext;

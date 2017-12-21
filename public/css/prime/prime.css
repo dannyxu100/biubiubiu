@@ -2052,6 +2052,7 @@ fieldset[disabled] .btn-link.active {
 }
 .btngroup-list > .btngroup:first-of-type,
 .btngroup-list > .btn:first-of-type {
+  margin-top: -1px;
   -moz-border-radius: 0.3em 0.3em 0 0;
   -webkit-border-radius: 0.3em 0.3em 0 0;
   border-radius: 0.3em 0.3em 0 0;
@@ -3343,24 +3344,22 @@ fieldset[disabled] .btn-link.active {
   position: relative;
   padding: 0;
   margin: 0;
-  margin-left: 3px;
   margin-bottom: -1px;
-  border: 1px solid transparent;
+  z-index: 100;
   padding: 15px 15px;
   height: 50px;
   line-height: 18px;
   font-size: 14px;
   font-weight: 400;
-  color: #319DBB;
+  color: #AAA;
   background-color: transparent;
-  border-color: transparent;
-  border-bottom-color: #DDD;
-  -moz-border-top-right-radius: 0.3em;
-  -moz-border-top-left-radius: 0.3em;
-  -webkit-border-top-right-radius: 0.3em;
-  -webkit-border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-  border-top-left-radius: 0.3em;
+  border-bottom: 2px solid transparent;
+  -moz-border-top-right-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   -webkit-transition: all linear 0.15s;
   -ms-transition: all linear 0.15s;
   -moz-transition: all linear 0.15s;
@@ -3376,45 +3375,34 @@ fieldset[disabled] .btn-link.active {
 .tabs .tabs-navs .tabs-nav:hover,
 .tabs .tabs-navs .tabs-nav.hover {
   color: #666;
-  background-color: #FFF;
-  border-color: #F5F5F5;
-  -moz-border-top-right-radius: 0.3em;
-  -moz-border-top-left-radius: 0.3em;
-  -webkit-border-top-right-radius: 0.3em;
-  -webkit-border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-  border-top-left-radius: 0.3em;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  -moz-border-top-right-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   z-index: 110;
-  border-bottom-color: #DDD;
-  -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
-  -ms-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
 }
 .tabs .tabs-navs .tabs-nav:active,
 .tabs .tabs-navs .tabs-nav.active {
-  color: #333;
+  color: #666;
   background-color: #FFF;
-  border-color: #DDD;
-  border-bottom-color: #DDD;
-  -moz-border-top-right-radius: 0.3em;
-  -moz-border-top-left-radius: 0.3em;
-  -webkit-border-top-right-radius: 0.3em;
-  -webkit-border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-  border-top-left-radius: 0.3em;
+  border-bottom: 2px solid #05C3F9;
+  -moz-border-top-right-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   z-index: 120;
-  border-bottom-color: transparent;
-  -webkit-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.06);
-  -ms-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.06);
 }
 .tabs .tabs-navs .tabs-nav:active:focus,
 .tabs .tabs-navs .tabs-nav.active:focus,
 .tabs .tabs-navs .tabs-nav:active.focus,
 .tabs .tabs-navs .tabs-nav.active.focus {
-  border-color: #DDD;
+  border-color: #05C3F9;
   z-index: 120;
   outline: thin dotted;
   outline: 2px auto -webkit-focus-ring-color;
@@ -3426,8 +3414,8 @@ fieldset[disabled] .btn-link.active {
 }
 .tabs-small .tabs-navs .tabs-nav {
   padding: 8px 15px;
-  height: 32px;
-  line-height: 14px;
+  height: 36px;
+  line-height: 18px;
   font-size: 12px;
   font-weight: 400;
 }
@@ -3435,11 +3423,12 @@ fieldset[disabled] .btn-link.active {
 .tabs > .tabs-navs > .tabs-nav-popmenu-left > .popmenu {
   top: 100%;
   left: 0;
-  margin-top: 3px;
+  margin-top: 5px;
   margin-left: 0;
 }
 .tabs > .tabs-navs > .tabs-nav-popmenu:after,
 .tabs > .tabs-navs > .tabs-nav-popmenu-left:after {
+  display: inline-block;
   vertical-align: top;
   color: #999;
   text-align: center;
@@ -3456,18 +3445,13 @@ fieldset[disabled] .btn-link.active {
 .tabs > .tabs-navs > .tabs-nav-popmenu-left.active {
   color: #666;
   background-color: #FFF;
-  border-color: #F5F5F5;
-  border-bottom-color: #DDD;
-  -moz-border-top-right-radius: 0.3em;
-  -moz-border-top-left-radius: 0.3em;
-  -webkit-border-top-right-radius: 0.3em;
-  -webkit-border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-  border-top-left-radius: 0.3em;
-  -webkit-box-shadow: none;
-  -ms-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  border-bottom: 2px solid #05C3F9;
+  -moz-border-top-right-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .tabs > .tabs-navs > .tabs-nav-popmenu:active:after,
 .tabs > .tabs-navs > .tabs-nav-popmenu-left:active:after,

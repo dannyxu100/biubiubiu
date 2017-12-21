@@ -30,13 +30,13 @@
                 </div>
                 <br/>
 
-                <h3>.tabs.tabs-min</h3>
+                <h3>.tabs.tabs-small</h3>
                 <div>小尺寸</div>
                 <br/>
                 <div class="grid">
                     <div class="grid-row" style="margin-bottom:10px;">
                         <div class="cell-12-6">
-                            <div class="tabs tabs-min">
+                            <div class="tabs tabs-small">
                                 <ul class="tabs-navs">
                                     <li class="tabs-nav active">红色</li>
                                     <li class="tabs-nav">蓝色</li>
@@ -55,7 +55,7 @@
                 <div class="grid">
                     <div class="grid-row" style="margin-bottom:10px;">
                         <div class="cell-12-6 demo-popmenuopen">
-                            <div class="tabs tabs-min">
+                            <div class="tabs">
                                 <ul class="tabs-navs">
                                     <li class="tabs-nav active">首页</li>
                                     <li class="tabs-nav">基本信息</li>

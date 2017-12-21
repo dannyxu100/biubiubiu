@@ -82,6 +82,46 @@ const prefix = {
             box-shadow: ${shadow};
         `;
     },
+    //CSS逐帧动画
+    keyframes (state, name, frames) {
+        return `
+            @-webkit-keyframes ${name} { ${frames}(); }
+            @-moz-keyframes ${name} { ${frames}(); }
+            @-ms-keyframes ${name} { ${frames}();}
+            @-o-keyframes ${name} { ${frames}(); }
+            @keyframes ${name} { ${frames}(); }
+        `;
+    },
+    //CSS形变动画
+    transform(state, attr) {
+        return `
+            -webkit-transform: ${attr};
+            -moz-transform: ${attr};
+            -o-transform: ${attr};
+            -ms-transform: ${attr};
+            transform: ${attr};
+        `;
+    },
+    //CSS形变动画原地
+    transform_origin(state, attr) {
+        return `
+            -webkit-transform-origin: ${attr};
+            -moz-transform-origin: ${attr};
+            -o-transform-origin: ${attr};
+            -ms-transform-origin: ${attr};
+            transform-origin: ${attr};
+        `;
+    },
+    //CSS动画
+    animation(state, attr){
+        return `
+            -webkit-animation: ${attr};
+            -moz-animation: ${attr};
+            -ms-animation: ${attr};
+            -o-animation: ${attr};
+            animation: ${attr};
+        `;
+    },
     //线性渐变背景
     gradient(state, opt){
         opt = opt || 'top, rgb(255,255,255), rgb(0,0,255)';
@@ -90,6 +130,18 @@ const prefix = {
             background: -moz-linear-gradient(${opt});
             background: -o-linear-gradient(${opt});
             background: linear-gradient(${opt});
+        `;
+    },
+    //镜像渐变背景
+    gradient_radial(state, positionorangle, shapeorsize, color1, color2, color3 ) {
+        positionorangle = positionorangle || 'bottom left';
+        shapeorsize = shapeorsize || 'circle';
+        color1 = color1 || '#000000';
+        color2 = color2 || '#d2f726';
+        color3 = color3 || '#dd2222';
+        return `
+            background: -moz-radial-gradient(${positionorangle}, ${shapeorsize}, ${color1}, ${color2}, ${color3});
+            background: -webkit-radial-gradient(${positionorangle}, ${shapeorsize}, ${color1}, ${color2}, ${color3});
         `;
     }
 };

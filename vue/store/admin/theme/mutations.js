@@ -41,6 +41,7 @@ export default {
             def:        basic.colors.white.ladder.light.hex,
             weak:       basic.colors.white.ladder.normal.hex
         });
+        basic.bgcolor.def           = basic.colors.white.ladder.light.hex;
         basic.fontfamily.def        = basic.fontfamily.ios.concat( basic.fontfamily.en, basic.fontfamily.zh, basic.fontfamily.sys ).join(',');
         basic.rem2px                = 1/basic.defpx;                                                              // 1/16 = 0.0625;
         basic.lineheight.auto       = Math.floor(basic.fontsize.def/basic.rem2px * basic.lineheight.def);         //动态行高，根据字体大小计算
@@ -452,33 +453,33 @@ export default {
         });
         Api.extend(true, basic.tabs, {
             bgcolor:                'transparent',
-            bordercolor_navs:       basic.colors.white.ladder.light.hex,
+            bordercolor_navs:       'rgba('+ basic.colors.white.ladder.light.rgb +', .2)',
             borderwidth_navs:       1,
             zindex:                 basic.zindex.bg,
             nav: {
                 color: {
-                    def:            'rgba('+ basic.colors.white.ladder.light.rgb +', .4)',
+                    def:            'rgba('+ basic.colors.white.ladder.light.rgb +', .6)',
                     hover:          'rgba('+ basic.colors.white.ladder.light.rgb +', .6)',
-                    active:         'rgba('+ basic.colors.white.ladder.light.rgb +', 1)',
+                    active:         'rgba('+ basic.colors.theme.ladder.darker.rgb +', 1)',
                 },
                 bordercolor: {
-                    hover:          basic.colors.white.ladder.dark.hex,
-                    active:         basic.colors.gray.ladder.lighter.hex
-                },
-                height: {
-                    def:            50,
-                    small:          32
+                    active:         basic.colors.theme.ladder.darker.hex
                 },
                 lineheight: {
-                    def:            1,
-                    small:          1
+                    def:            basic.tabs.nav.height.def - basic.tabs.nav.padding.def.top - basic.tabs.nav.padding.def.bottom,
+                    small:          basic.tabs.nav.height.small - basic.tabs.nav.padding.small.top - basic.tabs.nav.padding.small.bottom
                 },
                 zindex: {
                     def:            basic.zindex.control,
                     hover:          basic.zindex.control +10,
                     active:         basic.zindex.control +20
                 },
-                radius:             basic.radius.def
+                // shadow: {
+                //     hover:          '0 -1px 3px rgba(0, 0, 0, .05)',
+                //     active:         '0 -2px 3px rgba(0, 0, 0, .06)'
+                // },
+                radius:             basic.radius.def,
+                icon_popmenu:       basic.icons.rightsmall
             }
         });
         // debugger;

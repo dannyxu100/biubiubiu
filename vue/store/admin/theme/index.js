@@ -1043,6 +1043,7 @@ const State = {
                         hover:          'transparent',
                         active:         'transparent'
                     },
+                    borderwidth:        2,
                     bordercolor: {
                         def:            'transparent',
                         hover:          'transparent',
@@ -1050,7 +1051,7 @@ const State = {
                     },
                     height: {
                         def:            50,
-                        small:          32
+                        small:          36
                     },
                     lineheight: {
                         def:            0,
@@ -1062,16 +1063,16 @@ const State = {
                     },
                     padding: {
                         def: {
-                            top:        15,
-                            bottom:     15,
-                            left:       15,
-                            right:      15
+                            top:        10,
+                            bottom:     10,
+                            left:       20,
+                            right:      20
                         },
                         small: {
                             top:        8,
                             bottom:     8,
-                            left:       15,
-                            right:      15
+                            left:       20,
+                            right:      20
                         }
                     },
                     zindex: {
@@ -1079,7 +1080,13 @@ const State = {
                         hover:          0,
                         active:         0
                     },
-                    radius:             0
+                    shadow: {
+                        def:            'none',
+                        hover:          'none',
+                        active:         'none'
+                    },
+                    radius:             0,
+                    icon_popmenu:       ''
                 }
             }
         },
