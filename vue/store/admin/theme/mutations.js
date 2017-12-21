@@ -9,6 +9,7 @@ import Table                    from './mutations-table.js';
 import Btn                      from './mutations-btn.js';
 import Popmenu                  from './mutations-popmenu.js';
 import Checkboxradio            from './mutations-checkboxradio.js';
+import Tabs                     from './mutations-tabs.js';
 
 import Prefix                   from './css-prefix.js';
 import Comm                     from './css-comm.js';
@@ -18,6 +19,13 @@ export default {
         state.data_copy = Vue.api.copy( state.data );       //备份，做重置覆盖使用
         state.data = Object.assign( state.data, newdata );
     },
+    ...Framework,
+    ...Grid,
+    ...Table,
+    ...Btn,
+    ...Popmenu,
+    ...Checkboxradio,
+    ...Tabs,
     [MT.INIT_BASIC]( state ) {
         let basic = state.data.basic;
 
@@ -68,11 +76,11 @@ export default {
                         disabled:   basic.colors.gray.ladder.normal.hex
                     },
                     bgcolor: {
-                        def:        basic.colors.white.ladder.dark.hex,
+                        def:        basic.colors.white.ladder.darkest.hex,
                         hover:      basic.colors.white.ladder.normal.hex,
                         focus:      basic.colors.white.ladder.normal.hex,
                         active:     basic.colors.white.ladder.normal.hex,
-                        disabled:   basic.colors.white.ladder.dark.hex
+                        disabled:   basic.colors.white.ladder.darkest.hex
                     },
                     shadow: {
                         hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .15)`,
@@ -103,7 +111,7 @@ export default {
                     },
                     shadow: {
                         hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .2)`,
-                        active:     `0 0 0 3px rgba(${basic.colors.black.ladder.darker.rgb}, .3)`
+                        active:     `0 0 0 3px rgba(${basic.colors.black.ladder.darker.rgb}, .2)`
                     }
                 },
                 theme: {
@@ -442,14 +450,39 @@ export default {
                 }
             }
         });
+        Api.extend(true, basic.tabs, {
+            bgcolor:                'transparent',
+            bordercolor_navs:       basic.colors.white.ladder.light.hex,
+            borderwidth_navs:       1,
+            zindex:                 basic.zindex.bg,
+            nav: {
+                color: {
+                    def:            'rgba('+ basic.colors.white.ladder.light.rgb +', .4)',
+                    hover:          'rgba('+ basic.colors.white.ladder.light.rgb +', .6)',
+                    active:         'rgba('+ basic.colors.white.ladder.light.rgb +', 1)',
+                },
+                bordercolor: {
+                    hover:          basic.colors.white.ladder.dark.hex,
+                    active:         basic.colors.gray.ladder.lighter.hex
+                },
+                height: {
+                    def:            50,
+                    small:          32
+                },
+                lineheight: {
+                    def:            1,
+                    small:          1
+                },
+                zindex: {
+                    def:            basic.zindex.control,
+                    hover:          basic.zindex.control +10,
+                    active:         basic.zindex.control +20
+                },
+                radius:             basic.radius.def
+            }
+        });
         // debugger;
-    },
-    ...Framework,
-    ...Grid,
-    ...Table,
-    ...Btn,
-    ...Popmenu,
-    ...Checkboxradio
+    }
 };
 
 

@@ -1025,6 +1025,62 @@ const State = {
                         }
                     }
                 }
+            },
+            //标签页
+            tabs: {
+                bgcolor:                'transparent',
+                bordercolor_navs:       '',
+                borderwidth_navs:       1,
+                zindex:                 0,
+                nav: {
+                    color: {
+                        def:            '',
+                        hover:          '',
+                        active:         ''
+                    },
+                    bgcolor: {
+                        def:            'transparent',
+                        hover:          'transparent',
+                        active:         'transparent'
+                    },
+                    bordercolor: {
+                        def:            'transparent',
+                        hover:          'transparent',
+                        active:         'transparent'
+                    },
+                    height: {
+                        def:            50,
+                        small:          32
+                    },
+                    lineheight: {
+                        def:            0,
+                        small:          0
+                    },
+                    fontsize: {
+                        def:            14,
+                        small:          12
+                    },
+                    padding: {
+                        def: {
+                            top:        15,
+                            bottom:     15,
+                            left:       15,
+                            right:      15
+                        },
+                        small: {
+                            top:        8,
+                            bottom:     8,
+                            left:       15,
+                            right:      15
+                        }
+                    },
+                    zindex: {
+                        def:            0,
+                        hover:          0,
+                        active:         0
+                    },
+                    radius:             0
+                }
             }
         },
         csstext: ''

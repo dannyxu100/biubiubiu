@@ -877,6 +877,7 @@ export default {
             }
             .${namespace}btngroup-list > .${namespace}btngroup:first-of-type,
             .${namespace}btngroup-list > .${namespace}btn:first-of-type {
+                margin-top: 0;
                 ${Prefix.border_radius(state, basic.btn.radius +'em '+ basic.btn.radius +'em 0 0')}
             }
             .${namespace}btngroup-list > .${namespace}btngroup:last-of-type,
