@@ -453,17 +453,17 @@ export default {
         });
         Api.extend(true, basic.tabs, {
             bgcolor:                'transparent',
-            bordercolor_navs:       'rgba('+ basic.colors.white.ladder.light.rgb +', .2)',
             borderwidth_navs:       1,
+            bordercolor_navs:       'rgba('+ basic.colors.theme.ladder.darker.rgb +', 0.3)',
             zindex:                 basic.zindex.bg,
             nav: {
                 color: {
-                    def:            'rgba('+ basic.colors.white.ladder.light.rgb +', .6)',
-                    hover:          'rgba('+ basic.colors.white.ladder.light.rgb +', .6)',
-                    active:         'rgba('+ basic.colors.theme.ladder.darker.rgb +', 1)',
+                    def:            'rgba('+ basic.colors.theme.ladder.darker.rgb +', 0.8)',
+                    hover:          'rgba('+ basic.colors.theme.ladder.darker.rgb +', 1)',
+                    active:         'rgba('+ basic.colors.white.ladder.light.rgb +', 1)',
                 },
                 bordercolor: {
-                    active:         basic.colors.theme.ladder.darker.hex
+                    active:         basic.colors.white.ladder.light.hex
                 },
                 lineheight: {
                     def:            basic.tabs.nav.height.def - basic.tabs.nav.padding.def.top - basic.tabs.nav.padding.def.bottom,

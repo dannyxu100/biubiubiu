@@ -137,6 +137,20 @@ export default {
                 color: #ddd;
             }
 
+            /* 修正selection颜色 */
+            ::-moz-selection {
+                background: ${basic.colors.white.ladder.light.hex};
+                color: ${basic.colors.theme.ladder.darker.hex};
+            }
+            ::-webkit-selection {
+                background: ${basic.colors.white.ladder.light.hex};
+                color: ${basic.colors.theme.ladder.darker.hex};
+            }
+            ::selection {
+                background: ${basic.colors.white.ladder.light.hex};
+                color: ${basic.colors.theme.ladder.darker.hex};
+            }
+
             /*修正iconfont*/
             .iconfont {
                 display: inline-block;

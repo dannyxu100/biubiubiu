@@ -56,7 +56,7 @@ export default {
                 padding: 0;
                 margin: 0;
                 margin-bottom: ${-basic.tabs.borderwidth_navs}px;
-                z-index: ${basic.tabs.nav};
+                z-index: ${basic.tabs.nav.zindex.def};
                 ${nav_size(
                     state,
                     basic.tabs.nav.padding.def,
