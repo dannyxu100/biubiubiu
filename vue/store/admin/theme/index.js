@@ -8,6 +8,7 @@ Vue.use(Vuex);
 const State = {
     data_copy: {},
     data: {
+        csstext:        '',
         basic: {
             //命名空间（前缀）
             namespace:  '',
@@ -455,10 +456,10 @@ const State = {
                     bgcolor:    'linear-gradient(225deg, rgb(0, 83, 185), rgb(163, 108, 249))'
                 },
                 color: {
-                    def:        'rgb(255,255,255)',
-                    head:       'rgb(255,255,255)',
-                    body:       'rgb(211,255,255)',
-                    foot:       'rgb(211,255,255)',
+                    def:        'rgb(175, 224, 224)',
+                    head:       'rgb(210, 233, 236)',
+                    body:       'rgb(175, 224, 224)',
+                    foot:       'rgb(175, 224, 224)',
                     hover:      'rgb(255,255,255)'
                 },
                 bgcolor: {
@@ -568,6 +569,97 @@ const State = {
                             focus:      '',
                             active:     '',
                             disabled:   ''
+                        },
+                        shadow: {
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
+                        }
+                    },
+                    border: {
+                        borderwidth:    2,
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
+                        },
+                        shadow: {
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
+                        }
+                    },
+                    borderinverse: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bgcolor: {
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
+                        },
+                        shadow: {
+                            def:        'none',
+                            hover:      'none',
+                            focus:      'none',
+                            active:     'none',
+                            disabled:   'none !important'
+                        }
+                    },
+                    link: {
+                        color: {
+                            def:        '',
+                            hover:      '',
+                            focus:      '',
+                            active:     '',
+                            disabled:   ''
+                        },
+                        bordercolor: {
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
+                        },
+                        bgcolor: {
+                            def:        'transparent',
+                            hover:      'transparent',
+                            focus:      'transparent',
+                            active:     'transparent',
+                            disabled:   'transparent'
                         },
                         shadow: {
                             def:        'none',
@@ -688,97 +780,6 @@ const State = {
                             focus:      '',
                             active:     '',
                             disabled:   ''
-                        },
-                        shadow: {
-                            def:        'none',
-                            hover:      'none',
-                            focus:      'none',
-                            active:     'none',
-                            disabled:   'none !important'
-                        }
-                    },
-                    border: {
-                        borderwidth:    2,
-                        color: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
-                        },
-                        bordercolor: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
-                        },
-                        bgcolor: {
-                            def:        'transparent',
-                            hover:      'transparent',
-                            focus:      'transparent',
-                            active:     'transparent',
-                            disabled:   'transparent'
-                        },
-                        shadow: {
-                            def:        'none',
-                            hover:      'none',
-                            focus:      'none',
-                            active:     'none',
-                            disabled:   'none !important'
-                        }
-                    },
-                    borderinverse: {
-                        color: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
-                        },
-                        bordercolor: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
-                        },
-                        bgcolor: {
-                            def:        'transparent',
-                            hover:      'transparent',
-                            focus:      'transparent',
-                            active:     'transparent',
-                            disabled:   'transparent'
-                        },
-                        shadow: {
-                            def:        'none',
-                            hover:      'none',
-                            focus:      'none',
-                            active:     'none',
-                            disabled:   'none !important'
-                        }
-                    },
-                    link: {
-                        color: {
-                            def:        '',
-                            hover:      '',
-                            focus:      '',
-                            active:     '',
-                            disabled:   ''
-                        },
-                        bordercolor: {
-                            def:        'transparent',
-                            hover:      'transparent',
-                            focus:      'transparent',
-                            active:     'transparent',
-                            disabled:   'transparent'
-                        },
-                        bgcolor: {
-                            def:        'transparent',
-                            hover:      'transparent',
-                            focus:      'transparent',
-                            active:     'transparent',
-                            disabled:   'transparent'
                         },
                         shadow: {
                             def:        'none',
@@ -1088,9 +1089,42 @@ const State = {
                     radius:             0,
                     icon_popmenu:       ''
                 }
+            },
+            //标签
+            tag: {
+                padding: {
+                    top:            0.25,
+                    bottom:         0.25,
+                    left:           0.45,
+                    right:          0.45
+                },
+                padding_circle: {
+                    left:           0.51,
+                    right:          0.51
+                },
+                height:             'inherit',
+                lineheight:         1,
+                fontsize:           0.75,
+                color:              '',
+                bgcolor:            '',
+                borderwidth:        1,
+                bordercolor:        '',
+                radius:             0
+            },
+            //输入框
+            input: {
+                width: {
+                    def:                160,
+                    textarea:           160
+                },
+                height: {
+                    def:                0,
+                    small:              0,
+                    large:              0,
+                    textarea:           0
+                }
             }
-        },
-        csstext: ''
+        }
     }
 };
 

@@ -36,18 +36,18 @@
                 </div>
                 <br/>
 
-                <h3>.tag-theme | .tag-key | .tag-light | .tag-nice </h3>
+                <h3>.tag-theme | .tag-key | .tag-light | .tag-nice  | .tag-black </h3>
                 <div>其他风格</div>
                 <br/>
                 <div class="grid">
                     <div class="grid-row" style="margin-bottom:10px;">
                         <div class="cell-5-5">
                             <p class="fsize-14">
-                                老板，我要
                                 <span class="tag tag-theme">香菜</span>
                                 <span class="tag tag-key">火腿</span>
                                 <span class="tag tag-light">煎鸡蛋</span>
                                 <span class="tag tag-nice">生菜</span>
+                                <span class="tag tag-black">胡萝卜</span>
                             </p>
                         </div>
 
@@ -66,7 +66,8 @@
                                 <span class="tag tag-circle tag-key">套餐二</span>
                                 <span class="tag tag-circle tag-light">套餐三</span>
                                 <span class="tag tag-circle tag-nice">套餐四</span>
-                                <span class="tag tag-circle">9</span>
+                                <span class="tag tag-circle tag-black">9</span>
+                                <span class="tag tag-circle">63</span>
                             </p>
                         </div>
 

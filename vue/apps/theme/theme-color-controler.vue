@@ -105,15 +105,15 @@
                     ladder.lightest.hex = Color.rgb2hex( ladder.lightest.rgb );
                 }
                 if( ladder.dark ){
-                    ladder.dark.rgb = Color.darken( rgb, 20 );
+                    ladder.dark.rgb = Color.darken( rgb, 60 );
                     ladder.dark.hex = Color.rgb2hex( ladder.dark.rgb );
                 }
                 if( ladder.darker ){
-                    ladder.darker.rgb = Color.darken( rgb, 60 );
+                    ladder.darker.rgb = Color.darken( rgb, 80 );
                     ladder.darker.hex = Color.rgb2hex( ladder.darker.rgb );
                 }
                 if( ladder.darkest ){
-                    ladder.darkest.rgb = Color.darken( rgb, 80 );
+                    ladder.darkest.rgb = Color.darken( rgb, 120 );
                     ladder.darkest.hex = Color.rgb2hex( ladder.darkest.rgb );
                 }
 

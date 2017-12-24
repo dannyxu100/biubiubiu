@@ -6,14 +6,15 @@
 <template>
     <div class="wrapper wrapper-scroll wrapper-box wrapper-theme">
         <div class="container">
+
             <!-- 输入框 -->
-            <div class="section">
+            <div class="section" id="section-input">
                 <h2>输入框</h2>
-                <h3>.input</h3>
+                <h3>.input | .textarea</h3>
                 <div>默认样式（HTML5新类型各个浏览器支持程度不同）。</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-1">
                             <input type="text" class="input" value="default" placeholder="请输入"/>
                         </div>
@@ -24,13 +25,31 @@
                             <input type="text" class="input active" value="激活" placeholder="请输入"/>
                         </div>
                         <div class="cell-5-1">
-                            <input type="text" class="input" value="只读" readonly/>
+                            <input type="text" class="input" value="只读" placeholder="请输入" readonly/>
                         </div>
                         <div class="cell-5-1">
-                            <input type="text" class="input" value="禁用" disabled/>
+                            <input type="text" class="input" value="禁用" placeholder="请输入" disabled/>
                         </div>
                     </div>
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <br/>
+                    <div class="grid-row">
+                        <div class="cell-5-1">
+                            <textarea class="textarea" placeholder="请输入">default</textarea>
+                        </div>
+                        <div class="cell-5-1">
+                            <textarea class="textarea" placeholder="请输入">默认</textarea>
+                        </div>
+                        <div class="cell-5-1">
+                            <textarea class="textarea active" placeholder="请输入">激活</textarea>
+                        </div>
+                        <div class="cell-5-1">
+                            <textarea class="textarea" placeholder="请输入" readonly>只读</textarea>
+                        </div>
+                        <div class="cell-5-1">
+                            <textarea class="textarea" placeholder="请输入" disabled>禁用</textarea>
+                        </div>
+                    </div>
+                    <!-- <div class="grid-row">
                         <div class="cell-5-1">
                             text：<input type="text" class="input" value="" placeholder="请输入"/>
                         </div>
@@ -47,7 +66,7 @@
                             email：<input type="email" class="input" value="" placeholder="邮件地址"/>
                         </div>
                     </div>
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-1">
                             month：<input type="month" class="input" value="" placeholder="月份"/>
                         </div>
@@ -63,7 +82,7 @@
                         <div class="cell-5-1">
                             url：<input type="url" class="input" value="" placeholder="网址"/>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <br/>
 
@@ -71,7 +90,7 @@
                 <div>其他风格输入框</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-1">
                             theme：<input type="text" class="input input-theme" value="" placeholder="请输入"/>
                         </div>
@@ -88,7 +107,7 @@
                         </div>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-5-1">
                             active：<input type="text" class="input input-theme active" value="" placeholder="请输入"/>
                         </div>
@@ -107,22 +126,22 @@
                 </div>
                 <br/>
 
-                <h3>.input-min | .input-big</h3>
+                <h3>.input-small | .input-large</h3>
                 <div>大尺寸、小尺寸</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-4">
-                            <button class="btn btn-min">参照按钮</button>
-                            <input type="text" class="input input-min" value="" placeholder="请输入"/>
+                            <button class="btn btn-small">参照按钮</button>
+                            <input type="text" class="input input-small" value="" placeholder="请输入"/>
                         </div>
                         <div class="cell-12-4">
                             <button class="btn">参照按钮</button>
                             <input type="text" class="input" value="" placeholder="请输入"/>
                         </div>
                         <div class="cell-12-4">
-                            <button class="btn btn-big">参照按钮</button>
-                            <input type="text" class="input input-big" value="" placeholder="请输入"/>
+                            <button class="btn btn-large">参照按钮</button>
+                            <input type="text" class="input input-large" value="" placeholder="请输入"/>
                         </div>
                     </div>
                 </div>
@@ -132,27 +151,27 @@
                 <div>宽度100%</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <!-- <div class="grid-row">
                         <div class="cell-12-12">
-                            <input type="text" class="input input-min input-full" value="" placeholder="请输入"/>
+                            <input type="text" class="input input-small input-full" value="" placeholder="请输入"/>
                         </div>
-                    </div>
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    </div> -->
+                    <div class="grid-row">
                         <div class="cell-12-12">
-                            <input type="text" class="input input-theme input-full active" value="" placeholder="请输入"/>
+                            <input type="text" class="input input-theme input-full" value="" placeholder="请输入"/>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 组合输入框 -->
-            <div class="section">
+            <div class="section" id="section-inputgroup">
                 <h2>组合输入框</h2>
                 <h3>.inputgroup .addons .text</h3>
                 <div>组合输入框</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             <div class="inputgroup">
                                 <div class="addons">
@@ -180,7 +199,7 @@
                         </div>
                     </div>
 
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             <div class="inputgroup">
                                 <div class="addons">
@@ -210,15 +229,15 @@
                 <br/>
 
                 <h3>大尺寸、小尺寸</h3>
-                <div>*-min | *-big</div>
+                <div>*-small | *-large</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-4">
                             <div class="inputgroup">
-                                <input type="number" class="input input-min" value="" placeholder="数值"/>
+                                <input type="number" class="input input-small" value="" placeholder="数值"/>
                                 <div class="addons">
-                                    <span class="text text-min">元</span>
+                                    <span class="text text-small">元</span>
                                 </div>
                             </div>
                         </div>
@@ -232,9 +251,9 @@
                         </div>
                         <div class="cell-12-4">
                             <div class="inputgroup">
-                                <input type="number" class="input input-big" value="" placeholder="数值"/>
+                                <input type="number" class="input input-large" value="" placeholder="数值"/>
                                 <div class="addons">
-                                    <span class="text text-big">元</span>
+                                    <span class="text text-large">元</span>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +265,7 @@
                 <div>设置.inputgroup元素的宽度</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <div class="grid-row">
                         <div class="cell-12-12">
                             <div class="inputgroup" style="width:528px">
                                 <div class="addons">
@@ -264,7 +283,7 @@
                 <div>宽度100%</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <!-- <div class="grid-row">
                         <div class="cell-12-12">
                             <div class="inputgroup inputgroup-full">
                                 <input type="text" class="input" value="" placeholder="搜索关键字"/>
@@ -274,8 +293,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    </div> -->
+                    <div class="grid-row">
                         <div class="cell-12-12">
                             <div class="inputgroup inputgroup-full">
                                 <input type="text" class="input input-theme" value="" placeholder="搜索关键字"/>
@@ -287,16 +306,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-row" style="margin-bottom:10px;">
+                    <!-- <div class="grid-row">
                         <div class="cell-12-12">
                             <div class="inputgroup inputgroup-full">
                                 <div class="addons">
-                                    <button class="btn btn-theme btn-big border"><i class="iconfont icon-search"></i> 搜索</button>
+                                    <button class="btn btn-theme btn-large border"><i class="iconfont icon-search"></i> 搜索</button>
                                 </div>
-                                <input type="text" class="input input-theme input-big active" value="" placeholder="搜索关键字"/>
+                                <input type="text" class="input input-theme input-large active" value="" placeholder="搜索关键字"/>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 

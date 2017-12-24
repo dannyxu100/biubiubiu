@@ -53,6 +53,7 @@ export default {
                 )}
                 ${Prefix.user_select(state)}
                 ${Prefix.transition(state)}
+                ${Prefix.box_shadow(state, basic.btn.style.def.shadow.def)}
             }
             .${namespace}btn:focus,
             .${namespace}btn-def:focus,
@@ -72,7 +73,6 @@ export default {
             .${namespace}btn-def.loading.focus {
                 border-color: ${basic.btn.style.def.bordercolor.focus};
                 z-index: ${basic.btn.zindex.active};
-
                 ${Prefix.outline()}
             }
             .${namespace}btn:hover,
@@ -95,13 +95,32 @@ export default {
                 background-color: ${basic.btn.style.def.bgcolor.focus};
                 text-decoration: none;
                 z-index: ${basic.btn.zindex.active};
+                ${Prefix.box_shadow(state, basic.btn.style.def.shadow.focus)}
             }
             .${namespace}btn:active,
             .${namespace}btn-def:active,
             .${namespace}btn.active,
             .${namespace}btn-def.active,
             .${namespace}btn.loading,
-            .${namespace}btn-def.loading {
+            .${namespace}btn-def.loading,
+            .${namespace}btn:active:hover,
+            .${namespace}btn-def:active:hover,
+            .${namespace}btn.active:hover,
+            .${namespace}btn-def.active:hover,
+            .${namespace}btn.loading:hover,
+            .${namespace}btn-def.loading:hover,
+            .${namespace}btn:active:focus,
+            .${namespace}btn-def:active:focus,
+            .${namespace}btn.active:focus,
+            .${namespace}btn-def.active:focus,
+            .${namespace}btn.loading:focus,
+            .${namespace}btn-def.loading:focus,
+            .${namespace}btn:active.focus,
+            .${namespace}btn-def:active.focus,
+            .${namespace}btn.active.focus,
+            .${namespace}btn-def.active.focus,
+            .${namespace}btn.loading.focus,
+            .${namespace}btn-def.loading.focus {
                 color: ${basic.btn.style.def.color.active};
                 border-color: ${basic.btn.style.def.bordercolor.active};
                 background-color: ${basic.btn.style.def.bgcolor.active};
@@ -164,7 +183,6 @@ export default {
                 border-color: ${basic.btn.style.def.bordercolor.disabled};
                 background-color: ${basic.btn.style.def.bgcolor.disabled};
                 cursor: not-allowed;
-
                 ${Prefix.opacity(state, 0.55)}
                 ${Prefix.box_shadow(state, basic.btn.style.def.shadow.disabled)}
             }
@@ -206,49 +224,41 @@ export default {
                 color: ${basic.btn.style.inverse.color.def};
                 border-color: ${basic.btn.style.inverse.bordercolor.def};
                 background-color: ${basic.btn.style.inverse.bgcolor.def};
+                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.def)}
             }
             .${namespace}btn-inverse.border {
                 border-color: ${basic.btn.style.inverse.bordercolor.active};
-            }
-            .${namespace}btn-inverse:focus,
-            .${namespace}btn-inverse.focus {
-                color: ${basic.btn.style.inverse.color.focus};
-                border-color: ${basic.btn.style.inverse.bordercolor.focus};
-                background-color: ${basic.btn.style.inverse.bgcolor.focus};
             }
             .${namespace}btn-inverse:hover,
             .${namespace}btn-inverse.hover {
                 color: ${basic.btn.style.inverse.color.hover};
                 border-color: ${basic.btn.style.inverse.bordercolor.hover};
                 background-color: ${basic.btn.style.inverse.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.hover)}
+            }
+            .${namespace}btn-inverse:focus,
+            .${namespace}btn-inverse.focus {
+                color: ${basic.btn.style.inverse.color.focus};
+                border-color: ${basic.btn.style.inverse.bordercolor.focus};
+                background-color: ${basic.btn.style.inverse.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.focus)}
             }
             .${namespace}btn-inverse:active,
             .${namespace}btn-inverse.active,
             .${namespace}btn-inverse.loading,
-            .open > .dropdown-toggle.${namespace}btn-inverse {
-                color: ${basic.btn.style.inverse.color.active};
-                border-color: ${basic.btn.style.inverse.bordercolor.active};
-                background-color: ${basic.btn.style.inverse.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.active)}
-            }
             .${namespace}btn-inverse:active:hover,
             .${namespace}btn-inverse.active:hover,
             .${namespace}btn-inverse.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-inverse:hover,
             .${namespace}btn-inverse:active:focus,
             .${namespace}btn-inverse.active:focus,
             .${namespace}btn-inverse.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-inverse:focus,
             .${namespace}btn-inverse:active.focus,
             .${namespace}btn-inverse.active.focus,
-            .${namespace}btn-inverse.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-inverse.focus {
-                color: ${basic.btn.style.inverse.color.focus};
-                border-color: ${basic.btn.style.inverse.bordercolor.focus};
-                background-color: ${basic.btn.style.inverse.bgcolor.focus};
+            .${namespace}btn-inverse.loading.focus {
+                color: ${basic.btn.style.inverse.color.active};
+                border-color: ${basic.btn.style.inverse.bordercolor.active};
+                background-color: ${basic.btn.style.inverse.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.active)}
             }
             .${namespace}btn-inverse.disabled,
             .${namespace}btn-inverse[disabled],
@@ -271,6 +281,7 @@ export default {
                 color: ${basic.btn.style.inverse.color.disabled};
                 border-color: ${basic.btn.style.inverse.bordercolor.disabled};
                 background-color: ${basic.btn.style.inverse.bgcolor.disabled};
+                ${Prefix.box_shadow(state, basic.btn.style.inverse.shadow.disabled)}
             }
             .${namespace}btn-inverse .badge {
                 color: ${basic.colors.white.ladder.normal.hex};
@@ -280,49 +291,41 @@ export default {
                 color: ${basic.btn.style.theme.color.def};
                 border-color: ${basic.btn.style.theme.bordercolor.def};
                 background-color: ${basic.btn.style.theme.bgcolor.def};
+                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.def)}
             }
             .${namespace}btn-theme.border {
                 border-color: ${basic.btn.style.theme.bordercolor.active};
-            }
-            .${namespace}btn-theme:focus,
-            .${namespace}btn-theme.focus {
-                color: ${basic.btn.style.theme.color.focus};
-                border-color: ${basic.btn.style.theme.bordercolor.focus};
-                background-color: ${basic.btn.style.theme.bgcolor.focus};
             }
             .${namespace}btn-theme:hover,
             .${namespace}btn-theme.hover {
                 color: ${basic.btn.style.theme.color.hover};
                 border-color: ${basic.btn.style.theme.bordercolor.hover};
                 background-color: ${basic.btn.style.theme.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.hover)}
+            }
+            .${namespace}btn-theme:focus,
+            .${namespace}btn-theme.focus {
+                color: ${basic.btn.style.theme.color.focus};
+                border-color: ${basic.btn.style.theme.bordercolor.focus};
+                background-color: ${basic.btn.style.theme.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.focus)}
             }
             .${namespace}btn-theme:active,
             .${namespace}btn-theme.active,
             .${namespace}btn-theme.loading,
-            .open > .dropdown-toggle.${namespace}btn-theme {
-                color: ${basic.btn.style.theme.color.active};
-                border-color: ${basic.btn.style.theme.bordercolor.active};
-                background-color: ${basic.btn.style.theme.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.active)}
-            }
             .${namespace}btn-theme:active:hover,
             .${namespace}btn-theme.active:hover,
             .${namespace}btn-theme.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-theme:hover,
             .${namespace}btn-theme:active:focus,
             .${namespace}btn-theme.active:focus,
             .${namespace}btn-theme.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-theme:focus,
             .${namespace}btn-theme:active.focus,
             .${namespace}btn-theme.active.focus,
-            .${namespace}btn-theme.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-theme.focus {
-                color: ${basic.btn.style.theme.color.focus};
-                border-color: ${basic.btn.style.theme.bordercolor.focus};
-                background-color: ${basic.btn.style.theme.bgcolor.focus};
+            .${namespace}btn-theme.loading.focus {
+                color: ${basic.btn.style.theme.color.active};
+                border-color: ${basic.btn.style.theme.bordercolor.active};
+                background-color: ${basic.btn.style.theme.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.active)}
             }
             .${namespace}btn-theme.disabled,
             .${namespace}btn-theme[disabled],
@@ -345,6 +348,7 @@ export default {
                 color: ${basic.btn.style.theme.color.disabled};
                 border-color: ${basic.btn.style.theme.bordercolor.disabled};
                 background-color: ${basic.btn.style.theme.bgcolor.disabled};
+                ${Prefix.box_shadow(state, basic.btn.style.theme.shadow.disabled)}
             }
             .${namespace}btn-theme .badge {
                 color: ${basic.colors.white.ladder.normal.hex};
@@ -354,49 +358,41 @@ export default {
                 color: ${basic.btn.style.key.color.def};
                 border-color: ${basic.btn.style.key.bordercolor.def};
                 background-color: ${basic.btn.style.key.bgcolor.def};
+                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.def)}
             }
             .${namespace}btn-key.border {
                 border-color: ${basic.btn.style.key.bordercolor.active};
-            }
-            .${namespace}btn-key:focus,
-            .${namespace}btn-key.focus {
-                color: ${basic.btn.style.key.color.focus};
-                border-color: ${basic.btn.style.key.bordercolor.focus};
-                background-color: ${basic.btn.style.key.bgcolor.focus};
             }
             .${namespace}btn-key:hover,
             .${namespace}btn-key.hover {
                 color: ${basic.btn.style.key.color.hover};
                 border-color: ${basic.btn.style.key.bordercolor.hover};
                 background-color: ${basic.btn.style.key.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.key.shadow.hover)}
+            }
+            .${namespace}btn-key:focus,
+            .${namespace}btn-key.focus {
+                color: ${basic.btn.style.key.color.focus};
+                border-color: ${basic.btn.style.key.bordercolor.focus};
+                background-color: ${basic.btn.style.key.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.focus)}
             }
             .${namespace}btn-key:active,
             .${namespace}btn-key.active,
             .${namespace}btn-key.loading,
-            .open > .dropdown-toggle.${namespace}btn-key {
-                color: ${basic.btn.style.key.color.active};
-                border-color: ${basic.btn.style.key.bordercolor.active};
-                background-color: ${basic.btn.style.key.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.active)}
-            }
             .${namespace}btn-key:active:hover,
             .${namespace}btn-key.active:hover,
             .${namespace}btn-key.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-key:hover,
             .${namespace}btn-key:active:focus,
             .${namespace}btn-key.active:focus,
             .${namespace}btn-key.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-key:focus,
             .${namespace}btn-key:active.focus,
             .${namespace}btn-key.active.focus,
-            .${namespace}btn-key.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-key.focus {
-                color: ${basic.btn.style.key.color.focus};
-                border-color: ${basic.btn.style.key.bordercolor.focus};
-                background-color: ${basic.btn.style.key.bgcolor.focus};
+            .${namespace}btn-key.loading.focus {
+                color: ${basic.btn.style.key.color.active};
+                border-color: ${basic.btn.style.key.bordercolor.active};
+                background-color: ${basic.btn.style.key.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.active)}
             }
             .${namespace}btn-key:active,
             .${namespace}btn-key.active,
@@ -425,6 +421,7 @@ export default {
                 color: ${basic.btn.style.key.color.disabled};
                 border-color: ${basic.btn.style.key.bordercolor.disabled};
                 background-color: ${basic.btn.style.key.bgcolor.disabled};
+                ${Prefix.box_shadow(state, basic.btn.style.key.shadow.disabled)}
             }
             .${namespace}btn-key .badge {
                 color: ${basic.colors.white.ladder.normal.hex};
@@ -434,49 +431,41 @@ export default {
                 color: ${basic.btn.style.light.color.def};
                 border-color: ${basic.btn.style.light.bordercolor.def};
                 background-color: ${basic.btn.style.light.bgcolor.def};
+                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.def)}
             }
             .${namespace}btn-light.border {
                 border-color: ${basic.btn.style.light.bordercolor.active};
-            }
-            .${namespace}btn-light:focus,
-            .${namespace}btn-light.focus {
-                color: ${basic.btn.style.light.color.focus};
-                border-color: ${basic.btn.style.light.bordercolor.focus};
-                background-color: ${basic.btn.style.light.bgcolor.focus};
             }
             .${namespace}btn-light:hover,
             .${namespace}btn-light.hover {
                 color: ${basic.btn.style.light.color.hover};
                 border-color: ${basic.btn.style.light.bordercolor.hover};
                 background-color: ${basic.btn.style.light.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.light.shadow.hover)}
+            }
+            .${namespace}btn-light:focus,
+            .${namespace}btn-light.focus {
+                color: ${basic.btn.style.light.color.focus};
+                border-color: ${basic.btn.style.light.bordercolor.focus};
+                background-color: ${basic.btn.style.light.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.focus)}
             }
             .${namespace}btn-light:active,
             .${namespace}btn-light.active,
             .${namespace}btn-light.loading,
-            .open > .dropdown-toggle.${namespace}btn-light {
-                color: ${basic.btn.style.light.color.active};
-                border-color: ${basic.btn.style.light.bordercolor.active};
-                background-color: ${basic.btn.style.light.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.active)}
-            }
             .${namespace}btn-light:active:hover,
             .${namespace}btn-light.active:hover,
             .${namespace}btn-light.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-light:hover,
             .${namespace}btn-light:active:focus,
             .${namespace}btn-light.active:focus,
             .${namespace}btn-light.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-light:focus,
             .${namespace}btn-light:active.focus,
             .${namespace}btn-light.active.focus,
-            .${namespace}btn-light.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-light.focus {
-                color: ${basic.btn.style.light.color.focus};
-                border-color: ${basic.btn.style.light.bordercolor.focus};
-                background-color: ${basic.btn.style.light.bgcolor.focus};
+            .${namespace}btn-light.loading.focus {
+                color: ${basic.btn.style.light.color.active};
+                border-color: ${basic.btn.style.light.bordercolor.active};
+                background-color: ${basic.btn.style.light.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.active)}
             }
             .${namespace}btn-light:active,
             .${namespace}btn-light.active,
@@ -505,6 +494,7 @@ export default {
                 color: ${basic.btn.style.light.color.disabled};
                 border-color: ${basic.btn.style.light.bordercolor.disabled};
                 background-color: ${basic.btn.style.light.bgcolor.disabled};
+                ${Prefix.box_shadow(state, basic.btn.style.light.shadow.disabled)}
             }
             .${namespace}btn-light .badge {
                 color: ${basic.colors.white.ladder.normal.hex};
@@ -514,49 +504,41 @@ export default {
                 color: ${basic.btn.style.nice.color.def};
                 border-color: ${basic.btn.style.nice.bordercolor.def};
                 background-color: ${basic.btn.style.nice.bgcolor.def};
+                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.def)}
             }
             .${namespace}btn-nice.border {
                 border-color: ${basic.btn.style.nice.bordercolor.active};
-            }
-            .${namespace}btn-nice:focus,
-            .${namespace}btn-nice.focus {
-                color: ${basic.btn.style.nice.color.focus};
-                border-color: ${basic.btn.style.nice.bordercolor.focus};
-                background-color: ${basic.btn.style.nice.bgcolor.focus};
             }
             .${namespace}btn-nice:hover,
             .${namespace}btn-nice.hover {
                 color: ${basic.btn.style.nice.color.hover};
                 border-color: ${basic.btn.style.nice.bordercolor.hover};
                 background-color: ${basic.btn.style.nice.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.hover)}
+            }
+            .${namespace}btn-nice:focus,
+            .${namespace}btn-nice.focus {
+                color: ${basic.btn.style.nice.color.focus};
+                border-color: ${basic.btn.style.nice.bordercolor.focus};
+                background-color: ${basic.btn.style.nice.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.focus)}
             }
             .${namespace}btn-nice:active,
             .${namespace}btn-nice.active,
             .${namespace}btn-nice.loading,
-            .open > .dropdown-toggle.${namespace}btn-nice {
-                color: ${basic.btn.style.nice.color.active};
-                border-color: ${basic.btn.style.nice.bordercolor.active};
-                background-color: ${basic.btn.style.nice.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.active)}
-            }
             .${namespace}btn-nice:active:hover,
             .${namespace}btn-nice.active:hover,
             .${namespace}btn-nice.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-nice:hover,
             .${namespace}btn-nice:active:focus,
             .${namespace}btn-nice.active:focus,
             .${namespace}btn-nice.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-nice:focus,
             .${namespace}btn-nice:active.focus,
             .${namespace}btn-nice.active.focus,
-            .${namespace}btn-nice.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-nice.focus {
-                color: ${basic.btn.style.nice.color.focus};
-                border-color: ${basic.btn.style.nice.bordercolor.focus};
-                background-color: ${basic.btn.style.nice.bgcolor.focus};
+            .${namespace}btn-nice.loading.focus {
+                color: ${basic.btn.style.nice.color.active};
+                border-color: ${basic.btn.style.nice.bordercolor.active};
+                background-color: ${basic.btn.style.nice.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.active)}
             }
             .${namespace}btn-nice.disabled,
             .${namespace}btn-nice[disabled],
@@ -579,6 +561,7 @@ export default {
                 color: ${basic.btn.style.nice.color.disabled};
                 border-color: ${basic.btn.style.nice.bordercolor.disabled};
                 background-color: ${basic.btn.style.nice.bgcolor.disabled};
+                ${Prefix.box_shadow(state, basic.btn.style.nice.shadow.disabled)}
             }
             .${namespace}btn-nice .badge {
                 color: ${basic.colors.white.ladder.normal.hex};
@@ -589,46 +572,38 @@ export default {
                 color: ${basic.btn.style.border.color.def};
                 border-color: ${basic.btn.style.border.bordercolor.def};
                 background-color: ${basic.btn.style.border.bgcolor.def};
-            }
-            .${namespace}btn-border:focus,
-            .${namespace}btn-border.focus {
-                color: ${basic.btn.style.border.color.focus};
-                border-color: ${basic.btn.style.border.bordercolor.focus};
-                background-color: ${basic.btn.style.border.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.def)}
             }
             .${namespace}btn-border:hover,
             .${namespace}btn-border.hover {
                 color: ${basic.btn.style.border.color.hover};
                 border-color: ${basic.btn.style.border.bordercolor.hover};
                 background-color: ${basic.btn.style.border.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.border.shadow.hover)}
+            }
+            .${namespace}btn-border:focus,
+            .${namespace}btn-border.focus {
+                color: ${basic.btn.style.border.color.focus};
+                border-color: ${basic.btn.style.border.bordercolor.focus};
+                background-color: ${basic.btn.style.border.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.focus)}
             }
             .${namespace}btn-border:active,
             .${namespace}btn-border.active,
             .${namespace}btn-border.loading,
-            .open > .dropdown-toggle.${namespace}btn-border {
-                color: ${basic.btn.style.border.color.active};
-                border-color: ${basic.btn.style.border.bordercolor.active};
-                background-color: ${basic.btn.style.border.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.active)}
-            }
             .${namespace}btn-border:active:hover,
             .${namespace}btn-border.active:hover,
             .${namespace}btn-border.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-border:hover,
             .${namespace}btn-border:active:focus,
             .${namespace}btn-border.active:focus,
             .${namespace}btn-border.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-border:focus,
             .${namespace}btn-border:active.focus,
             .${namespace}btn-border.active.focus,
-            .${namespace}btn-border.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-border.focus {
-                color: ${basic.btn.style.border.color.focus};
-                border-color: ${basic.btn.style.border.bordercolor.focus};
-                background-color: ${basic.btn.style.border.bgcolor.focus};
+            .${namespace}btn-border.loading.focus {
+                color: ${basic.btn.style.border.color.active};
+                border-color: ${basic.btn.style.border.bordercolor.active};
+                background-color: ${basic.btn.style.border.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.active)}
             }
             .${namespace}btn-border.disabled,
             .${namespace}btn-border[disabled],
@@ -651,8 +626,7 @@ export default {
                 color: ${basic.btn.style.border.color.disabled};
                 border-color: ${basic.btn.style.border.bordercolor.disabled};
                 background-color: ${basic.btn.style.border.bgcolor.disabled};
-
-                ${Prefix.opacity(state, 0.8)}
+                ${Prefix.box_shadow(state, basic.btn.style.border.shadow.disabled)}
             }
             .${namespace}btn-border .badge {
                 color: ${basic.colors.gray.ladder.lighter.hex};
@@ -663,46 +637,38 @@ export default {
                 color: ${basic.btn.style.borderinverse.color.def};
                 border-color: ${basic.btn.style.borderinverse.bordercolor.def};
                 background-color: ${basic.btn.style.borderinverse.bgcolor.def};
-            }
-            .${namespace}btn-border-inverse:focus,
-            .${namespace}btn-border-inverse.focus {
-                color: ${basic.btn.style.borderinverse.color.focus};
-                border-color: ${basic.btn.style.borderinverse.bordercolor.focus};
-                background-color: ${basic.btn.style.borderinverse.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.def)}
             }
             .${namespace}btn-border-inverse:hover,
             .${namespace}btn-border-inverse.hover {
                 color: ${basic.btn.style.borderinverse.color.hover};
                 border-color: ${basic.btn.style.borderinverse.bordercolor.hover};
                 background-color: ${basic.btn.style.borderinverse.bgcolor.hover};
-
                 ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.hover)}
+            }
+            .${namespace}btn-border-inverse:focus,
+            .${namespace}btn-border-inverse.focus {
+                color: ${basic.btn.style.borderinverse.color.focus};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.focus};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.focus)}
             }
             .${namespace}btn-border-inverse:active,
             .${namespace}btn-border-inverse.active,
             .${namespace}btn-border-inverse.loading,
-            .open > .dropdown-toggle.${namespace}btn-border-inverse {
-                color: ${basic.btn.style.borderinverse.color.active};
-                border-color: ${basic.btn.style.borderinverse.bordercolor.active};
-                background-color: ${basic.btn.style.borderinverse.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.active)}
-            }
             .${namespace}btn-border-inverse:active:hover,
             .${namespace}btn-border-inverse.active:hover,
             .${namespace}btn-border-inverse.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-border-inverse:hover,
             .${namespace}btn-border-inverse:active:focus,
             .${namespace}btn-border-inverse.active:focus,
             .${namespace}btn-border-inverse.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-border-inverse:focus,
             .${namespace}btn-border-inverse:active.focus,
             .${namespace}btn-border-inverse.active.focus,
-            .${namespace}btn-border-inverse.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-border-inverse.focus {
-                color: ${basic.btn.style.borderinverse.color.focus};
-                border-color: ${basic.btn.style.borderinverse.bordercolor.focus};
-                background-color: ${basic.btn.style.borderinverse.bgcolor.focus};
+            .${namespace}btn-border-inverse.loading.focus {
+                color: ${basic.btn.style.borderinverse.color.active};
+                border-color: ${basic.btn.style.borderinverse.bordercolor.active};
+                background-color: ${basic.btn.style.borderinverse.bgcolor.active};
+                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.active)}
             }
             .${namespace}btn-border-inverse.disabled,
             .${namespace}btn-border-inverse[disabled],
@@ -725,6 +691,7 @@ export default {
                 color: ${basic.btn.style.borderinverse.color.disabled};
                 border-color: ${basic.btn.style.borderinverse.bordercolor.disabled};
                 background-color: ${basic.btn.style.borderinverse.bgcolor.disabled};
+                ${Prefix.box_shadow(state, basic.btn.style.borderinverse.shadow.disabled)}
             }
             .${namespace}btn-border-inverse .badge {
                 color: ${basic.colors.black.ladder.light.hex};
@@ -746,12 +713,7 @@ export default {
                 color: ${basic.btn.style.link.color.def};
                 border-color: ${basic.btn.style.link.bordercolor.def};
                 background-color: ${basic.btn.style.link.bgcolor.def};
-            }
-            .${namespace}btn-link:focus,
-            .${namespace}btn-link.focus {
-                color: ${basic.btn.style.link.color.focus};
-                border-color: ${basic.btn.style.link.bordercolor.focus};
-                background-color: ${basic.btn.style.link.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.def)}
             }
             .${namespace}btn-link:hover,
             .${namespace}btn-link.hover {
@@ -759,43 +721,32 @@ export default {
                 border-color: ${basic.btn.style.link.bordercolor.hover};
                 background-color: ${basic.btn.style.link.bgcolor.hover};
                 text-decoration: underline;
-
                 ${Prefix.box_shadow(state, basic.btn.style.link.shadow.hover)}
             }
-            .${namespace}btn-link:active,
-            .${namespace}btn-link.active,
-            .${namespace}btn-link.loading,
-            .open > .dropdown-toggle.${namespace}btn-link {
-                color: ${basic.btn.style.link.color.active};
-                border-color: ${basic.btn.style.link.bordercolor.active};
-                background-color: ${basic.btn.style.link.bgcolor.active};
-
-                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.active)}
-            }
-            .${namespace}btn-link:active:hover,
-            .${namespace}btn-link.active:hover,
-            .${namespace}btn-link.loading:hover,
-            .open > .dropdown-toggle.${namespace}btn-link:hover,
-            .${namespace}btn-link:active:focus,
-            .${namespace}btn-link.active:focus,
-            .${namespace}btn-link.loading:focus,
-            .open > .dropdown-toggle.${namespace}btn-link:focus,
-            .${namespace}btn-link:active.focus,
-            .${namespace}btn-link.active.focus,
-            .${namespace}btn-link.loading.focus,
-            .open > .dropdown-toggle.${namespace}btn-link.focus {
+            .${namespace}btn-link:focus,
+            .${namespace}btn-link.focus {
                 color: ${basic.btn.style.link.color.focus};
                 border-color: ${basic.btn.style.link.bordercolor.focus};
                 background-color: ${basic.btn.style.link.bgcolor.focus};
+                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.focus)}
             }
             .${namespace}btn-link:active,
             .${namespace}btn-link.active,
             .${namespace}btn-link.loading,
-            .open > .dropdown-toggle.${namespace}btn-link {
+            .${namespace}btn-link:active:hover,
+            .${namespace}btn-link.active:hover,
+            .${namespace}btn-link.loading:hover,
+            .${namespace}btn-link:active:focus,
+            .${namespace}btn-link.active:focus,
+            .${namespace}btn-link.loading:focus,
+            .${namespace}btn-link:active.focus,
+            .${namespace}btn-link.active.focus,
+            .${namespace}btn-link.loading.focus {
                 color: ${basic.btn.style.link.color.active};
                 border-color: ${basic.btn.style.link.bordercolor.active};
                 background-color: ${basic.btn.style.link.bgcolor.active};
                 text-decoration: none;
+                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.active)}
             }
             .${namespace}btn-link.disabled,
             .${namespace}btn-link[disabled],
@@ -819,6 +770,7 @@ export default {
                 border-color: ${basic.btn.style.link.bordercolor.disabled};
                 background-color: ${basic.btn.style.link.bgcolor.disabled};
                 text-decoration: line-through;
+                ${Prefix.box_shadow(state, basic.btn.style.link.shadow.disabled)}
             }
             .${namespace}btn-link .badge {
                 color: ${basic.colors.black.ladder.light.hex};

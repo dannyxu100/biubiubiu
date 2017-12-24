@@ -10,5 +10,6 @@ export default {
     CSS_POPMENU:            'CSS_POPMENU',
     CSS_CHECKBOXRADIO:      'CSS_CHECKBOXRADIO',
     CSS_TABS:               'CSS_TABS',
-    CSS_TABS_POPMENU:       'CSS_TABS_POPMENU'
+    CSS_TABS_POPMENU:       'CSS_TABS_POPMENU',
+    CSS_TAG:                'CSS_TAG'
 };
