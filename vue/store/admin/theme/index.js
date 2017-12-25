@@ -1122,6 +1122,165 @@ const State = {
                     small:              0,
                     large:              0,
                     textarea:           0
+                },
+                lineheight:             0,
+                fontsize: {
+                    def:                0,
+                    small:              0,
+                    large:              0
+                },
+                radius: {
+                    def:                0,
+                    textarea:           0
+                },
+                padding: {
+                    top:                4,
+                    bottom:             4,
+                    left:               15,
+                    right:              4
+                },
+                borderwidth: {
+                    def: {
+                        top:            0,
+                        bottom:         1,
+                        left:           0,
+                        right:          0
+                    },
+                    focus: {
+                        top:            0,
+                        bottom:         2,
+                        left:           0,
+                        right:          0
+                    },
+                    textarea: {
+                        top:            1,
+                        bottom:         1,
+                        left:           1,
+                        right:          1
+                    },
+                    textarea_focus: {
+                        top:            2,
+                        bottom:         2,
+                        left:           2,
+                        right:          2
+                    }
+                },
+                borderstyle: {
+                    def:                'solid',
+                    focus:              'solid',
+                    disabled:           'dotted'
+                },
+                style: {
+                    def: {
+                        color: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        bgcolor: {
+                            def:                'transparent',
+                            focus:              'transparent',
+                            disabled:           'transparent'
+                        },
+                        bordercolor: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        shadow: {
+                            def:                'none',
+                            focus:              'none',
+                            disabled:           'none'
+                        }
+                    },
+                    theme: {
+                        color: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        bgcolor: {
+                            def:                'transparent',
+                            focus:              'transparent',
+                            disabled:           'transparent'
+                        },
+                        bordercolor: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        shadow: {
+                            def:                'none',
+                            focus:              'none',
+                            disabled:           'none'
+                        }
+                    },
+                    key: {
+                        color: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        bgcolor: {
+                            def:                'transparent',
+                            focus:              'transparent',
+                            disabled:           'transparent'
+                        },
+                        bordercolor: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        shadow: {
+                            def:                'none',
+                            focus:              'none',
+                            disabled:           'none'
+                        }
+                    },
+                    light: {
+                        color: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        bgcolor: {
+                            def:                'transparent',
+                            focus:              'transparent',
+                            disabled:           'transparent'
+                        },
+                        bordercolor: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        shadow: {
+                            def:                'none',
+                            focus:              'none',
+                            disabled:           'none'
+                        }
+                    },
+                    nice: {
+                        color: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        bgcolor: {
+                            def:                'transparent',
+                            focus:              'transparent',
+                            disabled:           'transparent'
+                        },
+                        bordercolor: {
+                            def:                '',
+                            focus:              '',
+                            disabled:           ''
+                        },
+                        shadow: {
+                            def:                'none',
+                            focus:              'none',
+                            disabled:           'none'
+                        }
+                    }
                 }
             }
         }

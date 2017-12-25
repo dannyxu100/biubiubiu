@@ -11,6 +11,7 @@ import Popmenu                  from './mutations-popmenu.js';
 import Checkboxradio            from './mutations-checkboxradio.js';
 import Tabs                     from './mutations-tabs.js';
 import Tag                      from './mutations-tag.js';
+import Input                    from './mutations-input.js';
 
 import Prefix                   from './css-prefix.js';
 import Comm                     from './css-comm.js';
@@ -28,6 +29,7 @@ export default {
     ...Checkboxradio,
     ...Tabs,
     ...Tag,
+    ...Input,
     [MT.INIT_BASIC]( state ) {
         let basic = state.data.basic;
 
@@ -86,7 +88,7 @@ export default {
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     shadow: {
-                        def:        `0 1px 3px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
+                        def:        `0 1px 2px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .2)`,
                         hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
                         focus:      `0 0 0 3px rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
                         active:     `0 2px 5px rgba(${basic.colors.black.ladder.darker.rgb}, .4)`
@@ -116,7 +118,7 @@ export default {
                     },
                     shadow: {
                         def:        `0 1px 3px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .4)`,
+                        hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
                         focus:      `0 0 0 3px rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
                         active:     `0 2px 5px rgba(${basic.colors.black.ladder.darker.rgb}, .4)`
                     }
@@ -185,9 +187,9 @@ export default {
                         disabled:   basic.colors.theme.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 3px 0 rgba(${basic.colors.theme.ladder.darker.rgb}, .9)`,
+                        def:        `0 1px 2px 0 rgba(${basic.colors.theme.ladder.darker.rgb}, .8)`,
                         hover:      `0 3px 10px 0 rgba(${basic.colors.theme.ladder.dark.rgb}, .8)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.theme.ladder.dark.rgb}, .4)`,
+                        focus:      `0 0 0 3px rgba(${basic.colors.theme.ladder.dark.rgb}, .5)`,
                         active:     `0 2px 5px rgba(${basic.colors.theme.ladder.dark.rgb}, .4)`
                     }
                 },
@@ -214,7 +216,7 @@ export default {
                         disabled:   basic.colors.key.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 3px 0 rgba(${basic.colors.key.ladder.darker.rgb}, .8)`,
+                        def:        `0 1px 2px 0 rgba(${basic.colors.key.ladder.darker.rgb}, .6)`,
                         hover:      `0 3px 10px 0 rgba(${basic.colors.key.ladder.dark.rgb}, .5)`,
                         focus:      `0 0 0 3px rgba(${basic.colors.key.ladder.dark.rgb}, .4)`,
                         active:     `0 2px 5px rgba(${basic.colors.key.ladder.dark.rgb}, .3)`
@@ -243,10 +245,10 @@ export default {
                         disabled:   basic.colors.light.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 3px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.dark.rgb}, .3)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.black.ladder.dark.rgb}, .2)`,
-                        active:     `0 2px 5px rgba(${basic.colors.black.ladder.dark.rgb}, .2)`
+                        def:        `0 1px 2px 0 rgba(${basic.colors.gray.ladder.darker.rgb}, .6)`,
+                        hover:      `0 3px 10px 0 rgba(${basic.colors.gray.ladder.dark.rgb}, .5)`,
+                        focus:      `0 0 0 3px rgba(${basic.colors.gray.ladder.dark.rgb}, .6)`,
+                        active:     `0 2px 5px rgba(${basic.colors.gray.ladder.dark.rgb}, .4)`
                     }
                 },
                 nice: {
@@ -493,6 +495,85 @@ export default {
             bgcolor:            basic.colors.gray.ladder.darkest.hex,
             bordercolor:        basic.colors.gray.ladder.darkest.hex,
             radius:             basic.radius.def
+        });
+        Api.extend(true, basic.input, {
+            height: {
+                def:                basic.control.height.def,
+                small:              basic.control.height.small,
+                large:              basic.control.height.large,
+                textarea:           basic.control.height.def * 3
+            },
+            lineheight:             basic.lineheight.def,
+            fontsize: {
+                def:                basic.control.fontsize.def,
+                small:              basic.control.fontsize.small,
+                large:              basic.control.fontsize.large
+            },
+            radius: {
+                textarea:           basic.radius.def
+            },
+            style: {
+                def: {
+                    color: {
+                        def:                basic.colors.black.ladder.light.hex,
+                        focus:              basic.colors.black.ladder.light.hex,
+                        disabled:           basic.colors.gray.ladder.darker.hex
+                    },
+                    bordercolor: {
+                        def:                basic.colors.gray.ladder.darker.hex,
+                        focus:              basic.colors.black.ladder.light.hex,
+                        disabled:           basic.colors.gray.ladder.light.hex
+                    }
+                },
+                theme: {
+                    color: {
+                        def:                basic.colors.black.ladder.light.hex,
+                        focus:              basic.colors.black.ladder.light.hex,
+                        disabled:           basic.colors.gray.ladder.darker.hex
+                    },
+                    bordercolor: {
+                        def:                basic.colors.gray.ladder.light.hex,
+                        focus:              basic.colors.theme.ladder.normal.hex,
+                        disabled:           basic.colors.gray.ladder.light.hex
+                    }
+                },
+                key: {
+                    color: {
+                        def:                basic.colors.black.ladder.light.hex,
+                        focus:              basic.colors.black.ladder.light.hex,
+                        disabled:           basic.colors.gray.ladder.darker.hex
+                    },
+                    bordercolor: {
+                        def:                basic.colors.gray.ladder.light.hex,
+                        focus:              basic.colors.key.ladder.normal.hex,
+                        disabled:           basic.colors.gray.ladder.light.hex
+                    }
+                },
+                light: {
+                    color: {
+                        def:                basic.colors.black.ladder.light.hex,
+                        focus:              basic.colors.black.ladder.light.hex,
+                        disabled:           basic.colors.gray.ladder.darker.hex
+                    },
+                    bordercolor: {
+                        def:                basic.colors.gray.ladder.light.hex,
+                        focus:              basic.colors.light.ladder.darker.hex,
+                        disabled:           basic.colors.gray.ladder.light.hex
+                    }
+                },
+                nice: {
+                    color: {
+                        def:                basic.colors.black.ladder.light.hex,
+                        focus:              basic.colors.black.ladder.light.hex,
+                        disabled:           basic.colors.gray.ladder.darker.hex
+                    },
+                    bordercolor: {
+                        def:                basic.colors.gray.ladder.light.hex,
+                        focus:              basic.colors.nice.ladder.normal.hex,
+                        disabled:           basic.colors.gray.ladder.light.hex
+                    }
+                }
+            }
         });
         // debugger;
     }
