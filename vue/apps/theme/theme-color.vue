@@ -132,6 +132,7 @@
 
 <script>
     import {mapGetters, mapActions}         from 'vuex';
+    import Color                            from '_JS_/color.js';
 
     export default {
         components: {},
@@ -153,7 +154,7 @@
             //色块样式
             classesblock( item, itemkey ) {
                 let classes = {};
-                if( !this.islight(item.rgb) ) {
+                if( !Color.islight(item.rgb) ) {
                     classes['fwhite'] = true;
                 } else {
                     classes['fblack'] = true;
@@ -165,41 +166,15 @@
             },
             //实时预览色块颜色
             stylebgcolor( item, itemkey ) {
-                return {'background-color': 'rgb('+ item.rgb +')'};
+                return {'background-color': item.rgb};
             },
             //实时预览色块颜色(辅助色)
             stylebgcolor4min( color ) {
-                return {'border-color': 'rgb('+ color.complementary.rgb +')'};
-            },
-            //判断明暗(RGB 模式转换成 YUV 模式，而 Y 是明亮度（灰阶）)
-            islight( rgb ) {
-                let graylevel;
-                rgb = this.getrgb( rgb );
-                graylevel = rgb.$R * 0.299 + rgb.$G * 0.587 + rgb.$B * 0.114;
-                return graylevel >= 192 ? true : false;
-            },
-            //拆分rgb数值
-            getrgb( str ){
-                let rgb;
-                if( /^\#[0-9A-F]{3,6}$/i.test(str) ){
-                    str = this.hex2rgb( str );
-                }
-                if ( /^\d{1,3}\,\d{1,3}\,\d{1,3}$/i.test(str) ) {
-                    rgb = str.split(',');
-                } else {
-                    rgb = [0,0,0];
-                }
-                let r, g, b;
-                r = rgb[0] < 0 ? 0 : ( 255 < rgb[0] ? 255 : rgb[0]);
-                g = rgb[1] < 0 ? 0 : ( 255 < rgb[1] ? 255 : rgb[1]);
-                b = rgb[2] < 0 ? 0 : ( 255 < rgb[2] ? 255 : rgb[2]);
-                return {
-                    $R: parseInt(r),
-                    $G: parseInt(g),
-                    $B: parseInt(b),
-                }
+                return {'border-color': color.complementary.rgb};
             },
         },
-        created() {}
+        created() {
+            debugger;
+        }
     }
 </script>

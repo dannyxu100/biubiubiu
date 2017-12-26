@@ -38,6 +38,7 @@ export default {
         commit('CSS_TABS_POPMENU');
         commit('CSS_TAG');
         commit('CSS_INPUT');
+        commit('CSS_INPUTGROUP');
 
         if(node.styleSheet){                                                   //ie下
             node.styleSheet.cssText = state.data.csstext;

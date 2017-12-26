@@ -10,14 +10,15 @@ const Color = (function(){
         if( 1 === args.length ) {
             if( match = args[0].match( regx_hex ) ) {
                 this.set_hex( match[1] );
+                this.hex2rgb();
 
             } else if ( match = args[0].match( regx_rgb ) ) {
                 this.set_rgb.apply( this, match[2].split(',') );
-
+                this.rgb2hex();
             }
         } else if( 3 === args.length ) {
             this.set_rgb.apply(this, args);
-
+            this.rgb2hex();
         }
         return this;
     };
@@ -29,10 +30,10 @@ const Color = (function(){
         $hex:   '#000000',
         $rgb:   'rgb(0,0,0)',
         $rgba:  'rgb(0,0,0, 1)',
-        //
+        //设置透明度
         set_alpha( alpha ) {
+            alpha = Number(alpha);
             this.$a = alpha;
-            this.$rgb = `rgb(${this.$r},${this.$g},${this.$b})`;
             this.$rgba = `rgba(${this.$r},${this.$g},${this.$b}, ${this.$a})`;
         },
         //
@@ -41,50 +42,68 @@ const Color = (function(){
             this.$hex = hex;
         },
         //
-        set_rgb( r, g, b ) {
-            r = r < 0 ? 0 : ( 255 < r ? 255 : r);
-            g = g < 0 ? 0 : ( 255 < g ? 255 : g);
-            b = b < 0 ? 0 : ( 255 < b ? 255 : b);
-            this.$r = r;
-            this.$g = g;
-            this.$b = b;
+        set_rgb( red, green, blue ) {
+            red     = parseInt(red);
+            green   = parseInt(green);
+            blue    = parseInt(blue);
+            red     = red < 0 ? 0 : ( 255 < red ? 255 : red);
+            green   = green < 0 ? 0 : ( 255 < green ? 255 : green);
+            blue    = blue < 0 ? 0 : ( 255 < blue ? 255 : blue);
+            this.$r = red;
+            this.$g = green;
+            this.$b = blue;
             this.$rgb = `rgb(${this.$r},${this.$g},${this.$b})`;
             this.$rgba = `rgba(${this.$r},${this.$g},${this.$b}, ${this.$a})`;
+        },
+        //
+        hex2rgb() {
+            this.set_rgb.apply( this, Color.hex2rgb(this.$hex) );
+        },
+        //
+        rgb2hex() {
+            this.set_hex( Color.rgb2hex(this.$r, this.$g, this.$b) );
+        },
+        //增亮
+        //value可以是0~255，也可以是小数
+        lighten( value ) {
+            value = 0 < value && value < 1 ? value *= 255 : value;
+            this.set_rgb(this.$r+value, this.$g+value, this.$b+value);
+            this.rgb2hex();
+            return this;
+        },
+        //加深
+        //value可以是0~255，也可以是小数
+        darken( value ) {
+            return this.lighten( -value );
+        },
+        //透明度
+        opacity( value ) {
+            this.set_alpha( value );
+            return this;
+        },
+        //互补色
+        inverse() {
+            this.set_rgb(255-this.$r, 255-this.$g, 255-this.$b);
+            this.rgb2hex();
+            return this;
         }
     };
 
-    //拆分rgb数值
-    Color.getrgb = ( str )=>{
-        let rgb;
-        if( regx_hex.test(str) ){
-            str = Color.hex2rgb( str );
-        }
-        if ( regx_rgb.test(str) ) {
-            rgb = str.split(',');
+    //转为Color类型
+    Color.create = ( color ) => {
+        if( color instanceof Color ){
+            return new Color(color.$rgb);
         } else {
-            rgb = [0,0,0];
+            return new Color(color);
         }
-        let r, g, b;
-        r = rgb[0] < 0 ? 0 : ( 255 < rgb[0] ? 255 : rgb[0]);
-        g = rgb[1] < 0 ? 0 : ( 255 < rgb[1] ? 255 : rgb[1]);
-        b = rgb[2] < 0 ? 0 : ( 255 < rgb[2] ? 255 : rgb[2]);
-        return {
-            $R: parseInt(r),
-            $G: parseInt(g),
-            $B: parseInt(b)
-        };
     };
     //rgb转hex
-    Color.rgb2hex = ( rgb ) => {
-        rgb = 'string' === typeof rgb ? Color.getrgb(rgb) : rgb;
-        return '#' + ((1 << 24) + (rgb.$R << 16) + (rgb.$G << 8) + rgb.$B).toString(16).slice(1).toUpperCase();
+    Color.rgb2hex = ( r,g,b ) => {
+        // rgb = 'string' === typeof rgb ? Color.getrgb(rgb) : rgb;
+        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
     };
     //hex转rgb
-    Color.hex2rgb = ( color, hex ) => {
-        if( !(color instanceof Color) ){
-            color = Color.init();
-        }
-
+    Color.hex2rgb = ( hex ) => {
         let rgb = []; // 定义rgb数组
         if ( regx_hex_short.test(hex) ) {                   //判断传入是否为#三位十六进制数
             let sizhex = '#';
@@ -97,39 +116,34 @@ const Color = (function(){
             hex.replace(/[0-9A-F]{2}/ig, function(kw) {
                 rgb.push(eval('0x' + kw));                  //十六进制转化为十进制并存如数组
             });
-            color.set_rgb( rgb[0], rgb[1], rgb[2] );
-            return rgb.join(',');                           //输出RGB格式颜色
+            return rgb;                                     //输出RGB颜色
         } else {
-            // console.log(`Input ${hex} is wrong!`);
-            return '0,0,0';
+            return null;
         }
     };
+    //判断明暗(RGB 模式转换成 YUV 模式，而 Y 是明亮度（灰阶）)
+    Color.islight = ( color ) => {
+        color = Color.create( color );
+        return (color.$r*0.299 + color.$g*0.587 + color.$b*0.114) >= 192 ? true : false;
+    };
     //变亮
-    Color.lighten = ( rgb, value ) => {
-        rgb = 'string' === typeof rgb ? Color.getrgb(rgb) : rgb;
-        let r, g, b;
-        r = rgb.$R+value;
-        r = r < 0 ? 0 : ( 255 < r ? 255 : r);
-        g = rgb.$G+value;
-        g = g < 0 ? 0 : ( 255 < g ? 255 : g);
-        b = rgb.$B+value;
-        b = b < 0 ? 0 : ( 255 < b ? 255 : b);
-        return [ r, g, b ].join(',');
+    Color.lighten = ( color, value ) => {
+        return Color.create( color ).lighten( value );
     };
     //变暗
-    Color.darken = ( rgb, value ) => {
-        return Color.lighten( rgb, -value );
+    Color.darken = ( color, value ) => {
+        return Color.create( color ).darken( value );
+    };
+    //透明度
+    Color.opacity = ( color, value ) => {
+        return Color.create( color ).opacity( value );
     };
     //计算互补色
-    Color.complementarycolor = ( rgb ) => {
-        rgb = 'string' === typeof rgb ? Color.getrgb(rgb) : rgb;
-        return [255-rgb.$R, 255-rgb.$G, 255-rgb.$B].join(',');
+    Color.inverse = ( color ) => {
+        return Color.create( color ).inverse();
     };
 
     return Color;
 })();
-
-let a = new Color('123,223,44');
-debugger;
 
 export default Color;

@@ -86,39 +86,47 @@
             },
             //设置颜色
             changecolor( coloritem ) {
-                let ladder, rgb;
+                let ladder, normal, tmp;
                 ladder = coloritem.ladder;
-                rgb = Color.getrgb( ladder.normal.rgb );
-                ladder.normal.rgb = [rgb.$R, rgb.$G, rgb.$B].join(',');
-                ladder.normal.hex = Color.rgb2hex( rgb );
+                normal = new Color( ladder.normal.rgb );
+
+                ladder.normal.rgb = normal.$rgb;
+                ladder.normal.hex = normal.$hex;
 
                 if( ladder.light ){
-                    ladder.light.rgb = Color.lighten( rgb, 30 );
-                    ladder.light.hex = Color.rgb2hex( ladder.light.rgb );
+                    tmp = Color.lighten(normal, 30);
+                    ladder.light.rgb = tmp.$rgb;
+                    ladder.light.hex = tmp.$hex;
                 }
                 if( ladder.lighter ){
-                    ladder.lighter.rgb = Color.lighten( rgb, 90 );
-                    ladder.lighter.hex = Color.rgb2hex( ladder.lighter.rgb );
+                    tmp = Color.lighten(normal, 90);
+                    ladder.lighter.rgb = tmp.$rgb;
+                    ladder.lighter.hex = tmp.$hex;
                 }
                 if( ladder.lightest ){
-                    ladder.lightest.rgb = Color.lighten( rgb, 196 );
-                    ladder.lightest.hex = Color.rgb2hex( ladder.lightest.rgb );
+                    tmp = Color.lighten(normal, 196);
+                    ladder.lightest.rgb = tmp.$rgb;
+                    ladder.lightest.hex = tmp.$hex;
                 }
                 if( ladder.dark ){
-                    ladder.dark.rgb = Color.darken( rgb, 60 );
-                    ladder.dark.hex = Color.rgb2hex( ladder.dark.rgb );
+                    tmp = Color.darken(normal, 60);
+                    ladder.dark.rgb = tmp.$rgb;
+                    ladder.dark.hex = tmp.$hex;
                 }
                 if( ladder.darker ){
-                    ladder.darker.rgb = Color.darken( rgb, 80 );
-                    ladder.darker.hex = Color.rgb2hex( ladder.darker.rgb );
+                    tmp = Color.darken(normal, 80);
+                    ladder.darker.rgb = tmp.$rgb;
+                    ladder.darker.hex = tmp.$hex;
                 }
                 if( ladder.darkest ){
-                    ladder.darkest.rgb = Color.darken( rgb, 120 );
-                    ladder.darkest.hex = Color.rgb2hex( ladder.darkest.rgb );
+                    tmp = Color.darken(normal, 120);
+                    ladder.darkest.rgb = tmp.$rgb;
+                    ladder.darkest.hex = tmp.$hex;
                 }
 
-                coloritem.complementary.rgb = Color.complementarycolor( rgb );
-                coloritem.complementary.hex = Color.rgb2hex( coloritem.complementary.rgb );
+                tmp = Color.inverse(normal);
+                coloritem.complementary.rgb = tmp.$rgb;
+                coloritem.complementary.hex = tmp.$hex;
             },
             //
             submit() {

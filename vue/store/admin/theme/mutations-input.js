@@ -322,6 +322,125 @@ export default {
                 )}
             }
         `;
+    },
+    [MT.CSS_INPUTGROUP]( state ) {
+        let basic, namespace;
+        basic = state.data.basic;
+        namespace = basic.namespace;
+        state.data.csstext += `
+            /*====================================================
+
+                  inputgroup
+
+            ====================================================*/
+            .${namespace}inputgroup {
+                display: inline-table;
+                border-collapse: separate;
+                position: relative;
+                width: 220px;
+            }
+            .${namespace}inputgroup .${namespace}input {
+                display: table-cell;
+                position: relative;
+                z-index: ${basic.input.group.zindex.def};
+                width: 100%;
+                margin-left: ${-basic.input.borderwidth.group.left}px;
+                ${input_border(
+                    state,
+                    basic.input.borderwidth.group,
+                    basic.input.padding
+                )}
+                ${Prefix.border_radius(state, '0 '+ basic.input.radius.group +'em '+ basic.input.radius.group +'em 0')}
+            }
+            .${namespace}inputgroup .${namespace}input:first-child {
+                margin-left: 0;
+                ${Prefix.border_radius(state, basic.input.radius.group +'em 0 0 '+ basic.input.radius.group +'em')}
+            }
+            .${namespace}inputgroup .${namespace}input:focus,
+            .${namespace}inputgroup .${namespace}input.active {
+                z-index: ${basic.input.group.zindex.focus};
+                ${input_border(
+                    state,
+                    basic.input.borderwidth.group_focus,
+                    basic.input.padding
+                )}
+            }
+            .${namespace}inputgroup .${namespace}input-theme:focus,
+            .${namespace}inputgroup .${namespace}input-theme.active {
+                border-color: ${basic.input.style.theme.bordercolor.focus};
+            }
+            .${namespace}inputgroup .${namespace}input-key:focus,
+            .${namespace}inputgroup .${namespace}input-key.active {
+              border-color: ${basic.input.style.key.bordercolor.focus};
+            }
+            .${namespace}inputgroup .${namespace}input-light:focus,
+            .${namespace}inputgroup .${namespace}input-light.active {
+              border-color: ${basic.input.style.light.bordercolor.focus};
+            }
+            .${namespace}inputgroup .${namespace}input-nice:focus,
+            .${namespace}inputgroup .${namespace}input-nice.active {
+              border-color: ${basic.input.style.nice.bordercolor.focus};
+            }
+            .${namespace}inputgroup .addons {
+                display: table-cell;
+                vertical-align: middle;
+                position: relative;
+                z-index: ${basic.input.group.zindex.addons};
+                width: 1%;
+                ${Comm.inlineblock_clearspace(state)}
+            }
+            .${namespace}inputgroup .addons .text,
+            .${namespace}inputgroup .addons .btn {
+                ${Prefix.border_radius(state, 0)}
+            }
+            .${namespace}inputgroup .addons .text:last-child,
+            .${namespace}inputgroup .addons .btn:last-child {
+                ${Prefix.border_radius(state, '0 '+ basic.input.radius.group +'em '+ basic.input.radius.group +'em 0')}
+            }
+            .${namespace}inputgroup .addons .text {
+                display: inline-block;
+                margin-left: ${-basic.input.borderwidth.group.left}px;
+                padding: 4px 8px;
+                height: ${basic.input.height.def}px;
+                line-height: ${basic.input.height.def-4*2}px;
+                font-size: ${basic.input.fontsize.def}px;
+                color: #aaaaaa;
+                background-color: #f7f7f7;
+                border: 1px solid #dddddd;
+            }
+            .${namespace}inputgroup .addons .text-small {
+                height: ${basic.input.height.small}px;
+                line-height: ${basic.input.height.small-4*2}px;
+                font-size: ${basic.input.fontsize.small}px;
+            }
+            .${namespace}inputgroup .addons .text-large {
+                height: ${basic.input.height.large}px;
+                line-height: ${basic.input.height.large-4*2}px;
+                font-size: ${basic.input.fontsize.large}px;
+            }
+            .${namespace}inputgroup .addons .btn {
+                position: relative;
+                margin-left: ${-basic.input.borderwidth.group.left}px;
+            }
+            .${namespace}inputgroup .addons:first-child .text:last-child,
+            .${namespace}inputgroup .addons:first-child .btn:last-child {
+                ${Prefix.border_radius(state, 0)}
+            }
+            .${namespace}inputgroup .addons:first-child .text:first-child,
+            .${namespace}inputgroup .addons:first-child .btn:first-child {
+                margin-left: 0;
+                ${Prefix.border_radius(state, basic.input.radius.group +'em 0 0 '+ basic.input.radius.group +'em')}
+            }
+            .${namespace}inputgroup .addons:first-child .text:first-child {
+                padding-left: 15px;
+            }
+            .${namespace}inputgroup .addons:last-child .text:last-child {
+                padding-right: 15px;
+            }
+            .${namespace}inputgroup-full {
+                width: 100%;
+            }
+        `;
     }
 };
 

@@ -510,19 +510,20 @@ export default {
                 large:              basic.control.fontsize.large
             },
             radius: {
-                textarea:           basic.radius.def
+                textarea:           basic.radius.def,
+                group:              basic.radius.def
             },
             style: {
                 def: {
                     color: {
-                        def:                basic.colors.black.ladder.light.hex,
-                        focus:              basic.colors.black.ladder.light.hex,
+                        def:                basic.colors.white.ladder.darker.hex,
+                        focus:              basic.colors.white.ladder.normal.hex,
                         disabled:           basic.colors.gray.ladder.darker.hex
                     },
                     bordercolor: {
-                        def:                basic.colors.gray.ladder.darker.hex,
-                        focus:              basic.colors.black.ladder.light.hex,
-                        disabled:           basic.colors.gray.ladder.light.hex
+                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
+                        focus:              Color.opacity(basic.colors.white.ladder.light.hex, 0.8).$rgba,
+                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
                     }
                 },
                 theme: {
@@ -532,9 +533,9 @@ export default {
                         disabled:           basic.colors.gray.ladder.darker.hex
                     },
                     bordercolor: {
-                        def:                basic.colors.gray.ladder.light.hex,
-                        focus:              basic.colors.theme.ladder.normal.hex,
-                        disabled:           basic.colors.gray.ladder.light.hex
+                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
+                        focus:              Color.opacity(basic.colors.theme.ladder.darker.hex, 0.8).$rgba,
+                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
                     }
                 },
                 key: {
@@ -544,9 +545,9 @@ export default {
                         disabled:           basic.colors.gray.ladder.darker.hex
                     },
                     bordercolor: {
-                        def:                basic.colors.gray.ladder.light.hex,
-                        focus:              basic.colors.key.ladder.normal.hex,
-                        disabled:           basic.colors.gray.ladder.light.hex
+                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
+                        focus:              Color.opacity(basic.colors.key.ladder.normal.hex, 0.8).$rgba,
+                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
                     }
                 },
                 light: {
@@ -556,9 +557,9 @@ export default {
                         disabled:           basic.colors.gray.ladder.darker.hex
                     },
                     bordercolor: {
-                        def:                basic.colors.gray.ladder.light.hex,
-                        focus:              basic.colors.light.ladder.darker.hex,
-                        disabled:           basic.colors.gray.ladder.light.hex
+                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
+                        focus:              Color.opacity(basic.colors.light.ladder.darker.hex, 0.8).$rgba,
+                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
                     }
                 },
                 nice: {
@@ -568,11 +569,21 @@ export default {
                         disabled:           basic.colors.gray.ladder.darker.hex
                     },
                     bordercolor: {
-                        def:                basic.colors.gray.ladder.light.hex,
-                        focus:              basic.colors.nice.ladder.normal.hex,
-                        disabled:           basic.colors.gray.ladder.light.hex
+                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
+                        focus:              Color.opacity(basic.colors.nice.ladder.normal.hex, 0.8).$rgba,
+                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
                     }
                 }
+            },
+            group: {
+                zindex: {
+                    def:                    basic.zindex.control,
+                    focus:                  basic.zindex.control +20,
+                    addons:                 basic.zindex.control +10,
+                    addons_btn:             basic.zindex.control,
+                    addons_btn_hover:       basic.zindex.control +10
+                },
+                radius:                     basic.radius.def
             }
         });
         // debugger;
