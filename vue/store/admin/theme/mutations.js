@@ -430,11 +430,11 @@ export default {
                         checked:            basic.colors.light.ladder.darker.hex
                     },
                     bgcolor_after: {
-                        hover:              basic.colors.black.ladder.darker.hex,
+                        hover:              basic.colors.light.ladder.darker.hex,
                         checked:            basic.colors.black.ladder.dark.hex
                     },
                     color_after: {
-                        hover:              basic.colors.black.ladder.darker.hex,
+                        hover:              basic.colors.light.ladder.darker.hex,
                         checked:            basic.colors.black.ladder.dark.hex
                     }
                 },
