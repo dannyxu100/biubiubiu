@@ -302,13 +302,14 @@ const State = {
             },
             //字色
             fontcolor: {
-                def:        '',
-                weak:       '',
-                title:      'inherit',
-                hr:         '',
-                small:      '',
-                link:       '',
-                linkhover:  ''
+                def:            '',
+                weak:           '',
+                title:          'inherit',
+                hr:             'inherit',
+                small:          'inherit',
+                link:           '',
+                linkhover:      '',
+                placeholder:    ''
             },
             //底色
             bgcolor: {
@@ -899,9 +900,9 @@ const State = {
                     checked:            '',
                     disabled:           ''
                 },
-                borderwidth_before:     2,
+                borderwidth_before:     1,
                 radius_before: {
-                    chk:                0.1,
+                    chk:                0,
                     radio:              1
                 },
                 style: {
@@ -1302,7 +1303,65 @@ const State = {
                         addons:                 0,
                         addons_btn:             0,
                         addons_btn_hover:       0
+                    },
+                    input: {
+                        bgcolor: {
+                            def:                'transparent',
+                            focus:              'transparent',
+                            disabled:           'transparent'
+                        }
+                    },
+                    addons: {
+                        text: {
+                            color:              '',
+                            bgcolor:            '',
+                            bordercolor:        '',
+                            borderwidth:        1
+                        }
+                    },
+                    shadow:             'none'
+                }
+            },
+            //表单
+            form: {
+                padding: {
+                    top:                0,
+                    bottom:             0,
+                    left:               0,
+                    right:              0
+                },
+                margin: {
+                    top:                0,
+                    bottom:             0,
+                    left:               0,
+                    right:              0
+                },
+                margin_sub: {
+                    top:                5,
+                    bottom:             30,
+                    left:               0,
+                    right:              0
+                },
+                margin_item: {
+                    top:                0,
+                    bottom:             15,
+                    left:               0,
+                    right:              0
+                },
+                label: {
+                    color:              '',
+                    fontsize:           0,
+                    minwidth:           80,
+                    margin: {
+                        top:            0,
+                        bottom:         0,
+                        left:           0,
+                        right:          15
                     }
+                },
+                must: {
+                    color:              '',
+                    icon:               ''
                 }
             }
         }

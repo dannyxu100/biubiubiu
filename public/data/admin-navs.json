@@ -43,13 +43,6 @@
             "class": "",
             "path": "/theme-popmenu"
         },
-        "/theme-check": {
-            "name": "选择项",
-            "icon": "",
-            "image": "/public/images/apps/theme-checked.svg",
-            "class": "",
-            "path": "/theme-check"
-        },
         "/theme-select": {
             "name": "下拉",
             "icon": "",
@@ -70,6 +63,13 @@
             "image": "/public/images/apps/theme-badge.svg",
             "class": "",
             "path": "/theme-tag"
+        },
+        "/theme-check": {
+            "name": "选择项",
+            "icon": "",
+            "image": "/public/images/apps/theme-checked.svg",
+            "class": "",
+            "path": "/theme-check"
         },
         "/theme-input": {
             "name": "输入框",

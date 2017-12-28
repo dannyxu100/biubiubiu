@@ -4,7 +4,7 @@
 </style>
 
 <template>
-    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme">
+    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme wrapper-white">
         <div class="container">
             <!-- 单选、复选 -->
             <div class="section">
@@ -153,7 +153,7 @@
                 <br/>
                 <div class="grid">
                     <div class="grid-row">
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="checkbox checkbox-theme">
                                 <input type="checkbox" name="group1" value="1"/>
                                 <span class="checkbox-text">主题</span>
@@ -171,7 +171,7 @@
                                 <span class="checkbox-text">禁用</span>
                             </label>
                         </div>
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="checkbox checkbox-key">
                                 <input type="checkbox" name="group1" value="2"/>
                                 <span class="checkbox-text">关键</span>
@@ -189,7 +189,7 @@
                                 <span class="checkbox-text">禁用</span>
                             </label>
                         </div>
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="checkbox checkbox-light">
                                 <input type="checkbox" name="group1" value="3"/>
                                 <span class="checkbox-text">闪亮</span>
@@ -207,7 +207,7 @@
                                 <span class="checkbox-text">禁用</span>
                             </label>
                         </div>
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="checkbox checkbox-nice">
                                 <input type="checkbox" name="group1" value="4"/>
                                 <span class="checkbox-text">友好</span>
@@ -229,7 +229,7 @@
                     <br/>
 
                     <div class="grid-row">
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="radio radio-theme">
                                 <input type="radio" name="group1" value="1"/>
                                 <span class="radio-text">主题</span>
@@ -247,7 +247,7 @@
                                 <span class="radio-text">禁用</span>
                             </label>
                         </div>
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="radio radio-key">
                                 <input type="radio" name="group1" value="2"/>
                                 <span class="radio-text">关键</span>
@@ -265,7 +265,7 @@
                                 <span class="radio-text">禁用</span>
                             </label>
                         </div>
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="radio radio-light">
                                 <input type="radio" name="group1" value="3"/>
                                 <span class="radio-text">闪亮</span>
@@ -283,7 +283,7 @@
                                 <span class="radio-text">禁用</span>
                             </label>
                         </div>
-                        <div class="cell-12-2">
+                        <div class="cell-12-1">
                             <label class="radio radio-nice">
                                 <input type="radio" name="group1" value="4"/>
                                 <span class="radio-text">友好</span>

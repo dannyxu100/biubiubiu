@@ -39,6 +39,7 @@ export default {
         commit('CSS_TAG');
         commit('CSS_INPUT');
         commit('CSS_INPUTGROUP');
+        commit('CSS_FORM');
 
         if(node.styleSheet){                                                   //ie下
             node.styleSheet.cssText = state.data.csstext;

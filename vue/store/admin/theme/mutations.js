@@ -12,6 +12,7 @@ import Checkboxradio            from './mutations-checkboxradio.js';
 import Tabs                     from './mutations-tabs.js';
 import Tag                      from './mutations-tag.js';
 import Input                    from './mutations-input.js';
+import Form                     from './mutations-form.js';
 
 import Prefix                   from './css-prefix.js';
 import Comm                     from './css-comm.js';
@@ -30,20 +31,17 @@ export default {
     ...Tabs,
     ...Tag,
     ...Input,
+    ...Form,
     [MT.INIT_BASIC]( state ) {
         let basic = state.data.basic;
 
         Api.extend(true, basic.fontcolor, {
-            def:        basic.colors.black.ladder.normal.hex,
-            weak:       basic.colors.gray.ladder.darker.hex,
-            hr:         basic.colors.gray.ladder.lighter.hex,
-            small:      basic.colors.gray.ladder.darker.hex,
-            link:       basic.colors.theme.ladder.dark.hex,
-            linkhover:  basic.colors.theme.ladder.darker.hex
-        });
-        Api.extend(true, basic.fontcolor, {
-            def:        basic.colors.white.ladder.light.hex,
-            weak:       basic.colors.white.ladder.normal.hex
+            // def:            Color.opacity(basic.colors.white.ladder.light.hex, 0.9).$rgba,
+            def:            Color.opacity(basic.colors.black.ladder.dark.rgb, 0.9).$rgba,
+            weak:           Color.opacity(basic.colors.black.ladder.dark.hex, 0.6).$rgba,
+            link:           basic.colors.theme.ladder.dark.hex,
+            linkhover:      basic.colors.theme.ladder.darker.hex,
+            placeholder:    basic.colors.gray.ladder.normal.hex
         });
         basic.bgcolor.def           = basic.colors.white.ladder.light.hex;
         basic.fontfamily.def        = basic.fontfamily.ios.concat( basic.fontfamily.en, basic.fontfamily.zh, basic.fontfamily.sys ).join(',');
@@ -74,24 +72,24 @@ export default {
                         disabled:   basic.colors.black.ladder.dark.hex
                     },
                     bordercolor: {
-                        def:        basic.colors.white.ladder.normal.hex,
+                        def:        basic.colors.white.ladder.dark.hex,
                         hover:      basic.colors.white.ladder.light.hex,
                         focus:      basic.colors.white.ladder.light.hex,
-                        active:     basic.colors.gray.ladder.lighter.hex,
+                        active:     basic.colors.gray.ladder.normal.hex,
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     bgcolor: {
-                        def:        basic.colors.white.ladder.normal.hex,
+                        def:        basic.colors.white.ladder.dark.hex,
                         hover:      basic.colors.white.ladder.light.hex,
                         focus:      basic.colors.white.ladder.light.hex,
                         active:     basic.colors.gray.ladder.lighter.hex,
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     shadow: {
-                        def:        `0 1px 2px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .2)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        active:     `0 2px 5px rgba(${basic.colors.black.ladder.darker.rgb}, .4)`
+                        def:        `0 1px 2px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.2).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.4).$rgba}`
                     }
                 },
                 inverse: {
@@ -117,10 +115,10 @@ export default {
                         disabled:   basic.colors.black.ladder.normal.hex
                     },
                     shadow: {
-                        def:        `0 1px 3px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.black.ladder.darker.rgb}, .3)`,
-                        active:     `0 2px 5px rgba(${basic.colors.black.ladder.darker.rgb}, .4)`
+                        def:        `0 1px 3px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.4).$rgba}`
                     }
                 },
                 border: {
@@ -187,10 +185,10 @@ export default {
                         disabled:   basic.colors.theme.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 2px 0 rgba(${basic.colors.theme.ladder.darker.rgb}, .8)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.theme.ladder.dark.rgb}, .8)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.theme.ladder.dark.rgb}, .5)`,
-                        active:     `0 2px 5px rgba(${basic.colors.theme.ladder.dark.rgb}, .4)`
+                        def:        `0 1px 2px 0 ${Color.opacity(basic.colors.theme.ladder.darker.rgb, 0.8).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.theme.ladder.dark.rgb, 0.8).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.theme.ladder.dark.rgb, 0.5).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.theme.ladder.dark.rgb, 0.4).$rgba}`
                     }
                 },
                 key: {
@@ -216,10 +214,10 @@ export default {
                         disabled:   basic.colors.key.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 2px 0 rgba(${basic.colors.key.ladder.darker.rgb}, .6)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.key.ladder.dark.rgb}, .5)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.key.ladder.dark.rgb}, .4)`,
-                        active:     `0 2px 5px rgba(${basic.colors.key.ladder.dark.rgb}, .3)`
+                        def:        `0 1px 2px 0 ${Color.opacity(basic.colors.key.ladder.darker.rgb, 0.6).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.key.ladder.dark.rgb, 0.5).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.key.ladder.dark.rgb, 0.4).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.key.ladder.dark.rgb, 0.3).$rgba}`
                     }
                 },
                 light: {
@@ -245,10 +243,10 @@ export default {
                         disabled:   basic.colors.light.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 2px 0 rgba(${basic.colors.gray.ladder.darker.rgb}, .6)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.gray.ladder.dark.rgb}, .5)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.gray.ladder.dark.rgb}, .6)`,
-                        active:     `0 2px 5px rgba(${basic.colors.gray.ladder.dark.rgb}, .4)`
+                        def:        `0 1px 2px 0 ${Color.opacity(basic.colors.gray.ladder.darker.rgb, 0.6).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.gray.ladder.dark.rgb, 0.5).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.gray.ladder.dark.rgb, 0.6).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.gray.ladder.dark.rgb, 0.4).$rgba}`
                     }
                 },
                 nice: {
@@ -274,10 +272,10 @@ export default {
                         disabled:   basic.colors.nice.ladder.dark.hex
                     },
                     shadow: {
-                        def:        `0 1px 3px 0 rgba(${basic.colors.nice.ladder.darker.rgb}, .9)`,
-                        hover:      `0 3px 10px 0 rgba(${basic.colors.nice.ladder.dark.rgb}, .8)`,
-                        focus:      `0 0 0 3px rgba(${basic.colors.nice.ladder.dark.rgb}, .5)`,
-                        active:     `0 2px 5px rgba(${basic.colors.nice.ladder.dark.rgb}, .4)`
+                        def:        `0 1px 3px 0 ${Color.opacity(basic.colors.nice.ladder.darker.rgb, 0.9).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.nice.ladder.dark.rgb, 0.8).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.nice.ladder.dark.rgb, 0.5).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.nice.ladder.dark.rgb, 0.4).$rgba}`
                     }
                 }
             }
@@ -327,7 +325,6 @@ export default {
                     top:            basic.colors.gray.ladder.lighter.hex,
                     bottom:         basic.colors.white.ladder.light.hex
                 }
-
             }
         });
         Api.extend(true, basic.chkradio, {
@@ -338,35 +335,29 @@ export default {
             },
             icon_after:             basic.icons.done,
             color: {
-                def:                basic.colors.gray.ladder.lighter.hex,
-                hover:              basic.colors.gray.ladder.lighter.hex,
-                checked:            basic.colors.white.ladder.light.hex,
-                disabled:           basic.colors.gray.ladder.normal.hex
+                def:                Color.opacity(basic.colors.black.ladder.normal.rgb, 0.9).$rgba,
+                hover:              Color.opacity(basic.colors.black.ladder.normal.rgb, 0.9).$rgba,
+                checked:            Color.opacity(basic.colors.black.ladder.normal.rgb, 0.9).$rgba,
+                disabled:           Color.opacity(basic.colors.black.ladder.normal.rgb, 0.9).$rgba,
             },
             style: {
                 def: {
                     bordercolor_before: {
-                        def:                basic.colors.gray.ladder.light.hex,
-                        hover:              basic.colors.gray.ladder.lighter.hex,
-                        checked:            basic.colors.white.ladder.light.hex,
+                        def:                Color.opacity(basic.colors.black.ladder.light.rgb, 0.8).$rgba,
+                        hover:              basic.colors.black.ladder.normal.hex,
+                        checked:            basic.colors.black.ladder.light.hex,
                         disabled:           basic.colors.gray.ladder.light.hex
                     },
                     bgcolor_before: {
+                        checked:            basic.colors.black.ladder.light.hex
+                    },
+                    bgcolor_after: {
+                        hover:              basic.colors.black.ladder.light.hex,
                         checked:            basic.colors.white.ladder.light.hex
                     },
-                    // bgcolor_before: {
-                    //     def:                'rgba('+ basic.colors.gray.ladder.lighter.rgb +', 1)',
-                    //     hover:              'rgba('+ basic.colors.gray.ladder.lighter.rgb +', 1)',
-                    //     checked:            'rgba('+ basic.colors.white.ladder.light.rgb +', 1)',
-                    //     disabled:           'rgba('+ basic.colors.gray.ladder.lighter.rgb +', 1)'
-                    // },
-                    bgcolor_after: {
-                        hover:              basic.colors.gray.ladder.lighter.hex,
-                        checked:            basic.colors.black.ladder.darker.hex
-                    },
                     color_after: {
-                        hover:              basic.colors.gray.ladder.lighter.hex,
-                        checked:            basic.colors.black.ladder.darkest.hex
+                        hover:              basic.colors.black.ladder.light.hex,
+                        checked:            basic.colors.white.ladder.light.hex
                     }
                 },
                 theme: {
@@ -379,12 +370,6 @@ export default {
                     bgcolor_before: {
                         checked:            basic.colors.theme.ladder.darker.hex
                     },
-                    // bgcolor_before: {
-                    //     def:                'rgba('+ basic.colors.theme.ladder.darker.rgb +', .8)',
-                    //     hover:              'rgba('+ basic.colors.theme.ladder.darker.rgb +', .8)',
-                    //     checked:            'rgba('+ basic.colors.theme.ladder.darker.rgb +', 1)',
-                    //     disabled:           'rgba('+ basic.colors.theme.ladder.darker.rgb +', .8)'
-                    // },
                     bgcolor_after: {
                         hover:              basic.colors.theme.ladder.darker.hex,
                         checked:            basic.colors.white.ladder.light.hex
@@ -404,12 +389,6 @@ export default {
                     bgcolor_before: {
                         checked:            basic.colors.key.ladder.darker.hex
                     },
-                    // bgcolor_before: {
-                    //     def:                'rgba('+ basic.colors.key.ladder.darker.rgb +', .9)',
-                    //     hover:              'rgba('+ basic.colors.key.ladder.darker.rgb +', .9)',
-                    //     checked:            'rgba('+ basic.colors.key.ladder.darker.rgb +', 1)',
-                    //     disabled:           'rgba('+ basic.colors.key.ladder.darker.rgb +', .9)'
-                    // },
                     bgcolor_after: {
                         hover:              basic.colors.key.ladder.darker.hex,
                         checked:            basic.colors.white.ladder.light.hex
@@ -462,13 +441,13 @@ export default {
         Api.extend(true, basic.tabs, {
             bgcolor:                'transparent',
             borderwidth_navs:       1,
-            bordercolor_navs:       'rgba('+ basic.colors.theme.ladder.darker.rgb +', 0.3)',
+            bordercolor_navs:       Color.opacity(basic.colors.theme.ladder.darker.rgb, 0.3).$rgba,
             zindex:                 basic.zindex.bg,
             nav: {
                 color: {
-                    def:            'rgba('+ basic.colors.theme.ladder.darker.rgb +', 0.8)',
-                    hover:          'rgba('+ basic.colors.white.ladder.light.rgb +', 0.6)',
-                    active:         'rgba('+ basic.colors.white.ladder.light.rgb +', 1)',
+                    def:            Color.opacity(basic.colors.theme.ladder.darker.rgb, 0.8).$rgba,
+                    hover:          Color.opacity(basic.colors.white.ladder.light.rgb, 0.6).$rgba,
+                    active:         Color.opacity(basic.colors.white.ladder.light.rgb, 1).$rgba,
                 },
                 bordercolor: {
                     active:         basic.colors.white.ladder.light.hex
@@ -482,10 +461,6 @@ export default {
                     hover:          basic.zindex.control +10,
                     active:         basic.zindex.control +20
                 },
-                // shadow: {
-                //     hover:          '0 -1px 3px rgba(0, 0, 0, .05)',
-                //     active:         '0 -2px 3px rgba(0, 0, 0, .06)'
-                // },
                 radius:             basic.radius.def,
                 icon_popmenu:       basic.icons.rightsmall
             }
@@ -516,62 +491,63 @@ export default {
             style: {
                 def: {
                     color: {
-                        def:                basic.colors.white.ladder.darker.hex,
-                        focus:              basic.colors.white.ladder.normal.hex,
-                        disabled:           basic.colors.gray.ladder.darker.hex
+                        def:                Color.opacity(basic.colors.black.ladder.dark.hex, 0.8).$rgba,
+                        focus:              basic.colors.black.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.6).$rgba
                     },
                     bordercolor: {
-                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
-                        focus:              Color.opacity(basic.colors.white.ladder.light.hex, 0.8).$rgba,
-                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
+                        // def:                Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba,
+                        def:                basic.colors.gray.ladder.normal.hex,
+                        focus:              basic.colors.black.ladder.normal.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba
                     }
                 },
                 theme: {
                     color: {
-                        def:                basic.colors.black.ladder.light.hex,
-                        focus:              basic.colors.black.ladder.light.hex,
-                        disabled:           basic.colors.gray.ladder.darker.hex
+                        def:                Color.opacity(basic.colors.black.ladder.dark.hex, 0.9).$rgba,
+                        focus:              basic.colors.black.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.6).$rgba
                     },
                     bordercolor: {
-                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
-                        focus:              Color.opacity(basic.colors.theme.ladder.darker.hex, 0.8).$rgba,
-                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
+                        def:                Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba,
+                        focus:              basic.colors.theme.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba
                     }
                 },
                 key: {
                     color: {
-                        def:                basic.colors.black.ladder.light.hex,
-                        focus:              basic.colors.black.ladder.light.hex,
-                        disabled:           basic.colors.gray.ladder.darker.hex
+                        def:                Color.opacity(basic.colors.black.ladder.dark.hex, 0.9).$rgba,
+                        focus:              basic.colors.black.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.6).$rgba
                     },
                     bordercolor: {
-                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
-                        focus:              Color.opacity(basic.colors.key.ladder.normal.hex, 0.8).$rgba,
-                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
+                        def:                Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba,
+                        focus:              basic.colors.key.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba
                     }
                 },
                 light: {
                     color: {
-                        def:                basic.colors.black.ladder.light.hex,
-                        focus:              basic.colors.black.ladder.light.hex,
-                        disabled:           basic.colors.gray.ladder.darker.hex
+                        def:                Color.opacity(basic.colors.black.ladder.dark.hex, 0.9).$rgba,
+                        focus:              basic.colors.black.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.6).$rgba
                     },
                     bordercolor: {
-                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
-                        focus:              Color.opacity(basic.colors.light.ladder.darker.hex, 0.8).$rgba,
-                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
+                        def:                Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba,
+                        focus:              basic.colors.light.ladder.darker.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba
                     }
                 },
                 nice: {
                     color: {
-                        def:                basic.colors.black.ladder.light.hex,
-                        focus:              basic.colors.black.ladder.light.hex,
-                        disabled:           basic.colors.gray.ladder.darker.hex
+                        def:                Color.opacity(basic.colors.black.ladder.dark.hex, 0.9).$rgba,
+                        focus:              basic.colors.black.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.6).$rgba
                     },
                     bordercolor: {
-                        def:                Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba,
-                        focus:              Color.opacity(basic.colors.nice.ladder.normal.hex, 0.8).$rgba,
-                        disabled:           Color.opacity(basic.colors.white.ladder.light.hex, 0.3).$rgba
+                        def:                Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba,
+                        focus:              basic.colors.nice.ladder.dark.hex,
+                        disabled:           Color.opacity(basic.colors.black.ladder.normal.hex, 0.2).$rgba
                     }
                 }
             },
@@ -583,7 +559,24 @@ export default {
                     addons_btn:             basic.zindex.control,
                     addons_btn_hover:       basic.zindex.control +10
                 },
-                radius:                     basic.radius.def
+                addons: {
+                    text: {
+                        color:              basic.colors.black.ladder.normal.hex,
+                        bgcolor:            basic.colors.gray.ladder.light.hex,
+                        bordercolor:        basic.colors.gray.ladder.normal.hex,
+                        borderwidth:        1
+                    }
+                }
+            }
+        });
+        Api.extend(true, basic.form, {
+            label: {
+                color:              basic.fontcolor.def,
+                fontsize:           basic.control.fontsize.def
+            },
+            must: {
+                color:              basic.colors.key.ladder.normal.hex,
+                icon:               basic.icons.snow
             }
         });
         // debugger;

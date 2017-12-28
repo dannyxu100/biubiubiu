@@ -4,7 +4,7 @@
 </style>
 
 <template>
-    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme">
+    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme wrapper-white">
         <div class="container">
 
             <!-- 输入框 -->
@@ -210,17 +210,17 @@
                         </div>
                         <div class="cell-12-4">
                             <div class="inputgroup">
-                                <input type="text" class="input input-theme" value="" placeholder="搜索关键字"/>
+                                <input type="text" class="input" value="" placeholder="搜索关键字"/>
                                 <div class="addons">
-                                    <button class="btn btn-theme border">搜索</button>
+                                    <button class="btn border">搜索</button>
                                 </div>
                             </div>
                         </div>
                         <div class="cell-12-4">
                             <div class="inputgroup">
-                                <input type="text" class="input input-theme active" value="" placeholder="搜索关键字"/>
+                                <input type="text" class="input active" value="" placeholder="搜索关键字"/>
                                 <div class="addons">
-                                    <button class="btn btn-theme border">搜索</button>
+                                    <button class="btn border">搜索</button>
                                 </div>
                             </div>
                         </div>
@@ -265,7 +265,7 @@
                 <div>设置.inputgroup元素的宽度</div>
                 <br/>
                 <div class="grid">
-                    <div class="grid-row">
+                    <div class="grid-row bgimg-light">
                         <div class="cell-12-12">
                             <div class="inputgroup" style="width:528px">
                                 <div class="addons">
@@ -273,6 +273,12 @@
                                     <button class="btn btn-theme border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
                                 </div>
                                 <input type="text" class="input input-theme active" value="" placeholder="搜索关键字"/>
+                            </div>
+                            <div class="inputgroup" style="width:200px">
+                                <input type="text" class="input input-key active" value="" placeholder="搜索关键字"/>
+                                <div class="addons">
+                                    <button class="btn btn-key border">选择</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -294,14 +300,14 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="grid-row">
+                    <div class="grid-row bgimg-light">
                         <div class="cell-12-12">
                             <div class="inputgroup inputgroup-full">
-                                <input type="text" class="input input-theme" value="" placeholder="搜索关键字"/>
+                                <input type="text" class="input input-nice active" value="" placeholder="搜索关键字"/>
                                 <div class="addons">
-                                    <button class="btn btn-theme border">搜索</button>
-                                    <button class="btn btn-theme border">其他</button>
-                                    <button class="btn btn-theme border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
+                                    <button class="btn btn-nice border">搜索</button>
+                                    <button class="btn btn-nice border">其他</button>
+                                    <button class="btn btn-nice border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
                                 </div>
                             </div>
                         </div>

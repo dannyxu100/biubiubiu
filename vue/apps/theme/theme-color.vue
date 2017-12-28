@@ -173,8 +173,6 @@
                 return {'border-color': color.complementary.rgb};
             },
         },
-        created() {
-            debugger;
-        }
+        created() {}
     }
 </script>

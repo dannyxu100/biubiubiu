@@ -60,7 +60,7 @@ export default {
                     basic.input.borderstyle.def,
                     basic.input.style.def.shadow.def
                 )}
-                ${Prefix.transition(state, 'border-color linear .15s')}
+                ${Prefix.transition(state, 'border-color linear .15s, background-color linear .15s')}
             }
             .${namespace}input:focus,
             .${namespace}textarea:focus,
@@ -338,6 +338,8 @@ export default {
                 border-collapse: separate;
                 position: relative;
                 width: 220px;
+                ${Prefix.border_radius(state, basic.input.radius.group +'em '+ basic.input.radius.group +'em '+ basic.input.radius.group +'em '+ basic.input.radius.group +'em')}
+                ${Prefix.box_shadow(state, basic.input.group.shadow)}
             }
             .${namespace}inputgroup .${namespace}input {
                 display: table-cell;
@@ -345,6 +347,7 @@ export default {
                 z-index: ${basic.input.group.zindex.def};
                 width: 100%;
                 margin-left: ${-basic.input.borderwidth.group.left}px;
+                background-color: ${basic.input.group.input.bgcolor.def};
                 ${input_border(
                     state,
                     basic.input.borderwidth.group,
@@ -359,6 +362,7 @@ export default {
             .${namespace}inputgroup .${namespace}input:focus,
             .${namespace}inputgroup .${namespace}input.active {
                 z-index: ${basic.input.group.zindex.focus};
+                background-color: ${basic.input.group.input.bgcolor.focus};
                 ${input_border(
                     state,
                     basic.input.borderwidth.group_focus,
@@ -371,11 +375,11 @@ export default {
             }
             .${namespace}inputgroup .${namespace}input-key:focus,
             .${namespace}inputgroup .${namespace}input-key.active {
-              border-color: ${basic.input.style.key.bordercolor.focus};
+                border-color: ${basic.input.style.key.bordercolor.focus};
             }
             .${namespace}inputgroup .${namespace}input-light:focus,
             .${namespace}inputgroup .${namespace}input-light.active {
-              border-color: ${basic.input.style.light.bordercolor.focus};
+                border-color: ${basic.input.style.light.bordercolor.focus};
             }
             .${namespace}inputgroup .${namespace}input-nice:focus,
             .${namespace}inputgroup .${namespace}input-nice.active {
@@ -404,9 +408,9 @@ export default {
                 height: ${basic.input.height.def}px;
                 line-height: ${basic.input.height.def-4*2}px;
                 font-size: ${basic.input.fontsize.def}px;
-                color: #aaaaaa;
-                background-color: #f7f7f7;
-                border: 1px solid #dddddd;
+                color: ${basic.input.group.addons.text.color};
+                background-color: ${basic.input.group.addons.text.bgcolor};
+                border: ${basic.input.group.addons.text.borderwidth}px solid ${basic.input.group.addons.text.bordercolor};
             }
             .${namespace}inputgroup .addons .text-small {
                 height: ${basic.input.height.small}px;
@@ -421,6 +425,7 @@ export default {
             .${namespace}inputgroup .addons .btn {
                 position: relative;
                 margin-left: ${-basic.input.borderwidth.group.left}px;
+                ${Prefix.box_shadow(state, 'none')}
             }
             .${namespace}inputgroup .addons:first-child .text:last-child,
             .${namespace}inputgroup .addons:first-child .btn:last-child {

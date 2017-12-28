@@ -123,18 +123,18 @@ export default {
 
             /* 修正placeholder颜色 */
             :-moz-placeholder {  /* Mozilla Firefox 4 to 18 */
-                color: #ddd;
+                color: ${basic.fontcolor.placeholder};
             }
             ::-moz-placeholder { /* Mozilla Firefox 19+ */
-                color: #ddd;
+                color: ${basic.fontcolor.placeholder};
             }
             input:-ms-input-placeholder,
             textarea:-ms-input-placeholder {
-                color: #ddd;
+                color: ${basic.fontcolor.placeholder};
             }
             input::-webkit-input-placeholder,
             textarea::-webkit-input-placeholder {
-                color: #ddd;
+                color: ${basic.fontcolor.placeholder};
             }
 
             /* 修正selection颜色 */

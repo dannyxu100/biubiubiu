@@ -13,5 +13,6 @@ export default {
     CSS_TABS_POPMENU:       'CSS_TABS_POPMENU',
     CSS_TAG:                'CSS_TAG',
     CSS_INPUT:              'CSS_INPUT',
-    CSS_INPUTGROUP:         'CSS_INPUTGROUP'
+    CSS_INPUTGROUP:         'CSS_INPUTGROUP',
+    CSS_FORM:               'CSS_FORM'
 };
