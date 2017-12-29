@@ -72,7 +72,7 @@ export default {
             .${namespace}btn.loading.focus,
             .${namespace}btn-def.loading.focus {
                 border-color: ${basic.btn.style.def.bordercolor.focus};
-                z-index: ${basic.btn.zindex.active};
+                z-index: ${basic.btn.zindex.focus};
                 ${Prefix.outline()}
             }
             .${namespace}btn:hover,
@@ -83,7 +83,7 @@ export default {
                 border-color: ${basic.btn.style.def.bordercolor.hover};
                 background-color: ${basic.btn.style.def.bgcolor.hover};
                 text-decoration: none;
-                z-index: ${basic.btn.zindex.active};
+                z-index: ${basic.btn.zindex.hover};
                 ${Prefix.box_shadow(state, basic.btn.style.def.shadow.hover)}
             }
             .${namespace}btn:focus,
@@ -94,7 +94,7 @@ export default {
                 border-color: ${basic.btn.style.def.bordercolor.focus};
                 background-color: ${basic.btn.style.def.bgcolor.focus};
                 text-decoration: none;
-                z-index: ${basic.btn.zindex.active};
+                z-index: ${basic.btn.zindex.focus};
                 ${Prefix.box_shadow(state, basic.btn.style.def.shadow.focus)}
             }
             .${namespace}btn:active,

@@ -45,10 +45,11 @@ export default {
             .${namespace}grid {
                 width: 100%;
             }
-            .${namespace}grid-row,
-            .${namespace}grid-row-full {
-                ${Comm.clearfix(state, `.${namespace}grid-row-full`)}
-            }
+            ${Comm.clearfix(
+                state,
+                `.${namespace}grid-row`,
+                `.${namespace}grid-row-full`
+            )}
             .${namespace}grid-row {
                 margin-top: ${basic.grid.rowspace*2}px;
             }

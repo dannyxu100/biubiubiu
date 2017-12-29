@@ -516,6 +516,8 @@ const State = {
                 radius:         0,
                 zindex: {
                     def:        0,
+                    hover:      0,
+                    focus:      0,
                     active:     0
                 },
                 style: {
@@ -1363,6 +1365,75 @@ const State = {
                     color:              '',
                     icon:               ''
                 }
+            },
+            //遮罩层
+            mask: {
+                zindex:             0,
+                bgcolor:            ''
+            },
+            //对话框
+            dlg: {
+                bgcolor:            '',
+                zindex: {
+                    def:            0,
+                    mask:           0,
+                    wrapper:        0
+                },
+                head: {
+                    minheight:      40,
+                    padding: {
+                        top:        10,
+                        bottom:     10,
+                        left:       15,
+                        right:      15
+                    },
+                    borderwidth:    1,
+                    bordercolor:    ''
+                },
+                title: {
+                    zindex:         0,
+                    color:          '',
+                    fontsize:       0,
+                    fontweight:     0
+                },
+                close: {
+                    zindex:         0,
+                    width:          40,
+                    height:         40,
+                    padding: {
+                        top:        0,
+                        bottom:     0,
+                        left:       0,
+                        right:      0
+                    },
+                    color: {
+                        def:        '',
+                        hover:      ''
+                    },
+                    icon:           ''
+                },
+                foot: {
+                    minheight:      40,
+                    padding: {
+                        top:        10,
+                        bottom:     15,
+                        left:       15,
+                        right:      15
+                    },
+                    borderwidth:    0,
+                    bordercolor:    ''
+                },
+                body: {
+                    minheight:      80,
+                    padding: {
+                        top:        15,
+                        bottom:     15,
+                        left:       15,
+                        right:      15
+                    }
+                },
+                radius:             0,
+                shadow:             ''
             }
         }
     }

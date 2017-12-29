@@ -13,6 +13,8 @@ import Tabs                     from './mutations-tabs.js';
 import Tag                      from './mutations-tag.js';
 import Input                    from './mutations-input.js';
 import Form                     from './mutations-form.js';
+import Dlg                      from './mutations-dlg.js';
+import Commclass                from './mutations-commclass.js';
 
 import Prefix                   from './css-prefix.js';
 import Comm                     from './css-comm.js';
@@ -32,6 +34,8 @@ export default {
     ...Tag,
     ...Input,
     ...Form,
+    ...Dlg,
+    ...Commclass,
     [MT.INIT_BASIC]( state ) {
         let basic = state.data.basic;
 
@@ -60,7 +64,9 @@ export default {
             radius:         basic.radius.def,
             zindex: {
                 def:        basic.zindex.control,
-                active:     basic.zindex.control + 10
+                hover:      basic.zindex.control +10,
+                focus:      basic.zindex.control +20,
+                active:     basic.zindex.control +20
             },
             style: {
                 def: {
@@ -72,23 +78,23 @@ export default {
                         disabled:   basic.colors.black.ladder.dark.hex
                     },
                     bordercolor: {
-                        def:        basic.colors.white.ladder.dark.hex,
-                        hover:      basic.colors.white.ladder.light.hex,
-                        focus:      basic.colors.white.ladder.light.hex,
-                        active:     basic.colors.gray.ladder.normal.hex,
+                        def:        basic.colors.gray.ladder.lighter.hex,
+                        hover:      basic.colors.white.ladder.normal.hex,
+                        focus:      basic.colors.white.ladder.normal.hex,
+                        active:     basic.colors.gray.ladder.light.hex,
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     bgcolor: {
-                        def:        basic.colors.white.ladder.dark.hex,
-                        hover:      basic.colors.white.ladder.light.hex,
-                        focus:      basic.colors.white.ladder.light.hex,
-                        active:     basic.colors.gray.ladder.lighter.hex,
+                        def:        basic.colors.gray.ladder.lighter.hex,
+                        hover:      basic.colors.white.ladder.normal.hex,
+                        focus:      basic.colors.white.ladder.normal.hex,
+                        active:     basic.colors.gray.ladder.light.hex,
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     shadow: {
                         def:        `0 1px 2px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
-                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.2).$rgba}`,
-                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.25).$rgba}`,
                         active:     `0 2px 5px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.4).$rgba}`
                     }
                 },
@@ -466,10 +472,10 @@ export default {
             }
         });
         Api.extend(true, basic.tag, {
-            color:              basic.colors.white.ladder.normal.hex,
-            bgcolor:            basic.colors.gray.ladder.darkest.hex,
-            bordercolor:        basic.colors.gray.ladder.darkest.hex,
-            radius:             basic.radius.def
+            color:                  basic.colors.white.ladder.normal.hex,
+            bgcolor:                basic.colors.gray.ladder.darkest.hex,
+            bordercolor:            basic.colors.gray.ladder.darkest.hex,
+            radius:                 basic.radius.def
         });
         Api.extend(true, basic.input, {
             height: {
@@ -578,6 +584,40 @@ export default {
                 color:              basic.colors.key.ladder.normal.hex,
                 icon:               basic.icons.snow
             }
+        });
+        Api.extend(true, basic.mask, {
+            zindex:                 basic.zindex.layer,
+            bgcolor:                basic.colors.black.ladder.darkest.hex
+        });
+        Api.extend(true, basic.dlg, {
+            bgcolor:                basic.colors.white.ladder.light.hex,
+            zindex: {
+                def:                basic.zindex.layer,
+                mask:               basic.zindex.bg,
+                wrapper:            basic.zindex.bg +10
+            },
+            head: {
+                bordercolor:        Color.opacity(basic.colors.black.ladder.light.hex, 0.1).$rgba,
+            },
+            title: {
+                zindex:             basic.zindex.bg,
+                color:              basic.colors.black.ladder.light.hex,
+                fontsize:           basic.fontsize.m,
+                fontweight:         basic.fontweight.bold
+            },
+            close: {
+                zindex:             basic.zindex.bg +10,
+                color: {
+                    def:            Color.opacity(basic.colors.black.ladder.darkest.rgb, 0.5).$rgba,
+                    hover:          Color.opacity(basic.colors.black.ladder.darkest.rgb, 0.8).$rgba
+                },
+                icon:               basic.icons.delete
+            },
+            foot: {
+                bordercolor:        Color.opacity(basic.colors.black.ladder.light.hex, 0.1).$rgba,
+            },
+            radius:                 basic.radius.def,
+            shadow:                 `0 15px 50px 0 ${Color.opacity(basic.colors.black.ladder.darkest.rgb, 0.3).$rgba}`,
         });
         // debugger;
     }

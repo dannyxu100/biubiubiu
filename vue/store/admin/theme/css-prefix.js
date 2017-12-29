@@ -2,7 +2,10 @@ const prefix = {
     //字体大小
     font_size(state, rem) {
         let basic = state.data.basic;
-        return `font-size: ${rem/basic.rem2px}px; font-size: ${rem};`;
+        return `
+            font-size: ${rem/basic.rem2px}px;
+            font-size: ${rem};
+        `;
     },
     //边距和边框都将在已设定的宽度和高度内进行绘制
     box_sizing(state, mode) {

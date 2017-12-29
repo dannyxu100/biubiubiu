@@ -24,7 +24,7 @@
             </div>
 
             <!-- 对话框 -->
-            <div class="section">
+            <div class="section" id="section-dlg">
                 <h2>对话框</h2>
                 <h3>.dlg</h3>
                 <div>由于主张简洁统一的交互语言，这里的对话框都是模态。（如果需要非模态对话框，可以自己写一个，其实也很简单）</div>
@@ -45,7 +45,7 @@
                                     <div class="dlg-foot">
                                         <div class="fright">
                                             <button class="btn">取消</button>
-                                            <button class="btn btn-theme">确认</button>
+                                            <button class="btn">提交</button>
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +66,8 @@
                                     <div class="dlg-foot">
                                         <div class="fright">
                                             <button class="btn">取消</button>
-                                            <button class="btn btn-theme">确认</button>
+                                            <button class="btn">上传</button>
+                                            <button class="btn btn-theme">提交</button>
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +91,7 @@
                                         信息保存成功
                                     </div>
                                     <div class="dlg-foot">
-                                        <button class="btn dlg-ok">确认</button>
+                                        <button class="btn btn-nice dlg-ok">确认</button>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +106,7 @@
                                     </div>
                                     <div class="dlg-foot">
                                         <button class="btn dlg-cancel">取消</button>
-                                        <button class="btn dlg-yes">确认</button>
+                                        <button class="btn btn-key dlg-yes">删除</button>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +124,7 @@
                                     </div>
                                     <div class="dlg-foot">
                                         <button class="btn dlg-cancel">取消</button>
-                                        <button class="btn dlg-yes">确认</button>
+                                        <button class="btn btn-theme dlg-yes">确认</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +140,7 @@
                                     </div>
                                     <div class="dlg-foot">
                                         <button class="btn dlg-cancel">取消</button>
-                                        <button class="btn dlg-yes">确认</button>
+                                        <button class="btn btn-theme dlg-yes">确认</button>
                                     </div>
                                 </div>
                             </div>

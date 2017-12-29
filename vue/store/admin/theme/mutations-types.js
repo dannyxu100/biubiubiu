@@ -14,5 +14,8 @@ export default {
     CSS_TAG:                'CSS_TAG',
     CSS_INPUT:              'CSS_INPUT',
     CSS_INPUTGROUP:         'CSS_INPUTGROUP',
-    CSS_FORM:               'CSS_FORM'
+    CSS_FORM:               'CSS_FORM',
+    CSS_MASK:               'CSS_MASK',
+    CSS_DLG:                'CSS_DLG',
+    CSS_COMMCLASS:          'CSS_COMMCLASS'
 };
