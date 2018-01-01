@@ -28,7 +28,7 @@ module.exports = {
             'vue$'          : R('../node_modules/vue/dist/vue.js'),
             '_WEBROOT_'     : R('../'),
             '_ROOT_'        : R('../vue'),
-            '_PLUGIN_'      : R('../vue/plugins'),
+            '_PLUGINS_'     : R('../vue/plugins'),
             '_JS_'          : R('../vue/js'),
             '_LESS_'        : R('../vue/less'),
             '_ROUTER_'      : R('../vue/router'),

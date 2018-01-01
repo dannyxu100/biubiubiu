@@ -49,7 +49,7 @@ export default {
         } else {
             node.innerHTML = state.data.csstext;                               //或者写成 nod.appendChild(document.createTextNode(str))
         }
-        console.log(state.data.csstext);
+        // console.log(state.data.csstext);
     }
 
 };

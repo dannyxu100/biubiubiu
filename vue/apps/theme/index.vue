@@ -15,6 +15,10 @@
                 </template>
             </div>
             <div class="apps-group">
+                <router-link class="apps-item" to="/plugins-xscroll">
+                    <i class="ico" style="background-image:url(/public/images/apps/x-scroll.svg)"></i>
+                    <span class="tit">滚动条</span>
+                </router-link>
                 <router-link class="apps-item" to="">
                     <i class="ico" style="background-image:url(/public/images/apps/users.svg)"></i>
                     <span class="tit">用户</span>

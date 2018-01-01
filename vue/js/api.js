@@ -40,8 +40,8 @@ let MAX_ARRAY_INDEX     = Math.pow(2,53)-1,                  //js数组最大索
     rid                 = window.rid,
     nowCompanyId        = window.nowCompanyId;
 
-//vue通用api插件
-const api = {
+//vue通用Api插件
+const Api = {
     //类型判断
     //数组
     isarray: Array.isArray || function( target ) {
@@ -73,13 +73,13 @@ const api = {
     },
     //键值对象
     isplainobject( target ) {
-        return target && api.isobject(target) && Object.getPrototypeOf(target) === Object.prototype;
+        return target && Api.isobject(target) && Object.getPrototypeOf(target) === Object.prototype;
     },
 
     //判断某值是否存在于对象类型数组的某属性
     hasvalue( obj, key, value ) {
         let res = false;
-        api.each( obj, ( item, i )=>{
+        Api.each( obj, ( item, i )=>{
             if( item[key] && item[key] === value ) {
                 res = true;
                 return false;
@@ -93,7 +93,7 @@ const api = {
     },
     //获取对象所有属性名
     allkeys( obj ) {
-        if ( !api.isobject(obj) ) {
+        if ( !Api.isobject(obj) ) {
             return [];
         }
         let keys = [], key;
@@ -104,7 +104,7 @@ const api = {
     },
     //获取对象自有属性名（不包含原型属性）
     keys( obj ) {
-        if ( !api.isobject(obj) ) {
+        if ( !Api.isobject(obj) ) {
             return [];
         }
         if ( Object.keys ) {
@@ -112,7 +112,7 @@ const api = {
         }
         let keys = [], key;
         for (key in obj){
-            if( api.haskey(obj, key) ){
+            if( Api.haskey(obj, key) ){
                 keys.push(key);
             }
         }
@@ -120,7 +120,7 @@ const api = {
     },
     //获取对象自有属性值（数组）
     values( obj ) {
-        let keys = api.keys(obj),
+        let keys = Api.keys(obj),
             len = keys.length,
             i = 0,
             arr = Array(len);
@@ -138,7 +138,7 @@ const api = {
         if ( len < 2 || obj === null ){
             return obj;
         }
-        if( api.isboolean(arguments[0]) ) {
+        if( Api.isboolean(arguments[0]) ) {
             isdeep = arguments[0];
             obj = arguments[1];
             idx++;
@@ -146,21 +146,21 @@ const api = {
         let source, keys, proplen, i, key, iscopyarr, clone;
         for (; idx<len; idx++) {                                        //多对象
             source = arguments[idx];                                    //扩展目标对象
-            keys = api.allkeys(source);
+            keys = Api.allkeys(source);
             proplen = keys.length;
             for (i=0; i<proplen; i++) {
                 key = keys[i];
                 if ( source[key] === obj ) {                            //防止引用对象包含关系，导致死循环
                     continue;
                 }
-                if ( isdeep && ( api.isplainobject(source[key]) || (iscopyarr=api.isarray(source[key])) )) {
+                if ( isdeep && ( Api.isplainobject(source[key]) || (iscopyarr=Api.isarray(source[key])) )) {
                     if( iscopyarr ) {
                         iscopyarr = false;
-                        clone = obj[key] && api.isarray(obj[key]) ? obj[key] : [];
+                        clone = obj[key] && Api.isarray(obj[key]) ? obj[key] : [];
                     } else {
-                        clone = obj[key] && api.isplainobject(obj[key]) ? obj[key] : {};
+                        clone = obj[key] && Api.isplainobject(obj[key]) ? obj[key] : {};
                     }
-                    obj[key] = api.extend( isdeep, clone, source[key] );
+                    obj[key] = Api.extend( isdeep, clone, source[key] );
                 } else if ( void 0 !== source[key] ) {
                     obj[key] = source[key];
                 }
@@ -171,12 +171,12 @@ const api = {
     //拷贝
     copy( target, isdeep=true ) {
         let clone;
-        if( api.isarray(target) ){
+        if( Api.isarray(target) ){
             clone = [];
         } else {
             clone = {};
         }
-        return api.extend(isdeep, clone, target);
+        return Api.extend(isdeep, clone, target);
     },
     //遍历工具，dataset可以是数组和对象
     //回调函数 fn( item, index|key, dataset);
@@ -187,7 +187,7 @@ const api = {
             return fn.call(context, value, index, collection);
         };
         let i, len, res;
-        if ( api.isarraylike(dataset) ) {                                   //类数组
+        if ( Api.isarraylike(dataset) ) {                                   //类数组
             i=0;
             len=dataset.length;
             for (; i<len; i++) {
@@ -199,7 +199,7 @@ const api = {
                 }
             }
         } else {                                                            //键值对象
-            let keys = api.keys( dataset );
+            let keys = Api.keys( dataset );
             i=0;
             len=keys.length;
             for (; i<len; i++) {
@@ -315,10 +315,10 @@ const api = {
     getweekday( date ) {
         let map = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
 
-        if( api.isdate(date) ){
+        if( Api.isdate(date) ){
             return map[ date.getDay() ];
 
-        } else if( api.isstring(date) ){
+        } else if( Api.isstring(date) ){
             date = date.split(/[- :]/g);
             date = new Date(date[0], --date[1], date[2]);
             return map[ date.getDay() ];
@@ -329,17 +329,17 @@ const api = {
     },
     //获得日期对应的星期数
     dateplus( date ) {
-        if( api.isstring(date) ) {
-            date = api.str2date(date);
+        if( Api.isstring(date) ) {
+            date = Api.str2date(date);
         }
         return {
             self: date,
-            text: api.fmtdate( date ),                      //字符串全日期
+            text: Api.fmtdate( date ),                      //字符串全日期
             time: date.getTime(),                           //整数时间戳
             y: date.getFullYear(),                          //年
             M: date.getMonth() + 1,                         //月
             d: date.getDate(),                              //日
-            D: api.getweekday( date ),                      //星期
+            D: Api.getweekday( date ),                      //星期
             h: date.getHours(),
             m: date.getMinutes(),
             s: date.getSeconds(),
@@ -354,7 +354,7 @@ const api = {
     // fmt = '+M5'; //五个月后
     adddate( date, fmt ) {
         let dateplus, matchs, mothed, type, value;
-        dateplus = api.dateplus( date );
+        dateplus = Api.dateplus( date );
 
         matchs = fmt.match( /^([-+])([A-Za-z])(\d)*$/ );
         if( matchs && matchs[1] && matchs[2] && matchs[3] ) {
@@ -443,9 +443,9 @@ const api = {
             data: data,
             responseType: 'json'
         };
-        api.extend(params, opts);
+        Api.extend(params, opts);
 
-        return api.http( params ).then(( result )=>{
+        return Api.http( params ).then(( result )=>{
             let res = result.data;
             if ( !res ) {
                 return false;
@@ -455,7 +455,7 @@ const api = {
                     res = JSON.parse( dr(res.encode_str) );
                     // res = JSON.parse( MD5.hex(res.encode_str) );
                 } catch (ex) {
-                    api.error('数据错误！');
+                    Api.error('数据错误！');
                     return false;
                 }
             }
@@ -464,7 +464,7 @@ const api = {
                 return false;
             }
             if ( res.result === 'ServerError' ) {
-                api.error('操作超时，请重试或刷新页面！');
+                Api.error('操作超时，请重试或刷新页面！');
                 return false;
             }
             if ( res.result !== 'TRUE' ) {
@@ -476,16 +476,16 @@ const api = {
                     if ($('#taskDetail').length) {
                         viewUtil.showSummary();
                     } else {
-                        api.error('无权限查看相关内容');
+                        Api.error('无权限查看相关内容');
                     }
                     return false;
                 }
                 if ( res.result === 'FALSE' && (res.errorcode === 'ERROR_BE_DELETED' || res.errorcode === 'be_deleted') ) {
-                    api.error('内容已被删除');
+                    Api.error('内容已被删除');
                     return false;
                 }
                 if ( res.result === 'FALSE' && res.errorcode === 'ERROR_REPEATED' ) {
-                    api.error('已有相关内容');
+                    Api.error('已有相关内容');
                     return false;
                 }
                 //续费已过期
@@ -494,30 +494,30 @@ const api = {
                     return false;
                 }
                 if ( res.result === 'FALSE' && (res.msg === 'ERROR_DB_GAOXIN_DATA_EXIST') ) {
-                    api.error('已存在相同数据，请勿重复提交！');
+                    Api.error('已存在相同数据，请勿重复提交！');
                     return false;
                 }
-                api.error('操作失败');
+                Api.error('操作失败');
             }
             return res;
         }, ( res )=>{
-            api.error('操作超时，请重试或刷新页面！');
+            Api.error('操作超时，请重试或刷新页面！');
         });
     },
     //
     get( url, opts ) {
-        return api.ajax( url, { method: 'get' }, {} );
+        return Api.ajax( url, { method: 'get' }, {} );
     },
     //
     post( url, opts, data ) {
-        return api.ajax( url, { method: 'post' }, data );
+        return Api.ajax( url, { method: 'post' }, data );
     },
 
     //upyun上传接口
     //data = {policy, signature, file}
     ajaxupyun( url, data ) {
         let formData = new FormData(),
-            nowid = api.nowid(),
+            nowid = Api.nowid(),
             filedata = {
                 nowid: nowid,
                 filetype: data.file.type,
@@ -527,7 +527,7 @@ const api = {
                 file_url: ''
             };
 
-        api.each( data, ( item, key )=>{
+        Api.each( data, ( item, key )=>{
             formData.append( key, item );
         });
 
@@ -540,7 +540,7 @@ const api = {
             contentType: false
         };
 
-        return api.http( params ).then(( res )=>{
+        return Api.http( params ).then(( res )=>{
             // debugger;
             if ( 'string' === typeof res ) {
                 res = JSON.parse(res);
@@ -570,12 +570,12 @@ const api = {
                 return filedata;
 
             } else {
-                api.error('云存储数据异常！');
+                Api.error('云存储数据异常！');
             }
 
         }, ( res )=>{
             if( res && res.responseJSON ) {
-                api.error( '云存储错误：'+ res.responseJSON.code +' - '+ res.responseJSON.message );
+                Api.error( '云存储错误：'+ res.responseJSON.code +' - '+ res.responseJSON.message );
             }
         });
     },
@@ -589,20 +589,20 @@ const api = {
             token: '',
             company_id: nowCompanyId
         };
-        params = api.extend( params, filedata );
+        params = Api.extend( params, filedata );
 
-        return api.ajax( false, params ).then(( res )=>{
+        return Api.ajax( false, params ).then(( res )=>{
             if ( res && 'TRUE' === res.result ) {
                 res.data.created = '刚刚';        //返回新数据，未日期格式化
                 return res.data;
             }
             else {
-                api.error('保存附件失败！');
+                Api.error('保存附件失败！');
             }
 
         }, ( res )=>{
             // debugger;
-            api.error('保存附件失败！');
+            Api.error('保存附件失败！');
         });
     },
     //上传附件
@@ -624,7 +624,7 @@ const api = {
             file_name: encodeURIComponent(file.name),
             service_params_order: ['type', 'file_name']
         };
-        return api.ajax( false, params ).then(( res )=>{
+        return Api.ajax( false, params ).then(( res )=>{
             //获得upyun验证配置
             if ( res && 'TRUE' === res.result && res.data ) {
                 res = res.data;
@@ -634,10 +634,10 @@ const api = {
                     signature: res.signature,
                     file: file,
                 };
-                return api.ajaxupyun( res.action, data );
+                return Api.ajaxupyun( res.action, data );
 
             } else {
-                api.error('upyun配置数据异常！');
+                Api.error('upyun配置数据异常！');
             }
 
         }).then(( res )=>{
@@ -680,14 +680,14 @@ const api = {
                 filedata.another_user_id = 0;
             }
 
-            return api.savefile( filedata );
+            return Api.savefile( filedata );
 
         });
     },
     //上传图片（不保存附件管理记录）
     uploadimage( src, rid, rtype ) {
         var params = {
-            nowid: api.nowid(),
+            nowid: Api.nowid(),
             img_src: src
         };
         if ( rid ) {
@@ -697,11 +697,11 @@ const api = {
             params.rtype = rtype;
         }
 
-        return api.ajax( SERVICE_PREFIX + 'upload/uploadCaptureOrDragImg', params);
+        return Api.ajax( SERVICE_PREFIX + 'upload/uploadCaptureOrDragImg', params);
     },
     //根据路径创建目录（本地服务器）
     createfolder( opt ) {
-        if( api.isarray( opt.paths ) ){
+        if( Api.isarray( opt.paths ) ){
             opt.paths = opt.paths.join('<+>');
         }
 
@@ -709,10 +709,10 @@ const api = {
             httpType: 'post',
             serviceName: '',
             functionName: '',
-            serviceURL: createfolderApi,            //上传API地址
+            serviceURL: createfolderApi,            //上传Api地址
             paths: opt.paths || ''
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
     //上传文件（base64）
     uploadlocal4base64( opt ) {
@@ -726,7 +726,7 @@ const api = {
             path: opt.path || '',
             filename: opt.filename || ''
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
     //已上传文件列表
     getfiles( filetype='file', page=1, limit=15 ){
@@ -751,7 +751,7 @@ const api = {
             image_only: image_only,
             service_params_order: ['user_id', 'token', 'company_id', 'limit', 'page', 'image_only']
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
     //切换图片upyun尺寸
     imagemode( url, mode ) {
@@ -778,7 +778,7 @@ const api = {
             project_id: projectid,
             tiny: 0
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
     //获取项目阶段列表
     getprojectstages( projectid ) {
@@ -791,7 +791,7 @@ const api = {
             project_id: projectid,
             service_params_order: ['user_id', 'token', 'project_id']
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
     //获取所有参与项目
     getprojects() {
@@ -804,7 +804,7 @@ const api = {
             company_id: nowCompanyId,
             service_params_order: ['user_id', 'token', 'company_id']
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
     //获取所有客户
     getcustomers() {
@@ -818,7 +818,7 @@ const api = {
             page: 1,
             company_id: nowCompanyId
         };
-        return api.ajax( false, params );
+        return Api.ajax( false, params );
     },
 
     //通过用户id获得用户
@@ -830,7 +830,7 @@ const api = {
         let res = [];
         keywords = keywords.toUpperCase();
         if (keywords !== '') {
-            api.each(source, function ( user, index ) {
+            Api.each(source, function ( user, index ) {
                 if ( user.nickname_en && -1 < user.nickname_en.replace('/,/g', '').toUpperCase().indexOf(keywords) ) {
                     res.push(user);
                     return true;
@@ -859,7 +859,7 @@ const api = {
             params.data = opt.data;
         }
 
-        return api.ajax( false, params ).then(( res ) => {
+        return Api.ajax( false, params ).then(( res ) => {
             if( res && res.result && 'TRUE'===res.result ) {
 
             } else {
@@ -871,9 +871,9 @@ const api = {
     }
 };
 //扩展部分
-api.extend(api, {
+Api.extend(Api, {
     //创建一个全局缓存队列
-    cache: api.createcache(false)
+    cache: Api.createcache(false)
 });
 
 
@@ -889,10 +889,10 @@ function findvmfromfrag(frag) {
     return node.__vue__;
 }
 //扩展部分
-api.extend(api, {
+Api.extend(Api, {
     install( Vue, options ) {
-        Vue.$fn = api;
-        Vue.prototype.$fn = api;
+        Vue.$fn = Api;
+        Vue.prototype.$fn = Api;
 
         Vue.directive('floaded', {
             bind () {
@@ -971,7 +971,7 @@ api.extend(api, {
 
                 if (!refs) { return; }
 
-                if (api.isarray(refs)) {
+                if (Api.isarray(refs)) {
                     refs.push(findvmfromfrag(this._frag));
                 } else {
                     refs[key] = findvmfromfrag(this._frag);
@@ -980,4 +980,4 @@ api.extend(api, {
         });
     }
 });
-export default api;
+export default Api;

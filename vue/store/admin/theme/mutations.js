@@ -71,31 +71,31 @@ export default {
             style: {
                 def: {
                     color: {
-                        def:        basic.colors.black.ladder.dark.hex,
+                        def:        basic.colors.black.ladder.light.hex,
                         hover:      basic.colors.black.ladder.darkest.hex,
                         focus:      basic.colors.black.ladder.darkest.hex,
                         active:     basic.colors.black.ladder.darker.hex,
-                        disabled:   basic.colors.black.ladder.dark.hex
+                        disabled:   basic.colors.black.ladder.light.hex
                     },
                     bordercolor: {
                         def:        basic.colors.gray.ladder.lighter.hex,
                         hover:      basic.colors.white.ladder.normal.hex,
-                        focus:      basic.colors.white.ladder.normal.hex,
+                        focus:      basic.colors.white.ladder.light.hex,
                         active:     basic.colors.gray.ladder.light.hex,
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     bgcolor: {
                         def:        basic.colors.gray.ladder.lighter.hex,
                         hover:      basic.colors.white.ladder.normal.hex,
-                        focus:      basic.colors.white.ladder.normal.hex,
+                        focus:      basic.colors.white.ladder.light.hex,
                         active:     basic.colors.gray.ladder.light.hex,
                         disabled:   basic.colors.white.ladder.normal.hex
                     },
                     shadow: {
-                        def:        `0 1px 2px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
-                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`,
-                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.25).$rgba}`,
-                        active:     `0 2px 5px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.4).$rgba}`
+                        def:        `0 1px 2px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.15).$rgba}`,
+                        hover:      `0 3px 10px 0 ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.2).$rgba}`,
+                        focus:      `0 0 0 3px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.2).$rgba}`,
+                        active:     `0 2px 5px ${Color.opacity(basic.colors.black.ladder.darker.rgb, 0.3).$rgba}`
                     }
                 },
                 inverse: {

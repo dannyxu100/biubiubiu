@@ -1,10 +1,12 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
 import VueRouter                from 'vue-router';
-import Api                      from '_JS_/api.js';
+import Api                      from '_JS_/Api.js';
+import XScroll                  from '_PLUGINS_/XScroll.js';
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(Api);
+Vue.use(XScroll);
 
 
 //组件
@@ -21,8 +23,9 @@ import CRightpad                from '_APPS_/common/rightpad.vue';
 import RIndex                               from '_ROUTER_/index.js';
 import RAdmin                               from '_ROUTER_/admin.js';
 import RTheme                               from '_ROUTER_/theme.js';
+import RPlugins                             from '_ROUTER_/plugins.js';
 const Router = new VueRouter({
-    routes: RIndex.concat( RAdmin, RTheme )
+    routes: RIndex.concat( RAdmin, RTheme, RPlugins )
 });
 
 
