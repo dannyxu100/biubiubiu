@@ -220,7 +220,7 @@ textarea {
         margin: 0;
     }
     .xscroll-bar {
-        background-color: inherit;
+        background-color: rgba(0, 0, 0, .06);
         .prefix-border-radius(.5em);
         .xscroll-block {
             .prefix-border-radius(.5em);
@@ -238,6 +238,9 @@ textarea {
             .xscroll-block {
                 width: 6px;
             }
+        }
+        &.active {
+            background-color: rgba(0, 0, 0, .1);
         }
     }
 }

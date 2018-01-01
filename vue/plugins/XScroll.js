@@ -351,17 +351,34 @@ const XScroll = (() => {
             }
         };
     }
+    //
+    function createcode() {
+        return Math.random().toString().substring(2);
+    }
 
     let XScroll = function(elem, setting) {
         this.target = elem;
+        this.code = createcode();
+        elem.setAttribute('xscroll-code', this.code);
         Object.assign(this.setting, setting);
-        this.init();
-        this.event();
-        this.resize();
+        // this.init();
+        XScroll.cache(this.code, this);
         return this;
     };
-
+    XScroll.cachestore = {};
+    XScroll.cache = function( code, xscroll ) {
+        if( xscroll ) {
+            XScroll.cachestore[code] = xscroll;
+        } else {
+            return XScroll.cachestore[code];
+        }
+    };
+    XScroll.find = function( code ) {
+        return XScroll.cache( code );
+    };
     XScroll.prototype = {
+        inited:         false,
+        code:           '',
         setting: {
             class:          '',
             wheelspeed:     0.1,
@@ -389,6 +406,9 @@ const XScroll = (() => {
 
         //初始化
         init() {
+            if( this.inited ) {
+                return this;
+            }
             addclass(this.target, 'xscroll '+this.setting.class);
             this.target.innerHTML = '<div>'+ this.target.innerHTML +'</div>';
 
@@ -435,6 +455,10 @@ const XScroll = (() => {
                 marginBottom:       (this.padding.bottom + px(styles.marginBottom)) +'px'
             });
 
+            this.event();
+            this.resize();
+
+            this.inited = true;
         },
         //
         event() {
@@ -665,7 +689,12 @@ XScroll.install = function(Vue, options) {
     Vue.directive('xscroll', {
         inserted(el, binding, vnode, oldVnode) {
             // debugger;
-            new XScroll(el, binding.value);
+            new XScroll(el, binding.value).init();
+        },
+        componentUpdated(el, binding, vnode, oldVnode) {
+            debugger;
+            let xscroll = XScroll.find( el.getAttribute('xscroll-code') );
+            xscroll.resize();
         }
     });
 };
