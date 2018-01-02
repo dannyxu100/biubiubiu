@@ -1,5 +1,5 @@
 import Vue                      from 'vue';
-import Api                      from '_JS_/api.js';
+import Api                      from '_JS_/Api.js';
 import Color                    from '_JS_/color.js';
 import MT                       from './mutations-types.js';
 

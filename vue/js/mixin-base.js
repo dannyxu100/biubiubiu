@@ -1,4 +1,4 @@
-import api            from './api.js';
+import Api            from './Api.js';
 
 //vue通用api插件
 const base = {

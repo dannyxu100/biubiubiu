@@ -356,7 +356,7 @@ const XScroll = (() => {
         return Math.random().toString().substring(2);
     }
 
-    let XScroll = function(elem, setting) {
+    let XScroll = function( elem, setting ) {
         this.target = elem;
         this.code = createcode();
         elem.setAttribute('xscroll-code', this.code);
@@ -373,8 +373,8 @@ const XScroll = (() => {
             return XScroll.cachestore[code];
         }
     };
-    XScroll.find = function( code ) {
-        return XScroll.cache( code );
+    XScroll.get = function( elem ) {
+        return elem.getAttribute ? XScroll.cache( elem.getAttribute('xscroll-code') ) : XScroll.cache( elem );
     };
     XScroll.prototype = {
         inited:         false,
@@ -403,12 +403,8 @@ const XScroll = (() => {
             content_width:       0,
             content_height:      0
         },
-
-        //初始化
-        init() {
-            if( this.inited ) {
-                return this;
-            }
+        //创建DOM
+        create() {
             addclass(this.target, 'xscroll '+this.setting.class);
             this.target.innerHTML = '<div>'+ this.target.innerHTML +'</div>';
 
@@ -428,7 +424,13 @@ const XScroll = (() => {
             this.scroll_y.className = 'xscroll-bar xscroll-y';
             this.block_x.className = 'xscroll-block';
             this.block_y.className = 'xscroll-block';
-
+            return this;
+        },
+        //初始化
+        init() {
+            if( this.inited ) {
+                return this;
+            }
             let styles;
             styles = getstyle(this.target);
             this.padding.top = px(styles.paddingTop);
@@ -459,6 +461,7 @@ const XScroll = (() => {
             this.resize();
 
             this.inited = true;
+            return this;
         },
         //
         event() {
@@ -660,7 +663,7 @@ const XScroll = (() => {
             this.size.content_height = this.wrapper.scrollHeight + px(styles.marginTop) + px(styles.marginBottom);
         },
         //
-        resize() {
+        resize() {debugger;
             this.getcontentsize();
             setstyle(this.block_x, { width: Math.pow(this.wrapper.offsetWidth, 2) / this.size.content_width + 'px' });
             setstyle(this.block_y, { height: Math.pow(this.wrapper.offsetHeight, 2) / this.size.content_height + 'px' });
@@ -686,15 +689,48 @@ const XScroll = (() => {
 
 
 XScroll.install = function(Vue, options) {
-    Vue.directive('xscroll', {
-        inserted(el, binding, vnode, oldVnode) {
+    /*Vue.directive('xscroll', {
+        inserted(elem, binding, vnode, oldVnode) {
             // debugger;
-            new XScroll(el, binding.value).init();
+            // new XScroll(elem, binding.value).init();
+            // new XScroll(el, binding.value);
         },
-        componentUpdated(el, binding, vnode, oldVnode) {
-            debugger;
-            let xscroll = XScroll.find( el.getAttribute('xscroll-code') );
-            xscroll.resize();
+        componentUpdated(elem, binding, vnode, oldVnode) {
+            // debugger;
+            // let xscroll = XScroll.get( elem );
+            // xscroll.resize();
+        }
+    });*/
+
+    Vue.component('x-scroll', {
+        template: `
+            <div ref="target" class="xscroll">
+                <div ref="wrapper" class="xscroll-wrapper">
+                    <slot></slot>
+                </div>
+                <div ref="scroll_x" class="xscroll-bar xscroll-x">
+                    <div ref="block_x" class="xscroll-block"></div>
+                </div>
+                <div ref="scroll_y" class="xscroll-bar xscroll-y">
+                    <div ref="block_y" class="xscroll-block"></div>
+                </div>
+            </div>
+        `,
+        data() {
+            return {
+                xscroll: null
+            };
+        },
+        mounted() {debugger;
+            this.xscroll = new XScroll( this.$refs.target );
+            // this.xscroll.target = this.$refs.target;
+            this.xscroll.wrapper = this.$refs.wrapper;
+            this.xscroll.scroll_x = this.$refs.scroll_x;
+            this.xscroll.scroll_y = this.$refs.scroll_y;
+            this.xscroll.block_x = this.$refs.block_x;
+            this.xscroll.block_y = this.$refs.block_y;
+            this.xscroll.init();
+            // this.$refs;
         }
     });
 };

@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="menusbox" v-xscroll>
+        <div class="menusbox" is="x-scroll">
             <div class="menus-group">
                 <div class="groupname"><!-- 常用功能 --></div>
                 <div class="menu">

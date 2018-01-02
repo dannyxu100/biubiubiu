@@ -3,7 +3,8 @@
 
 <template>
 	<div class="wrapper wrapper-scroll wrapper-box">
-        <div style="width:500px; height:600px; border:0px solid #f66; background:#fff; overflow:hidden;" v-xscroll="{'class':'xscroll-default'}">
+        <div style="width:500px; height:600px; border:0px solid #f66; background:#fff; overflow:hidden;" is="x-scroll">
+            <!-- <x-scroll> -->
             <div style="width:1000px;">
                 <p>指令钩子函数会被传入以下参数：</p>
                 <p>el：指令所绑定的元素，可以用来直接操作 DOM 。</p>
@@ -104,6 +105,7 @@
                 <p></p>
                 <p>这是一个使用了这些属性的自定义钩子样例：</p>
             </div>
+            <!-- </x-scroll> -->
         </div>
 	</div>
 </template>

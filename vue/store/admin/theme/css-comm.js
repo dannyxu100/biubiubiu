@@ -1,4 +1,4 @@
-import Api                      from '_JS_/api.js';
+import Api                      from '_JS_/Api.js';
 import Prefix                   from './css-prefix.js';
 
 //字体图标
