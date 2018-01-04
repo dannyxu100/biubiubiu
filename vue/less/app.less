@@ -158,21 +158,31 @@ textarea {
 /************************** XScroll **************************/
 .xscroll {
     position: relative;
-    overflow: hidden;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    overflow: hidden !important;
     .xscroll-wrapper {
         position: absolute;
         top: 0px;
         bottom: 0px;
         left: 0px;
         right: 0px;
-        margin-right: 8px;
-        margin-bottom: 8px;
+        // margin-right: 6px;
+        // margin-bottom: 6px;
         overflow: hidden;
+        // overflow: scroll;
+        .xscroll-container {
+            // position: absolute;
+            // min-width: 100%;
+            // display:inline-block;
+            // *display:inline;
+            // *zoom:1;
+        }
     }
     .xscroll-bar {
         position: absolute;
         z-index: 1;
-        background-color: rgba(220, 220, 220, 1);
+        background-color: rgba(240, 240, 240, 1);
         .prefix-user-select();
         .prefix-transition(background-color linear .15s);
         .xscroll-block {
@@ -180,67 +190,96 @@ textarea {
             top: 0px;
             left: 0px;
             cursor: pointer;
-            background-color: rgba(120, 120, 120, 1);
-            .prefix-transition(background-color linear .15s);
+            background-color: rgba(190, 190, 190, 1);
+            .prefix-transition(~"background-color linear .15s, width linear .05s, height linear .05s");
         }
         &.xscroll-x {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 8px;
+            height: 6px;
             .xscroll-block {
                 left: 0px;
                 top: 0px;
-                height: 8px;
+                height: 6px;
             }
         }
         &.xscroll-y {
             top: 0px;
             bottom: 0px;
             right: 0px;
-            width: 8px;
+            width: 6px;
             .xscroll-block {
                 top: 0px;
                 left: 0px;
-                width: 8px;
+                width: 6px;
             }
         }
         &.active {
             background-color: rgba(220, 220, 220, 1);
             .xscroll-block {
-                background-color: rgba(60, 60, 60, 1);
+                background-color: rgba(120, 120, 120, 1);
             }
         }
     }
 }
-/************************/
-.xscroll-default {
-     padding:10px 15px 15px 10px;
+
+/* xscroll皮肤 */
+.xscroll-light,
+.xscroll-dark {
+     padding:10px 12px 12px 10px;
     .xscroll-wrapper {
         margin: 0;
     }
     .xscroll-bar {
-        background-color: rgba(0, 0, 0, .06);
         .prefix-border-radius(.5em);
         .xscroll-block {
             .prefix-border-radius(.5em);
         }
         &.xscroll-x {
             bottom: 4px;
-            height: 6px;
+            height: 4px;
             .xscroll-block {
-                height: 6px;
+                height: 4px;
             }
         }
         &.xscroll-y {
             right: 4px;
-            width: 6px;
+            width: 4px;
             .xscroll-block {
-                width: 6px;
+                width: 4px;
             }
         }
         &.active {
             background-color: rgba(0, 0, 0, .1);
+        }
+    }
+}
+.xscroll-light {
+    .xscroll-bar {
+        background-color: rgba(0, 0, 0, .06);
+        .xscroll-block {
+            background-color: rgba(190, 190, 190, 1);
+        }
+        &.active {
+            background-color: rgba(0, 0, 0, .1);
+            .xscroll-block {
+                background-color: rgba(120, 120, 120, 1);
+            }
+        }
+    }
+}
+.xscroll-dark {
+    .xscroll-bar {
+        background-color: rgba(0, 0, 0, .1);
+        .xscroll-block {
+            background-color: rgba(0, 0, 0, .4);
+        }
+        &.active {
+            background-color: rgba(0, 0, 0, .2);
+            .xscroll-block {
+                background-color: rgba(0, 0, 0, .6);
+            }
         }
     }
 }

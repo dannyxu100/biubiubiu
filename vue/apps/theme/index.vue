@@ -4,7 +4,8 @@
 </style>
 
 <template>
-    <div class="wrapper wrapper-scroll wrapper-box">
+    <!-- <div class="wrapper wrapper-scroll wrapper-box"> -->
+    <div class="wrapper-box wrapper-theme">
         <div class="apps-container">
             <div class="apps-group">
                 <template v-for="(nav,path) in navs.maps" v-if="'/theme'!==path">

@@ -1,3 +1,163 @@
+/**
+* Detect Element Resize
+*
+* https://github.com/sdecima/javascript-detect-element-resize
+* Sebastian Decima
+*
+* version: 0.5.3
+**/
+(function () {
+    var attachEvent = document.attachEvent,
+        stylesCreated = false;
+
+    let resetTriggers, checkTriggers, scrollListener;
+    if (!attachEvent) {
+        var requestFrame = (function(){
+            var raf = window.requestAnimationFrame ||
+                        window.mozRequestAnimationFrame ||
+                            window.webkitRequestAnimationFrame ||
+                                function(fn){ return window.setTimeout(fn, 20); };
+            return function(fn){ return raf(fn); };
+        })();
+
+        var cancelFrame = (function(){
+            var cancel = window.cancelAnimationFrame ||
+                            window.mozCancelAnimationFrame ||
+                                window.webkitCancelAnimationFrame ||
+                                   window.clearTimeout;
+          return function(id){ return cancel(id); };
+        })();
+
+        resetTriggers = function(element){
+            var triggers = element.__resizeTriggers__,
+                expand = triggers.firstElementChild,
+                contract = triggers.lastElementChild,
+                expandChild = expand.firstElementChild;
+            contract.scrollLeft = contract.scrollWidth;
+            contract.scrollTop = contract.scrollHeight;
+            expandChild.style.width = expand.offsetWidth + 1 + 'px';
+            expandChild.style.height = expand.offsetHeight + 1 + 'px';
+            expand.scrollLeft = expand.scrollWidth;
+            expand.scrollTop = expand.scrollHeight;
+        };
+
+        checkTriggers = function(element){
+            return element.offsetWidth !== element.__resizeLast__.width ||
+                         element.offsetHeight !== element.__resizeLast__.height;
+        };
+
+        scrollListener = function(e){
+            var element = this;
+            resetTriggers(this);
+            if (this.__resizeRAF__) {
+                cancelFrame(this.__resizeRAF__);
+            }
+            this.__resizeRAF__ = requestFrame(function(){
+                if (checkTriggers(element)) {
+                    element.__resizeLast__.width = element.offsetWidth;
+                    element.__resizeLast__.height = element.offsetHeight;
+                    element.__resizeListeners__.forEach(function(fn){
+                        fn.call(element, e);
+                    });
+                }
+            });
+        };
+
+        /* Detect CSS Animations support to detect element display/re-attach */
+        var animation = false,
+            animationstring = 'animation',
+            keyframeprefix = '',
+            animationstartevent = 'animationstart',
+            domPrefixes = 'Webkit Moz O ms'.split(' '),
+            startEvents = 'webkitAnimationStart animationstart oAnimationStart MSAnimationStart'.split(' '),
+            pfx  = '';
+        {
+            var elm = document.createElement('fakeelement');
+            if( elm.style.animationName !== undefined ) { animation = true; }
+
+            if( animation === false ) {
+                for( var i = 0; i < domPrefixes.length; i++ ) {
+                    if( elm.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+                        pfx = domPrefixes[ i ];
+                        animationstring = pfx + 'Animation';
+                        keyframeprefix = '-' + pfx.toLowerCase() + '-';
+                        animationstartevent = startEvents[ i ];
+                        animation = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        var animationName = 'resizeanim';
+        var animationKeyframes = '@' + keyframeprefix + 'keyframes ' + animationName + ' { from { opacity: 0; } to { opacity: 0; } } ';
+        var animationStyle = keyframeprefix + 'animation: 1ms ' + animationName + '; ';
+    }
+
+    function createStyles() {
+        if (!stylesCreated) {
+            //opacity:0 works around a chrome bug https://code.google.com/p/chromium/issues/detail?id=286360
+            var css = (animationKeyframes ? animationKeyframes : '') +
+                    '.resize-triggers { ' + (animationStyle ? animationStyle : '') + 'visibility: hidden; opacity: 0; } ' +
+                    '.resize-triggers, .resize-triggers > div, .contract-trigger:before { content: \" \"; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }',
+                head = document.head || document.getElementsByTagName('head')[0],
+                style = document.createElement('style');
+
+            style.type = 'text/css';
+            if (style.styleSheet) {
+                style.styleSheet.cssText = css;
+            } else {
+                style.appendChild(document.createTextNode(css));
+            }
+
+            head.appendChild(style);
+            stylesCreated = true;
+        }
+    }
+
+    window.addResizeListener = function(elem, fn){
+        if (attachEvent) {
+            elem.attachEvent('onresize', fn);
+        } else {
+            if (!elem.__resizeTriggers__) {
+                if (getComputedStyle(elem).position === 'static') {
+                    elem.style.position = 'relative';
+                }
+                createStyles();
+                elem.__resizeLast__ = {};
+                elem.__resizeListeners__ = [];
+                (elem.__resizeTriggers__ = document.createElement('div')).className = 'resize-triggers';
+                elem.__resizeTriggers__.innerHTML = '<div class="expand-trigger"><div></div></div>' +
+                                                                                        '<div class="contract-trigger"></div>';
+                elem.appendChild(elem.__resizeTriggers__);
+                resetTriggers(elem);
+                elem.addEventListener('scroll', scrollListener, true);
+
+                /* Listen for a css animation to detect element display/re-attach */
+                animationstartevent && elem.__resizeTriggers__.addEventListener(animationstartevent, function(e) {
+                    if(e.animationName === animationName){
+                        resetTriggers(elem);
+                    }
+                });
+            }
+            elem.__resizeListeners__.push(fn);
+        }
+    };
+
+    window.removeResizeListener = function(elem, fn){
+        if (attachEvent) {
+            elem.detachEvent('onresize', fn);
+        } else {
+            elem.__resizeListeners__.splice(elem.__resizeListeners__.indexOf(fn), 1);
+            if (!elem.__resizeListeners__.length) {
+                elem.removeEventListener('scroll', scrollListener);
+                elem.__resizeTriggers__ = !elem.removeChild(elem.__resizeTriggers__);
+            }
+        }
+    };
+})();
+
+
 const Evt = {
     fix: function(event) {
         if (event.wrapper === true) {
@@ -93,6 +253,12 @@ const Evt = {
             delete elem['on'+name];
         }
         return this;
+    },
+    onresize: function(elem, handler){
+        window.addResizeListener(elem, handler);
+    },
+    offresize: function(elem, handler){
+        window.removeResizeListener(elem, handler);
     }
 };
 
@@ -387,6 +553,7 @@ const XScroll = (() => {
         },
         target:         null,
         wrapper:        null,
+        container:      null,
         scroll_x:       null,
         scroll_y:       null,
         block_x:        null,
@@ -406,9 +573,10 @@ const XScroll = (() => {
         //创建DOM
         create() {
             addclass(this.target, 'xscroll '+this.setting.class);
-            this.target.innerHTML = '<div>'+ this.target.innerHTML +'</div>';
+            this.target.innerHTML = '<div><div>'+ this.target.innerHTML +'</div></div>';
 
             this.wrapper = this.target.firstChild;
+            this.container = this.wrapper.firstChild;
             this.scroll_x = document.createElement('div');
             this.block_x = document.createElement('div');
             this.scroll_y = document.createElement('div');
@@ -420,6 +588,7 @@ const XScroll = (() => {
             this.target.appendChild(this.scroll_y);
 
             this.wrapper.className = 'xscroll-wrapper';
+            this.container.className = 'xscroll-container';
             this.scroll_x.className = 'xscroll-bar xscroll-x';
             this.scroll_y.className = 'xscroll-bar xscroll-y';
             this.block_x.className = 'xscroll-block';
@@ -448,13 +617,17 @@ const XScroll = (() => {
             });
 
             setstyle(this.scroll_x, {
-                marginLeft:         (this.padding.left + px(styles.marginLeft)) +'px',
-                marginRight:        (this.padding.right + px(styles.marginRight)) +'px'
+                // marginLeft:         (this.padding.left + px(styles.marginLeft)) +'px',
+                // marginRight:        (this.padding.right + px(styles.marginRight)) +'px'
+                marginLeft:         this.padding.left +'px',
+                marginRight:        this.padding.right +'px'
             });
 
             setstyle(this.scroll_y, {
-                marginTop:          (this.padding.top + px(styles.marginTop)) +'px',
-                marginBottom:       (this.padding.bottom + px(styles.marginBottom)) +'px'
+                // marginTop:          (this.padding.top + px(styles.marginTop)) +'px',
+                // marginBottom:       (this.padding.bottom + px(styles.marginBottom)) +'px'
+                marginTop:          this.padding.top +'px',
+                marginBottom:       this.padding.bottom +'px'
             });
 
             this.event();
@@ -469,9 +642,18 @@ const XScroll = (() => {
             this.wheelevent();
             this.dragevent(this.block_x);
             this.dragevent(this.block_y);
-            Evt.on(this.wrapper, 'mouseenter', (evt) => {
+            Evt.on(window, 'resize', (evt) => {
                 this.resize();
             });
+            Evt.onresize(this.container, (evt) => {
+                this.resize();
+            });
+            // Evt.on(this.wrapper, 'mouseenter', (evt) => {
+            //     this.resize();
+            // });
+            // Evt.on(this.wrapper, 'mouseleave', (evt) => {
+            //     this.resize();
+            // });
             Evt.on(this.scroll_x, 'mouseover', (evt) => {
                 addclass(this.scroll_x, 'active');
                 setstyle(this.scroll_x, { zIndex: '2' });
@@ -480,13 +662,13 @@ const XScroll = (() => {
                 addclass(this.scroll_y, 'active');
                 setstyle(this.scroll_y, { zIndex: '2' });
             });
-            Evt.on(this.scroll_x, 'mouseout', (evt) => {
+            Evt.on(this.scroll_x, 'mouseleave', (evt) => {
                 if( !this.locked_x ) {
                     removeclass(this.scroll_x, 'active');
                     setstyle(this.scroll_x, { zIndex: '1' });
                 }
             });
-            Evt.on(this.scroll_y, 'mouseout', (evt) => {
+            Evt.on(this.scroll_y, 'mouseleave', (evt) => {
                 if( !this.locked_y ) {
                     removeclass(this.scroll_y, 'active');
                     setstyle(this.scroll_y, { zIndex: '1' });
@@ -566,7 +748,7 @@ const XScroll = (() => {
 
             let dragstart, dragmove, dragend;
             dragstart = function(evt) {
-                // _this.resize();
+                _this.resize();
                 if (isvertical) {
                     _this.locked_y = true;
                     starttop = elem.offsetTop;
@@ -659,11 +841,11 @@ const XScroll = (() => {
         getcontentsize() {
             let styles;
             styles = getstyle(this.wrapper);
-            this.size.content_width = this.wrapper.scrollWidth + px(styles.marginLeft) + px(styles.marginRight);
-            this.size.content_height = this.wrapper.scrollHeight + px(styles.marginTop) + px(styles.marginBottom);
+            this.size.content_width = this.wrapper.scrollWidth;// + px(styles.marginLeft) + px(styles.marginRight);
+            this.size.content_height = this.wrapper.scrollHeight;// + px(styles.marginTop) + px(styles.marginBottom);
         },
         //
-        resize() {debugger;
+        resize() {
             this.getcontentsize();
             setstyle(this.block_x, { width: Math.pow(this.wrapper.offsetWidth, 2) / this.size.content_width + 'px' });
             setstyle(this.block_y, { height: Math.pow(this.wrapper.offsetHeight, 2) / this.size.content_height + 'px' });
@@ -675,6 +857,8 @@ const XScroll = (() => {
             } else {
                 setstyle(this.scroll_x, { display: 'none' });
             }
+
+            // this.getcontentsize();
             if( this.setting.ybar && this.size.content_height > this.wrapper.clientHeight ) {
                 setstyle(this.scroll_y, { display: 'block' });
             } else {
@@ -687,26 +871,34 @@ const XScroll = (() => {
     return XScroll;
 })();
 
-
 XScroll.install = function(Vue, options) {
-    /*Vue.directive('xscroll', {
+    /*Vue.directive('changebind', {
         inserted(elem, binding, vnode, oldVnode) {
             // debugger;
             // new XScroll(elem, binding.value).init();
             // new XScroll(el, binding.value);
         },
+        update(elem, binding, vnode, oldVnode) {
+            debugger;
+            XScroll.get(elem).resize();
+            // new XScroll(el, binding.value);
+        },
         componentUpdated(elem, binding, vnode, oldVnode) {
-            // debugger;
+            debugger;
+            XScroll.get(elem).resize();
             // let xscroll = XScroll.get( elem );
             // xscroll.resize();
         }
     });*/
 
     Vue.component('x-scroll', {
+        props: {},
         template: `
             <div ref="target" class="xscroll">
                 <div ref="wrapper" class="xscroll-wrapper">
-                    <slot></slot>
+                    <div ref="container" class="xscroll-container">
+                        <slot></slot>
+                    </div>
                 </div>
                 <div ref="scroll_x" class="xscroll-bar xscroll-x">
                     <div ref="block_x" class="xscroll-block"></div>
@@ -721,10 +913,11 @@ XScroll.install = function(Vue, options) {
                 xscroll: null
             };
         },
-        mounted() {debugger;
+        mounted() {
             this.xscroll = new XScroll( this.$refs.target );
             // this.xscroll.target = this.$refs.target;
             this.xscroll.wrapper = this.$refs.wrapper;
+            this.xscroll.container = this.$refs.container;
             this.xscroll.scroll_x = this.$refs.scroll_x;
             this.xscroll.scroll_y = this.$refs.scroll_y;
             this.xscroll.block_x = this.$refs.block_x;

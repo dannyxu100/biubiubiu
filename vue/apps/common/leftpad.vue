@@ -16,15 +16,15 @@
             </div>
         </div>
 
-        <div class="menusbox" is="x-scroll">
+        <div class="menusbox xscroll-light" is="x-scroll">
             <div class="menus-group">
-                <div class="groupname"><!-- 常用功能 --></div>
+                <!-- <div class="groupname">常用功能</div> -->
                 <div class="menu">
                     <a class="name" href="javascript:void(0)"><i class="iconfont icon-file-inverse"></i>发布文章</a>
                 </div>
             </div>
             <div class="menus-group">
-                <div class="groupname"><!-- 全部模块 --></div>
+                <!-- <div class="groupname">全部模块</div> -->
                 <div class="menu haschild">
                     <span class="name" :class="{active:menu.theme}" @click="togglemenu('theme')">
                         <i class="iconfont icon-theme-inverse"></i>主题样式
@@ -70,7 +70,7 @@
                     </transition>
                 </div>
                 <div class="menus-group">
-                    <div class="groupname"><!-- 其他 --></div>
+                    <!-- <div class="groupname">其他</div> -->
                     <div class="menu">
                         <a class="name" href="javascript:void(0)"><i class="iconfont icon-lock-inverse"></i>修改密码</a>
                     </div>
