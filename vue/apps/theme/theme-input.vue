@@ -4,7 +4,8 @@
 </style>
 
 <template>
-    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme wrapper-white">
+    <!-- <div class="wrapper wrapper-scroll wrapper-box wrapper-theme wrapper-white"> -->
+    <div class="wrapper-box wrapper-theme wrapper-white">
         <div class="container">
 
             <!-- 输入框 -->

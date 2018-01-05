@@ -4,7 +4,8 @@
 </style>
 
 <template>
-    <div class="wrapper wrapper-scroll wrapper-box wrapper-theme-ctrl">
+    <!-- <div class="wrapper wrapper-scroll wrapper-box wrapper-theme-ctrl"> -->
+    <div class="wrapper-box wrapper-theme-ctrl">
         <div class="container">
             <!-- 颜色 -->
             <div class="section">
