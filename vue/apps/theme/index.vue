@@ -16,10 +16,14 @@
                 </template>
             </div>
             <div class="apps-group">
-                <router-link class="apps-item" to="/plugins-xscroll">
-                    <i class="ico" style="background-image:url(/public/images/apps/x-scroll.svg)"></i>
-                    <span class="tit">滚动条</span>
-                </router-link>
+                <template v-for="(plugin,path) in navs.plugins" v-if="'/theme'!==path">
+                    <a class="apps-item" :key="plugin.name" href="javascript:;" @click="$root.routerpath(path)">
+                        <i class="ico" :style="styleimage(plugin)"></i>
+                        <span class="tit">{{plugin.name}}</span>
+                    </a>
+                </template>
+            </div>
+            <div class="apps-group">
                 <router-link class="apps-item" to="">
                     <i class="ico" style="background-image:url(/public/images/apps/users.svg)"></i>
                     <span class="tit">用户</span>

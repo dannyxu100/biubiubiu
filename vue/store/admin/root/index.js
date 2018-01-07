@@ -21,17 +21,18 @@ const State = {
             show: false
         },
         navs: {
-            maps: {},
-            used: [],
-            list: [],
+            maps:       {},
+            used:       [],
+            plugins:    [],
+            list:       [],
             home: {
-                'name': '',
-                'icon': 'icon-apps',
-                'image': '',
-                'class': '',
-                'path': '/theme'
+                'name':         '',
+                'icon':         'icon-apps',
+                'image':        '',
+                'class':        '',
+                'path':         '/theme'
             },
-            current: ''
+            current:    ''
         },
     }
 };

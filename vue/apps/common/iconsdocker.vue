@@ -36,7 +36,7 @@
                 color: rgba(255,255,255,1);
                 background: rgba(255,114,92, 1);
                 .prefix-border-radius(5px);
-                .prefix-gradient(0deg, rgba(228,58,21, 1), rgba(230,82,69, 1));
+                .prefix-gradient(~'0deg, rgba(228,58,21, 1), rgba(230,82,69, 1)');
             }
             i {
                 display: block;

@@ -1,5 +1,5 @@
 import Vue                      from 'vue';
-import Api                      from '_JS_/Api.js';
+import Fn                       from '_JS_/fn.js';
 import Color                    from '_JS_/color.js';
 import MT                       from './mutations-types.js';
 
@@ -21,7 +21,7 @@ import Comm                     from './css-comm.js';
 
 export default {
     [MT.MERGE_DATA] ( state, newdata ) {
-        state.data_copy = Vue.api.copy( state.data );       //备份，做重置覆盖使用
+        state.data_copy = Vue.$fn.copy( state.data );       //备份，做重置覆盖使用
         state.data = Object.assign( state.data, newdata );
     },
     ...Framework,
@@ -39,7 +39,7 @@ export default {
     [MT.INIT_BASIC]( state ) {
         let basic = state.data.basic;
 
-        Api.extend(true, basic.fontcolor, {
+        Vue.$fn.extend(true, basic.fontcolor, {
             // def:            Color.opacity(basic.colors.white.ladder.light.hex, 0.9).$rgba,
             def:            Color.opacity(basic.colors.black.ladder.dark.rgb, 0.9).$rgba,
             weak:           Color.opacity(basic.colors.black.ladder.dark.hex, 0.6).$rgba,
@@ -54,8 +54,8 @@ export default {
         basic.table.fontsize        = basic.fontsize.def;
         basic.table.radius          = basic.radius.r6;
 
-        Api.extend(true, basic.btn, basic.control);
-        Api.extend(true, basic.btn, {
+        Vue.$fn.extend(true, basic.btn, basic.control);
+        Vue.$fn.extend(true, basic.btn, {
             lineheight: {
                 def:        basic.btn.height.def-(basic.control.padding.def.top+basic.control.padding.def.bottom)-2,
                 small:      basic.btn.height.small-(basic.control.padding.small.top+basic.control.padding.small.bottom)-2,
@@ -286,7 +286,7 @@ export default {
                 }
             }
         });
-        Api.extend(true, basic.popmenu, {
+        Vue.$fn.extend(true, basic.popmenu, {
             color: {
                 def:        basic.colors.black.ladder.normal.hex,
                 hover:      basic.colors.white.ladder.light.hex,
@@ -333,7 +333,7 @@ export default {
                 }
             }
         });
-        Api.extend(true, basic.chkradio, {
+        Vue.$fn.extend(true, basic.chkradio, {
             fontsize:               basic.control.fontsize.def,
             zindex: {
                 before:             basic.zindex.control,
@@ -444,7 +444,7 @@ export default {
                 }
             }
         });
-        Api.extend(true, basic.tabs, {
+        Vue.$fn.extend(true, basic.tabs, {
             bgcolor:                'transparent',
             borderwidth_navs:       1,
             bordercolor_navs:       Color.opacity(basic.colors.theme.ladder.darker.rgb, 0.3).$rgba,
@@ -471,13 +471,13 @@ export default {
                 icon_popmenu:       basic.icons.rightsmall
             }
         });
-        Api.extend(true, basic.tag, {
+        Vue.$fn.extend(true, basic.tag, {
             color:                  basic.colors.white.ladder.normal.hex,
             bgcolor:                basic.colors.gray.ladder.darkest.hex,
             bordercolor:            basic.colors.gray.ladder.darkest.hex,
             radius:                 basic.radius.def
         });
-        Api.extend(true, basic.input, {
+        Vue.$fn.extend(true, basic.input, {
             height: {
                 def:                basic.control.height.def,
                 small:              basic.control.height.small,
@@ -575,7 +575,7 @@ export default {
                 }
             }
         });
-        Api.extend(true, basic.form, {
+        Vue.$fn.extend(true, basic.form, {
             label: {
                 color:              basic.fontcolor.def,
                 fontsize:           basic.control.fontsize.def
@@ -585,11 +585,11 @@ export default {
                 icon:               basic.icons.snow
             }
         });
-        Api.extend(true, basic.mask, {
+        Vue.$fn.extend(true, basic.mask, {
             zindex:                 basic.zindex.layer,
             bgcolor:                basic.colors.black.ladder.darkest.hex
         });
-        Api.extend(true, basic.dlg, {
+        Vue.$fn.extend(true, basic.dlg, {
             bgcolor:                basic.colors.white.ladder.light.hex,
             zindex: {
                 def:                basic.zindex.layer,

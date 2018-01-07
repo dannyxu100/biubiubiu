@@ -43,13 +43,6 @@
             "class": "",
             "path": "/theme-popmenu"
         },
-        "/theme-select": {
-            "name": "下拉",
-            "icon": "",
-            "image": "/public/images/apps/theme-list.svg",
-            "class": "",
-            "path": "/theme-select"
-        },
         "/theme-tabs": {
             "name": "分页栏",
             "icon": "",
@@ -77,6 +70,13 @@
             "image": "/public/images/apps/theme-input.svg",
             "class": "",
             "path": "/theme-input"
+        },
+        "/theme-select": {
+            "name": "下拉",
+            "icon": "",
+            "image": "/public/images/apps/theme-list.svg",
+            "class": "",
+            "path": "/theme-select"
         },
         "/theme-form": {
             "name": "表单",

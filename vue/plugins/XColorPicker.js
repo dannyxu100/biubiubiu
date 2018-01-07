@@ -1,39 +1,36 @@
 import Fn           from '../js/fn.js';
 import Evt          from '../js/evt.js';
-import Resize       from '../js/resize.js';
 import MouseWheel   from '../js/mousewheel.js';
 
 
 
-const XScroll = (() => {
+const XColorPicker = (() => {
     //
     function createcode() {
         return Math.random().toString().substring(2);
     }
 
-
-
-    let XScroll = function( elem, setting ) {
+    let XColorPicker = function( elem, setting ) {
         this.target = elem;
         this.code = createcode();
-        elem.setAttribute('xscroll-code', this.code);
+        elem.setAttribute('xcolorpicker-code', this.code);
         Object.assign(this.setting, setting);
         // this.init();
-        XScroll.cache(this.code, this);
+        XColorPicker.cache(this.code, this);
         return this;
     };
-    XScroll.cachestore = {};
-    XScroll.cache = function( code, xscroll ) {
-        if( xscroll ) {
-            XScroll.cachestore[code] = xscroll;
+    XColorPicker.cachestore = {};
+    XColorPicker.cache = function( code, xcolorpicker ) {
+        if( xcolorpicker ) {
+            XColorPicker.cachestore[code] = xcolorpicker;
         } else {
-            return XScroll.cachestore[code];
+            return XColorPicker.cachestore[code];
         }
     };
-    XScroll.get = function( elem ) {
-        return elem.getAttribute ? XScroll.cache( elem.getAttribute('xscroll-code') ) : XScroll.cache( elem );
+    XColorPicker.get = function( elem ) {
+        return elem.getAttribute ? XColorPicker.cache( elem.getAttribute('xcolorpicker-code') ) : XColorPicker.cache( elem );
     };
-    XScroll.prototype = {
+    XColorPicker.prototype = {
         inited:         false,
         code:           '',
         setting: {
@@ -63,7 +60,7 @@ const XScroll = (() => {
         },
         //创建DOM
         create() {
-            Fn.addclass(this.target, 'xscroll '+this.setting.class);
+            Fn.addclass(this.target, 'xcolorpicker '+this.setting.class);
             this.target.innerHTML = '<div><div>'+ this.target.innerHTML +'</div></div>';
 
             this.wrapper = this.target.firstChild;
@@ -359,10 +356,10 @@ const XScroll = (() => {
         }
     };
 
-    return XScroll;
+    return XColorPicker;
 })();
 
-XScroll.install = function(Vue, options) {
+XColorPicker.install = function(Vue, options) {
     Vue.component('x-scroll', {
         props: {},
         template: `
@@ -386,7 +383,7 @@ XScroll.install = function(Vue, options) {
             };
         },
         mounted() {
-            this.xscroll = new XScroll( this.$refs.target );
+            this.xscroll = new XColorPicker( this.$refs.target );
             // this.xscroll.target = this.$refs.target;
             this.xscroll.wrapper = this.$refs.wrapper;
             this.xscroll.container = this.$refs.container;
@@ -400,4 +397,4 @@ XScroll.install = function(Vue, options) {
     });
 };
 
-export default XScroll;
+export default XColorPicker;

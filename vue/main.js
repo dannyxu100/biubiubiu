@@ -1,11 +1,11 @@
 import Vue                      from 'vue';
 import Vuex                     from 'vuex';
 import VueRouter                from 'vue-router';
-import Api                      from '_JS_/Api.js';
+import Fn                       from '_JS_/fn.js';
 import XScroll                  from '_PLUGINS_/XScroll.js';
 Vue.use(Vuex);
 Vue.use(VueRouter);
-Vue.use(Api);
+Vue.use(Fn);
 Vue.use(XScroll);
 
 
@@ -35,7 +35,7 @@ import { mapGetters, mapActions }           from 'vuex';
 
 
 //Mixin
-import Base                                 from '_JS_/mixin-base.js';
+import Base                                 from './mixin-base.js';
 Vue.mixin(Base);
 
 
@@ -170,6 +170,9 @@ window.vueapp = new Vue({
             this.$fn.get('/public/data/admin-navs-used.json').then((res)=>{
                 this.navs.used = res.data;
             });
+            this.$fn.get('/public/data/admin-plugins.json').then((res)=>{
+                this.navs.plugins = res.data;
+            });
         },
 
         //判断路由是否存在nav标签
@@ -185,7 +188,7 @@ window.vueapp = new Vue({
         },
         //根据path提取nav数据对象
         getnav4path( path ) {
-            return this.navs.maps[path] || false;
+            return this.navs.maps[path] || this.navs.plugins[path] || false;
         },
         //提取当前nav索引
         getnavcurrentidx() {

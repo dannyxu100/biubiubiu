@@ -1,4 +1,4 @@
-import Api                      from '_JS_/Api.js';
+import Fn                       from '_JS_/fn.js';
 import Prefix                   from './css-prefix.js';
 
 //字体图标
@@ -22,7 +22,7 @@ const comm = {
     clearfix(state, classes) {
         classes = Array.prototype.slice.call(arguments, 1);
         let arrbefore = [], arrafter = [];
-        Api.each(classes, (classname, idx)=>{
+        Fn.each(classes, (classname, idx)=>{
             arrbefore.push(classname +'::before');
             arrafter.push(classname +'::after');
         });

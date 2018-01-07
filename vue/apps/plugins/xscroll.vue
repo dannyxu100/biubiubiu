@@ -220,7 +220,7 @@
 
             </div>
             <div class="cell-12-4">
-                <div style="width:400px; height:400px; background:#fff;" is="x-scroll" class="xscroll-dark">
+                <div style="width:400px; height:400px; background:#666;" is="x-scroll" class="xscroll-dark">
                     <!-- <x-scroll> -->
                     <div style="width:1000px; background:rgb(31,228,149); border:10px solid rgb(0,138,59);">
                         <p>指令钩子函数会被传入以下参数：</p>

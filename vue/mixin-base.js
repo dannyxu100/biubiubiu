@@ -1,6 +1,5 @@
-import Api            from './Api.js';
+import Fn            from './js/fn.js';
 
-//vue通用api插件
 const base = {
     methods: {
 

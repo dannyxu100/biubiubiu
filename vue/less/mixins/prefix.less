@@ -179,16 +179,16 @@
     animation:@attr;
 }
 //线性渐变背景
-.prefix-gradient(@angle:top,@start:#000,@stop:#0000ff){
-  background: -webkit-linear-gradient(@angle,@start,@stop);
-  background: -moz-linear-gradient(@angle,@start,@stop);
-  background: -o-linear-gradient(@angle,@start,@stop);
-  background: linear-gradient(@angle,@start,@stop);
+.prefix-gradient(@attr){
+  background: -webkit-linear-gradient(@attr);
+  background: -moz-linear-gradient(@attr);
+  background: -o-linear-gradient(@attr);
+  background: linear-gradient(@attr);
 }
 //镜像渐变背景
-.prefix-gradient-radial(@positionorangle:bottom left,@shapeorsize:circle,@color_stop1:#000000,@color_stop2:#d2f726 ,@color_stop3:#dd2222 ){
-  background: -moz-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop3);
-  background: -webkit-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop3);
+.prefix-gradient-radial(@attr){
+  background: -moz-radial-gradient(@attr);
+  background: -webkit-radial-gradient(@attr);
 }
 
 

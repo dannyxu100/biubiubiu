@@ -31,17 +31,14 @@ let MAX_ARRAY_INDEX     = Math.pow(2,53)-1,                  //js数组最大索
     toString            = window.toString,
     viewUtil            = window.viewUtil,
     dr                  = window.dr,
-    QUERY_SERVICE       = window.QUERY_SERVICE,
-    SERVICE_PREFIX      = window.SERVICE_PREFIX,
-    uploadApi4base64    = window.uploadApi4base64,
-    uploadPath          = window.uploadPath,
-    createfolderApi     = window.createfolderApi,
-    rtype               = window.rtype,
-    rid                 = window.rid,
-    nowCompanyId        = window.nowCompanyId;
+    QUERY_SERVICE       = window.QUERY_SERVICE;
 
-//vue通用Api插件
-const Api = {
+let domdiv, defstyle;
+domdiv = document.createElement('div');
+document.documentElement.appendChild(domdiv);
+
+//vue通用Fn插件
+const Fn = {
     //类型判断
     //数组
     isarray: Array.isArray || function( target ) {
@@ -73,13 +70,13 @@ const Api = {
     },
     //键值对象
     isplainobject( target ) {
-        return target && Api.isobject(target) && Object.getPrototypeOf(target) === Object.prototype;
+        return target && Fn.isobject(target) && Object.getPrototypeOf(target) === Object.prototype;
     },
 
     //判断某值是否存在于对象类型数组的某属性
     hasvalue( obj, key, value ) {
         let res = false;
-        Api.each( obj, ( item, i )=>{
+        Fn.each( obj, ( item, i )=>{
             if( item[key] && item[key] === value ) {
                 res = true;
                 return false;
@@ -93,7 +90,7 @@ const Api = {
     },
     //获取对象所有属性名
     allkeys( obj ) {
-        if ( !Api.isobject(obj) ) {
+        if ( !Fn.isobject(obj) ) {
             return [];
         }
         let keys = [], key;
@@ -104,7 +101,7 @@ const Api = {
     },
     //获取对象自有属性名（不包含原型属性）
     keys( obj ) {
-        if ( !Api.isobject(obj) ) {
+        if ( !Fn.isobject(obj) ) {
             return [];
         }
         if ( Object.keys ) {
@@ -112,7 +109,7 @@ const Api = {
         }
         let keys = [], key;
         for (key in obj){
-            if( Api.haskey(obj, key) ){
+            if( Fn.haskey(obj, key) ){
                 keys.push(key);
             }
         }
@@ -120,7 +117,7 @@ const Api = {
     },
     //获取对象自有属性值（数组）
     values( obj ) {
-        let keys = Api.keys(obj),
+        let keys = Fn.keys(obj),
             len = keys.length,
             i = 0,
             arr = Array(len);
@@ -138,7 +135,7 @@ const Api = {
         if ( len < 2 || obj === null ){
             return obj;
         }
-        if( Api.isboolean(arguments[0]) ) {
+        if( Fn.isboolean(arguments[0]) ) {
             isdeep = arguments[0];
             obj = arguments[1];
             idx++;
@@ -146,21 +143,21 @@ const Api = {
         let source, keys, proplen, i, key, iscopyarr, clone;
         for (; idx<len; idx++) {                                        //多对象
             source = arguments[idx];                                    //扩展目标对象
-            keys = Api.allkeys(source);
+            keys = Fn.allkeys(source);
             proplen = keys.length;
             for (i=0; i<proplen; i++) {
                 key = keys[i];
                 if ( source[key] === obj ) {                            //防止引用对象包含关系，导致死循环
                     continue;
                 }
-                if ( isdeep && ( Api.isplainobject(source[key]) || (iscopyarr=Api.isarray(source[key])) )) {
+                if ( isdeep && ( Fn.isplainobject(source[key]) || (iscopyarr=Fn.isarray(source[key])) )) {
                     if( iscopyarr ) {
                         iscopyarr = false;
-                        clone = obj[key] && Api.isarray(obj[key]) ? obj[key] : [];
+                        clone = obj[key] && Fn.isarray(obj[key]) ? obj[key] : [];
                     } else {
-                        clone = obj[key] && Api.isplainobject(obj[key]) ? obj[key] : {};
+                        clone = obj[key] && Fn.isplainobject(obj[key]) ? obj[key] : {};
                     }
-                    obj[key] = Api.extend( isdeep, clone, source[key] );
+                    obj[key] = Fn.extend( isdeep, clone, source[key] );
                 } else if ( void 0 !== source[key] ) {
                     obj[key] = source[key];
                 }
@@ -171,12 +168,12 @@ const Api = {
     //拷贝
     copy( target, isdeep=true ) {
         let clone;
-        if( Api.isarray(target) ){
+        if( Fn.isarray(target) ){
             clone = [];
         } else {
             clone = {};
         }
-        return Api.extend(isdeep, clone, target);
+        return Fn.extend(isdeep, clone, target);
     },
     //遍历工具，dataset可以是数组和对象
     //回调函数 fn( item, index|key, dataset);
@@ -187,7 +184,7 @@ const Api = {
             return fn.call(context, value, index, collection);
         };
         let i, len, res;
-        if ( Api.isarraylike(dataset) ) {                                   //类数组
+        if ( Fn.isarraylike(dataset) ) {                                   //类数组
             i=0;
             len=dataset.length;
             for (; i<len; i++) {
@@ -199,7 +196,7 @@ const Api = {
                 }
             }
         } else {                                                            //键值对象
-            let keys = Api.keys( dataset );
+            let keys = Fn.keys( dataset );
             i=0;
             len=keys.length;
             for (; i<len; i++) {
@@ -315,10 +312,10 @@ const Api = {
     getweekday( date ) {
         let map = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
 
-        if( Api.isdate(date) ){
+        if( Fn.isdate(date) ){
             return map[ date.getDay() ];
 
-        } else if( Api.isstring(date) ){
+        } else if( Fn.isstring(date) ){
             date = date.split(/[- :]/g);
             date = new Date(date[0], --date[1], date[2]);
             return map[ date.getDay() ];
@@ -329,17 +326,17 @@ const Api = {
     },
     //获得日期对应的星期数
     dateplus( date ) {
-        if( Api.isstring(date) ) {
-            date = Api.str2date(date);
+        if( Fn.isstring(date) ) {
+            date = Fn.str2date(date);
         }
         return {
             self: date,
-            text: Api.fmtdate( date ),                      //字符串全日期
+            text: Fn.fmtdate( date ),                      //字符串全日期
             time: date.getTime(),                           //整数时间戳
             y: date.getFullYear(),                          //年
             M: date.getMonth() + 1,                         //月
             d: date.getDate(),                              //日
-            D: Api.getweekday( date ),                      //星期
+            D: Fn.getweekday( date ),                      //星期
             h: date.getHours(),
             m: date.getMinutes(),
             s: date.getSeconds(),
@@ -354,7 +351,7 @@ const Api = {
     // fmt = '+M5'; //五个月后
     adddate( date, fmt ) {
         let dateplus, matchs, mothed, type, value;
-        dateplus = Api.dateplus( date );
+        dateplus = Fn.dateplus( date );
 
         matchs = fmt.match( /^([-+])([A-Za-z])(\d)*$/ );
         if( matchs && matchs[1] && matchs[2] && matchs[3] ) {
@@ -443,9 +440,9 @@ const Api = {
             data: data,
             responseType: 'json'
         };
-        Api.extend(params, opts);
+        Fn.extend(params, opts);
 
-        return Api.http( params ).then(( result )=>{
+        return Fn.http( params ).then(( result )=>{
             let res = result.data;
             if ( !res ) {
                 return false;
@@ -455,7 +452,7 @@ const Api = {
                     res = JSON.parse( dr(res.encode_str) );
                     // res = JSON.parse( MD5.hex(res.encode_str) );
                 } catch (ex) {
-                    Api.error('数据错误！');
+                    Fn.error('数据错误！');
                     return false;
                 }
             }
@@ -464,7 +461,7 @@ const Api = {
                 return false;
             }
             if ( res.result === 'ServerError' ) {
-                Api.error('操作超时，请重试或刷新页面！');
+                Fn.error('操作超时，请重试或刷新页面！');
                 return false;
             }
             if ( res.result !== 'TRUE' ) {
@@ -476,16 +473,16 @@ const Api = {
                     if ($('#taskDetail').length) {
                         viewUtil.showSummary();
                     } else {
-                        Api.error('无权限查看相关内容');
+                        Fn.error('无权限查看相关内容');
                     }
                     return false;
                 }
                 if ( res.result === 'FALSE' && (res.errorcode === 'ERROR_BE_DELETED' || res.errorcode === 'be_deleted') ) {
-                    Api.error('内容已被删除');
+                    Fn.error('内容已被删除');
                     return false;
                 }
                 if ( res.result === 'FALSE' && res.errorcode === 'ERROR_REPEATED' ) {
-                    Api.error('已有相关内容');
+                    Fn.error('已有相关内容');
                     return false;
                 }
                 //续费已过期
@@ -494,387 +491,108 @@ const Api = {
                     return false;
                 }
                 if ( res.result === 'FALSE' && (res.msg === 'ERROR_DB_GAOXIN_DATA_EXIST') ) {
-                    Api.error('已存在相同数据，请勿重复提交！');
+                    Fn.error('已存在相同数据，请勿重复提交！');
                     return false;
                 }
-                Api.error('操作失败');
+                Fn.error('操作失败');
             }
             return res;
         }, ( res )=>{
-            Api.error('操作超时，请重试或刷新页面！');
+            Fn.error('操作超时，请重试或刷新页面！');
         });
     },
     //
     get( url, opts ) {
-        return Api.ajax( url, { method: 'get' }, {} );
+        return Fn.ajax( url, { method: 'get' }, {} );
     },
     //
     post( url, opts, data ) {
-        return Api.ajax( url, { method: 'post' }, data );
+        return Fn.ajax( url, { method: 'post' }, data );
     },
 
-    //upyun上传接口
-    //data = {policy, signature, file}
-    ajaxupyun( url, data ) {
-        let formData = new FormData(),
-            nowid = Api.nowid(),
-            filedata = {
-                nowid: nowid,
-                filetype: data.file.type,
-                size: data.file.size,
-                file_nowid: nowid,
-                file_name: data.file.name,
-                file_url: ''
-            };
 
-        Api.each( data, ( item, key )=>{
-            formData.append( key, item );
-        });
-
-        let params = {
-            type: 'POST',
-            url: url,
-            data: formData,
-            dataType: 'json',
-            processData: false,
-            contentType: false
-        };
-
-        return Api.http( params ).then(( res )=>{
-            // debugger;
-            if ( 'string' === typeof res ) {
-                res = JSON.parse(res);
-            } else {
-                res = res;
-            }
-            if ( 200 === res.code && 'ok' === res.message ) {
-                let isimage = /image\/\w+/.test( res.mimetype );
-                if ( isimage ) {
-                    if ( res['image-width'] ) {
-                        filedata.file_width = res['image-width'];
-                        filedata.width = res['image-width'];
-                    }
-                    if ( res['image-height'] ) {
-                        filedata.file_height = res['image-height'];
-                        filedata.height = res['image-height'];
-                    }
-                    filedata.file_url = 'https://groups35-images.b0.upaiyun.com' + res.url.substr(0, 9) + encodeURIComponent( res.url.substr(9) ) + '!normal';
-                    filedata.file_type = 'pic';
-                    filedata.type = '1';
-
-                } else {
-                    filedata.file_url = 'https://groups35-notimage.b0.upaiyun.com' + res.url.substr(0, 9) + encodeURIComponent( res.url.substr(9) );
-                    filedata.file_type = 'files';
-                    filedata.type = '3';
-                }
-                return filedata;
-
-            } else {
-                Api.error('云存储数据异常！');
-            }
-
-        }, ( res )=>{
-            if( res && res.responseJSON ) {
-                Api.error( '云存储错误：'+ res.responseJSON.code +' - '+ res.responseJSON.message );
-            }
-        });
+    //获取渲染后的style
+    getstyle(elem, prop) {
+        let styles = elem.currentStyle? elem.currentStyle : window.getComputedStyle(elem, null);
+        return prop ? styles[prop] : styles;
     },
-    //保存附件文件信息
-    savefile( filedata ) {
-        let params = {
-            httpType: 'post',
-            serviceName: 'file',
-            functionName: 'addToGroupOrP2P',
-            user_id: '',
-            token: '',
-            company_id: nowCompanyId
-        };
-        params = Api.extend( params, filedata );
-
-        return Api.ajax( false, params ).then(( res )=>{
-            if ( res && 'TRUE' === res.result ) {
-                res.data.created = '刚刚';        //返回新数据，未日期格式化
-                return res.data;
-            }
-            else {
-                Api.error('保存附件失败！');
-            }
-
-        }, ( res )=>{
-            // debugger;
-            Api.error('保存附件失败！');
-        });
-    },
-    //上传附件
-    //attachtype = msg|group|temp       //附件分类
-    //attachdata = {type, id}           //分类信息
-    uploadattach( file, attachtype, attachdata ) {
-        let configtype = 'files';
-        if ( /image\/\w+/.test(file.type) ) {
-            configtype = 'images';
-        }
-        if ( /audio\/\w+/.test(file.type) ) {
-            configtype = 'audio';
-        }
-
-        let params = {
-            serviceName: 'file',
-            functionName: 'getUploadInfoNoReturn',
-            type: configtype,
-            file_name: encodeURIComponent(file.name),
-            service_params_order: ['type', 'file_name']
-        };
-        return Api.ajax( false, params ).then(( res )=>{
-            //获得upyun验证配置
-            if ( res && 'TRUE' === res.result && res.data ) {
-                res = res.data;
-
-                let data = {
-                    policy: res.policy,
-                    signature: res.signature,
-                    file: file,
-                };
-                return Api.ajaxupyun( res.action, data );
-
-            } else {
-                Api.error('upyun配置数据异常！');
-            }
-
-        }).then(( res )=>{
-            //保存附件文件信息
-            var filedata = {
-                file_url: res.file_url,
-                type: res.file_type,
-                title: res.file_name,
-                size: res.size,
-                file_rtype: '',
-                file_rid: '0'
-            };
-
-            if ( 'pic' === res.type ) {
-                filedata.width = res.file_width;
-                filedata.height = res.file_height;
-            }
-
-            if ( 'task' === attachtype ) {
-                filedata.from = attachtype;
-            }
-            if( 'msg' === attachtype ){
-                filedata.file_rtype = attachdata.type || rtype;     //rtype、rid兼容老代码的全局变量
-                filedata.file_rid = attachdata.id || rid;
-            }
-            if ( 'group' === attachtype ) {
-                filedata.file_rtype = attachdata.type;
-                filedata.file_rid = attachdata.id;
-
-                if ( 'task' !== attachtype ) {
-                    filedata.from_group_id = attachdata.id;
+    //设置样式
+    setstyle(elem, styles) {
+        let style, newstyles;
+        newstyles = {};
+        for( let prop in styles ){
+            style = Fn.getstyle(elem, prop);
+            if ( styles.hasOwnProperty(prop) && defstyle.hasOwnProperty(prop) ) {
+                if( style !== styles[prop] ){
+                    newstyles[prop] = styles[prop];
                 }
             }
+        }
+        // Object.assign(elem.style, newstyles);           //统一设置，样式设置相互影响默认值，避免影响判断。
+        Fn.extend(elem.style, newstyles);
+    },
 
-            if ( 'p2p' === filedata.file_rtype ) {
-                filedata.another_user_id = filedata.file_rid;
+    //
+    addclass(elem, classes) {
+        classes = classes.split(' ');
+        let oldClasses, newClasses;
+        oldClasses = elem.className.split(' ');
+        newClasses = oldClasses.concat();
+        for( let i=0; i<classes.length; i++ ){
+            if( -1 === oldClasses.indexOf(classes[i]) ){
+                newClasses.push(classes[i]);
             }
-            if ( 'all' === filedata.file_rtype ) {
-                filedata.file_rid = 0;
-                filedata.another_user_id = 0;
+        }
+        elem.className = newClasses.join(' ');
+    },
+    //
+    removeclass(elem, classes) {
+        classes = classes.split(' ');
+        let oldClasses, newClasses;
+        oldClasses = elem.className.split(' ');
+        newClasses = [];
+        for( let i=0; i<oldClasses.length; i++ ){
+            if( -1 === classes.indexOf(oldClasses[i]) ){
+                newClasses.push(oldClasses[i]);
             }
-
-            return Api.savefile( filedata );
-
-        });
-    },
-    //上传图片（不保存附件管理记录）
-    uploadimage( src, rid, rtype ) {
-        var params = {
-            nowid: Api.nowid(),
-            img_src: src
-        };
-        if ( rid ) {
-            params.rid = rid;
         }
-        if ( rtype ) {
-            params.rtype = rtype;
-        }
-
-        return Api.ajax( SERVICE_PREFIX + 'upload/uploadCaptureOrDragImg', params);
+        elem.className = newClasses.join(' ');
     },
-    //根据路径创建目录（本地服务器）
-    createfolder( opt ) {
-        if( Api.isarray( opt.paths ) ){
-            opt.paths = opt.paths.join('<+>');
-        }
-
-        var params = {
-            httpType: 'post',
-            serviceName: '',
-            functionName: '',
-            serviceURL: createfolderApi,            //上传Api地址
-            paths: opt.paths || ''
-        };
-        return Api.ajax( false, params );
+    //
+    px(style) {
+        let px = parseFloat(style);
+        return isNaN(px) ? 0 : px;
     },
-    //上传文件（base64）
-    uploadlocal4base64( opt ) {
-        var params = {
-            httpType: 'post',
-            serviceName: '',
-            functionName: '',
-            serviceURL: uploadApi4base64,           //上传API地址
-            host: uploadPath,                       //服务器地址
-            imgdata: opt.imgdata,
-            path: opt.path || '',
-            filename: opt.filename || ''
-        };
-        return Api.ajax( false, params );
-    },
-    //已上传文件列表
-    getfiles( filetype='file', page=1, limit=15 ){
-        let image_only;
-        switch( filetype ){
-            case 'file':
-                image_only = 0;
-                break;
-            case 'pic':
-                image_only = 1;
-                break;
-        }
-
-        let params = {
-            serviceName: 'file',
-            functionName: 'getItemsByUserId',
-            user_id: '',
-            token: '',
-            company_id: nowCompanyId,
-            limit: limit,
-            page: page,
-            image_only: image_only,
-            service_params_order: ['user_id', 'token', 'company_id', 'limit', 'page', 'image_only']
-        };
-        return Api.ajax( false, params );
-    },
-    //切换图片upyun尺寸
-    imagemode( url, mode ) {
-        if( !url || !mode ) {
-            return url;
-        }
-        if( 'NORMAL' === mode ) {
-            return url.replace(/\!\w*/, '!normal');
-        } else if( 'THUMBNAIL' === mode ) {
-            return url.replace(/\!\w*/, '!thumbnail');
-        } else if( 'ORIGIN' === mode ) {
-            return url.replace(/\!\w*/, '');
+    //
+    outerwidth(elem) {
+        if( elem.outerWidth ){
+            return elem.outerWidth();
+        } else {
+            let styles = Fn.getstyle(elem);
+            return elem.offsetWidth + Fn.px(styles.marginLeft) + Fn.px(styles.marginRight);
         }
     },
-
-    //获取项目详情
-    getprojectdetail( projectid ) {
-        let params = {
-            user_id: '',
-            token: '',
-            serviceName: 'project',
-            functionName: 'getProjectInfo',
-            httpType: 'post',
-            project_id: projectid,
-            tiny: 0
-        };
-        return Api.ajax( false, params );
-    },
-    //获取项目阶段列表
-    getprojectstages( projectid ) {
-        let params = {
-            httpType: 'get',
-            serviceName: 'stage',
-            functionName: 'getStageByProjectId',
-            user_id: '',
-            token: '',
-            project_id: projectid,
-            service_params_order: ['user_id', 'token', 'project_id']
-        };
-        return Api.ajax( false, params );
-    },
-    //获取所有参与项目
-    getprojects() {
-        let params = {
-            httpType: 'get',
-            serviceName: 'project',
-            functionName: 'getCanVisibleProjectList',
-            user_id: '',
-            token: '',
-            company_id: nowCompanyId,
-            service_params_order: ['user_id', 'token', 'company_id']
-        };
-        return Api.ajax( false, params );
-    },
-    //获取所有客户
-    getcustomers() {
-        let params = {
-            httpType: 'post',
-            serviceName: 'customer',
-            functionName: 'listOwnCustomers',
-            user_id: '',
-            token: '',
-            limit: 99999,
-            page: 1,
-            company_id: nowCompanyId
-        };
-        return Api.ajax( false, params );
-    },
-
-    //通过用户id获得用户
-    getuser( id ) {
-        return id && window.orgUsers[id] ? window.orgUsers[id] : null;
-    },
-    //筛选用户
-    queryusers( keywords, source ) {
-        let res = [];
-        keywords = keywords.toUpperCase();
-        if (keywords !== '') {
-            Api.each(source, function ( user, index ) {
-                if ( user.nickname_en && -1 < user.nickname_en.replace('/,/g', '').toUpperCase().indexOf(keywords) ) {
-                    res.push(user);
-                    return true;
-                } else if ( user.nickname && -1 < user.nickname.replace('/,/g', '').toUpperCase().indexOf(keywords) ) {
-                    res.push(user);
-                    return true;
-                }
-            });
+    //
+    outerheight(elem) {
+        if( elem.outerHeight ){
+            return elem.outerHeight();
+        } else {
+            let styles = Fn.getstyle(elem);
+            return elem.offsetHeight + Fn.px(styles.marginTop) + Fn.px(styles.marginBottom);
         }
-        return res;
-    },
-
-    //向pomelo服务器发送消息
-    send_comment( opt ) {
-        let params = {
-            httpType: 'post',
-            serviceName: 'task',
-            functionName: 'addComment',
-            user_id: '',
-            token: '',
-        };
-        if( opt.type ){
-            params.sub_type = opt.type;
-        }
-        if( opt.data ){
-            params.data = opt.data;
-        }
-
-        return Api.ajax( false, params ).then(( res ) => {
-            if( res && res.result && 'TRUE'===res.result ) {
-
-            } else {
-                //
-            }
-        }, ( res ) => {
-            //
-        });
     }
 };
 //扩展部分
-Api.extend(Api, {
+Fn.extend(Fn, {
     //创建一个全局缓存队列
-    cache: Api.createcache(false)
+    cache: Fn.createcache(false)
 });
+
+
+defstyle = Fn.getstyle(domdiv);
+// defstyle = Object.assign({}, defstyle);
+defstyle = Fn.copy(defstyle);
+document.documentElement.removeChild(domdiv);
 
 
 
@@ -889,10 +607,10 @@ function findvmfromfrag(frag) {
     return node.__vue__;
 }
 //扩展部分
-Api.extend(Api, {
+Fn.extend(Fn, {
     install( Vue, options ) {
-        Vue.$fn = Api;
-        Vue.prototype.$fn = Api;
+        Vue.$fn = Fn;
+        Vue.prototype.$fn = Fn;
 
         Vue.directive('floaded', {
             bind () {
@@ -971,7 +689,7 @@ Api.extend(Api, {
 
                 if (!refs) { return; }
 
-                if (Api.isarray(refs)) {
+                if (Fn.isarray(refs)) {
                     refs.push(findvmfromfrag(this._frag));
                 } else {
                     refs[key] = findvmfromfrag(this._frag);
@@ -980,4 +698,4 @@ Api.extend(Api, {
         });
     }
 });
-export default Api;
+export default Fn;
