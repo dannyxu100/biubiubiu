@@ -11,7 +11,7 @@ const XColorPicker = (() => {
     }
 
     let XColorPicker = function( elem, setting ) {
-        this.target = elem;
+        this.elem = elem;
         this.code = createcode();
         elem.setAttribute('xcolorpicker-code', this.code);
         Object.assign(this.setting, setting);
@@ -39,48 +39,143 @@ const XColorPicker = (() => {
             xbar:           true,
             ybar:           true
         },
-        target:         null,
-        wrapper:        null,
-        container:      null,
-        scroll_x:       null,
-        scroll_y:       null,
-        block_x:        null,
-        block_y:        null,
-        locked_x:       false,
-        locked_y:       false,
-        padding: {
-            top:        0,
-            bottom:     0,
-            left:       0,
-            right:      0
+        elem:           null,
+        colorpad: {
+            elem:       null,
+            light:      null,
+            dark:       null,
+            pointer:    null,
+            locked:     false
         },
-        size: {
-            content_width:       0,
-            content_height:      0
+        rainbow: {
+            elem:       null,
+            color:      null,
+            pointer:    null,
+            locked:     false
         },
+        values: {
+            elem:       null,
+            hex:        null,
+            rgb: {
+                r:      null,
+                g:      null,
+                b:      null
+            },
+            hsb: {
+                h:      null,
+                s:      null,
+                b:      null
+            }
+        },
+        block: {
+            elem:       null,
+            new:        null,
+            old:        null
+        },
+        btns: {
+            elem:       null,
+            cancel:     null,
+            submit:     null
+        },
+
         //创建DOM
         create() {
-            Fn.addclass(this.target, 'xcolorpicker '+this.setting.class);
-            this.target.innerHTML = '<div><div>'+ this.target.innerHTML +'</div></div>';
+            Fn.addclass(this.elem, 'xcolorpicker '+ this.setting.class);
+            this.elem.innerHTML = `
+                <div class="colorpad">
+                    <div class="colorpad-light"></div>
+                    <div class="colorpad-dark"></div>
+                    <div class="pointer"></div>
+                </div>
+                <div class="rainbow">
+                    <div class="rainbow-color"></div>
+                    <div class="pointer"></div>
+                </div>
+                <div class="values">
+                    <div class="values-hex">
+                        <div class="value-item">
+                            <span class="tit"># </span>
+                            <input class="txt" />
+                        </div>
+                    </div>
+                    <div class="values-rgb">
+                        <div class="value-item">
+                            <span class="tit">R:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">G:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">B:</span>
+                            <input class="txt" />
+                        </div>
+                    </div>
+                    <div class="values-hsb">
+                        <div class="value-item">
+                            <span class="tit">H:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">S:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">B:</span>
+                            <input class="txt" />
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-box block-box-new">
+                        <div class="block-color"></div>
+                    </div>
+                    <div class="block-box block-box-old">
+                        <div class="block-color"></div>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="btn btn-small btns-cancel">取消</button>
+                    <button class="btn btn-small btn-theme btns-submit">确定</button>
+                </div>
+            `;
 
-            this.wrapper = this.target.firstChild;
-            this.container = this.wrapper.firstChild;
-            this.scroll_x = document.createElement('div');
-            this.block_x = document.createElement('div');
-            this.scroll_y = document.createElement('div');
-            this.block_y = document.createElement('div');
+            let childs = this.elem.childNodes;
+            this.colorpad.elem    = childs[0];
+            this.rainbow.elem     = childs[1];
+            this.values.elem      = childs[2];
+            this.block.elem       = childs[3];
+            this.btns.elem        = childs[4];
 
-            this.scroll_x.appendChild(this.block_x);
-            this.scroll_y.appendChild(this.block_y);
-            this.target.appendChild(this.scroll_x);
-            this.target.appendChild(this.scroll_y);
+            childs = this.colorpad.elem.childNodes;
+            this.colorpad.light      = childs[0];
+            this.colorpad.dark       = childs[1];
+            this.colorpad.pointer    = childs[2];
 
-            this.wrapper.className = 'xscroll-wrapper';
-            this.container.className = 'xscroll-container';
-            this.scroll_x.className = 'xscroll-bar xscroll-x';
-            this.scroll_y.className = 'xscroll-bar xscroll-y';
-            this.block_x.className = 'xscroll-block';
-            this.block_y.className = 'xscroll-block';
+            childs = this.rainbow.elem.childNodes;
+            this.rainbow.color      = childs[0];
+            this.rainbow.pointer    = childs[1];
+
+            childs = this.values.elem.childNodes;
+            this.values.hex         = childs[0].firstChild.lastChild;
+
+            this.values.rgb.r       = childs[1].childNodes[0].lastChild;
+            this.values.rgb.g       = childs[1].childNodes[1].lastChild;
+            this.values.rgb.b       = childs[1].childNodes[2].lastChild;
+
+            this.values.hsb.h       = childs[2].childNodes[0].lastChild;
+            this.values.hsb.s       = childs[2].childNodes[1].lastChild;
+            this.values.hsb.b       = childs[2].childNodes[2].lastChild;
+
+            childs = this.block.elem.childNodes;
+            this.block.new          = childs[0].firstChild;
+            this.block.old          = childs[1].firstChild;
+
+            childs = this.btns.elem.childNodes;
+            this.btns.cancel        = childs[0];
+            this.btns.submit        = childs[1];
+
             return this;
         },
         //初始化
@@ -88,38 +183,7 @@ const XColorPicker = (() => {
             if( this.inited ) {
                 return this;
             }
-            let styles;
-            styles = Fn.getstyle(this.target);
-            this.padding.top        = Fn.px(styles.paddingTop);
-            this.padding.bottom     = Fn.px(styles.paddingBottom);
-            this.padding.left       = Fn.px(styles.paddingLeft);
-            this.padding.right      = Fn.px(styles.paddingRight);
-            this.getcontentsize();
-
-            // debugger;
-            Fn.setstyle(this.wrapper, {
-                top:                this.padding.top +'px',
-                bottom:             this.padding.bottom +'px',
-                left:               this.padding.left +'px',
-                right:              this.padding.right +'px'
-            });
-
-            Fn.setstyle(this.scroll_x, {
-                // marginLeft:         (this.padding.left + px(styles.marginLeft)) +'px',
-                // marginRight:        (this.padding.right + px(styles.marginRight)) +'px'
-                marginLeft:         this.padding.left +'px',
-                marginRight:        this.padding.right +'px'
-            });
-
-            Fn.setstyle(this.scroll_y, {
-                // marginTop:          (this.padding.top + px(styles.marginTop)) +'px',
-                // marginBottom:       (this.padding.bottom + px(styles.marginBottom)) +'px'
-                marginTop:          this.padding.top +'px',
-                marginBottom:       this.padding.bottom +'px'
-            });
-
             this.event();
-            this.resize();
 
             this.inited = true;
             return this;
@@ -127,47 +191,8 @@ const XColorPicker = (() => {
         //
         event() {
             let _this = this;
-            this.wheelevent();
-            this.dragevent(this.block_x);
-            this.dragevent(this.block_y);
-            Evt.on(window, 'resize', (evt) => {
-                this.resize();
-            });
-            Evt.onresize(this.container, (evt) => {
-                this.resize();
-            });
-            // Evt.on(this.wrapper, 'mouseenter', (evt) => {
-            //     this.resize();
-            // });
-            // Evt.on(this.wrapper, 'mouseleave', (evt) => {
-            //     this.resize();
-            // });
-            Evt.on(this.scroll_x, 'mouseover', (evt) => {
-                Fn.addclass(this.scroll_x, 'active');
-                Fn.setstyle(this.scroll_x, { zIndex: '2' });
-            });
-            Evt.on(this.scroll_y, 'mouseover', (evt) => {
-                Fn.addclass(this.scroll_y, 'active');
-                Fn.setstyle(this.scroll_y, { zIndex: '2' });
-            });
-            Evt.on(this.scroll_x, 'mouseleave', (evt) => {
-                if( !this.locked_x ) {
-                    Fn.removeclass(this.scroll_x, 'active');
-                    Fn.setstyle(this.scroll_x, { zIndex: '1' });
-                }
-            });
-            Evt.on(this.scroll_y, 'mouseleave', (evt) => {
-                if( !this.locked_y ) {
-                    Fn.removeclass(this.scroll_y, 'active');
-                    Fn.setstyle(this.scroll_y, { zIndex: '1' });
-                }
-            });
-            Evt.on(this.scroll_x, 'selectstart', (evt) => {
-                return false;
-            });
-            Evt.on(this.scroll_y, 'selectstart', (evt) => {
-                return false;
-            });
+            // this.wheelevent();
+            this.dragevent(this.rainbow);
         },
         //
         wheelevent() {
@@ -224,12 +249,19 @@ const XColorPicker = (() => {
         },
         //
         dragevent(elem, locked) {
-            let _this, isvertical, starttop, startleft, start, end, range, dist, t, l, scroll;
+            let _this, israinbow, starttop, startleft, start, end, range, dist, t, l, scroll;
             _this = this;
-            isvertical = this.block_y === elem;
+            israinbow = this.rainbow === elem;
+
+
             start = { x: 0, y: 0 };
             end = { x: 0, y: 0 };
-            range = { minleft: 0, maxleft: 0, mintop: 0, maxtop: 0 };
+            range = {
+                minleft: 0,
+                maxleft: 0,
+                mintop: 0,
+                maxtop: 0
+            };
             dist = { minx: 0, maxx: 0, miny:0, maxy:0, x: 0, y: 0 };
             scroll = { max: 0, top: 0, left: 0 };
             // to = { up: false, down: false, left: false, right: false };
@@ -237,8 +269,9 @@ const XColorPicker = (() => {
             let dragstart, dragmove, dragend;
             dragstart = function(evt) {
                 _this.resize();
-                if (isvertical) {
-                    _this.locked_y = true;
+                if (israinbow) {
+                    _this.rainbow.locked = true;
+
                     starttop = elem.offsetTop;
                     start.y = evt.clientY;
                     dist.maxy = _this.wrapper.offsetHeight - _this.block_y.offsetHeight - _this.block_y.offsetTop;
@@ -246,7 +279,8 @@ const XColorPicker = (() => {
                     scroll.max = _this.size.content_height - _this.wrapper.offsetHeight;
 
                 } else {
-                    _this.locked_x = true;
+                    _this.colorpad.locked = true;
+
                     startleft = elem.offsetLeft;
                     start.x = evt.clientX;
                     dist.maxx = _this.wrapper.offsetWidth - _this.block_x.offsetWidth - _this.block_x.offsetLeft;
@@ -267,8 +301,8 @@ const XColorPicker = (() => {
                 // console.log('start');
             };
             dragmove = function(evt) {
-                if (isvertical) {
-                    if (!_this.locked_y) {
+                if (israinbow) {
+                    if (!_this.rainbow.locked) {
                         return;
                     }
 
@@ -284,7 +318,7 @@ const XColorPicker = (() => {
                     _this.wrapper.scrollTop = scroll.top;
 
                 } else {
-                    if (!_this.locked_x) {
+                    if (!_this.colorpad.locked) {
                         return;
                     }
 
@@ -303,12 +337,15 @@ const XColorPicker = (() => {
                 // console.log('mousemove');
             };
             dragend = function(evt) {
-                if( isvertical ) {
-                    _this.locked_y = false;
+                if( israinbow ) {
+                    _this.rainbow.locked = false;
+
                     Fn.removeclass(_this.scroll_y, 'active');
                     Fn.setstyle(_this.scroll_y, { zIndex: '1' });
+
                 } else {
-                    _this.locked_x = false;
+                    _this.colorpad.locked = false;
+
                     Fn.removeclass(_this.scroll_x, 'active');
                     Fn.setstyle(_this.scroll_x, { zIndex: '1' });
                 }
@@ -324,56 +361,73 @@ const XColorPicker = (() => {
             };
 
             Evt.on(elem, 'mousedown', dragstart);
-        },
-        //
-        getcontentsize() {
-            let styles;
-            styles = Fn.getstyle(this.wrapper);
-            this.size.content_width = this.wrapper.scrollWidth;// + px(styles.marginLeft) + px(styles.marginRight);
-            this.size.content_height = this.wrapper.scrollHeight;// + px(styles.marginTop) + px(styles.marginBottom);
-        },
-        //
-        resize() {
-            this.getcontentsize();
-            Fn.setstyle(this.block_x, { width: Math.pow(this.wrapper.offsetWidth, 2) / this.size.content_width + 'px' });
-            Fn.setstyle(this.block_y, { height: Math.pow(this.wrapper.offsetHeight, 2) / this.size.content_height + 'px' });
-
-            // this.setting.xbar  = this.size.content_width > this.wrapper.clientWidth ? true : false;
-            // this.setting.ybar = this.size.content_height > this.wrapper.clientHidth ? true : false;
-            if( this.setting.xbar && this.size.content_width > this.wrapper.clientWidth ) {
-                Fn.setstyle(this.scroll_x, { display: 'block' });
-            } else {
-                Fn.setstyle(this.scroll_x, { display: 'none' });
-            }
-
-            // this.getcontentsize();
-            if( this.setting.ybar && this.size.content_height > this.wrapper.clientHeight ) {
-                Fn.setstyle(this.scroll_y, { display: 'block' });
-            } else {
-                Fn.setstyle(this.scroll_y, { display: 'none' });
-            }
-            // debugger;
         }
     };
 
     return XColorPicker;
 })();
 
-XColorPicker.install = function(Vue, options) {
+/*XColorPicker.install = function(Vue, options) {
     Vue.component('x-scroll', {
         props: {},
         template: `
-            <div ref="target" class="xscroll">
-                <div ref="wrapper" class="xscroll-wrapper">
-                    <div ref="container" class="xscroll-container">
-                        <slot></slot>
+            <div class="xcolorpicker">
+                <div class="colorpad">
+                    <div class="colorpad-light"></div>
+                    <div class="colorpad-dark"></div>
+                    <div class="pointer"></div>
+                </div>
+                <div ref="rainbow" class="rainbow" @mousedown="mousedown_rainbow" @mousemove="mousemove_rainbow" @mouseup="mouseup_rainbow">
+                    <div class="rainbow-color"></div>
+                    <div class="pointer"></div>
+                </div>
+                <div class="values">
+                    <div class="values-hex">
+                        <div class="value-item">
+                            <span class="tit"># </span>
+                            <input class="txt" />
+                        </div>
+                    </div>
+                    <div class="values-rgb">
+                        <div class="value-item">
+                            <span class="tit">R:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">G:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">B:</span>
+                            <input class="txt" />
+                        </div>
+                    </div>
+                    <div class="values-hsb">
+                        <div class="value-item">
+                            <span class="tit">H:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">S:</span>
+                            <input class="txt" />
+                        </div>
+                        <div class="value-item">
+                            <span class="tit">B:</span>
+                            <input class="txt" />
+                        </div>
                     </div>
                 </div>
-                <div ref="scroll_x" class="xscroll-bar xscroll-x">
-                    <div ref="block_x" class="xscroll-block"></div>
+                <div class="block">
+                    <div class="block-box block-box-new">
+                        <div class="block-color"></div>
+                    </div>
+                    <div class="block-box block-box-old">
+                        <div class="block-color"></div>
+                    </div>
                 </div>
-                <div ref="scroll_y" class="xscroll-bar xscroll-y">
-                    <div ref="block_y" class="xscroll-block"></div>
+                <div class="btns">
+                    <button class="btn btn-small btns-cancel">取消</button>
+                    <button class="btn btn-small btn-theme btns-submit">确定</button>
                 </div>
             </div>
         `,
@@ -395,6 +449,6 @@ XColorPicker.install = function(Vue, options) {
             // this.$refs;
         }
     });
-};
+};*/
 
 export default XColorPicker;

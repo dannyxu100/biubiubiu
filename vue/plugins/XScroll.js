@@ -242,6 +242,7 @@ const XScroll = (() => {
                 _this.resize();
                 if (isvertical) {
                     _this.locked_y = true;
+
                     starttop = elem.offsetTop;
                     start.y = evt.clientY;
                     dist.maxy = _this.wrapper.offsetHeight - _this.block_y.offsetHeight - _this.block_y.offsetTop;
@@ -250,6 +251,7 @@ const XScroll = (() => {
 
                 } else {
                     _this.locked_x = true;
+
                     startleft = elem.offsetLeft;
                     start.x = evt.clientX;
                     dist.maxx = _this.wrapper.offsetWidth - _this.block_x.offsetWidth - _this.block_x.offsetLeft;
@@ -308,10 +310,13 @@ const XScroll = (() => {
             dragend = function(evt) {
                 if( isvertical ) {
                     _this.locked_y = false;
+
                     Fn.removeclass(_this.scroll_y, 'active');
                     Fn.setstyle(_this.scroll_y, { zIndex: '1' });
+
                 } else {
                     _this.locked_x = false;
+
                     Fn.removeclass(_this.scroll_x, 'active');
                     Fn.setstyle(_this.scroll_x, { zIndex: '1' });
                 }
