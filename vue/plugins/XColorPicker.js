@@ -1,5 +1,6 @@
 import Fn           from '../js/fn.js';
 import Evt          from '../js/evt.js';
+import Drag         from '../js/drag.js';
 import MouseWheel   from '../js/mousewheel.js';
 
 
@@ -193,6 +194,21 @@ const XColorPicker = (() => {
             let _this = this;
             // this.wheelevent();
             this.dragevent(this.rainbow);
+
+            this.Drag(this.rainbow, {
+                start: ()=>{
+
+                },
+                move: (evt, drag)=>{
+                    t = starttop + drag.dist.y;
+                    t = range.mintop <= t ? t : range.mintop;
+                    t = t <= range.maxtop ? t : range.maxtop;
+                    Fn.setstyle(_this.block_y, { top: t+'px' });
+                },
+                end: ()=>{
+
+                }
+            });
         },
         //
         wheelevent() {
