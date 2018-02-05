@@ -3,10 +3,12 @@ import Vuex                     from 'vuex';
 import VueRouter                from 'vue-router';
 import Fn                       from '_JS_/fn.js';
 import XScroll                  from '_PLUGINS_/XScroll.js';
+import XColorPicker             from '_PLUGINS_/XColorPicker.js';
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(Fn);
 Vue.use(XScroll);
+Vue.use(XColorPicker);
 
 
 //组件

@@ -2,6 +2,7 @@ import Fn           from '../js/fn.js';
 import Evt          from '../js/evt.js';
 import Drag         from '../js/drag.js';
 import MouseWheel   from '../js/mousewheel.js';
+import Color        from '../js/color.js';
 
 
 
@@ -35,10 +36,7 @@ const XColorPicker = (() => {
         inited:         false,
         code:           '',
         setting: {
-            class:          '',
-            wheelspeed:     0.1,
-            xbar:           true,
-            ybar:           true
+            class:          ''
         },
         elem:           null,
         colorpad: {
@@ -77,6 +75,15 @@ const XColorPicker = (() => {
             elem:       null,
             cancel:     null,
             submit:     null
+        },
+
+        color: {
+            base:       '',
+            old:        '',
+            new:        '',
+            hex:        '',
+            rgb:        [],
+            hsb:        []
         },
 
         //创建DOM
@@ -184,29 +191,80 @@ const XColorPicker = (() => {
             if( this.inited ) {
                 return this;
             }
+            // this.color.base = new Color(255,0,0);
             this.event();
-
+            this.computecolor();
+            // debugger;
             this.inited = true;
             return this;
         },
         //
         event() {
-            let _this = this;
+            // let _this = this;
             // this.wheelevent();
-            this.dragevent(this.rainbow);
+            // this.dragevent(this.rainbow);
+            let RBP, CPP;
+            RBP = {
+                top:        0,
+                newtop:     0,
+                min:        0,
+                max:        this.rainbow.elem.offsetHeight
+            };
+            CPP = {
+                top:        0,
+                left:       0,
+                newtop:     0,
+                newleft:    0,
+                mintop:     -this.colorpad.pointer.offsetHeight/2,
+                minleft:    -this.colorpad.pointer.offsetWidth/2,
+                maxtop:     this.colorpad.elem.offsetHeight-this.colorpad.pointer.offsetHeight/2,
+                maxleft:    this.colorpad.elem.offsetWidth-this.colorpad.pointer.offsetWidth/2
+            };
+            new Drag(this.rainbow.elem, {
+                dragable: false,
+                start: (evt, drag)=>{
+                    // debugger;
+                    Fn.setstyle(this.rainbow.pointer, {top: evt.offsetY +'px'});
+                    RBP.top = this.rainbow.pointer.offsetTop;
 
-            this.Drag(this.rainbow, {
-                start: ()=>{
-
+                    this.computecolor();
+                    this.showcolor();
                 },
                 move: (evt, drag)=>{
-                    t = starttop + drag.dist.y;
-                    t = range.mintop <= t ? t : range.mintop;
-                    t = t <= range.maxtop ? t : range.maxtop;
-                    Fn.setstyle(_this.block_y, { top: t+'px' });
+                    // debugger;
+                    RBP.newtop = RBP.top + drag.dist.y;
+                    RBP.newtop = Drag.rangelimit(RBP.newtop, RBP.min, RBP.max);
+                    Fn.setstyle(this.rainbow.pointer, {top: RBP.newtop +'px'});
+
+                    this.computecolor();
+                    this.showcolor();
                 },
                 end: ()=>{
+                    // debugger;
+                }
+            });
+            new Drag(this.colorpad.elem, {
+                dragable: false,
+                start: ()=>{
+                    CPP.top = this.colorpad.pointer.offsetTop;
+                    CPP.left = this.colorpad.pointer.offsetLeft;
+                },
+                move: (evt, drag)=>{
+                    // debugger;
+                    CPP.newtop  = CPP.top + drag.dist.y;
+                    CPP.newleft = CPP.left + drag.dist.x;
+                    CPP.newtop  = Drag.rangelimit(CPP.newtop, CPP.mintop, CPP.maxtop);
+                    CPP.newleft = Drag.rangelimit(CPP.newleft, CPP.minleft, CPP.maxleft);
+                    Fn.setstyle(this.colorpad.pointer, {
+                        top:   CPP.newtop +'px',
+                        left:  CPP.newleft +'px'
+                    });
 
+                    this.computecolor();
+                    this.showcolor();
+                },
+                end: ()=>{
+                    // debugger;
                 }
             });
         },
@@ -377,73 +435,129 @@ const XColorPicker = (() => {
             };
 
             Evt.on(elem, 'mousedown', dragstart);
+        },
+        //
+        computecolor() {
+            // rgb(255,0,0), rgb(255,0,255), rgb(0,0,255), rgb(0,255,255), rgb(0,255,0), rgb(255,255,0), rgb(255,0,0)
+            let basevalue, transit, scale, stage, value;
+            basevalue = this.rainbow.pointer.offsetTop;
+            transit = this.rainbow.elem.offsetHeight/6;                         //6个渐变间隔
+            scale = this.rainbow.elem.offsetHeight/(255*6);                     //像素高度与颜色差值比例
+            stage = Math.floor(basevalue/transit);
+            value = (basevalue%transit)/scale;
+            // console.log(`basevalue:${basevalue}, transit:${transit}, stage:${stage}, value:${value}`);
+            debugger;
+            if( 0 === stage ) {
+                this.color.base = new Color(255, 0, value);
+            } else if( 1 === stage ) {
+                this.color.base = new Color(255-value, 0, 255);
+            } else if( 2 === stage ) {
+                this.color.base = new Color(0, value, 255);
+            } else if( 3 === stage ) {
+                this.color.base = new Color(0, 255, 255-value);
+            } else if( 4 === stage ) {
+                this.color.base = new Color(value, 255, 0);
+            } else if( 5 === stage ) {
+                this.color.base = new Color(255, 255-value, 0);
+            } else {
+                this.color.base = new Color(255,0,0);
+            }
+
+            let x, y, s, b;
+            x = this.colorpad.pointer.offsetLeft + this.colorpad.pointer.offsetWidth/2;
+            y = this.colorpad.pointer.offsetTop + this.colorpad.pointer.offsetHeight/2;
+            s = x/this.colorpad.light.offsetWidth*100;
+            b = (this.colorpad.dark.offsetHeight-y)/this.colorpad.dark.offsetHeight*100;
+
+            this.color.new = new Color(this.color.base);
+            this.color.new.set_hsv(this.color.new.$vh, s, b);
+            this.color.new.hsv2rgb();
+            this.color.new.rgb2hsl();
+            this.color.new.rgb2hex();
+
+            this.color.hex = this.color.new.$hex;
+            this.color.rgb = [this.color.new.$r, this.color.new.$g, this.color.new.$b];
+            this.color.hsb = [this.color.new.$vh, this.color.new.$vs, this.color.new.$vv];
+        },
+        //
+        showcolor() {
+            this.values.hex.value   = this.color.hex;
+            this.values.rgb.r.value = this.color.rgb[0];
+            this.values.rgb.g.value = this.color.rgb[1];
+            this.values.rgb.b.value = this.color.rgb[2];
+
+            this.values.hsb.h.value = this.color.hsb[0];
+            this.values.hsb.s.value = this.color.hsb[1];
+            this.values.hsb.b.value = this.color.hsb[2];
+            Fn.setstyle(this.colorpad.elem, {backgroundColor: this.color.base.$rgb});
+            Fn.setstyle(this.block.new, {backgroundColor: this.color.new.$rgb});
         }
     };
 
     return XColorPicker;
 })();
 
-/*XColorPicker.install = function(Vue, options) {
-    Vue.component('x-scroll', {
+XColorPicker.install = function(Vue, options) {
+    Vue.component('x-color-picker', {
         props: {},
         template: `
-            <div class="xcolorpicker">
-                <div class="colorpad">
-                    <div class="colorpad-light"></div>
-                    <div class="colorpad-dark"></div>
-                    <div class="pointer"></div>
+            <div ref="xcolorpicker" class="xcolorpicker">
+                <div ref="colorpad" class="colorpad">
+                    <div ref="colorpad_light" class="colorpad-light"></div>
+                    <div ref="colorpad_dark" class="colorpad-dark"></div>
+                    <div ref="colorpad_pointer" class="pointer"></div>
                 </div>
-                <div ref="rainbow" class="rainbow" @mousedown="mousedown_rainbow" @mousemove="mousemove_rainbow" @mouseup="mouseup_rainbow">
-                    <div class="rainbow-color"></div>
-                    <div class="pointer"></div>
+                <div ref="rainbow" class="rainbow">
+                    <div ref="rainbow_color" class="rainbow-color"></div>
+                    <div ref="rainbow_pointer" class="pointer"></div>
                 </div>
-                <div class="values">
+                <div ref="values" class="values">
                     <div class="values-hex">
                         <div class="value-item">
                             <span class="tit"># </span>
-                            <input class="txt" />
+                            <input ref="values_hex" class="txt" />
                         </div>
                     </div>
                     <div class="values-rgb">
                         <div class="value-item">
                             <span class="tit">R:</span>
-                            <input class="txt" />
+                            <input ref="values_rgb_r" class="txt" />
                         </div>
                         <div class="value-item">
                             <span class="tit">G:</span>
-                            <input class="txt" />
+                            <input ref="values_rgb_g" class="txt" />
                         </div>
                         <div class="value-item">
                             <span class="tit">B:</span>
-                            <input class="txt" />
+                            <input ref="values_rgb_b" class="txt" />
                         </div>
                     </div>
                     <div class="values-hsb">
                         <div class="value-item">
                             <span class="tit">H:</span>
-                            <input class="txt" />
+                            <input ref="values_hsb_h" class="txt" />
                         </div>
                         <div class="value-item">
                             <span class="tit">S:</span>
-                            <input class="txt" />
+                            <input ref="values_hsb_s" class="txt" />
                         </div>
                         <div class="value-item">
                             <span class="tit">B:</span>
-                            <input class="txt" />
+                            <input ref="values_hsb_b" class="txt" />
                         </div>
                     </div>
                 </div>
-                <div class="block">
+                <div ref="block" class="block">
                     <div class="block-box block-box-new">
-                        <div class="block-color"></div>
+                        <div ref="block_new" class="block-color"></div>
                     </div>
                     <div class="block-box block-box-old">
-                        <div class="block-color"></div>
+                        <div ref="block_old" class="block-color"></div>
                     </div>
                 </div>
-                <div class="btns">
-                    <button class="btn btn-small btns-cancel">取消</button>
-                    <button class="btn btn-small btn-theme btns-submit">确定</button>
+                <div ref="btns" class="btns">
+                    <button ref="btns_cancel" class="btn btn-small btns-cancel">取消</button>
+                    <button ref="btns_submit" class="btn btn-small btn-theme btns-submit">确定</button>
                 </div>
             </div>
         `,
@@ -453,18 +567,40 @@ const XColorPicker = (() => {
             };
         },
         mounted() {
-            this.xscroll = new XColorPicker( this.$refs.target );
-            // this.xscroll.target = this.$refs.target;
-            this.xscroll.wrapper = this.$refs.wrapper;
-            this.xscroll.container = this.$refs.container;
-            this.xscroll.scroll_x = this.$refs.scroll_x;
-            this.xscroll.scroll_y = this.$refs.scroll_y;
-            this.xscroll.block_x = this.$refs.block_x;
-            this.xscroll.block_y = this.$refs.block_y;
-            this.xscroll.init();
+            this.xcpr = new XColorPicker(this.$refs.xcolorpicker);
+            this.xcpr.colorpad.elem    = this.$refs.colorpad;
+            this.xcpr.rainbow.elem     = this.$refs.rainbow;
+            this.xcpr.values.elem      = this.$refs.values;
+            this.xcpr.block.elem       = this.$refs.block;
+            this.xcpr.btns.elem        = this.$refs.btns;
+
+            this.xcpr.colorpad.light     = this.$refs.colorpad_light;
+            this.xcpr.colorpad.dark      = this.$refs.colorpad_dark;
+            this.xcpr.colorpad.pointer   = this.$refs.colorpad_pointer;
+
+            this.xcpr.rainbow.color      = this.$refs.rainbow_color;
+            this.xcpr.rainbow.pointer    = this.$refs.rainbow_pointer;
+
+            this.xcpr.values.hex         = this.$refs.values_hex;
+            this.xcpr.values.rgb.r       = this.$refs.values_rgb_r;
+            this.xcpr.values.rgb.g       = this.$refs.values_rgb_g;
+            this.xcpr.values.rgb.b       = this.$refs.values_rgb_b;
+
+            this.xcpr.values.hsb.h       = this.$refs.values_hsb_h;
+            this.xcpr.values.hsb.s       = this.$refs.values_hsb_s;
+            this.xcpr.values.hsb.b       = this.$refs.values_hsb_b;
+
+            this.xcpr.block.new          = this.$refs.block_new;
+            this.xcpr.block.old          = this.$refs.block_old;
+
+            this.xcpr.btns.cancel        = this.$refs.btns_cancel;
+            this.xcpr.btns.submit        = this.$refs.btns_submit;
+
+            this.xcpr.init();
+            this.xcpr.showcolor();
             // this.$refs;
         }
     });
-};*/
+};
 
 export default XColorPicker;

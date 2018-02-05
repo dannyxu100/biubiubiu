@@ -5,7 +5,7 @@ import MouseWheel   from '../js/mousewheel.js';
 
 
 
-const XScroll = (() => {
+const XScroll = (()=>{
     //
     function createcode() {
         return Math.random().toString().substring(2);
@@ -17,7 +17,7 @@ const XScroll = (() => {
         this.target = elem;
         this.code = createcode();
         elem.setAttribute('xscroll-code', this.code);
-        Object.assign(this.setting, setting);
+        this.setting = Object.assign({}, this.setting, setting);
         // this.init();
         XScroll.cache(this.code, this);
         return this;
@@ -391,14 +391,14 @@ XScroll.install = function(Vue, options) {
             };
         },
         mounted() {
-            this.xscroll = new XScroll( this.$refs.target );
+            this.xscroll = new XScroll( this.$refs.target, {wheelspeed: 2} );
             // this.xscroll.target = this.$refs.target;
-            this.xscroll.wrapper = this.$refs.wrapper;
-            this.xscroll.container = this.$refs.container;
-            this.xscroll.scroll_x = this.$refs.scroll_x;
-            this.xscroll.scroll_y = this.$refs.scroll_y;
-            this.xscroll.block_x = this.$refs.block_x;
-            this.xscroll.block_y = this.$refs.block_y;
+            this.xscroll.wrapper    = this.$refs.wrapper;
+            this.xscroll.container  = this.$refs.container;
+            this.xscroll.scroll_x   = this.$refs.scroll_x;
+            this.xscroll.scroll_y   = this.$refs.scroll_y;
+            this.xscroll.block_x    = this.$refs.block_x;
+            this.xscroll.block_y    = this.$refs.block_y;
             this.xscroll.init();
             // this.$refs;
         }
