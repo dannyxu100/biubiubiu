@@ -391,7 +391,7 @@ XScroll.install = function(Vue, options) {
             };
         },
         mounted() {
-            this.xscroll = new XScroll( this.$refs.target, {wheelspeed: 2} );
+            this.xscroll = new XScroll( this.$refs.target );
             // this.xscroll.target = this.$refs.target;
             this.xscroll.wrapper    = this.$refs.wrapper;
             this.xscroll.container  = this.$refs.container;
