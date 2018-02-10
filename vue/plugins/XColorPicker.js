@@ -39,6 +39,8 @@ const XColorPicker = (() => {
             class:          ''
         },
         elem:           null,
+        handle:         null,
+        wrapper:        null,
         colorpad: {
             elem:       null,
             light:      null,
@@ -90,66 +92,73 @@ const XColorPicker = (() => {
         create() {
             Fn.addclass(this.elem, 'xcolorpicker '+ this.setting.class);
             this.elem.innerHTML = `
-                <div class="colorpad">
-                    <div class="colorpad-light"></div>
-                    <div class="colorpad-dark"></div>
-                    <div class="pointer"></div>
-                </div>
-                <div class="rainbow">
-                    <div class="rainbow-color"></div>
-                    <div class="pointer"></div>
-                </div>
-                <div class="values">
-                    <div class="values-hex">
-                        <div class="value-item">
-                            <span class="tit"># </span>
-                            <input class="txt" />
+                <div ref="handle" class="xcolorpicker-handle"></div>
+                <div ref="wrapper" class="xcolorpicker-wrapper">
+                    <div class="xcolorpicker-colorpad">
+                        <div class="colorpad-light"></div>
+                        <div class="colorpad-dark"></div>
+                        <div class="pointer"></div>
+                    </div>
+                    <div class="xcolorpicker-rainbow">
+                        <div class="rainbow-color"></div>
+                        <div class="pointer"></div>
+                    </div>
+                    <div class="xcolorpicker-values">
+                        <div class="values-hex">
+                            <div class="value-item">
+                                <span class="tit"># </span>
+                                <input class="txt" />
+                            </div>
+                        </div>
+                        <div class="values-rgb">
+                            <div class="value-item">
+                                <span class="tit">R:</span>
+                                <input class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">G:</span>
+                                <input class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">B:</span>
+                                <input class="txt" />
+                            </div>
+                        </div>
+                        <div class="values-hsb">
+                            <div class="value-item">
+                                <span class="tit">H:</span>
+                                <input class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">S:</span>
+                                <input class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">B:</span>
+                                <input class="txt" />
+                            </div>
                         </div>
                     </div>
-                    <div class="values-rgb">
-                        <div class="value-item">
-                            <span class="tit">R:</span>
-                            <input class="txt" />
+                    <div class="xcolorpicker-block">
+                        <div class="block-box block-box-new">
+                            <div class="block-color"></div>
                         </div>
-                        <div class="value-item">
-                            <span class="tit">G:</span>
-                            <input class="txt" />
-                        </div>
-                        <div class="value-item">
-                            <span class="tit">B:</span>
-                            <input class="txt" />
+                        <div class="block-box block-box-old">
+                            <div class="block-color"></div>
                         </div>
                     </div>
-                    <div class="values-hsb">
-                        <div class="value-item">
-                            <span class="tit">H:</span>
-                            <input class="txt" />
-                        </div>
-                        <div class="value-item">
-                            <span class="tit">S:</span>
-                            <input class="txt" />
-                        </div>
-                        <div class="value-item">
-                            <span class="tit">B:</span>
-                            <input class="txt" />
-                        </div>
+                    <div class="xcolorpicker-btns">
+                        <button class="btn btn-small btns-cancel">取消</button>
+                        <button class="btn btn-small btn-theme btns-submit">确定</button>
                     </div>
-                </div>
-                <div class="block">
-                    <div class="block-box block-box-new">
-                        <div class="block-color"></div>
-                    </div>
-                    <div class="block-box block-box-old">
-                        <div class="block-color"></div>
-                    </div>
-                </div>
-                <div class="btns">
-                    <button class="btn btn-small btns-cancel">取消</button>
-                    <button class="btn btn-small btn-theme btns-submit">确定</button>
                 </div>
             `;
 
             let childs = this.elem.childNodes;
+            this.handle     = childs[0];
+            this.wrapper    = childs[1];
+
+            childs = this.wrapper.childNodes;
             this.colorpad.elem    = childs[0];
             this.rainbow.elem     = childs[1];
             this.values.elem      = childs[2];
@@ -194,84 +203,28 @@ const XColorPicker = (() => {
             // this.color.base = new Color(255,0,0);
             this.event();
             this.computecolor();
+            this.showcolor();
             // debugger;
             this.inited = true;
             return this;
         },
         //
         event() {
-            // let _this = this;
-            // this.wheelevent();
-            // this.dragevent(this.rainbow);
-            let RBP, CPP;
-            RBP = {
-                top:        0,
-                newtop:     0,
-                min:        0,
-                max:        this.rainbow.elem.offsetHeight
-            };
-            CPP = {
-                top:        0,
-                left:       0,
-                newtop:     0,
-                newleft:    0,
-                mintop:     -this.colorpad.pointer.offsetHeight/2,
-                minleft:    -this.colorpad.pointer.offsetWidth/2,
-                maxtop:     this.colorpad.elem.offsetHeight-this.colorpad.pointer.offsetHeight/2,
-                maxleft:    this.colorpad.elem.offsetWidth-this.colorpad.pointer.offsetWidth/2
-            };
-            new Drag(this.rainbow.elem, {
-                dragable: false,
-                start: (evt, drag)=>{
-                    // debugger;
-                    Fn.setstyle(this.rainbow.pointer, {top: evt.offsetY +'px'});
-                    RBP.top = this.rainbow.pointer.offsetTop;
-
-                    this.computecolor();
-                    this.showcolor();
-                },
-                move: (evt, drag)=>{
-                    // debugger;
-                    RBP.newtop = RBP.top + drag.dist.y;
-                    RBP.newtop = Drag.rangelimit(RBP.newtop, RBP.min, RBP.max);
-                    Fn.setstyle(this.rainbow.pointer, {top: RBP.newtop +'px'});
-
-                    this.computecolor();
-                    this.showcolor();
-                },
-                end: ()=>{
-                    // debugger;
+            let active = false;
+            Evt.on(this.elem, 'click', (evt)=>{
+                if( true === active ) {
+                    return;
                 }
+                active = true;
+                this.show();
+                Evt.off(document, 'click').on(document, 'click', (evt)=>{
+                    active = false;
+                    this.hide();
+                });
+                evt.stopPropagation();
             });
-            new Drag(this.colorpad.elem, {
-                dragable: false,
-                start: ()=>{
-                    CPP.top = this.colorpad.pointer.offsetTop;
-                    CPP.left = this.colorpad.pointer.offsetLeft;
-                },
-                move: (evt, drag)=>{
-                    // debugger;
-                    CPP.newtop  = CPP.top + drag.dist.y;
-                    CPP.newleft = CPP.left + drag.dist.x;
-                    CPP.newtop  = Drag.rangelimit(CPP.newtop, CPP.mintop, CPP.maxtop);
-                    CPP.newleft = Drag.rangelimit(CPP.newleft, CPP.minleft, CPP.maxleft);
-                    Fn.setstyle(this.colorpad.pointer, {
-                        top:   CPP.newtop +'px',
-                        left:  CPP.newleft +'px'
-                    });
 
-                    this.computecolor();
-                    this.showcolor();
-                },
-                end: ()=>{
-                    // debugger;
-                }
-            });
-        },
-        //
-        wheelevent() {
-            MouseWheel(this.target, (evt, delta) => {
-                // this.resize();
+            /*MouseWheel(this.target, (evt, delta) => {
                 if (!evt.shiftKey) {
                     let t, curtop, stepsize, mintop, maxtop, maxscroll, scrolltop, todown, toup;
                     curtop = this.block_y.offsetTop;
@@ -295,149 +248,95 @@ const XColorPicker = (() => {
                             evt.preventDefault();
                         }
                     }
-                } else {
-                    let l, curleft, stepsize, minleft, maxleft, maxscroll, scrollleft, toleft, toright;
-                    curleft = this.block_x.offsetLeft;
-                    stepsize = Math.ceil(this.block_x.offsetWidth * this.setting.wheelspeed);
-                    minleft = 0;
-                    maxleft = this.wrapper.offsetWidth - this.block_x.offsetWidth;
-                    maxscroll = this.size.content_width - this.wrapper.offsetWidth;
-                    toleft = delta < 0 && curleft < maxleft;            //向左
-                    toright = 0 < delta && minleft < curleft;           //向右
-                    if (toleft || toright) {
-                        l = this.block_x.offsetLeft - delta * stepsize;
-                        l = minleft <= l ? l : minleft;
-                        l = l <= maxleft ? l : maxleft;
-                        Fn.setstyle(this.block_x, { left: l+'px' });
+                }
+            });*/
 
-                        scrollleft = l * maxscroll / maxleft;
-                        this.wrapper.scrollLeft = scrollleft;
+            let RBP, CPP;
+            RBP = {
+                top:        0,
+                newtop:     0,
+                min:        0,
+                max:        this.rainbow.elem.offsetHeight
+            };
+            CPP = {
+                top:        0,
+                left:       0,
+                newtop:     0,
+                newleft:    0,
+                mintop:     -this.colorpad.pointer.offsetHeight/2,
+                minleft:    -this.colorpad.pointer.offsetWidth/2,
+                maxtop:     this.colorpad.elem.offsetHeight-this.colorpad.pointer.offsetHeight/2,
+                maxleft:    this.colorpad.elem.offsetWidth-this.colorpad.pointer.offsetWidth/2
+            };
+            new Drag(this.rainbow.elem, {
+                dragable: false,
+                start: (evt, drag)=>{
+                    // debugger;
+                    Fn.setstyle(this.rainbow.pointer, {top: (evt.offsetY-this.rainbow.pointer.offsetHeight/2) +'px'});
+                    RBP.top = this.rainbow.pointer.offsetTop;
 
-                        if (!(minleft === l || l === maxleft)) {
-                            evt.stopPropagation();
-                            evt.preventDefault();
-                        }
+                    this.computecolor();
+                    this.showcolor();
+                },
+                move: (evt, drag)=>{
+                    // debugger;
+                    RBP.newtop = RBP.top + drag.dist.y;
+                    RBP.newtop = Drag.rangelimit(RBP.newtop, RBP.min, RBP.max);
+                    Fn.setstyle(this.rainbow.pointer, {top: RBP.newtop +'px'});
+
+                    this.computecolor();
+                    this.showcolor();
+                },
+                end: ()=>{
+                    // debugger;
+                }
+            });
+            new Drag(this.colorpad.elem, {
+                dragable: false,
+                start: (evt)=>{
+                    if( this.colorpad.pointer !== evt.target ) {
+                        Fn.setstyle(this.colorpad.pointer, {
+                            top: (evt.offsetY-this.colorpad.pointer.offsetHeight/2) +'px',
+                            left: (evt.offsetX-this.colorpad.pointer.offsetWidth/2) +'px'
+                        });
                     }
+                    CPP.top = this.colorpad.pointer.offsetTop;
+                    CPP.left = this.colorpad.pointer.offsetLeft;
+
+                    this.computecolor();
+                    this.showcolor();
+                },
+                move: (evt, drag)=>{
+                    // debugger;
+                    CPP.newtop  = CPP.top + drag.dist.y;
+                    CPP.newleft = CPP.left + drag.dist.x;
+                    CPP.newtop  = Drag.rangelimit(CPP.newtop, CPP.mintop, CPP.maxtop);
+                    CPP.newleft = Drag.rangelimit(CPP.newleft, CPP.minleft, CPP.maxleft);
+                    Fn.setstyle(this.colorpad.pointer, {
+                        top:   CPP.newtop +'px',
+                        left:  CPP.newleft +'px'
+                    });
+
+                    this.computecolor();
+                    this.showcolor();
+                },
+                end: ()=>{
+                    // debugger;
                 }
             });
         },
         //
-        dragevent(elem, locked) {
-            let _this, israinbow, starttop, startleft, start, end, range, dist, t, l, scroll;
-            _this = this;
-            israinbow = this.rainbow === elem;
-
-
-            start = { x: 0, y: 0 };
-            end = { x: 0, y: 0 };
-            range = {
-                minleft: 0,
-                maxleft: 0,
-                mintop: 0,
-                maxtop: 0
-            };
-            dist = { minx: 0, maxx: 0, miny:0, maxy:0, x: 0, y: 0 };
-            scroll = { max: 0, top: 0, left: 0 };
-            // to = { up: false, down: false, left: false, right: false };
-
-            let dragstart, dragmove, dragend;
-            dragstart = function(evt) {
-                _this.resize();
-                if (israinbow) {
-                    _this.rainbow.locked = true;
-
-                    starttop = elem.offsetTop;
-                    start.y = evt.clientY;
-                    dist.maxy = _this.wrapper.offsetHeight - _this.block_y.offsetHeight - _this.block_y.offsetTop;
-                    range.maxtop = _this.wrapper.offsetHeight - _this.block_y.offsetHeight;
-                    scroll.max = _this.size.content_height - _this.wrapper.offsetHeight;
-
-                } else {
-                    _this.colorpad.locked = true;
-
-                    startleft = elem.offsetLeft;
-                    start.x = evt.clientX;
-                    dist.maxx = _this.wrapper.offsetWidth - _this.block_x.offsetWidth - _this.block_x.offsetLeft;
-                    range.maxleft = _this.wrapper.offsetWidth - _this.block_x.offsetWidth;
-                    scroll.max = _this.size.content_width - _this.wrapper.offsetWidth;
-
-                }
-
-                if( elem.setCapture ) {                     //设置鼠标捕获
-                    elem.setCapture();
-                } else {
-                    evt.preventDefault();                   //阻止默认动作
-                }
-
-                Evt.on(document, 'mousemove', dragmove);
-                Evt.on(document, 'mouseup', dragend);
-
-                // console.log('start');
-            };
-            dragmove = function(evt) {
-                if (israinbow) {
-                    if (!_this.rainbow.locked) {
-                        return;
-                    }
-
-                    end.y = evt.clientY;
-                    dist.y = end.y - start.y;
-
-                    t = starttop + dist.y;
-                    t = range.mintop <= t ? t : range.mintop;
-                    t = t <= range.maxtop ? t : range.maxtop;
-                    Fn.setstyle(_this.block_y, { top: t+'px' });
-
-                    scroll.top = t * scroll.max / range.maxtop;
-                    _this.wrapper.scrollTop = scroll.top;
-
-                } else {
-                    if (!_this.colorpad.locked) {
-                        return;
-                    }
-
-                    end.x = evt.clientX;
-                    dist.x = end.x - start.x;
-
-                    l = startleft + dist.x;
-                    l = range.minleft <= l ? l : range.minleft;
-                    l = l <= range.maxleft ? l : range.maxleft;
-                    Fn.setstyle(_this.block_x, { left: l+'px' });
-
-                    scroll.left = l * scroll.max / range.maxleft;
-                    _this.wrapper.scrollLeft = scroll.left;
-                }
-
-                // console.log('mousemove');
-            };
-            dragend = function(evt) {
-                if( israinbow ) {
-                    _this.rainbow.locked = false;
-
-                    Fn.removeclass(_this.scroll_y, 'active');
-                    Fn.setstyle(_this.scroll_y, { zIndex: '1' });
-
-                } else {
-                    _this.colorpad.locked = false;
-
-                    Fn.removeclass(_this.scroll_x, 'active');
-                    Fn.setstyle(_this.scroll_x, { zIndex: '1' });
-                }
-
-                if( elem.releaseCapture ) {                 //设置鼠标捕获
-                    elem.releaseCapture();
-                }
-
-                Evt.off(document, 'mousemove', dragmove);
-                Evt.off(document, 'mouseup', dragend);
-
-                // console.log('end');
-            };
-
-            Evt.on(elem, 'mousedown', dragstart);
+        show() {
+            Fn.addclass(this.elem, 'active');
         },
         //
-        computecolor() {
+        hide() {
+            Fn.removeclass(this.elem, 'active');
+        },
+        //
+        computecolor: Fn.later(function() {
+            this.show();
+
             // rgb(255,0,0), rgb(255,0,255), rgb(0,0,255), rgb(0,255,255), rgb(0,255,0), rgb(255,255,0), rgb(255,0,0)
             let basevalue, transit, scale, stage, value;
             basevalue = this.rainbow.pointer.offsetTop;
@@ -446,7 +345,7 @@ const XColorPicker = (() => {
             stage = Math.floor(basevalue/transit);
             value = (basevalue%transit)/scale;
             // console.log(`basevalue:${basevalue}, transit:${transit}, stage:${stage}, value:${value}`);
-            debugger;
+            // debugger;
             if( 0 === stage ) {
                 this.color.base = new Color(255, 0, value);
             } else if( 1 === stage ) {
@@ -478,10 +377,12 @@ const XColorPicker = (() => {
             this.color.hex = this.color.new.$hex;
             this.color.rgb = [this.color.new.$r, this.color.new.$g, this.color.new.$b];
             this.color.hsb = [this.color.new.$vh, this.color.new.$vs, this.color.new.$vv];
-        },
+
+            this.hide();
+        }, 10),
         //
-        showcolor() {
-            this.values.hex.value   = this.color.hex;
+        showcolor: Fn.later(function() {
+            this.values.hex.value   = this.color.hex.replace('#', '');
             this.values.rgb.r.value = this.color.rgb[0];
             this.values.rgb.g.value = this.color.rgb[1];
             this.values.rgb.b.value = this.color.rgb[2];
@@ -491,7 +392,8 @@ const XColorPicker = (() => {
             this.values.hsb.b.value = this.color.hsb[2];
             Fn.setstyle(this.colorpad.elem, {backgroundColor: this.color.base.$rgb});
             Fn.setstyle(this.block.new, {backgroundColor: this.color.new.$rgb});
-        }
+            Fn.setstyle(this.colorpad.pointer, {borderColor: this.color.new.$inverse});
+        }, 10)
     };
 
     return XColorPicker;
@@ -502,72 +404,76 @@ XColorPicker.install = function(Vue, options) {
         props: {},
         template: `
             <div ref="xcolorpicker" class="xcolorpicker">
-                <div ref="colorpad" class="colorpad">
-                    <div ref="colorpad_light" class="colorpad-light"></div>
-                    <div ref="colorpad_dark" class="colorpad-dark"></div>
-                    <div ref="colorpad_pointer" class="pointer"></div>
-                </div>
-                <div ref="rainbow" class="rainbow">
-                    <div ref="rainbow_color" class="rainbow-color"></div>
-                    <div ref="rainbow_pointer" class="pointer"></div>
-                </div>
-                <div ref="values" class="values">
-                    <div class="values-hex">
-                        <div class="value-item">
-                            <span class="tit"># </span>
-                            <input ref="values_hex" class="txt" />
+                <div ref="handle" class="xcolorpicker-handle"></div>
+                <div ref="wrapper" class="xcolorpicker-wrapper">
+                    <div ref="colorpad" class="xcolorpicker-colorpad">
+                        <div ref="colorpad_light" class="colorpad-light"></div>
+                        <div ref="colorpad_dark" class="colorpad-dark"></div>
+                        <div ref="colorpad_pointer" class="pointer"></div>
+                    </div>
+                    <div ref="rainbow" class="xcolorpicker-rainbow">
+                        <div ref="rainbow_color" class="rainbow-color"></div>
+                        <div ref="rainbow_pointer" class="pointer"></div>
+                    </div>
+                    <div ref="values" class="xcolorpicker-values">
+                        <div class="values-hex">
+                            <div class="value-item">
+                                <span class="tit"># </span>
+                                <input ref="values_hex" class="txt" />
+                            </div>
+                        </div>
+                        <div class="values-rgb">
+                            <div class="value-item">
+                                <span class="tit">R:</span>
+                                <input ref="values_rgb_r" class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">G:</span>
+                                <input ref="values_rgb_g" class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">B:</span>
+                                <input ref="values_rgb_b" class="txt" />
+                            </div>
+                        </div>
+                        <div class="values-hsb">
+                            <div class="value-item">
+                                <span class="tit">H:</span>
+                                <input ref="values_hsb_h" class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">S:</span>
+                                <input ref="values_hsb_s" class="txt" />
+                            </div>
+                            <div class="value-item">
+                                <span class="tit">B:</span>
+                                <input ref="values_hsb_b" class="txt" />
+                            </div>
                         </div>
                     </div>
-                    <div class="values-rgb">
-                        <div class="value-item">
-                            <span class="tit">R:</span>
-                            <input ref="values_rgb_r" class="txt" />
+                    <div ref="block" class="xcolorpicker-block">
+                        <div class="block-box block-box-new">
+                            <div ref="block_new" class="block-color"></div>
                         </div>
-                        <div class="value-item">
-                            <span class="tit">G:</span>
-                            <input ref="values_rgb_g" class="txt" />
-                        </div>
-                        <div class="value-item">
-                            <span class="tit">B:</span>
-                            <input ref="values_rgb_b" class="txt" />
+                        <div class="block-box block-box-old">
+                            <div ref="block_old" class="block-color"></div>
                         </div>
                     </div>
-                    <div class="values-hsb">
-                        <div class="value-item">
-                            <span class="tit">H:</span>
-                            <input ref="values_hsb_h" class="txt" />
-                        </div>
-                        <div class="value-item">
-                            <span class="tit">S:</span>
-                            <input ref="values_hsb_s" class="txt" />
-                        </div>
-                        <div class="value-item">
-                            <span class="tit">B:</span>
-                            <input ref="values_hsb_b" class="txt" />
-                        </div>
+                    <div ref="btns" class="xcolorpicker-btns">
+                        <button ref="btns_cancel" class="btn btn-small btns-cancel">取消</button>
+                        <button ref="btns_submit" class="btn btn-small btn-theme btns-submit">确定</button>
                     </div>
-                </div>
-                <div ref="block" class="block">
-                    <div class="block-box block-box-new">
-                        <div ref="block_new" class="block-color"></div>
-                    </div>
-                    <div class="block-box block-box-old">
-                        <div ref="block_old" class="block-color"></div>
-                    </div>
-                </div>
-                <div ref="btns" class="btns">
-                    <button ref="btns_cancel" class="btn btn-small btns-cancel">取消</button>
-                    <button ref="btns_submit" class="btn btn-small btn-theme btns-submit">确定</button>
                 </div>
             </div>
         `,
         data() {
-            return {
-                xscroll: null
-            };
+            return {};
         },
         mounted() {
             this.xcpr = new XColorPicker(this.$refs.xcolorpicker);
+            this.xcpr.handle        = this.$refs.handle;
+            this.xcpr.wrapper       = this.$refs.wrapper;
+
             this.xcpr.colorpad.elem    = this.$refs.colorpad;
             this.xcpr.rainbow.elem     = this.$refs.rainbow;
             this.xcpr.values.elem      = this.$refs.values;
@@ -597,8 +503,6 @@ XColorPicker.install = function(Vue, options) {
             this.xcpr.btns.submit        = this.$refs.btns_submit;
 
             this.xcpr.init();
-            this.xcpr.showcolor();
-            // this.$refs;
         }
     });
 };

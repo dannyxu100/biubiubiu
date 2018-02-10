@@ -35,24 +35,28 @@ const Color = (function(){
         return this;
     };
     Color.prototype = {
-        $r:     0,
-        $g:     0,
-        $b:     0,
-        $a:     1,
-        $hex:   '#000000',
-        $rgb:   'rgb(0,0,0)',
-        $rgba:  'rgb(0,0,0, 1)',
+        $r:         0,
+        $g:         0,
+        $b:         0,
+        $a:         1,
+        $hex:       '#000000',
+        $rgb:       'rgb(0,0,0)',
+        $rgba:      'rgb(0,0,0, 1)',
+        $ir:        255,
+        $ig:        255,
+        $ib:        255,
+        $inverse:   'rgb(255,255,255)',
 
-        $h:     0,
-        $s:     0,
-        $l:     0,
-        $hsl:   'hsl(0, 0%, 0%)',
-        $hsla:  'hsl(0, 0%, 0%, 1)',
+        $h:         0,
+        $s:         0,
+        $l:         0,
+        $hsl:       'hsl(0, 0%, 0%)',
+        $hsla:      'hsl(0, 0%, 0%, 1)',
 
-        $vh:     0,
-        $vs:     0,
-        $vv:     0,
-        $hsv:   'hsv(0, 0%, 0%)',
+        $vh:        0,
+        $vs:        0,
+        $vv:        0,
+        $hsv:       'hsv(0, 0%, 0%)',
 
         //设置透明度
         set_alpha(alpha) {
@@ -78,6 +82,11 @@ const Color = (function(){
             this.$b = blue;
             this.$rgb = `rgb(${this.$r},${this.$g},${this.$b})`;
             this.$rgba = `rgba(${this.$r},${this.$g},${this.$b}, ${this.$a})`;
+
+            this.$ir = 255-red;
+            this.$ig = 255-green;
+            this.$ib = 255-blue;
+            this.$inverse = `rgb(${this.$ir},${this.$ig},${this.$ib})`;
         },
         //
         set_hsl(hue, saturation, lightness) {
@@ -123,7 +132,7 @@ const Color = (function(){
             this.set_hsl.apply( this, Color.rgb2hsl(this.$r, this.$g, this.$b) );
         },
         //
-        hsv2rgb() {debugger;
+        hsv2rgb() {
             this.set_rgb.apply( this, Color.hsv2rgb(this.$vh/360, this.$vs/100, this.$vv/100) );
         },
         //
@@ -148,7 +157,7 @@ const Color = (function(){
             this.set_alpha( value );
             return this;
         },
-        //互补色
+        //转为互补色
         inverse() {
             this.set_rgb(255-this.$r, 255-this.$g, 255-this.$b);
             this.rgb2hex();

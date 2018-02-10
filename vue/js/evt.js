@@ -1,5 +1,5 @@
 const Evt = {
-    fix: function(event) {
+    fix(event) {
         if (event.wrapper === true) {
             return event;
         }
@@ -69,13 +69,13 @@ const Evt = {
         }
         return event;
     },
-    on: function(elem, name, handler, params){
+    on(elem, name, handler, params) {
         // let wrapperHandler = handler;
         // if(params){
         //     function(){
         //     }
         // }
-        if(elem.attachEvent){
+        if(elem.attachEvent) {
             elem.attachEvent('on'+name, handler );
         } else if (elem.addEventListener){
             elem.addEventListener(name, handler, false);
@@ -84,8 +84,8 @@ const Evt = {
         }
         return this;
     },
-    off: function(elem, name, handler) {
-        if (elem.removeEventListener){
+    off(elem, name, handler) {
+        if (elem.removeEventListener) {
             elem.removeEventListener(name, handler, false);
         } else if (elem.detachEvent){
             elem.detachEvent('on'+name, handler);
@@ -94,11 +94,28 @@ const Evt = {
         }
         return this;
     },
-    onresize: function(elem, handler){
+    onresize(elem, handler) {
         window.addResizeListener(elem, handler);
+        return this;
     },
-    offresize: function(elem, handler){
+    offresize(elem, handler) {
         window.removeResizeListener(elem, handler);
+        return this;
+    },
+    toggle(elem /* , fn1,fn2,fn3...fnN */) {
+        let fns, len, cur;
+        fns = [].slice.call(arguments);
+        fns = fns.slice(1);
+        len = fns.length;
+        cur = -1;
+
+        Evt.on(elem, 'click', (evt)=>{
+            if( len === ++cur ) {
+                cur = 0;
+            }
+            fns[cur].call(elem, evt);
+        });
+        return this;
     }
 };
 
