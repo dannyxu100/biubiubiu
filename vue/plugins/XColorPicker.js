@@ -34,9 +34,10 @@ const XColorPicker = (() => {
     };
     XColorPicker.prototype = {
         inited:         false,
+        isshow:         false,
         code:           '',
         setting: {
-            class:          ''
+            class:      ''
         },
         elem:           null,
         handle:         null,
@@ -78,7 +79,6 @@ const XColorPicker = (() => {
             cancel:     null,
             submit:     null
         },
-
         color: {
             base:       '',
             old:        '',
@@ -197,31 +197,31 @@ const XColorPicker = (() => {
         },
         //初始化
         init() {
+            // debugger;
             if( this.inited ) {
                 return this;
             }
             // this.color.base = new Color(255,0,0);
+            this.show();
             this.event();
-            this.computecolor();
-            this.showcolor();
-            // debugger;
-            this.inited = true;
+            this.computecolor(()=>{
+                this.hide();
+                this.inited = true;
+            });
             return this;
         },
         //
         event() {
-            let active = false;
+            let click2doc = (evt)=>{
+                this.hide();
+            };
             Evt.on(this.elem, 'click', (evt)=>{
-                if( true === active ) {
+                evt.stopPropagation();
+                if( true === this.isshow ) {
                     return;
                 }
-                active = true;
                 this.show();
-                Evt.off(document, 'click').on(document, 'click', (evt)=>{
-                    active = false;
-                    this.hide();
-                });
-                evt.stopPropagation();
+                Evt.off(document, 'click', click2doc).on(document, 'click', click2doc);
             });
 
             /*MouseWheel(this.target, (evt, delta) => {
@@ -276,7 +276,6 @@ const XColorPicker = (() => {
                     RBP.top = this.rainbow.pointer.offsetTop;
 
                     this.computecolor();
-                    this.showcolor();
                 },
                 move: (evt, drag)=>{
                     // debugger;
@@ -285,7 +284,6 @@ const XColorPicker = (() => {
                     Fn.setstyle(this.rainbow.pointer, {top: RBP.newtop +'px'});
 
                     this.computecolor();
-                    this.showcolor();
                 },
                 end: ()=>{
                     // debugger;
@@ -294,6 +292,7 @@ const XColorPicker = (() => {
             new Drag(this.colorpad.elem, {
                 dragable: false,
                 start: (evt)=>{
+                    // debugger;
                     if( this.colorpad.pointer !== evt.target ) {
                         Fn.setstyle(this.colorpad.pointer, {
                             top: (evt.offsetY-this.colorpad.pointer.offsetHeight/2) +'px',
@@ -304,7 +303,6 @@ const XColorPicker = (() => {
                     CPP.left = this.colorpad.pointer.offsetLeft;
 
                     this.computecolor();
-                    this.showcolor();
                 },
                 move: (evt, drag)=>{
                     // debugger;
@@ -318,7 +316,6 @@ const XColorPicker = (() => {
                     });
 
                     this.computecolor();
-                    this.showcolor();
                 },
                 end: ()=>{
                     // debugger;
@@ -327,16 +324,16 @@ const XColorPicker = (() => {
         },
         //
         show() {
-            Fn.addclass(this.elem, 'active');
+            Fn.addclass(this.elem, 'open');
+            this.isshow = true;
         },
         //
         hide() {
-            Fn.removeclass(this.elem, 'active');
+            Fn.removeclass(this.elem, 'open');
+            this.isshow = false;
         },
         //
-        computecolor: Fn.later(function() {
-            this.show();
-
+        computecolor: Fn.later(function(fnafter) {
             // rgb(255,0,0), rgb(255,0,255), rgb(0,0,255), rgb(0,255,255), rgb(0,255,0), rgb(255,255,0), rgb(255,0,0)
             let basevalue, transit, scale, stage, value;
             basevalue = this.rainbow.pointer.offsetTop;
@@ -378,10 +375,14 @@ const XColorPicker = (() => {
             this.color.rgb = [this.color.new.$r, this.color.new.$g, this.color.new.$b];
             this.color.hsb = [this.color.new.$vh, this.color.new.$vs, this.color.new.$vv];
 
-            this.hide();
+            this.drawcolor();
+
+            if( fnafter ) {
+                fnafter.call(this);
+            }
         }, 10),
         //
-        showcolor: Fn.later(function() {
+        drawcolor() {
             this.values.hex.value   = this.color.hex.replace('#', '');
             this.values.rgb.r.value = this.color.rgb[0];
             this.values.rgb.g.value = this.color.rgb[1];
@@ -393,7 +394,7 @@ const XColorPicker = (() => {
             Fn.setstyle(this.colorpad.elem, {backgroundColor: this.color.base.$rgb});
             Fn.setstyle(this.block.new, {backgroundColor: this.color.new.$rgb});
             Fn.setstyle(this.colorpad.pointer, {borderColor: this.color.new.$inverse});
-        }, 10)
+        }
     };
 
     return XColorPicker;
